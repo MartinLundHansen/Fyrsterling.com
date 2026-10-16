@@ -1,1 +1,47 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="FYRSTERLING. AETERNUM. Something eternal is coming.">
+<title>FYRSTERLING | AETERNUM</title>
+<style>
+:root{--black:#050505;--ivory:#f4efe8;--gold:#ba8c63;--muted:#9b9690}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--ivory);font-family:Arial,sans-serif}
+.page{min-height:100svh;display:grid;grid-template-columns:48% 52%;overflow:hidden;background:#050505}
+.visual{position:relative;min-height:100svh;background:url('images/Smykke01.jpg') center/cover no-repeat}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.02),rgba(0,0,0,.08) 60%,#050505 100%)}
+.content{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:70px 8%;position:relative}
+.inner{width:min(650px,100%);text-align:center}.logo{width:112px;height:112px;object-fit:contain;margin:0 auto 38px;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35))}
+.eyebrow{font-size:11px;letter-spacing:.52em;text-transform:uppercase;color:#c6c1bb;margin:0 0 34px}
+h1{margin:0;font-family:Georgia,serif;font-size:clamp(58px,7.7vw,120px);font-weight:400;line-height:.85;letter-spacing:.16em;color:var(--gold);padding-left:.16em}
+.brand{font-family:Georgia,serif;font-size:clamp(18px,2vw,29px);letter-spacing:.43em;padding-left:.43em;margin:30px 0 0;color:#fff}
+.rule{width:56px;height:1px;background:var(--gold);margin:38px auto}.soon{font-size:11px;letter-spacing:.58em;padding-left:.58em;text-transform:uppercase;color:#d1ccc6}
+.links{margin-top:70px;padding-top:30px;border-top:1px solid #24201d;display:flex;justify-content:center;gap:35px;flex-wrap:wrap}
+.links a{color:#aaa39d;text-decoration:none;font-size:11px;letter-spacing:.16em;text-transform:uppercase;transition:.2s}.links a:hover{color:var(--gold)}
+.footer{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#4f4b47;font-size:9px;letter-spacing:.3em;text-transform:uppercase}
+@media(max-width:800px){.page{grid-template-columns:1fr}.visual{min-height:48svh}.visual:after{background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(5,5,5,.12) 60%,#050505 100%)}.content{min-height:52svh;padding:45px 24px 70px}.logo{width:84px;height:84px;margin-bottom:27px}.eyebrow{margin-bottom:25px}h1{font-size:clamp(48px,15vw,76px)}.brand{font-size:17px}.rule{margin:29px auto}.links{margin-top:46px}.footer{position:static;margin-top:45px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="visual" aria-label="FYRSTERLING jewellery"></section>
+  <section class="content">
+    <div class="inner">
+      <img class="logo" src="images/Logo.png" alt="FYRSTERLING logo">
+      <p class="eyebrow">Something eternal is coming.</p>
+      <h1>AETERNUM</h1>
+      <p class="brand">FYRSTERLING</p>
+      <div class="rule"></div>
+      <p class="soon">Coming soon.</p>
+      <div class="links">
+        <a href="https://www.instagram.com/fyrsterlingofficial?utm_source=ig_web_button_share_sheet&obrf=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram · @fyrsterlingofficial</a>
+        <a href="mailto:mf@fyrsterling.com">mf@fyrsterling.com</a>
+      </div>
+      <div class="footer">FYRSTERLING · AETERNUM</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
