@@ -251,3 +251,52 @@ h1 {
   color: #ffffff;
   text-transform: uppercase;
 }
+/* FYRSTERLING – Explore section */
+
+.video-explore {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 90%;
+  text-align: center;
+  color: white;
+  font-family: 'Butler', Georgia, serif;
+  font-weight: 400;
+}
+
+.video-explore p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+
+  transition: background 0.3s, color 0.3s;
+}
+}
+
+.explore-button:hover {
+  background: white;
+  color: #050505;
+}
+
+@media (max-width: 600px) {
+  .video-explore {
+    bottom: 10%;
+  }
+}
