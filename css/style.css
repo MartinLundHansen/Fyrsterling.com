@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 :root {
     --black: #050505;
     --ivory: #f4efe8;
@@ -226,7 +227,6 @@ h1 {
   min-height: 100svh;
   background: #050505;
 }
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 
 .visual {
   position: relative;
