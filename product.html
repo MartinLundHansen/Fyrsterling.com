@@ -154,7 +154,7 @@
     <section class="details">
       <h1 id="productName"></h1>
       <p class="metal" id="metalName"></p>
-      <p class="price">Price coming soon</p>
+<p class="price" id="productPrice">Price coming soon</p>
 
       <div class="variants" id="variants"></div>
 
@@ -240,6 +240,28 @@
       "Rose Gold": "Rose gold",
       "Silver": "Sølv"
     };
+const prices = {
+  "Ring": {
+    "Yellow Gold": 9600,
+    "Rose Gold": 9600,
+    "Silver": 3200
+  },
+  "Earrings": {
+    "Yellow Gold": 5200,
+    "Rose Gold": 5200,
+    "Silver": 3000
+  },
+  "Necklace": {
+    "Yellow Gold": 9100,
+    "Rose Gold": 9100,
+    "Silver": 3600
+  },
+  "Bracelet": {
+    "Yellow Gold": 6500,
+    "Rose Gold": 6500,
+    "Silver": 3200
+  }
+};
 
     function imagePath(selectedMetal) {
       const filename = `${metals[selectedMetal]} ${types[type]}.jpeg`;
@@ -250,6 +272,7 @@
       "AETERNUM " + type.toUpperCase();
 
     document.getElementById("metalName").textContent = metal;
+document.getElementById("productPrice").textContent = prices[type][metal].toLocaleString("da-DK") + " DKK";
 document.getElementById("requestedProduct").value = "AETERNUM " + type.toUpperCase() + " – " + metal;
     document.getElementById("mainImage").src = imagePath(metal);
 
