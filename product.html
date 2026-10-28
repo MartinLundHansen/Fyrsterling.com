@@ -173,7 +173,7 @@
 <form id="purchaseForm" hidden
   onsubmit="event.preventDefault()"
   style="margin-top:30px;">
-
+<input type="hidden" name="product" id="requestedProduct">
   <p style="font-size:12px;letter-spacing:2px;">
     PURCHASE ENQUIRY
   </p>
@@ -250,7 +250,7 @@
       "AETERNUM " + type.toUpperCase();
 
     document.getElementById("metalName").textContent = metal;
-
+document.getElementById("requestedProduct").value = "AETERNUM " + type.toUpperCase() + " – " + metal;
     document.getElementById("mainImage").src = imagePath(metal);
 
     document.getElementById("variants").innerHTML =
