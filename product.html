@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETERNUM | FYRSTERLING</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #171717;
+      background: #fff;
+    }
+
+    header {
+      padding: 26px 30px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    header a {
+      color: inherit;
+      text-decoration: none;
+      letter-spacing: 4px;
+      font-size: 17px;
+    }
+
+    .back {
+      display: block;
+      max-width: 1200px;
+      margin: 30px auto 0;
+      padding: 0 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .product-layout {
+      max-width: 1200px;
+      margin: 35px auto 100px;
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .main-image {
+      background: #f7f7f7;
+      aspect-ratio: 4 / 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .details h1 {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      margin: 0 0 18px;
+    }
+
+    .metal {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .price {
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .variants {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .variant {
+      width: 65px;
+      height: 75px;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      background: #f7f7f7;
+      padding: 3px;
+    }
+
+    .variant.active {
+      border: 1px solid #171717;
+    }
+
+    .variant img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .description {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      .product-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 20px;
+        padding: 0 16px;
+      }
+
+      .back {
+        padding: 0 16px;
+      }
+
+      .details h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/">FYRSTERLING</a>
+  </header>
+
+  <a class="back" href="/collection.html">
+    ← BACK TO COLLECTION
+  </a>
+
+  <main class="product-layout">
+    <div class="main-image">
+      <img id="mainImage" alt="AETERNUM Jewellery">
+    </div>
+
+    <section class="details">
+      <h1 id="productName"></h1>
+      <p class="metal" id="metalName"></p>
+      <p class="price">Price coming soon</p>
+
+      <p class="label">SELECT METAL</p>
+      <div class="variants" id="variants"></div>
+
+      <p class="description">
+        Discover AETERNUM by FYRSTERLING.
+        A timeless expression of elegance,
+        designed to be treasured.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const validTypes = ["Ring", "Necklace", "Earrings", "Bracelet"];
+    const validMetals = ["Yellow Gold", "Rose Gold", "Silver"];
+
+    const type = validTypes.includes(params.get("type"))
+      ? params.get("type") : "Ring";
+
+    const metal = validMetals.includes(params.get("metal"))
+      ? params.get("metal") : "Yellow Gold";
+
+    const types = {
+      "Ring": "ring",
+      "Necklace": "halskæde",
+      "Earrings": "øreringe",
+      "Bracelet": "armbånd"
+    };
+
+    const metals = {
+      "Yellow Gold": "Guld",
+      "Rose Gold": "Rose gold",
+      "Silver": "Sølv"
+    };
+
+    function imagePath(selectedMetal) {
+      const filename = `${metals[selectedMetal]} ${types[type]}.jpeg`;
+      return "/images/" + encodeURIComponent(filename);
+    }
+
+    document.getElementById("productName").textContent =
+      "AETERNUM " + type.toUpperCase();
+
+    document.getElementById("metalName").textContent = metal;
+
+    document.getElementById("mainImage").src = imagePath(metal);
+
+    document.getElementById("variants").innerHTML =
+      validMetals.map(selectedMetal => `
+        <a
+          class="variant ${selectedMetal === metal ? "active" : ""}"
+          href="/product.html?type=${encodeURIComponent(type)}&metal=${encodeURIComponent(selectedMetal)}"
+          title="${selectedMetal}"
+          aria-label="${selectedMetal}"
+        >
+          <img src="${imagePath(selectedMetal)}" alt="${selectedMetal}">
+        </a>
+      `).join("");
+  </script>
+</body>
+</html>
