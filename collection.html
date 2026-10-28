@@ -227,13 +227,13 @@ document.getElementById("products").innerHTML =
 
     return `
       <article class="product">
-        <div class="product-image">
+<a class="product-image" href="/product.html?type=${encodeURIComponent(name)}&metal=${encodeURIComponent(metal)}">
           <img
             src="/images/${encodeURIComponent(filename)}"
             alt="AETERNUM ${name} – ${metal}"
             loading="lazy"
           >
-        </div>
+</a>
         <h2>AETERNUM ${name.toUpperCase()}</h2>
         <p>${metal}</p>
         <p>Price coming soon</p>
