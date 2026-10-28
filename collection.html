@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETERNUM Collection | FYRSTERLING</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #171717;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header a {
+      color: inherit;
+      text-decoration: none;
+      letter-spacing: 4px;
+      font-size: 18px;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 75px 20px 55px;
+    }
+
+    .intro h1 {
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      margin: 0 0 15px;
+    }
+
+    .intro p {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #777;
+    }
+
+    .collection {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px 35px 100px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 60px 25px;
+    }
+
+    .product {
+      text-align: center;
+    }
+
+    .product-image {
+      aspect-ratio: 1 / 1;
+      background: #f6f5f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 12px;
+    }
+
+    .product h2 {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 20px 0 10px;
+    }
+
+    .product p {
+      font-size: 13px;
+      color: #777;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 700px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 12px;
+      }
+
+      .collection {
+        padding: 15px 12px 60px;
+      }
+
+      .intro {
+        padding: 55px 20px 35px;
+      }
+
+      .intro h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="/">FYRSTERLING</a>
+  </header>
+
+  <section class="intro">
+    <h1>AETERNUM</h1>
+    <p>THE COLLECTION</p>
+  </section>
+
+  <main class="collection">
+    <div class="products" id="products"></div>
+  </main>
+
+  <script>
+    const products = [
+      ["Ring", "Yellow Gold"],
+      ["Necklace", "Silver"],
+      ["Earrings", "Rose Gold"],
+      ["Bracelet", "Yellow Gold"],
+      ["Ring", "Silver"],
+      ["Necklace", "Rose Gold"],
+      ["Bracelet", "Silver"],
+      ["Earrings", "Yellow Gold"],
+      ["Necklace", "Yellow Gold"],
+      ["Ring", "Rose Gold"],
+      ["Earrings", "Silver"],
+      ["Bracelet", "Rose Gold"]
+    ];
+
+    document.getElementById("products").innerHTML =
+      products.map(([name, metal]) => `
+        <article class="product">
+          <div class="product-image">
+            Product image
+          </div>
+          <h2>AETERNUM ${name.toUpperCase()}</h2>
+          <p>${metal}</p>
+          <p>Price coming soon</p>
+        </article>
+      `).join("");
+  </script>
+
+</body>
+</html>
