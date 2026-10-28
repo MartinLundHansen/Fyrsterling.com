@@ -221,6 +221,29 @@ const types = {
   "Bracelet": "armbånd"
 };
 
+const prices = {
+  "Ring": {
+    "Yellow Gold": 9600,
+    "Rose Gold": 9600,
+    "Silver": 3200
+  },
+  "Earrings": {
+    "Yellow Gold": 5200,
+    "Rose Gold": 5200,
+    "Silver": 3000
+  },
+  "Necklace": {
+    "Yellow Gold": 9100,
+    "Rose Gold": 9100,
+    "Silver": 3600
+  },
+  "Bracelet": {
+    "Yellow Gold": 6500,
+    "Rose Gold": 6500,
+    "Silver": 3200
+  }
+};
+
 document.getElementById("products").innerHTML =
   products.map(([name, metal]) => {
     const filename = `${metals[metal]} ${types[name]}.jpeg`;
@@ -236,7 +259,7 @@ document.getElementById("products").innerHTML =
 </a>
         <h2>AETERNUM ${name.toUpperCase()}</h2>
         <p>${metal}</p>
-        <p>Price coming soon</p>
+<p>${prices[name][metal].toLocaleString("da-DK")} DKK</p>
       </article>
     `;
   }).join("");
