@@ -139,32 +139,40 @@
       ["Bracelet", "Rose Gold"]
     ];
 
-    document.getElementById("products").innerHTML =
-      products.map(([name, metal]) => `
-        <article class="product">
-        
-<div class="product-image">
-  <img
-    src={`/images/${({
-      "Yellow Gold": "Guld",
-      "Rose Gold": "Rose gold",
-      "Silver": "Sølv"
-    })[metal]} ${({
-      "Ring": "ring",
-      "Necklace": "halskæde",
-      "Earrings": "øreringe",
-      "Bracelet": "armbånd"
-    })[name]}.jpeg`}
-    alt={`AETERNUM ${name} – ${metal}`}
-    loading="lazy"
-  >
-</div>
+   
+const metals = {
+  "Yellow Gold": "Guld",
+  "Rose Gold": "Rose gold",
+  "Silver": "Sølv"
+};
 
-          <h2>AETERNUM ${name.toUpperCase()}</h2>
-          <p>${metal}</p>
-          <p>Price coming soon</p>
-        </article>
-      `).join("");
+const types = {
+  "Ring": "ring",
+  "Necklace": "halskæde",
+  "Earrings": "øreringe",
+  "Bracelet": "armbånd"
+};
+
+document.getElementById("products").innerHTML =
+  products.map(([name, metal]) => {
+    const filename = `${metals[metal]} ${types[name]}.jpeg`;
+
+    return `
+      <article class="product">
+        <div class="product-image">
+          <img
+            src="/images/${encodeURIComponent(filename)}"
+            alt="AETERNUM ${name} – ${metal}"
+            loading="lazy"
+          >
+        </div>
+        <h2>AETERNUM ${name.toUpperCase()}</h2>
+        <p>${metal}</p>
+        <p>Price coming soon</p>
+      </article>
+    `;
+  }).join("");
+
   </script>
 
 </body>
