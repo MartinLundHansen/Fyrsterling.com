@@ -142,9 +142,24 @@
     document.getElementById("products").innerHTML =
       products.map(([name, metal]) => `
         <article class="product">
-          <div class="product-image">
-            Product image
-          </div>
+        
+<div class="product-image">
+  <img
+    src={`/images/${({
+      "Yellow Gold": "Guld",
+      "Rose Gold": "Rose gold",
+      "Silver": "Sølv"
+    })[metal]} ${({
+      "Ring": "ring",
+      "Necklace": "halskæde",
+      "Earrings": "øreringe",
+      "Bracelet": "armbånd"
+    })[name]}.jpeg`}
+    alt={`AETERNUM ${name} – ${metal}`}
+    loading="lazy"
+  >
+</div>
+
           <h2>AETERNUM ${name.toUpperCase()}</h2>
           <p>${metal}</p>
           <p>Price coming soon</p>
