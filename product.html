@@ -169,10 +169,11 @@
   style="width:100%;padding:18px;margin-top:35px;background:#005A7D;color:white;border:0;letter-spacing:2px;cursor:pointer;">
   REQUEST TO PURCHASE
 </button>
-
 <form id="purchaseForm" hidden
-  onsubmit="event.preventDefault()"
+  action="https://formspree.io/f/xjyyogbg"
+  method="POST"
   style="margin-top:30px;">
+
 <input type="hidden" name="product" id="requestedProduct">
   <p style="font-size:12px;letter-spacing:2px;">
     PURCHASE ENQUIRY
@@ -202,14 +203,15 @@
     autocomplete="address-level2" required
     style="width:100%;padding:14px;margin:8px 0;">
 
-  <button type="submit" disabled
-    style="width:100%;padding:18px;margin-top:20px;background:#aaa;color:white;border:0;letter-spacing:2px;">
-    SUBMIT REQUEST – COMING SOON
-  </button>
+<button type="submit"
+  style="width:100%;padding:18px;margin-top:20px;background:#005A7D;color:white;border:0;letter-spacing:2px;cursor:pointer;">
+  SUBMIT REQUEST
+</button>
 
   <p style="font-size:12px;color:#777;line-height:1.7;">
-    Purchase enquiries will be available shortly.
-    No payment will be collected through this form.
+    Your purchase enquiry is non-binding.
+We will contact you with payment details.
+No payment is collected through this form.
   </p>
 </form>
 
