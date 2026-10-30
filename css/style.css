@@ -300,3 +300,81 @@ h1 {
     bottom: 10%;
   }
 }
+/* FYRSTERLING Navigation */
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 28px 4%;
+  background: transparent;
+}
+
+.site-logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Butler", Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.site-nav a:hover {
+  opacity: 0.6;
+}
+
+/* Tablet and mobile navigation */
+
+@media (max-width: 1100px) {
+  .site-header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px 5%;
+  }
+
+  .site-nav {
+    justify-content: center;
+    gap: 14px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-logo {
+    font-size: 21px;
+  }
+
+  .site-nav {
+    gap: 12px 16px;
+  }
+
+  .site-nav a {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+}
