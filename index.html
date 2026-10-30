@@ -7,10 +7,61 @@
     <meta name="theme-color" content="#050505">
     <meta name="description" content="FYRSTERLING. AETERNUM. Something eternal is coming.">
 
-    <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <title>FYRSTERLING | AETERNUM</title>
+    <style>
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  background: transparent;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.site-logo {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: "Butler", Georgia, serif;
+  font-size: 30px;
+  letter-spacing: 0.12em;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-top: 18px;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.site-header:hover,
+.site-header:focus-within {
+  background: white;
+}
+
+.site-header:hover .site-logo,
+.site-header:hover .site-nav a,
+.site-header:focus-within .site-logo,
+.site-header:focus-within .site-nav a {
+  color: #142a46;
+}
+</style>
   </head>
 
   <body>
