@@ -23,13 +23,37 @@
       border-bottom: 1px solid #eee;
     }
 
-    .header a {
-      color: inherit;
-      text-decoration: none;
-      letter-spacing: 4px;
-      font-size: 18px;
-    }
+   .header a {
+  color: #142a46;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 30px;
+  letter-spacing: 0.12em;
+  font-weight: normal;
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  margin-top: 22px;
+  font-family: Arial, sans-serif;
+}
 
+.main-nav a {
+  color: #142a46;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  font-weight: normal;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: #004f71;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
     .intro {
       text-align: center;
       padding: 75px 20px 55px;
@@ -180,6 +204,14 @@ html, body {
 
   <header class="header">
     <a href="/">FYRSTERLING</a>
+    <nav class="main-nav" aria-label="Main navigation">
+  <a href="/collection.html" aria-current="page">JEWELLERY</a>
+  <a href="/services.html">SERVICES</a>
+  <a href="/our-story.html">MAISON</a>
+  <a href="/appointments.html">APPOINTMENTS</a>
+  <a href="/contact.html">CONTACT</a>
+  <a href="/faq.html">FAQ</a>
+</nav>
   </header>
 
   <section class="intro">
