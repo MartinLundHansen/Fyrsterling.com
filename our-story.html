@@ -3,322 +3,209 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Story | FYRSTERLING</title>
+  <meta name="description" content="Discover Maison FYRSTERLING, the vision of founder Mie Fyrsterling and the story behind AETERNUM fine jewellery.">
+  <title>MAISON FYRSTERLING | The Art of Eternity</title>
   <style>
-    * { box-sizing: border-box; }
-
-    :root {
-  --fyrsterling-blue: #004F71;
-  --fyrsterling-cream: #F7F6F2;
-}
-
-    .story-blue-box {
-  background-color: var(--fyrsterling-blue);
-  color: #ffffff;
-  padding: 65px 45px;
-  margin: 75px auto;
-  text-align: center;
-}
-
-.story-blue-box h2 {
-  color: #ffffff;
-  font-size: 34px;
-  font-weight: normal;
-  line-height: 1.3;
-  margin: 0 0 25px;
-}
-
-.story-blue-box p {
-  color: #ffffff;
-  font-size: 19px;
-  line-height: 1.8;
-  margin: 0;
-}
-
-    .story-chapter {
-  margin: 90px auto 35px;
-  text-align: center;
-}
-
-.story-chapter .chapter-number {
-  display: block;
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--fyrsterling-blue);
-  margin-bottom: 18px;
-}
-
-.story-chapter h2 {
-  font-family: Georgia, serif;
-  font-size: 38px;
-  font-weight: normal;
-  line-height: 1.25;
-  color: #142a46;
-  margin: 0;
-}
-
-    body {
-      margin: 0;
-      background: #fff;
-      color: #142a46;
-      font-family: Georgia, serif;
-    }
-
-    header {
-      padding: 28px 20px;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-
-    .logo {
-      color: #142a46;
-      text-decoration: none;
-      font-size: 30px;
-      letter-spacing: 0.12em;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 16px 28px;
-      margin-top: 22px;
-    }
-
-    nav a {
-      color: #142a46;
-      text-decoration: none;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 0.12em;
-    }
-
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 110px 28px 140px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: normal;
-      letter-spacing: 0.08em;
-      margin-bottom: 48px;
-    }
-
-    p {
-      color: #444;
-      font-size: 19px;
-      line-height: 1.9;
-      margin-bottom: 28px;
-    }
-
-    .signature {
-      margin-top: 65px;
-      font-size: 15px;
-      letter-spacing: 0.18em;
-      color: #142a46;
-    }
-
-    @media (max-width: 600px) {
-      .logo { font-size: 23px; }
-      main { padding: 75px 24px 100px; }
-      h1 { font-size: 36px; }
-      p { font-size: 17px; }
+    :root { --blue:#004f71; --ink:#142a46; --cream:#f7f6f2; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#fff; color:var(--ink); font-family:Georgia,'Times New Roman',serif; }
+    header { padding:26px 24px 22px; text-align:center; border-bottom:1px solid #eee; }
+    .logo { display:inline-block; color:var(--ink); text-decoration:none; font-size:30px; letter-spacing:.12em; }
+    nav { display:flex; justify-content:center; flex-wrap:wrap; gap:12px 26px; margin-top:22px; font-family:Arial,sans-serif; }
+    nav a { color:var(--ink); text-decoration:none; font-size:11px; letter-spacing:.13em; }
+    nav a:hover, nav a[aria-current="page"] { color:var(--blue); text-decoration:underline; text-underline-offset:6px; }
+    main { max-width:1140px; padding:0 28px 110px; margin:auto; }
+    .hero { text-align:center; padding:55px 0 62px; }
+    .hero h1 { font-size:clamp(35px,5vw,60px); font-weight:normal; letter-spacing:.085em; margin:0 0 19px; }
+    .hero p { font-size:19px; font-style:italic; margin:0; color:#526174; }
+    .chapter { margin:85px 0 32px; text-align:center; }
+    .chapter-number { display:block; font:11px Arial,sans-serif; letter-spacing:.26em; color:var(--blue); margin-bottom:16px; }
+    .chapter h2 { font-weight:normal; font-size:clamp(30px,3.7vw,43px); line-height:1.2; margin:0; }
+    .prose { max-width:760px; margin:0 auto; }
+    .prose p, .editorial-copy p { font-size:18px; line-height:1.95; margin:0 0 24px; }
+    .prose strong { font-weight:bold; }
+    .intro { display:grid; grid-template-columns:1.07fr .93fr; gap:58px; align-items:center; }
+    .intro .chapter { margin:0 0 32px; text-align:left; }
+    .intro .editorial-copy { padding:0 0 10px; }
+    .photo { display:block; width:100%; height:auto; }
+    .portrait { max-height:690px; object-fit:cover; object-position:center top; }
+    .clinic-layout { display:grid; grid-template-columns:1.12fr .88fr; gap:28px; align-items:center; margin:55px 0 65px; }
+    .clinic-main { width:100%; height:600px; object-fit:cover; object-position:center; }
+    .clinic-side { display:flex; flex-direction:column; gap:24px; }
+    .clinic-side img { width:100%; height:310px; object-fit:cover; object-position:center; }
+    .clinic-note { padding:32px 28px; background:var(--cream); text-align:center; }
+    .clinic-note .eyebrow { font:10px Arial,sans-serif; letter-spacing:.2em; color:var(--blue); }
+    .clinic-note p { font-size:24px; line-height:1.4; margin:14px 0 0; }
+    .blue-box { background:var(--blue); color:white; text-align:center; padding:57px 38px; margin:65px auto; max-width:850px; }
+    .blue-box h3 { font-size:31px; font-weight:normal; margin:0 0 18px; }
+    .blue-box p { font-size:18px; line-height:1.8; margin:0; }
+    .product-photo { width:100%; max-width:680px; display:block; margin:50px auto 65px; height:auto; }
+    .aeternum-photo { display:block; width:100%; max-width:900px; height:auto; margin:50px auto 60px; }
+    .meaning { margin-bottom:28px; }
+    .meaning strong { display:block; margin-bottom:3px; }
+    .ending { text-align:center; margin-top:42px; }
+    .ending p { font-size:19px; line-height:1.85; }
+    .ending .last-line { font-size:23px; font-weight:bold; }
+    .signature { text-align:center; font-size:22px; letter-spacing:.16em; margin-top:64px; }
+    .tagline { text-align:center; font-style:italic; margin-top:14px; font-size:18px; }
+    @media(max-width:760px) {
+      header { padding:23px 14px; }
+      .logo { font-size:25px; }
+      nav { gap:12px 17px; }
+      nav a { font-size:10px; }
+      main { padding:0 20px 75px; }
+      .hero { padding:42px 0 50px; }
+      .intro { grid-template-columns:1fr; gap:28px; }
+      .intro .chapter { text-align:center; }
+      .intro .editorial-copy { order:1; }
+      .intro .portrait { order:2; width:100%; max-width:520px; margin:auto; }
+      .chapter { margin:66px 0 26px; }
+      .prose p,.editorial-copy p { font-size:17px; line-height:1.85; }
+      .clinic-layout { grid-template-columns:1fr; gap:20px; }
+      .clinic-main { height:auto; max-height:580px; }
+      .clinic-side img { height:auto; }
+      .clinic-note { padding:30px 22px; }
+      .blue-box { padding:42px 23px; margin:50px auto; }
+      .blue-box h3 { font-size:27px; }
+      .blue-box p { font-size:17px; }
     }
   </style>
 </head>
-
 <body>
   <header>
     <a href="/" class="logo">FYRSTERLING</a>
-
     <nav aria-label="Main navigation">
       <a href="/collection.html">JEWELLERY</a>
       <a href="/services.html">SERVICES</a>
-      <a href="/our-story.html">OUR STORY</a>
+      <a href="/our-story.html" aria-current="page">MAISON</a>
       <a href="/appointments.html">APPOINTMENTS</a>
       <a href="/contact.html">CONTACT</a>
       <a href="/faq.html">FAQ</a>
     </nav>
   </header>
-
   <main>
-    <h1>OUR STORY</h1>
+    <section class="hero">
+      <h1>MAISON FYRSTERLING</h1>
+      <p>An uncompromising pursuit of beauty.</p>
+    </section>
 
-    <div class="story-chapter">
-  <span class="chapter-number">CHAPTER I</span>
-  <h2>The Woman Behind the Vision</h2>
-</div>
+    <section class="intro">
+      <div class="editorial-copy">
+        <div class="chapter">
+          <span class="chapter-number">CHAPTER I</span>
+          <h2>The Woman Behind FYRSTERLING</h2>
+        </div>
+        <p>For as long as she can remember, Mie Fyrsterling has been drawn to beauty, aesthetics and the art of creating.</p>
+        <p>From an early age, she developed a deep appreciation for dressing with elegance, wearing beautiful, carefully crafted jewellery and caring for the skin. To Mie, these were never simply matters of appearance. They were expressions of individuality, confidence and the quiet power of feeling beautiful in one's own skin.</p>
+        <p>Her fascination with aesthetics would eventually become the foundation of something much greater.</p>
+      </div>
+      <img class="photo portrait" src="/images/Billede%20Mie.jpg" alt="Mie Fyrsterling, founder of FYRSTERLING" loading="eager">
+    </section>
 
-   <p>
-  Behind FYRSTERLING is founder Mie Fyrsterling,
-  whose passion for aesthetics, beauty and creation
-  began long before the brand itself.
-</p>
+    <section>
+      <div class="chapter">
+        <span class="chapter-number">CHAPTER II</span>
+        <h2>The Beginning of a Universe</h2>
+      </div>
+      <div class="prose">
+        <p>In 2024, Mie founded FYRSTERLING Clinic — the first chapter in what she envisioned as the FYRSTERLING universe.</p>
+        <p>From the very beginning, her ambition was clear: nothing less than exceptional would do.</p>
+        <p>The finest products.<br>Beautiful, thoughtfully curated surroundings.<br>And above all, an extraordinary level of personal service.</p>
+        <p>As FYRSTERLING Clinic flourished and gradually expanded, one thing remained unchanged: the attention, care and personal experience offered to every individual who walked through its doors.</p>
+      </div>
+      <div class="clinic-layout">
+        <img class="photo clinic-main" src="/images/Klinik%20billede.jpg" alt="Mie Fyrsterling, FYRSTERLING Clinic" loading="lazy">
+        <div class="clinic-side">
+          <div class="clinic-note">
+            <span class="eyebrow">THE FYRSTERLING PHILOSOPHY</span>
+            <p>Beauty in Every Detail</p>
+          </div>
+          <img src="/images/sygeplejerske-vurderer-kundens-hud.jpg" alt="Personal consultation at FYRSTERLING Clinic" loading="lazy">
+        </div>
+      </div>
+      <div class="prose">
+        <p>For Mie, true luxury has never been about appearances alone. It is about how something makes you feel, the thought behind every decision and the details that others might never notice.</p>
+        <p>Because excellence is rarely found in the obvious. It lives in the smallest details.</p>
+        <p>And when it comes to those details, Mie is a perfectionist.</p>
+      </div>
+    </section>
 
-<p>
-  From an early age, Mie was drawn to the elegance
-  of dressing beautifully, wearing exquisite jewellery
-  and caring for the skin. For her, true beauty has
-  always been found in the smallest details.
-</p>
+    <section>
+      <div class="chapter">
+        <span class="chapter-number">CHAPTER III</span>
+        <h2>A Passion for Jewellery</h2>
+      </div>
+      <div class="prose">
+        <p>With FYRSTERLING Clinic established on a strong foundation, Mie was ready to pursue another lifelong passion: fine jewellery.</p>
+        <p>Jewellery had always held a special place in her heart. She believed that the pieces we choose to wear reveal something about who we are — our personality, our memories, our relationships and the moments that define us.</p>
+        <p>Yet over the years, she had become increasingly aware of a frustrating reality.</p>
+        <p>Even among prestigious luxury houses, she did not always feel that the quality of a piece justified its price.</p>
+        <p>To her, a celebrated name should never be a substitute for exceptional craftsmanship, carefully selected materials and genuine value.</p>
+        <p>Luxury should be more than a label.</p>
+        <p>It should be something you can see, feel and believe in.</p>
+        <p>And rather than simply accepting what was available, Mie decided to create something that reflected her own standards.</p>
+      </div>
+      <img class="product-photo" src="/images/Flyvende%20boks.PNG" alt="FYRSTERLING jewellery presentation box" loading="lazy">
+    </section>
 
-<img src="/images/Billede%20Mie.jpg"
-     alt="Mie Fyrsterling, founder of FYRSTERLING"
-     style="width:100%; max-width:520px; height:auto; display:block; margin:55px auto;">
-<div class="story-chapter">
-  <span class="chapter-number">CHAPTER II</span>
-  <h2>The Beginning of FYRSTERLING</h2>
-</div>
-<p>
-  In 2024, she founded FYRSTERLING Clinic,
-  the first chapter of a much greater vision:
-  the FYRSTERLING universe.
-</p>
+    <section>
+      <div class="chapter">
+        <span class="chapter-number">CHAPTER IV</span>
+        <h2>The Fascination with Diamonds</h2>
+      </div>
+      <div class="prose">
+        <p>Diamonds had long represented something extraordinary to Mie.</p>
+        <p>Their natural beauty, rarity and remarkable endurance fascinated her. That fascination grew into a deeper passion when she began investing in diamonds and gaining insight into the world behind these exceptional stones.</p>
+        <p>Through the relationships and opportunities that followed, she was able to enter the diamond industry and develop a greater understanding of the qualities that distinguish one diamond from another.</p>
+        <p>It was here that her vision became increasingly clear.</p>
+        <p>She wanted to create fine jewellery where beauty and quality were considered at every stage — from the choice of materials to the final detail.</p>
+        <p>Pieces that would not simply follow fashion, but transcend it.</p>
+        <p>Jewellery designed to be treasured for a lifetime and, perhaps, passed from one generation to the next.</p>
+      </div>
+    </section>
 
-<p>
-  From the very beginning, her ambition was clear.
-  Exceptional products. Beautiful surroundings.
-  And a level of personal service that makes
-  every experience feel truly special.
-</p>
+    <section>
+      <div class="chapter">
+        <span class="chapter-number">CHAPTER V</span>
+        <h2>AETERNUM — A Story Without End</h2>
+      </div>
+      <div class="prose">
+        <p>From this vision, AETERNUM was born.</p>
+        <p>Derived from Latin and evoking the idea of eternity, AETERNUM represents everything FYRSTERLING believes fine jewellery should embody: enduring beauty, lasting meaning and a connection that reaches beyond the present moment.</p>
+        <p>But eternity means something different to each of us.</p>
+      </div>
+      <img class="aeternum-photo" src="/images/AETERNUM%20kransen.PNG" alt="AETERNUM jewellery by FYRSTERLING" loading="lazy">
+      <div class="prose">
+        <p class="meaning"><strong>For some, AETERNUM is love.</strong>A promise between two people. A connection that remains, even as life changes.</p>
+        <p class="meaning"><strong>For others, it is strength.</strong>A reminder of the challenges overcome, the courage discovered and the person they have become.</p>
+        <p class="meaning"><strong>It can represent friendship.</strong>The rare and beautiful bonds that stand the test of time.</p>
+        <p class="meaning"><strong>It can symbolise family.</strong>The people, memories and traditions we carry with us through generations.</p>
+        <p class="meaning"><strong>And sometimes, AETERNUM is simply a promise to oneself.</strong>To remain true to who you are, to celebrate your own journey and to never compromise on what matters most.</p>
+        <p>There is no single interpretation.</p>
+        <p>The meaning belongs to the person who wears it.</p>
+      </div>
+    </section>
 
-    <div class="story-blue-box">
-  <h2>True Luxury Is Found in Every Detail</h2>
-  <p>
-    Exceptional quality. Timeless beauty.
-    A truly personal experience.
-  </p>
-</div>
-
-    <p>
-  As FYRSTERLING Clinic continued to flourish,
-  one thing remained unchanged: the dedication
-  to exceptional service and a truly personal experience.
-</p>
-
-<img src="/images/Klinik%20billede.jpg"
-     alt="FYRSTERLING Clinic"
-     style="width:100%; max-width:620px; height:auto; display:block; margin:55px auto;">
-<img src="/images/sygeplejerske-vurderer-kundens-hud.jpg"
-     alt="Personal skin consultation at FYRSTERLING Clinic"
-     style="width:100%; max-width:440px; height:auto; display:block; margin:55px auto;">
-<p>
-  For Mie, refinement is an art. Every detail matters,
-  and perfection is never simply an ambition,
-  but a standard she strives to uphold.
-</p>
-
-<p>
-  With the clinic firmly established, the time had come
-  to pursue another lifelong passion: fine jewellery.
-</p>
-
-    <div class="story-chapter">
-  <span class="chapter-number">CHAPTER III</span>
-  <h2>A Passion for Fine Jewellery</h2>
-</div>
-
-    <p>
-  Jewellery has always held a special place in Mie's heart.
-  To her, a piece of jewellery is more than an accessory.
-  It is an expression of personality, individuality
-  and the moments that shape our lives.
-</p>
-
-<p>
-  Yet when purchasing jewellery from established luxury houses,
-  she sometimes felt that the quality did not reflect the price.
-  She believed that true luxury should be defined by more
-  than a prestigious name.
-</p>
-
-<p>
-  For Mie, exceptional jewellery should be beautiful
-  in every detail, thoughtfully created and made
-  to be cherished for generations.
-  This belief became the foundation of FYRSTERLING Jewellery.
-</p>
-
-<img src="/images/Flyvende%20boks.PNG"
-     alt="FYRSTERLING luxury jewellery box"
-     style="width:100%; max-width:560px; height:auto; display:block; margin:65px auto;">
-
-<div class="story-chapter">
-  <span class="chapter-number">THE INSPIRATION</span>
-  <h2>A World of Diamonds</h2>
-</div>
-
-    <p>
-  Diamonds had always fascinated Mie.
-  Their extraordinary beauty, rarity and enduring nature
-  represented everything she admired about fine jewellery.
-</p>
-
-<p>
-  Her fascination deepened when she began investing
-  in diamonds and gained an insight into the diamond world.
-  This opened the door to a new ambition:
-  to create jewellery where quality, craftsmanship
-  and timeless design would always come first.
-</p>
-
-<p>
-  Her vision was to create pieces that could be worn
-  with confidence, treasured for a lifetime
-  and passed down through generations.
-</p>
-
-<div class="story-blue-box">
-  <h2>Created to Endure</h2>
-  <p>
-    Beyond trends. Beyond generations.
-    Jewellery of lasting beauty,
-    made to become part of your story.
-  </p>
-</div>
-
-    <div class="story-chapter">
-  <span class="chapter-number">CHAPTER IV</span>
-  <h2>The Art of Eternity</h2>
-</div>
-
-    <p>
-  From this vision, AETERNUM was born.
-  A collection inspired by eternity and the beauty
-  of everything we wish to hold on to.
-</p>
-
-<p>
-  AETERNUM speaks of love that lasts, friendships
-  that endure and the strength we discover within ourselves.
-  It can symbolise a promise, a cherished memory,
-  a personal achievement or a bond that time cannot diminish.
-</p>
-
-<p>
-  Its meaning is yours to define.
-  Whether chosen for yourself or someone you love,
-  each piece becomes a reminder of what matters most.
-</p>
-
-<div class="story-blue-box">
-  <h2>Forever Is Personal</h2>
-  <p>
-    Every piece holds a meaning.
-    Every meaning tells a story.
-    And every story is uniquely yours.
-  </p>
-</div>
-
-    <img src="/images/AETERNUM%20kransen.PNG"
-     alt="AETERNUM jewellery by FYRSTERLING"
-
-style="width:100%; max-width:700px; height:auto; display:block; margin:55px auto;">
-
-    <div class="signature">FYRSTERLING</div>
+    <section>
+      <div class="chapter">
+        <span class="chapter-number">CHAPTER VI</span>
+        <h2>Made to Mean More</h2>
+      </div>
+      <div class="prose">
+        <p>FYRSTERLING was created from a simple conviction: that exceptional jewellery should be exceptional in every sense.</p>
+        <p>Not only in its appearance, but in its materials, its craftsmanship, its attention to detail and the experience surrounding it.</p>
+        <p>Every piece is guided by Mie's appreciation for timeless design and her belief that true elegance never needs to shout.</p>
+        <p>FYRSTERLING is for those who value substance as much as beauty. Those who recognise the difference between something made to be admired for a moment and something made to be cherished for a lifetime.</p>
+        <p>To wear FYRSTERLING is to carry more than a beautiful piece of jewellery.</p>
+        <p>It is to carry a memory, a promise, a feeling or a personal achievement.</p>
+        <p>Something that reflects who you are.</p>
+        <p>Something you can wear with confidence and pride.</p>
+      </div>
+      <div class="blue-box"><h3>Something beautiful. Something meaningful. Something eternal.</h3></div>
+      <div class="signature">FYRSTERLING</div>
+      <div class="tagline">The Art of Eternity.</div>
+    </section>
   </main>
 </body>
 </html>
