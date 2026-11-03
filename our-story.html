@@ -1,94 +1,429 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="Discover Maison FYRSTERLING, the vision of founder Mie Fyrsterling and the story behind AETERNUM fine jewellery.">
+
   <title>MAISON FYRSTERLING | The Art of Eternity</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    :root { --blue:#004f71; --ink:#142a46; --cream:#f7f6f2; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:#fff; color:var(--ink); font-family:Georgia,'Times New Roman',serif; }
-    header { padding:26px 24px 22px; text-align:center; border-bottom:1px solid #eee; }
-    .logo { display:inline-block; color:var(--ink); text-decoration:none; font-size:30px; letter-spacing:.12em; }
-    nav { display:flex; justify-content:center; flex-wrap:wrap; gap:12px 26px; margin-top:22px; font-family:Arial,sans-serif; }
-    nav a { color:var(--ink); text-decoration:none; font-size:11px; letter-spacing:.13em; }
-    nav a:hover, nav a[aria-current="page"] { color:var(--blue); text-decoration:underline; text-underline-offset:6px; }
-    main { max-width:1140px; padding:0 28px 110px; margin:auto; }
-    .hero { text-align:center; padding:55px 0 62px; }
-    .hero h1 { font-size:clamp(35px,5vw,60px); font-weight:normal; letter-spacing:.085em; margin:0 0 19px; }
-    .hero p { font-size:19px; font-style:italic; margin:0; color:#526174; }
-    .chapter { margin:85px 0 32px; text-align:center; }
-    .chapter-number { display:block; font:11px Arial,sans-serif; letter-spacing:.26em; color:var(--blue); margin-bottom:16px; }
-    .chapter h2 { font-weight:normal; font-size:clamp(30px,3.7vw,43px); line-height:1.2; margin:0; }
-    .prose { max-width:760px; margin:0 auto; }
-    .prose p, .editorial-copy p { font-size:18px; line-height:1.95; margin:0 0 24px; }
-    .prose strong { font-weight:bold; }
-    .intro { display:grid; grid-template-columns:1.07fr .93fr; gap:58px; align-items:center; }
-    .intro .chapter { margin:0 0 32px; text-align:left; }
-    .intro .editorial-copy { padding:0 0 10px; }
-    .photo { display:block; width:100%; height:auto; }
-    .portrait { max-height:690px; object-fit:cover; object-position:center top; }
-    .clinic-layout { display:grid; grid-template-columns:1.12fr .88fr; gap:28px; align-items:center; margin:55px 0 65px; }
-    .clinic-main { width:100%; height:600px; object-fit:cover; object-position:center; }
-    .clinic-side { display:flex; flex-direction:column; gap:24px; }
-.clinic-side img { width:100%; height:auto; object-fit:contain; }
-    .clinic-note { padding:32px 28px; background:var(--cream); text-align:center; }
-    .clinic-note .eyebrow { font:10px Arial,sans-serif; letter-spacing:.2em; color:var(--blue); }
-    .clinic-note p { font-size:24px; line-height:1.4; margin:14px 0 0; }
-    .blue-box { background:var(--blue); color:white; text-align:center; padding:57px 38px; margin:65px auto; max-width:850px; }
-    .blue-box h3 { font-size:31px; font-weight:normal; margin:0 0 18px; }
-    .blue-box p { font-size:18px; line-height:1.8; margin:0; }
-    .product-photo { width:100%; max-width:680px; display:block; margin:50px auto 65px; height:auto; }
-    .aeternum-photo { display:block; width:100%; max-width:900px; height:auto; margin:50px auto 60px; }
-    .meaning { margin-bottom:28px; }
-    .meaning strong { display:block; margin-bottom:3px; }
-    .ending { text-align:center; margin-top:42px; }
-    .ending p { font-size:19px; line-height:1.85; }
-    .ending .last-line { font-size:23px; font-weight:bold; }
-    .signature { text-align:center; font-size:22px; letter-spacing:.16em; margin-top:64px; }
-    .tagline { text-align:center; font-style:italic; margin-top:14px; font-size:18px; }
-    @media(max-width:760px) {
-      header { padding:23px 14px; }
-      .logo { font-size:25px; }
-      nav { gap:12px 17px; }
-      nav a { font-size:10px; }
-      main { padding:0 20px 75px; }
-      .hero { padding:42px 0 50px; }
-      .intro { grid-template-columns:1fr; gap:28px; }
-      .intro .chapter { text-align:center; }
-      .intro .editorial-copy { order:1; }
-      .intro .portrait { order:2; width:100%; max-width:520px; margin:auto; }
-      .chapter { margin:66px 0 26px; }
-      .prose p,.editorial-copy p { font-size:17px; line-height:1.85; }
-      .clinic-layout { grid-template-columns:1fr; gap:20px; }
-      .clinic-main { height:auto; max-height:580px; }
-      .clinic-side img { height:auto; }
-      .clinic-note { padding:30px 22px; }
-      .blue-box { padding:42px 23px; margin:50px auto; }
-      .blue-box h3 { font-size:27px; }
-      .blue-box p { font-size:17px; }
+    :root {
+      --blue: #004f71;
+      --ink: #142a46;
+      --white: #FFFFFF;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER — SAME AS OTHER PAGES */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--ink);
+    }
+
+    /* MAIN CONTENT */
+
+    main {
+      max-width: 1140px;
+      padding: 0 28px 110px;
+      margin: auto;
+    }
+
+    /* PAGE HEADING */
+
+    .hero {
+      text-align: center;
+      padding: 43px 0 62px;
+    }
+
+    .hero h1 {
+      margin: 0 0 19px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 19px;
+      font-style: italic;
+      margin: 0;
+      color: #526174;
+    }
+
+    /* CHAPTERS */
+
+    .chapter {
+      margin: 85px 0 32px;
+      text-align: center;
+    }
+
+    .chapter-number {
+      display: block;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.26em;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .chapter h2 {
+      font-weight: normal;
+      font-size: clamp(30px, 3.7vw, 43px);
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .prose {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .prose p,
+    .editorial-copy p {
+      font-size: 18px;
+      line-height: 1.95;
+      margin: 0 0 24px;
+    }
+
+    .prose strong {
+      font-weight: bold;
+    }
+
+    /* FOUNDER INTRODUCTION */
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.07fr 0.93fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .intro .chapter {
+      margin: 0 0 32px;
+      text-align: left;
+    }
+
+    .intro .editorial-copy {
+      padding: 0 0 10px;
+    }
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .portrait {
+      max-height: 690px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* CLINIC SECTION */
+
+    .clinic-layout {
+      display: block;
+      max-width: 650px;
+      margin: 55px auto 65px;
+    }
+
+    .clinic-side {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .clinic-side img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .clinic-note {
+      padding: 32px 28px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .clinic-note .eyebrow {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--blue);
+    }
+
+    .clinic-note p {
+      font-size: 24px;
+      line-height: 1.4;
+      margin: 14px 0 0;
+    }
+
+    /* BLUE STATEMENT */
+
+    .blue-box {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 57px 38px;
+      margin: 65px auto;
+      max-width: 850px;
+    }
+
+    .blue-box h3 {
+      font-size: 31px;
+      font-weight: normal;
+      margin: 0 0 18px;
+    }
+
+    .blue-box p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* IMAGES */
+
+    .product-photo {
+      width: 100%;
+      max-width: 680px;
+      display: block;
+      margin: 50px auto 65px;
+      height: auto;
+    }
+
+    .aeternum-photo {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: 50px auto 60px;
+    }
+
+    /* AETERNUM MEANINGS */
+
+    .meaning {
+      margin-bottom: 28px;
+    }
+
+    .meaning strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    /* ENDING */
+
+    .ending {
+      text-align: center;
+      margin-top: 42px;
+    }
+
+    .ending p {
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .ending .last-line {
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .signature {
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 0.16em;
+      margin-top: 64px;
+    }
+
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      margin-top: 14px;
+      font-size: 18px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      main {
+        padding: 0 20px 75px;
+      }
+
+      .hero {
+        padding: 35px 0 50px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .intro .chapter {
+        text-align: center;
+      }
+
+      .intro .editorial-copy {
+        order: 1;
+      }
+
+      .intro .portrait {
+        order: 2;
+        width: 100%;
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .chapter {
+        margin: 66px 0 26px;
+      }
+
+      .prose p,
+      .editorial-copy p {
+        font-size: 17px;
+        line-height: 1.85;
+      }
+
+      .clinic-layout {
+        margin: 45px auto 55px;
+      }
+
+      .clinic-side img {
+        height: auto;
+      }
+
+      .clinic-note {
+        padding: 30px 22px;
+      }
+
+      .blue-box {
+        padding: 42px 23px;
+        margin: 50px auto;
+      }
+
+      .blue-box h3 {
+        font-size: 27px;
+      }
+
+      .blue-box p {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <a href="/" class="logo">FYRSTERLING</a>
-    <nav aria-label="Main navigation">
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/index.html" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="/collection.html">JEWELLERY</a>
       <a href="/services.html">SERVICES</a>
-      <a href="/our-story.html" aria-current="page">MAISON</a>
+      <a href="/our-story.html" class="active" aria-current="page">MAISON</a>
       <a href="/appointments.html">APPOINTMENTS</a>
       <a href="/contact.html">CONTACT</a>
       <a href="/faq.html">FAQ</a>
     </nav>
   </header>
+
   <main>
+
+    <!-- MAISON INTRODUCTION -->
+
     <section class="hero">
       <h1>MAISON FYRSTERLING</h1>
       <p>An uncompromising pursuit of beauty.</p>
     </section>
+
+    <!-- CHAPTER I -->
 
     <section class="intro">
       <div class="editorial-copy">
@@ -96,115 +431,200 @@
           <span class="chapter-number">CHAPTER I</span>
           <h2>The Woman Behind FYRSTERLING</h2>
         </div>
+
         <p>For as long as she can remember, Mie Fyrsterling has been drawn to beauty, aesthetics and the art of creating.</p>
+
         <p>From an early age, she developed a deep appreciation for dressing with elegance, wearing beautiful, carefully crafted jewellery and caring for the skin. To Mie, these were never simply matters of appearance. They were expressions of individuality, confidence and the quiet power of feeling beautiful in one's own skin.</p>
+
         <p>Her fascination with aesthetics would eventually become the foundation of something much greater.</p>
       </div>
-      <img class="photo portrait" src="/images/Billede%20Mie.jpg" alt="Mie Fyrsterling, founder of FYRSTERLING" loading="eager">
+
+      <img
+        class="photo portrait"
+        src="/images/Billede%20Mie.jpg"
+        alt="Mie Fyrsterling, founder of FYRSTERLING"
+        loading="eager"
+      >
     </section>
+
+    <!-- CHAPTER II -->
 
     <section>
       <div class="chapter">
         <span class="chapter-number">CHAPTER II</span>
         <h2>The Beginning of a Universe</h2>
       </div>
+
       <div class="prose">
         <p>In 2024, Mie founded FYRSTERLING Clinic — the first chapter in what she envisioned as the FYRSTERLING universe.</p>
+
         <p>From the very beginning, her ambition was clear: nothing less than exceptional would do.</p>
-        <p>The finest products.<br>Beautiful, thoughtfully curated surroundings.<br>And above all, an extraordinary level of personal service.</p>
+
+        <p>The finest products.<br>
+        Beautiful, thoughtfully curated surroundings.<br>
+        And above all, an extraordinary level of personal service.</p>
+
         <p>As FYRSTERLING Clinic flourished and gradually expanded, one thing remained unchanged: the attention, care and personal experience offered to every individual who walked through its doors.</p>
       </div>
-<div class="clinic-layout" style="display:block; max-width:650px; margin:55px auto 65px;">
+
+      <div class="clinic-layout">
         <div class="clinic-side">
           <div class="clinic-note">
             <span class="eyebrow">THE FYRSTERLING PHILOSOPHY</span>
             <p>Beauty in Every Detail</p>
           </div>
-          <img src="/images/sygeplejerske-vurderer-kundens-hud.jpg" alt="Personal consultation at FYRSTERLING Clinic" loading="lazy">
+
+          <img
+            src="/images/sygeplejerske-vurderer-kundens-hud.jpg"
+            alt="Personal consultation at FYRSTERLING Clinic"
+            loading="lazy"
+          >
         </div>
       </div>
+
       <div class="prose">
         <p>For Mie, true luxury has never been about appearances alone. It is about how something makes you feel, the thought behind every decision and the details that others might never notice.</p>
+
         <p>Because excellence is rarely found in the obvious. It lives in the smallest details.</p>
+
         <p>And when it comes to those details, Mie is a perfectionist.</p>
       </div>
     </section>
+
+    <!-- CHAPTER III -->
 
     <section>
       <div class="chapter">
         <span class="chapter-number">CHAPTER III</span>
         <h2>A Passion for Jewellery</h2>
       </div>
+
       <div class="prose">
         <p>With FYRSTERLING Clinic established on a strong foundation, Mie was ready to pursue another lifelong passion: fine jewellery.</p>
+
         <p>Jewellery had always held a special place in her heart. She believed that the pieces we choose to wear reveal something about who we are — our personality, our memories, our relationships and the moments that define us.</p>
+
         <p>Yet over the years, she had become increasingly aware of a frustrating reality.</p>
+
         <p>Even among prestigious luxury houses, she did not always feel that the quality of a piece justified its price.</p>
+
         <p>To her, a celebrated name should never be a substitute for exceptional craftsmanship, carefully selected materials and genuine value.</p>
+
         <p>Luxury should be more than a label.</p>
+
         <p>It should be something you can see, feel and believe in.</p>
+
         <p>And rather than simply accepting what was available, Mie decided to create something that reflected her own standards.</p>
       </div>
-      <img class="product-photo" src="/images/Flyvende%20boks.PNG" alt="FYRSTERLING jewellery presentation box" loading="lazy">
+
+      <img
+        class="product-photo"
+        src="/images/Flyvende%20boks.PNG"
+        alt="FYRSTERLING jewellery presentation box"
+        loading="lazy"
+      >
     </section>
+
+    <!-- CHAPTER IV -->
 
     <section>
       <div class="chapter">
         <span class="chapter-number">CHAPTER IV</span>
         <h2>The Fascination with Diamonds</h2>
       </div>
+
       <div class="prose">
         <p>Diamonds had long represented something extraordinary to Mie.</p>
+
         <p>Their natural beauty, rarity and remarkable endurance fascinated her. That fascination grew into a deeper passion when she began investing in diamonds and gaining insight into the world behind these exceptional stones.</p>
+
         <p>Through the relationships and opportunities that followed, she was able to enter the diamond industry and develop a greater understanding of the qualities that distinguish one diamond from another.</p>
+
         <p>It was here that her vision became increasingly clear.</p>
+
         <p>She wanted to create fine jewellery where beauty and quality were considered at every stage — from the choice of materials to the final detail.</p>
+
         <p>Pieces that would not simply follow fashion, but transcend it.</p>
+
         <p>Jewellery designed to be treasured for a lifetime and, perhaps, passed from one generation to the next.</p>
       </div>
     </section>
+
+    <!-- CHAPTER V -->
 
     <section>
       <div class="chapter">
         <span class="chapter-number">CHAPTER V</span>
         <h2>AETERNUM — A Story Without End</h2>
       </div>
+
       <div class="prose">
         <p>From this vision, AETERNUM was born.</p>
+
         <p>Derived from Latin and evoking the idea of eternity, AETERNUM represents everything FYRSTERLING believes fine jewellery should embody: enduring beauty, lasting meaning and a connection that reaches beyond the present moment.</p>
+
         <p>But eternity means something different to each of us.</p>
       </div>
-      <img class="aeternum-photo" src="/images/AETERNUM%20kransen.PNG" alt="AETERNUM jewellery by FYRSTERLING" loading="lazy">
+
+      <img
+        class="aeternum-photo"
+        src="/images/AETERNUM%20kransen.PNG"
+        alt="AETERNUM jewellery by FYRSTERLING"
+        loading="lazy"
+      >
+
       <div class="prose">
         <p class="meaning"><strong>For some, AETERNUM is love.</strong>A promise between two people. A connection that remains, even as life changes.</p>
+
         <p class="meaning"><strong>For others, it is strength.</strong>A reminder of the challenges overcome, the courage discovered and the person they have become.</p>
+
         <p class="meaning"><strong>It can represent friendship.</strong>The rare and beautiful bonds that stand the test of time.</p>
+
         <p class="meaning"><strong>It can symbolise family.</strong>The people, memories and traditions we carry with us through generations.</p>
+
         <p class="meaning"><strong>And sometimes, AETERNUM is simply a promise to oneself.</strong>To remain true to who you are, to celebrate your own journey and to never compromise on what matters most.</p>
+
         <p>There is no single interpretation.</p>
+
         <p>The meaning belongs to the person who wears it.</p>
       </div>
     </section>
+
+    <!-- CHAPTER VI -->
 
     <section>
       <div class="chapter">
         <span class="chapter-number">CHAPTER VI</span>
         <h2>Made to Mean More</h2>
       </div>
+
       <div class="prose">
         <p>FYRSTERLING was created from a simple conviction: that exceptional jewellery should be exceptional in every sense.</p>
+
         <p>Not only in its appearance, but in its materials, its craftsmanship, its attention to detail and the experience surrounding it.</p>
+
         <p>Every piece is guided by Mie's appreciation for timeless design and her belief that true elegance never needs to shout.</p>
+
         <p>FYRSTERLING is for those who value substance as much as beauty. Those who recognise the difference between something made to be admired for a moment and something made to be cherished for a lifetime.</p>
+
         <p>To wear FYRSTERLING is to carry more than a beautiful piece of jewellery.</p>
+
         <p>It is to carry a memory, a promise, a feeling or a personal achievement.</p>
+
         <p>Something that reflects who you are.</p>
+
         <p>Something you can wear with confidence and pride.</p>
       </div>
-      <div class="blue-box"><h3>Something beautiful. Something meaningful. Something eternal.</h3></div>
+
+      <div class="blue-box">
+        <h3>Something beautiful. Something meaningful. Something eternal.</h3>
+      </div>
+
       <div class="signature">FYRSTERLING</div>
       <div class="tagline">The Art of Eternity.</div>
     </section>
+
   </main>
+
 </body>
 </html>
