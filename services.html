@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | FYRSTERLING</title>
+  <meta name="description" content="Discover FYRSTERLING jewellery services, including private consultations and personalisation.">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --cream: #f7f6f2;
+      --muted: #777777;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 34px 20px 22px;
+      background: var(--cream);
+      border-bottom: 1px solid #e6e3de;
+    }
+
+    .logo {
+      display: inline-block;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin-bottom: 22px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 80px 24px 75px;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin: 22px 0;
+    }
+
+    .intro p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #555;
+    }
+
+    .services-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 36px 100px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px;
+      align-items: start;
+    }
+
+    .service {
+      text-align: center;
+    }
+
+    .service-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #eeeae5;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .service-image:hover img {
+      transform: scale(1.035);
+    }
+
+    .service h2 {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      margin: 24px 0 12px;
+    }
+
+    .service p {
+      max-width: 330px;
+      margin: 0 auto 17px;
+      color: #777;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .find-out {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.3px;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 4px;
+    }
+
+    .find-out:hover { opacity: .65; }
+
+    footer {
+      border-top: 1px solid #e6e3de;
+      padding: 36px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    footer a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 20px 70px;
+        gap: 30px 18px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      nav { gap: 14px; }
+
+      nav a { font-size: 10px; }
+
+      .intro { padding: 55px 22px; }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        padding: 0 22px 65px;
+        gap: 55px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="/index.html">FYRSTERLING</a>
+  <nav>
+    <a href="/collection.html">JEWELLERY</a>
+    <a href="/services.html" class="active">SERVICES</a>
+    <a href="/our-story.html">MAISON</a>
+    <a href="/appointments.html">APPOINTMENTS</a>
+    <a href="/contact.html">CONTACT</a>
+    <a href="/faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="eyebrow">THE FYRSTERLING EXPERIENCE</div>
+    <h1>Our Services</h1>
+    <p>
+      At FYRSTERLING, we believe that fine jewellery is more
+      than a beautiful possession. It is a personal expression,
+      a meaningful connection and something to be treasured
+      for years to come.
+    </p>
+    <p>
+      From private consultations and personalisation to
+      jewellery care and thoughtful presentation, our
+      services reflect the attention to detail that defines
+      every FYRSTERLING creation.
+    </p>
+    <p>
+      Discover the care, guidance and personal attention
+      that accompany your FYRSTERLING experience.
+    </p>
+  </section>
+
+  <section class="services-grid" aria-label="FYRSTERLING services">
+
+    <!-- PRIVATE JEWELLERY CONSULTATION -->
+    <article class="service">
+      <a class="service-image" href="/services/private-consultation.html">
+        <img src="/images/Book%20tid.PNG"
+             alt="FYRSTERLING private jewellery presentation">
+      </a>
+      <h2>PRIVATE JEWELLERY CONSULTATION</h2>
+      <p>
+        Discover a personal jewellery experience at
+        our FYRSTERLING showroom in Odense.
+      </p>
+      <a class="find-out" href="/services/private-consultation.html">
+        FIND OUT MORE
+      </a>
+    </article>
+
+    <!-- PERSONALISATION -->
+    <article class="service">
+      <a class="service-image" href="/services/personalisation.html">
+        <img src="/images/Personalisation-ring.jpeg"
+             alt="FYRSTERLING ring with personalised date engraving">
+      </a>
+      <h2>PERSONALISATION</h2>
+      <p>
+        Make your FYRSTERLING creation uniquely yours
+        with a meaningful engraving.
+      </p>
+      <a class="find-out" href="/services/personalisation.html">
+        FIND OUT MORE
+      </a>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  FYRSTERLING &nbsp; | &nbsp;
+  <a href="mailto:info@fyrsterling.com">INFO@FYRSTERLING.COM</a>
+  &nbsp; | &nbsp;
+  <a href="/terms-and-conditions.html">TERMS &amp; CONDITIONS</a>
+</footer>
+
+</body>
+</html>
