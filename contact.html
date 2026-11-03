@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | FYRSTERLING</title>
+  <meta name="description" content="Contact FYRSTERLING for personal jewellery assistance, private showroom appointments and enquiries.">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --cream: #f7f6f2;
+      --muted: #777777;
+      --line: #e6e3de;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 34px 20px 22px;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin-bottom: 22px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .contact-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1500px;
+      margin: 0 auto;
+      min-height: 480px;
+    }
+
+    .hero-image {
+      overflow: hidden;
+      background: #eae7e1;
+    }
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 60px;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin: 24px 0;
+    }
+
+    .hero-text p {
+      max-width: 420px;
+      font-size: 16px;
+      line-height: 1.9;
+      color: #555;
+      margin: 0;
+    }
+
+    .contact-section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 100px 35px 110px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 65px;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+      font-weight: normal;
+      margin: 0 0 18px;
+    }
+
+    .section-heading p {
+      color: #777;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 110px;
+      row-gap: 80px;
+    }
+
+    .contact-item {
+      text-align: left;
+    }
+
+    .contact-item h3 {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      margin: 0 0 22px;
+    }
+
+    .contact-item p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.85;
+      margin: 0 0 17px;
+    }
+
+    .hours {
+      margin: 22px 0;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding: 11px 0;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+    }
+
+    .contact-link:hover {
+      opacity: .65;
+    }
+
+    .address {
+      font-style: normal;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #555;
+      margin: 20px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 38px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1px;
+      line-height: 2;
+    }
+
+    footer a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .contact-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        height: 420px;
+      }
+
+      .hero-text {
+        padding: 65px 25px;
+      }
+
+      .contact-grid {
+        column-gap: 45px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 10px;
+      }
+
+      .hero-image {
+        height: 320px;
+      }
+
+      .hero-text {
+        padding: 55px 24px;
+      }
+
+      .contact-section {
+        padding: 65px 25px 80px;
+      }
+
+      .section-heading {
+        margin-bottom: 50px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        row-gap: 55px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="/index.html">FYRSTERLING</a>
+
+  <nav>
+    <a href="/collection.html">JEWELLERY</a>
+    <a href="/services.html">SERVICES</a>
+    <a href="/our-story.html">MAISON</a>
+    <a href="/appointments.html">APPOINTMENTS</a>
+    <a href="/contact.html" class="active">CONTACT</a>
+    <a href="/faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+
+    <div class="hero-image">
+      <img
+        src="/images/Armb%C3%A5nd%20box.jpg"
+        alt="FYRSTERLING jewellery presentation box">
+    </div>
+
+    <div class="hero-text">
+      <span class="eyebrow">THE FYRSTERLING EXPERIENCE</span>
+      <h1>Contact Us</h1>
+      <p>
+        We welcome your enquiries about our jewellery,
+        private consultations and services.
+        Whether you are seeking personal guidance
+        or assistance with a FYRSTERLING creation,
+        we are here to help.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CONTACT OPTIONS -->
+  <section class="contact-section">
+
+    <div class="section-heading">
+      <h2>How May We Assist You?</h2>
+      <p>
+        We look forward to hearing from you.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- CALL US -->
+      <article class="contact-item">
+        <h3>CALL US</h3>
+
+        <p>
+          For personal assistance with our jewellery,
+          services or your purchase, we welcome
+          you to contact us by telephone.
+        </p>
+
+        <div class="hours">
+          <div class="hours-row">
+            <span>Monday – Friday</span>
+            <span>09:00 – 18:00</span>
+          </div>
+
+          <div class="hours-row">
+            <span>Saturday</span>
+            <span>10:00 – 15:00</span>
+          </div>
+
+          <div class="hours-row">
+            <span>Sunday</span>
+            <span>10:00 – 15:00</span>
+          </div>
+        </div>
+
+        <a class="contact-link" href="tel:+4528345288">
+          +45 28 34 52 88
+        </a>
+      </article>
+
+      <!-- EMAIL US -->
+      <article class="contact-item">
+        <h3>EMAIL US</h3>
+
+        <p>
+          For enquiries regarding our collections,
+          personalisation, purchases or services,
+          we invite you to contact us by email.
+        </p>
+
+        <p>
+          Every enquiry is approached with
+          personal attention and care.
+        </p>
+
+        <a class="contact-link" href="mailto:info@fyrsterling.com">
+          INFO@FYRSTERLING.COM
+        </a>
+      </article>
+
+      <!-- VISIT OUR SHOWROOM -->
+      <article class="contact-item">
+        <h3>VISIT OUR SHOWROOM</h3>
+
+        <p>
+          Discover FYRSTERLING through a private
+          jewellery consultation at our showroom
+          in Odense.
+        </p>
+
+        <address class="address">
+          FYRSTERLING<br>
+          Kildemosevej 13<br>
+          5000 Odense C<br>
+          Denmark
+        </address>
+
+        <p>
+          Showroom visits are complimentary
+          and available by confirmed appointment only.
+        </p>
+
+        <a class="contact-link" href="/appointments.html">
+          ARRANGE AN APPOINTMENT
+        </a>
+      </article>
+
+      <!-- HELP -->
+      <article class="contact-item">
+        <h3>HELP</h3>
+
+        <p>
+          Looking for further information?
+        </p>
+
+        <p>
+          Explore our frequently asked questions
+          for guidance on FYRSTERLING jewellery,
+          services, appointments and purchases.
+        </p>
+
+        <a class="contact-link" href="/faq.html">
+          EXPLORE FAQ
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  FYRSTERLING &nbsp; | &nbsp;
+  <a href="mailto:info@fyrsterling.com">
+    INFO@FYRSTERLING.COM
+  </a>
+  &nbsp; | &nbsp;
+  <a href="/terms-and-conditions.html">
+    TERMS &amp; CONDITIONS
+  </a>
+</footer>
+
+</body>
+</html>
