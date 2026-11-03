@@ -1,0 +1,43 @@
+:root{--blue:#004f71;--ink:#142a46;--cream:#f7f6f2;--muted:#667183;--line:#e7e7e4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+header{padding:26px 24px 22px;text-align:center;border-bottom:1px solid #eee}
+.logo{display:inline-block;color:var(--ink);text-decoration:none;font-size:30px;letter-spacing:.12em}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 26px;margin-top:22px;font-family:Arial,sans-serif}
+nav a{color:var(--ink);text-decoration:none;font-size:11px;letter-spacing:.13em}
+nav a:hover,nav a[aria-current=page]{color:var(--blue);text-decoration:underline;text-underline-offset:6px}
+main{max-width:1240px;margin:auto;padding:0 28px 110px}
+.hero{text-align:center;padding:66px 0 55px}
+.hero h1{font-size:clamp(35px,5vw,59px);font-weight:normal;letter-spacing:.095em;margin:0 0 20px}
+.hero p{font-size:18px;line-height:1.8;color:#526174;max-width:670px;margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 27px;align-items:start}
+.service-card{text-align:center}
+.service-card .image-link{display:block;overflow:hidden;background:var(--cream);aspect-ratio:1/1;text-decoration:none}
+.service-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .65s ease}
+.service-card .image-link:hover img{transform:scale(1.035)}
+.service-card .consultation-photo{object-position:center 48%}
+.service-card .ring-photo{object-position:center center}
+.service-card h2{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:400;letter-spacing:.075em;line-height:1.45;margin:23px 0 12px}
+.service-card p{font-size:14px;color:#677080;line-height:1.65;max-width:310px;margin:0 auto 14px}
+.find-more{font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.13em;text-decoration:underline;text-underline-offset:5px;display:inline-block;padding:5px}
+.find-more:hover{color:var(--blue)}
+footer{text-align:center;border-top:1px solid var(--line);padding:33px 20px 42px;font:11px Arial,sans-serif;letter-spacing:.13em;color:#697585}
+footer a{text-decoration:none}
+.detail-main{max-width:1100px}
+.breadcrumb{display:block;margin:37px 0 20px;font:11px Arial,sans-serif;letter-spacing:.14em;text-decoration:none;color:var(--muted)}
+.detail-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:62px;align-items:center;margin:0 auto 58px}
+.detail-hero img{display:block;width:100%;height:auto;max-height:660px;object-fit:cover}
+.detail-hero .eyebrow{font:11px Arial,sans-serif;letter-spacing:.18em;color:var(--blue)}
+.detail-hero h1{font-size:clamp(32px,4.2vw,51px);font-weight:normal;line-height:1.18;letter-spacing:.03em;margin:18px 0 24px}
+.detail-hero .subtitle{font-size:21px;font-style:italic;line-height:1.5;color:#526174}
+.detail-copy{max-width:760px;margin:0 auto}
+.detail-copy p{font-size:18px;line-height:1.95;margin:0 0 25px}
+.detail-copy h2{font-size:26px;font-weight:normal;margin:48px 0 20px}
+.detail-copy .cta{display:inline-block;margin:20px 0 32px;padding:17px 28px;border:1px solid var(--ink);text-decoration:none;font:11px Arial,sans-serif;letter-spacing:.14em;transition:background .2s,color .2s}
+.detail-copy .cta:hover{background:var(--ink);color:#fff}
+.detail-copy .email{word-break:break-word}
+@media(max-width:900px){.services-grid{gap:35px 18px}.service-card h2{font-size:13px}.detail-hero{gap:35px}}
+@media(max-width:700px){header{padding:23px 14px}.logo{font-size:25px}nav{gap:12px 17px}nav a{font-size:10px}main{padding:0 20px 70px}.hero{padding:46px 0 42px}.hero p{font-size:16px}.services-grid{grid-template-columns:1fr;gap:49px;max-width:490px;margin:0 auto}.service-card h2{font-size:14px}.service-card p{font-size:15px}.detail-hero{grid-template-columns:1fr;gap:30px;margin-bottom:34px}.detail-hero img{max-height:520px;object-fit:contain}.detail-hero h1{margin:12px 0 14px}.detail-copy p{font-size:17px;line-height:1.85}}
+@media(prefers-reduced-motion:reduce){.service-card img{transition:none}html{scroll-behavior:auto}}
