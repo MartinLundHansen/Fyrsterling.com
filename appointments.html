@@ -4,63 +4,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Discover FYRSTERLING jewellery through a private showroom appointment in Odense, Denmark.">
+
   <title>Private Appointments | FYRSTERLING</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --line: #e8e8e8;
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: #f7f6f2;
-      color: #142a46;
-      font-family: Arial, sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
     }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER — SAME AS OTHER MAIN PAGES */
 
     .site-header {
-      padding: 35px 20px 26px;
+      background: #FFFFFF;
       text-align: center;
-      background: #f7f6f2;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .site-logo {
-      color: #142a46;
-      text-decoration: none;
+    .logo {
+      display: inline-block;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
+      font-size: 29px;
       font-weight: normal;
-      letter-spacing: 0.12em;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
     }
 
-    .site-nav {
+    .main-nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px 26px;
-      margin-top: 22px;
+      gap: 27px;
     }
 
-    .site-nav a {
-      color: #142a46;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
-      font-weight: normal;
-      letter-spacing: 0.13em;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
     }
 
-    .site-nav a:hover,
-    .site-nav a[aria-current="page"] {
-      color: #004f71;
-      text-decoration: underline;
-      text-underline-offset: 6px;
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--navy);
     }
+
+    /* MAIN CONTENT */
 
     main {
-      padding: 75px 24px 110px;
+      padding: 43px 24px 110px;
     }
+
+    /* INTRODUCTION */
 
     .intro {
       max-width: 760px;
@@ -69,17 +96,21 @@
     }
 
     .eyebrow {
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
-      letter-spacing: 0.24em;
+      font-weight: 400;
+      letter-spacing: 2.4px;
       text-transform: uppercase;
     }
 
-    h1 {
-      margin: 25px 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 5vw, 56px);
-      font-weight: normal;
-      letter-spacing: 0.04em;
+    .intro h1 {
+      margin: 18px 0 20px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.2;
+      text-transform: uppercase;
     }
 
     .subtitle {
@@ -87,11 +118,14 @@
       font-size: 19px;
       font-style: italic;
       line-height: 1.7;
+      margin: 0;
     }
+
+    /* PRESENTATION IMAGE */
 
     .image-wrap {
       max-width: 740px;
-      margin: 65px auto;
+      margin: 55px auto 65px;
       text-align: center;
     }
 
@@ -100,6 +134,8 @@
       width: 100%;
       height: auto;
     }
+
+    /* APPOINTMENT CONTENT */
 
     .appointment-content {
       max-width: 610px;
@@ -112,41 +148,53 @@
       font-size: 29px;
       font-weight: normal;
       letter-spacing: 0.04em;
+      margin: 0 0 26px;
     }
 
     .appointment-content p {
-      font-size: 14px;
-      line-height: 2;
-      letter-spacing: 0.02em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      line-height: 1.9;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      margin: 0 0 22px;
     }
+
+    /* APPOINTMENT BUTTON */
 
     .request-button {
       display: inline-block;
-      margin-top: 28px;
+      margin-top: 20px;
       padding: 17px 30px;
-      border: 1px solid #142a46;
-      color: #142a46;
+      border: 1px solid var(--navy);
+      color: var(--navy);
       text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
-      letter-spacing: 0.16em;
+      font-weight: 400;
+      letter-spacing: 1.6px;
       transition: background 0.2s, color 0.2s;
     }
 
     .request-button:hover {
-      background: #142a46;
-      color: white;
+      background: var(--navy);
+      color: #FFFFFF;
     }
+
+    /* SHOWROOM DETAILS */
 
     .details {
       margin-top: 58px;
-      font-size: 12px;
-      line-height: 2;
       color: #647080;
     }
 
     .details p {
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 12px;
       line-height: 1.9;
+      letter-spacing: 0.3px;
+      color: #647080;
+      margin: 0 0 22px;
     }
 
     .details .duration {
@@ -154,64 +202,113 @@
       color: #89919a;
     }
 
-    footer {
+    /* FOOTER */
+
+    .site-footer {
+      background: #FFFFFF;
       padding: 35px 20px;
-      border-top: 1px solid #dededb;
+      border-top: 1px solid var(--line);
       text-align: center;
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
-      letter-spacing: 0.12em;
+      letter-spacing: 1.2px;
       color: #647080;
     }
 
-    @media (max-width: 600px) {
+    /* MOBILE */
+
+    @media (max-width: 700px) {
       .site-header {
-        padding-top: 28px;
+        padding: 22px 15px 16px;
       }
 
-      .site-logo {
-        font-size: 25px;
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
       }
 
-      .site-nav {
-        gap: 14px 18px;
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
       }
 
       main {
-        padding-top: 55px;
+        padding: 35px 22px 75px;
+      }
+
+      .intro h1 {
+        font-size: 28px;
+        letter-spacing: 1.5px;
+      }
+
+      .subtitle {
+        font-size: 17px;
       }
 
       .image-wrap {
-        margin: 45px auto;
+        margin: 45px auto 50px;
+      }
+
+      .appointment-content h2 {
+        font-size: 26px;
+      }
+
+      .appointment-content p {
+        font-size: 14px;
+      }
+
+      .details {
+        margin-top: 48px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="site-logo" href="/">FYRSTERLING</a>
 
-    <nav class="site-nav" aria-label="Main navigation">
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/index.html" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="/collection.html">JEWELLERY</a>
       <a href="/services.html">SERVICES</a>
       <a href="/our-story.html">MAISON</a>
-      <a href="/appointments.html" aria-current="page">APPOINTMENTS</a>
+      <a href="/appointments.html" class="active" aria-current="page">APPOINTMENTS</a>
       <a href="/contact.html">CONTACT</a>
       <a href="/faq.html">FAQ</a>
     </nav>
   </header>
 
   <main>
+
+    <!-- INTRODUCTION -->
+
     <section class="intro">
       <div class="eyebrow">THE FYRSTERLING EXPERIENCE</div>
+
       <h1>PRIVATE APPOINTMENTS</h1>
-      <p class="subtitle">An Invitation to Discover FYRSTERLING</p>
+
+      <p class="subtitle">
+        An Invitation to Discover FYRSTERLING
+      </p>
     </section>
 
+    <!-- SHOWROOM PRESENTATION IMAGE -->
+
     <div class="image-wrap">
-      <img src="/images/Smykkebox.PNG"
-           alt="FYRSTERLING navy blue jewellery presentation box">
+      <img
+        src="/images/Book%20tid.PNG"
+        alt="FYRSTERLING private jewellery presentation"
+      >
     </div>
+
+    <!-- APPOINTMENT INFORMATION -->
 
     <section class="appointment-content">
       <h2>A Personal Invitation</h2>
@@ -235,10 +332,16 @@
         personal experience.
       </p>
 
-      <a class="request-button"
-         href="mailto:info@fyrsterling.com?subject=Private%20Jewellery%20Appointment%20Request">
+      <!-- APPOINTMENT REQUEST -->
+
+      <a
+        class="request-button"
+        href="mailto:info@fyrsterling.com?subject=Private%20Jewellery%20Appointment%20Request"
+      >
         REQUEST AN APPOINTMENT
       </a>
+
+      <!-- SHOWROOM DETAILS -->
 
       <div class="details">
         <p>
@@ -259,10 +362,14 @@
         </p>
       </div>
     </section>
+
   </main>
 
-  <footer>
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
     © FYRSTERLING — THE ART OF ETERNITY
   </footer>
+
 </body>
 </html>
