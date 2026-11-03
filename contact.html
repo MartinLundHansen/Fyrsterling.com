@@ -2,285 +2,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | FYRSTERLING</title>
-  <meta name="description" content="Contact FYRSTERLING for personal jewellery assistance, private showroom appointments and enquiries.">
+<title>Contact Us | FYRSTERLING</title>
+<meta name="description" content="Contact FYRSTERLING for jewellery enquiries, private showroom consultations and personal assistance.">
 
-  <style>
-    :root {
-      --navy: #142a46;
-      --cream: #f7f6f2;
-      --muted: #777777;
-      --line: #e6e3de;
-    }
+<style>
+:root {
+  --navy: #142a46;
+  --cream: #f7f6f2;
+  --text: #555;
+  --line: #e7e5e0;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--navy);
-      font-family: Georgia, "Times New Roman", serif;
-    }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+}
 
-    header {
-      text-align: center;
-      padding: 34px 20px 22px;
-      background: var(--cream);
-      border-bottom: 1px solid var(--line);
-    }
+header {
+  padding: 24px 20px 18px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
 
-    .logo {
-      display: inline-block;
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 30px;
-      letter-spacing: 5px;
-      margin-bottom: 22px;
-    }
+.logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 29px;
+  letter-spacing: 5px;
+  color: var(--navy);
+  text-decoration: none;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
 
-    nav a {
-      color: var(--navy);
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1.6px;
-    }
+nav a {
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.4px;
+  color: var(--navy);
+  text-decoration: none;
+}
 
-    nav a:hover,
-    nav a.active {
-      text-decoration: underline;
-      text-underline-offset: 6px;
-    }
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 
-    .contact-hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1500px;
-      margin: 0 auto;
-      min-height: 480px;
-    }
+/* Compact Cartier-inspired hero */
 
-    .hero-image {
-      overflow: hidden;
-      background: #eae7e1;
-    }
+.contact-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 260px;
+  width: 100%;
+}
 
-    .hero-image img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.hero-image {
+  min-width: 0;
+  overflow: hidden;
+  background: #eae8e4;
+}
 
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 70px 60px;
-    }
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+}
 
-    .eyebrow {
-      font-family: Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px 45px;
+}
 
-    h1 {
-      font-size: clamp(38px, 5vw, 60px);
-      font-weight: normal;
-      letter-spacing: 2px;
-      margin: 24px 0;
-    }
+.hero-text h1 {
+  font: 400 25px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0 0 14px;
+}
 
-    .hero-text p {
-      max-width: 420px;
-      font-size: 16px;
-      line-height: 1.9;
-      color: #555;
-      margin: 0;
-    }
+.hero-text p {
+  max-width: 390px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
 
-    .contact-section {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 100px 35px 110px;
-    }
+/* Contact information */
 
-    .section-heading {
-      text-align: center;
-      margin-bottom: 65px;
-    }
+.contact-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 45px 35px 70px;
+}
 
-    .section-heading h2 {
-      font-size: 34px;
-      font-weight: normal;
-      margin: 0 0 18px;
-    }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 42px 65px;
+}
 
-    .section-heading p {
-      color: #777;
-      font-size: 15px;
-      line-height: 1.8;
-    }
+.contact-item h2 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font: 400 13px Arial, sans-serif;
+  letter-spacing: 2px;
+  margin: 0 0 17px;
+}
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 110px;
-      row-gap: 80px;
-    }
+.contact-icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  stroke: var(--navy);
+  fill: none;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
-    .contact-item {
-      text-align: left;
-    }
+.contact-item p,
+.contact-item address {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.65;
+  font-style: normal;
+}
 
-    .contact-item h3 {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      margin: 0 0 22px;
-    }
+.hours {
+  margin: 10px 0 12px;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.7;
+}
 
-    .contact-item p {
-      color: #666;
-      font-size: 15px;
-      line-height: 1.85;
-      margin: 0 0 17px;
-    }
+.contact-link {
+  display: inline-block;
+  margin-top: 5px;
+  padding-bottom: 3px;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font: 11px Arial, sans-serif;
+  letter-spacing: .5px;
+}
 
-    .hours {
-      margin: 22px 0;
-    }
+.contact-link:hover {
+  opacity: .65;
+}
 
-    .hours-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      border-bottom: 1px solid var(--line);
-      padding: 11px 0;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #555;
-    }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 20px;
+  text-align: center;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1px;
+  line-height: 2;
+}
 
-    .contact-link {
-      display: inline-block;
-      margin-top: 12px;
-      color: var(--navy);
-      text-decoration: none;
-      border-bottom: 1px solid var(--navy);
-      padding-bottom: 5px;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1.2px;
-    }
+footer a {
+  color: var(--navy);
+  text-decoration: none;
+}
 
-    .contact-link:hover {
-      opacity: .65;
-    }
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
 
-    .address {
-      font-style: normal;
-      font-size: 15px;
-      line-height: 1.9;
-      color: #555;
-      margin: 20px 0;
-    }
+  .hero-text {
+    padding: 20px 25px;
+  }
+}
 
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 38px 20px;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 1px;
-      line-height: 2;
-    }
+@media (max-width: 600px) {
+  header {
+    padding: 22px 12px 16px;
+  }
 
-    footer a {
-      color: var(--navy);
-      text-decoration: none;
-    }
+  .logo {
+    font-size: 23px;
+    letter-spacing: 3px;
+  }
 
-    @media (max-width: 800px) {
-      .contact-hero {
-        grid-template-columns: 1fr;
-      }
+  nav {
+    gap: 13px;
+  }
 
-      .hero-image {
-        height: 420px;
-      }
+  nav a {
+    font-size: 9px;
+  }
 
-      .hero-text {
-        padding: 65px 25px;
-      }
+  .contact-hero {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
 
-      .contact-grid {
-        column-gap: 45px;
-      }
-    }
+  .hero-image {
+    height: 205px;
+  }
 
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 24px;
-        letter-spacing: 3px;
-      }
+  .hero-text {
+    padding: 35px 25px;
+  }
 
-      nav {
-        gap: 14px;
-      }
+  .hero-text h1 {
+    font-size: 23px;
+  }
 
-      nav a {
-        font-size: 10px;
-      }
+  .hero-text p {
+    font-size: 13px;
+  }
 
-      .hero-image {
-        height: 320px;
-      }
+  .contact-section {
+    padding: 38px 25px 55px;
+  }
 
-      .hero-text {
-        padding: 55px 24px;
-      }
-
-      .contact-section {
-        padding: 65px 25px 80px;
-      }
-
-      .section-heading {
-        margin-bottom: 50px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-        row-gap: 55px;
-      }
-    }
-  </style>
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="logo" href="/index.html">FYRSTERLING</a>
+  <a href="/index.html" class="logo">FYRSTERLING</a>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="/collection.html">JEWELLERY</a>
     <a href="/services.html">SERVICES</a>
     <a href="/our-story.html">MAISON</a>
@@ -292,7 +264,6 @@
 
 <main>
 
-  <!-- CONTACT HERO -->
   <section class="contact-hero">
 
     <div class="hero-image">
@@ -302,103 +273,67 @@
     </div>
 
     <div class="hero-text">
-      <span class="eyebrow">THE FYRSTERLING EXPERIENCE</span>
-      <h1>Contact Us</h1>
+      <h1>CONTACT US</h1>
       <p>
-        We welcome your enquiries about our jewellery,
-        private consultations and services.
-        Whether you are seeking personal guidance
-        or assistance with a FYRSTERLING creation,
-        we are here to help.
+        Whether you have an enquiry about our jewellery,
+        require assistance with a purchase or wish to
+        arrange a private consultation, we are delighted
+        to assist you.
       </p>
     </div>
 
   </section>
 
-  <!-- CONTACT OPTIONS -->
   <section class="contact-section">
-
-    <div class="section-heading">
-      <h2>How May We Assist You?</h2>
-      <p>
-        We look forward to hearing from you.
-      </p>
-    </div>
-
     <div class="contact-grid">
 
       <!-- CALL US -->
       <article class="contact-item">
-        <h3>CALL US</h3>
+        <h2>
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L8.1 11a16 16 0 0 0 4.9 4.9l1.5-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2z"/>
+          </svg>
+          CALL US
+        </h2>
 
         <p>
           For personal assistance with our jewellery,
-          services or your purchase, we welcome
-          you to contact us by telephone.
+          services or purchases, please contact us by telephone.
         </p>
 
         <div class="hours">
-          <div class="hours-row">
-            <span>Monday – Friday</span>
-            <span>09:00 – 18:00</span>
-          </div>
-
-          <div class="hours-row">
-            <span>Saturday</span>
-            <span>10:00 – 15:00</span>
-          </div>
-
-          <div class="hours-row">
-            <span>Sunday</span>
-            <span>10:00 – 15:00</span>
-          </div>
+          Monday – Friday: 09:00 – 18:00<br>
+          Saturday: 10:00 – 15:00<br>
+          Sunday: 10:00 – 15:00
         </div>
 
         <a class="contact-link" href="tel:+4528345288">
-          +45 28 34 52 88
-        </a>
-      </article>
-
-      <!-- EMAIL US -->
-      <article class="contact-item">
-        <h3>EMAIL US</h3>
-
-        <p>
-          For enquiries regarding our collections,
-          personalisation, purchases or services,
-          we invite you to contact us by email.
-        </p>
-
-        <p>
-          Every enquiry is approached with
-          personal attention and care.
-        </p>
-
-        <a class="contact-link" href="mailto:info@fyrsterling.com">
-          INFO@FYRSTERLING.COM
+          Tel. +45 28 34 52 88
         </a>
       </article>
 
       <!-- VISIT OUR SHOWROOM -->
       <article class="contact-item">
-        <h3>VISIT OUR SHOWROOM</h3>
+        <h2>
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10h18M5 10v10M10 10v10M14 10v10M19 10v10M3 20h18M12 3 2 8v2h20V8z"/>
+          </svg>
+          VISIT OUR SHOWROOM
+        </h2>
 
         <p>
-          Discover FYRSTERLING through a private
-          jewellery consultation at our showroom
-          in Odense.
+          Discover our jewellery through a complimentary
+          private consultation at our showroom in Odense.
         </p>
 
-        <address class="address">
-          FYRSTERLING<br>
+        <address>
           Kildemosevej 13<br>
           5000 Odense C<br>
           Denmark
         </address>
 
         <p>
-          Showroom visits are complimentary
-          and available by confirmed appointment only.
+          Visits are available by confirmed appointment only.
         </p>
 
         <a class="contact-link" href="/appointments.html">
@@ -408,20 +343,44 @@
 
       <!-- HELP -->
       <article class="contact-item">
-        <h3>HELP</h3>
+        <h2>
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 11v6M12 7h.01"/>
+          </svg>
+          HELP
+        </h2>
 
         <p>
-          Looking for further information?
-        </p>
-
-        <p>
-          Explore our frequently asked questions
-          for guidance on FYRSTERLING jewellery,
-          services, appointments and purchases.
+          Do you have a question about our jewellery,
+          services, appointments or purchases?
+          You may find the answer in our frequently
+          asked questions.
         </p>
 
         <a class="contact-link" href="/faq.html">
           EXPLORE FAQ
+        </a>
+      </article>
+
+      <!-- EMAIL US -->
+      <article class="contact-item">
+        <h2>
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 6 10 7 10-7"/>
+          </svg>
+          EMAIL US
+        </h2>
+
+        <p>
+          For enquiries regarding our collections,
+          personalisation or services, we welcome
+          you to contact us by email.
+        </p>
+
+        <a class="contact-link" href="mailto:info@fyrsterling.com">
+          INFO@FYRSTERLING.COM
         </a>
       </article>
 
