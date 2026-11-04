@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AETERNUM Fine Jewellery | FYRSTERLING</title>
+  <meta name="description" content="Discover AETERNUM fine jewellery by FYRSTERLING. Explore timeless rings, necklaces, earrings and bracelets in gold, rose gold and sterling silver.">
+
+  <link rel="canonical" id="canonicalLink" href="https://fyrsterling.com/en/product.html">
+  <link rel="alternate" id="danishAlternate" hreflang="da" href="https://fyrsterling.com/product.html">
+  <link rel="alternate" id="englishAlternate" hreflang="en" href="https://fyrsterling.com/en/product.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --muted: #777777;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER — MATCHES COLLECTION */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
+    }
+
+    /* BACK LINK */
+
+    .back {
+      display: block;
+      max-width: 1200px;
+      margin: 30px auto 0;
+      padding: 0 30px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: var(--navy);
+    }
+
+    /* PRODUCT LAYOUT */
+
+    .product-layout {
+      max-width: 1200px;
+      margin: 35px auto 100px;
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .main-image {
+      background: #f7f7f7;
+      aspect-ratio: 4 / 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .main-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* PRODUCT DETAILS */
+
+    .details h1 {
+      margin: 0 0 18px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.3;
+    }
+
+    .metal {
+      margin: 0 0 30px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .price {
+      margin: 0 0 40px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 17px;
+      color: var(--navy);
+    }
+
+    .variants {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .variant {
+      width: 65px;
+      height: 75px;
+      border: 1px solid #dddddd;
+      cursor: pointer;
+      background: #f7f7f7;
+      padding: 3px;
+      text-decoration: none;
+    }
+
+    .variant.active {
+      border: 1px solid var(--navy);
+    }
+
+    .variant img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .description {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* PURCHASE ENQUIRY */
+
+    .purchase-button,
+    .submit-button {
+      width: 100%;
+      padding: 18px;
+      margin-top: 35px;
+      background: #005A7D;
+      color: #FFFFFF;
+      border: 0;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .purchase-button:hover,
+    .submit-button:hover {
+      background: var(--navy);
+    }
+
+    .purchase-form {
+      margin-top: 30px;
+    }
+
+    .purchase-form[hidden] {
+      display: none;
+    }
+
+    .form-heading {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .form-field {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: 1px solid #dddddd;
+      border-radius: 0;
+      background: #FFFFFF;
+      color: var(--navy);
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .form-field:focus {
+      outline: 1px solid var(--navy);
+    }
+
+    .submit-button {
+      margin-top: 20px;
+    }
+
+    .submit-button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .form-note {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
+      .product-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 20px auto 65px;
+        padding: 0 16px;
+      }
+
+      .back {
+        padding: 0 16px;
+      }
+
+      .details h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/en/" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/en/collection.html" class="active">JEWELLERY</a>
+      <a href="/en/services.html">SERVICES</a>
+      <a href="/en/our-story.html">MAISON</a>
+      <a href="/en/appointments.html">APPOINTMENTS</a>
+      <a href="/en/contact.html">CONTACT</a>
+      <a href="/en/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Choose language">
+        <a href="/product.html" id="danishLink" lang="da">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="#" id="englishLink" lang="en" aria-current="page">EN</a>
+      </span>
+    </nav>
+  </header>
+
+  <!-- BACK TO COLLECTION -->
+
+  <a class="back" href="/en/collection.html">
+    ← BACK TO COLLECTION
+  </a>
+
+  <!-- PRODUCT -->
+
+  <main class="product-layout">
+
+    <div class="main-image">
+      <img id="mainImage" alt="AETERNUM fine jewellery">
+    </div>
+
+    <section class="details">
+      <h1 id="productName"></h1>
+      <p class="metal" id="metalName"></p>
+      <p class="price" id="productPrice"></p>
+
+      <div class="variants" id="variants" aria-label="Available metal options"></div>
+
+      <p class="description">
+        Discover AETERNUM by FYRSTERLING.
+        A timeless expression of elegance,
+        designed to be treasured.
+      </p>
+
+      <!-- PURCHASE BUTTON -->
+
+      <button
+        type="button"
+        class="purchase-button"
+        id="purchaseButton"
+        aria-expanded="false"
+        aria-controls="purchaseForm"
+      >
+        REQUEST TO PURCHASE
+      </button>
+
+      <!-- PURCHASE FORM -->
+
+      <form
+        id="purchaseForm"
+        class="purchase-form"
+        hidden
+        action="https://formspree.io/f/xjyyogbg"
+        method="POST"
+      >
+        <input type="hidden" name="product" id="requestedProduct">
+
+        <p class="form-heading">PURCHASE ENQUIRY</p>
+
+        <input
+          class="form-field"
+          type="text"
+          name="name"
+          placeholder="Full name"
+          aria-label="Full name"
+          autocomplete="name"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="email"
+          name="email"
+          placeholder="Email address"
+          aria-label="Email address"
+          autocomplete="email"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="tel"
+          name="phone"
+          placeholder="Phone number"
+          aria-label="Phone number"
+          autocomplete="tel"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="text"
+          name="address"
+          placeholder="Delivery address"
+          aria-label="Delivery address"
+          autocomplete="street-address"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="text"
+          name="postal_code"
+          placeholder="Postal code"
+          aria-label="Postal code"
+          autocomplete="postal-code"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="text"
+          name="city"
+          placeholder="City"
+          aria-label="City"
+          autocomplete="address-level2"
+          required
+        >
+
+        <button type="submit" class="submit-button">
+          SUBMIT REQUEST
+        </button>
+
+        <p class="form-note">
+          Your purchase enquiry is non-binding.
+          We will contact you with payment details.
+          No payment is collected through this form.
+        </p>
+      </form>
+
+    </section>
+  </main>
+
+  <script>
+    /* PRODUCT PARAMETERS */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const validTypes = [
+      "Ring",
+      "Necklace",
+      "Earrings",
+      "Bracelet"
+    ];
+
+    const validMetals = [
+      "Yellow Gold",
+      "Rose Gold",
+      "Silver"
+    ];
+
+    const type = validTypes.includes(params.get("type"))
+      ? params.get("type")
+      : "Ring";
+
+    const metal = validMetals.includes(params.get("metal"))
+      ? params.get("metal")
+      : "Yellow Gold";
+
+    /* ORIGINAL IMAGE FILENAMES */
+
+    const types = {
+      "Ring": "ring",
+      "Necklace": "halskæde",
+      "Earrings": "øreringe",
+      "Bracelet": "armbånd"
+    };
+
+    const metals = {
+      "Yellow Gold": "Guld",
+      "Rose Gold": "Rose gold",
+      "Silver": "Sølv"
+    };
+
+    /* PRODUCT PRICES */
+
+    const prices = {
+      "Ring": {
+        "Yellow Gold": 9600,
+        "Rose Gold": 9600,
+        "Silver": 3200
+      },
+      "Earrings": {
+        "Yellow Gold": 5200,
+        "Rose Gold": 5200,
+        "Silver": 3000
+      },
+      "Necklace": {
+        "Yellow Gold": 9100,
+        "Rose Gold": 9100,
+        "Silver": 3600
+      },
+      "Bracelet": {
+        "Yellow Gold": 6500,
+        "Rose Gold": 6500,
+        "Silver": 3200
+      }
+    };
+
+    function imagePath(selectedMetal) {
+      const filename = `${metals[selectedMetal]} ${types[type]}.jpeg`;
+      return "/images/" + encodeURIComponent(filename);
+    }
+
+    function productUrl(language, selectedMetal = metal) {
+      const path = language === "en"
+        ? "/en/product.html"
+        : "/product.html";
+
+      const query = new URLSearchParams({
+        type: type,
+        metal: selectedMetal
+      });
+
+      return path + "?" + query.toString();
+    }
+
+    /* PRODUCT CONTENT */
+
+    document.getElementById("productName").textContent =
+      "AETERNUM " + type.toUpperCase();
+
+    document.getElementById("metalName").textContent = metal;
+
+    document.getElementById("productPrice").textContent =
+      prices[type][metal].toLocaleString("da-DK") + " DKK";
+
+    document.getElementById("requestedProduct").value =
+      "AETERNUM " + type.toUpperCase() + " – " + metal;
+
+    const mainImage = document.getElementById("mainImage");
+    mainImage.src = imagePath(metal);
+    mainImage.alt = "AETERNUM " + type + " – " + metal;
+
+    /* LANGUAGE LINKS */
+
+    document.getElementById("danishLink").href = productUrl("da");
+    document.getElementById("englishLink").href = productUrl("en");
+
+    /* SEO LINKS */
+
+    const origin = "https://fyrsterling.com";
+
+    document.getElementById("canonicalLink").href =
+      origin + productUrl("en");
+
+    document.getElementById("danishAlternate").href =
+      origin + productUrl("da");
+
+    document.getElementById("englishAlternate").href =
+      origin + productUrl("en");
+
+    document.title =
+      "AETERNUM " + type + " – " + metal + " | FYRSTERLING";
+
+    /* METAL VARIANTS */
+
+    const variantsContainer = document.getElementById("variants");
+
+    validMetals.forEach(selectedMetal => {
+      const link = document.createElement("a");
+      link.className = "variant" +
+        (selectedMetal === metal ? " active" : "");
+
+      link.href = productUrl("en", selectedMetal);
+      link.title = selectedMetal;
+      link.setAttribute("aria-label", selectedMetal);
+
+      if (selectedMetal === metal) {
+        link.setAttribute("aria-current", "page");
+      }
+
+      const image = document.createElement("img");
+      image.src = imagePath(selectedMetal);
+      image.alt = selectedMetal;
+
+      link.appendChild(image);
+      variantsContainer.appendChild(link);
+    });
+
+    /* SHOW PURCHASE FORM */
+
+    const purchaseButton = document.getElementById("purchaseButton");
+    const purchaseForm = document.getElementById("purchaseForm");
+
+    purchaseButton.addEventListener("click", () => {
+      purchaseForm.hidden = false;
+      purchaseButton.setAttribute("aria-expanded", "true");
+    });
+
+    /* SEND PURCHASE ENQUIRY */
+
+    purchaseForm.addEventListener("submit", async event => {
+      event.preventDefault();
+
+      const button = purchaseForm.querySelector(
+        'button[type="submit"]'
+      );
+
+      button.disabled = true;
+      button.textContent = "SENDING...";
+
+      try {
+        const response = await fetch(purchaseForm.action, {
+          method: "POST",
+          body: new FormData(purchaseForm),
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Submission failed");
+        }
+
+        window.location.href = "/en/thank-you.html";
+
+      } catch (error) {
+        alert("Your enquiry could not be sent. Please try again.");
+        button.disabled = false;
+        button.textContent = "SUBMIT REQUEST";
+      }
+    });
+  </script>
+
+</body>
+</html>
