@@ -1,13 +1,17 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="Discover Maison FYRSTERLING, the vision of founder Mie Fyrsterling and the story behind AETERNUM fine jewellery.">
+  <meta name="description" content="Oplev MAISON FYRSTERLING, historien om grundlægger Mie Fyrsterling og visionen bag smykkekollektionen AETERNUM.">
+  <title>MAISON FYRSTERLING | Kunsten at skabe noget evigt</title>
 
-  <title>MAISON FYRSTERLING | The Art of Eternity</title>
+  <link rel="canonical" href="https://fyrsterling.com/our-story.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/our-story.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/our-story.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/our-story.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +45,7 @@
       color: inherit;
     }
 
-    /* HEADER — SAME AS OTHER PAGES */
+    /* HEADER */
 
     .site-header {
       background: #FFFFFF;
@@ -63,6 +67,7 @@
     .main-nav {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       gap: 27px;
     }
@@ -81,7 +86,32 @@
       border-bottom: 1px solid var(--ink);
     }
 
-    /* MAIN CONTENT */
+    /* SPROGVALG */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .language-divider {
+      color: #999999;
+    }
+
+    /* HOVEDINDHOLD */
 
     main {
       max-width: 1140px;
@@ -89,7 +119,7 @@
       margin: auto;
     }
 
-    /* PAGE HEADING */
+    /* SIDEOVERSKRIFT */
 
     .hero {
       text-align: center;
@@ -113,7 +143,7 @@
       color: #526174;
     }
 
-    /* CHAPTERS */
+    /* KAPITLER */
 
     .chapter {
       margin: 85px 0 32px;
@@ -153,7 +183,7 @@
       font-weight: bold;
     }
 
-    /* FOUNDER INTRODUCTION */
+    /* GRUNDLÆGGER */
 
     .intro {
       display: grid;
@@ -183,7 +213,7 @@
       object-position: center top;
     }
 
-    /* CLINIC SECTION */
+    /* CLINIC */
 
     .clinic-layout {
       display: block;
@@ -223,7 +253,7 @@
       margin: 14px 0 0;
     }
 
-    /* BLUE STATEMENT */
+    /* BLÅT CITATFELT */
 
     .blue-box {
       background: var(--blue);
@@ -246,7 +276,7 @@
       margin: 0;
     }
 
-    /* IMAGES */
+    /* BILLEDER */
 
     .product-photo {
       width: 100%;
@@ -264,7 +294,7 @@
       margin: 50px auto 60px;
     }
 
-    /* AETERNUM MEANINGS */
+    /* AETERNUM BETYDNINGER */
 
     .meaning {
       margin-bottom: 28px;
@@ -275,22 +305,7 @@
       margin-bottom: 3px;
     }
 
-    /* ENDING */
-
-    .ending {
-      text-align: center;
-      margin-top: 42px;
-    }
-
-    .ending p {
-      font-size: 19px;
-      line-height: 1.85;
-    }
-
-    .ending .last-line {
-      font-size: 23px;
-      font-weight: bold;
-    }
+    /* AFSLUTNING */
 
     .signature {
       text-align: center;
@@ -306,7 +321,7 @@
       font-size: 18px;
     }
 
-    /* MOBILE */
+    /* MOBIL */
 
     @media (max-width: 760px) {
       .site-header {
@@ -325,6 +340,11 @@
       .main-nav a {
         font-size: 10px;
         letter-spacing: 0.7px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
       }
 
       main {
@@ -373,10 +393,6 @@
         margin: 45px auto 55px;
       }
 
-      .clinic-side img {
-        height: auto;
-      }
-
       .clinic-note {
         padding: 30px 22px;
       }
@@ -402,222 +418,230 @@
   <!-- HEADER -->
 
   <header class="site-header">
-    <a href="/index.html" class="logo">FYRSTERLING</a>
+    <a href="/" class="logo">FYRSTERLING</a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/collection.html">JEWELLERY</a>
+    <nav class="main-nav" aria-label="Hovednavigation">
+      <a href="/collection.html">SMYKKER</a>
       <a href="/services.html">SERVICES</a>
       <a href="/our-story.html" class="active" aria-current="page">MAISON</a>
-      <a href="/appointments.html">APPOINTMENTS</a>
-      <a href="/contact.html">CONTACT</a>
+      <a href="/appointments.html">BOOK TID</a>
+      <a href="/contact.html">KONTAKT</a>
       <a href="/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Vælg sprog">
+        <a href="/our-story.html" lang="da" aria-current="page">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/our-story.html" lang="en">EN</a>
+      </span>
     </nav>
   </header>
 
   <main>
 
-    <!-- MAISON INTRODUCTION -->
+    <!-- MAISON INTRODUKTION -->
 
     <section class="hero">
       <h1>MAISON FYRSTERLING</h1>
-      <p>An uncompromising pursuit of beauty.</p>
+      <p>En kompromisløs stræben efter skønhed.</p>
     </section>
 
-    <!-- CHAPTER I -->
+    <!-- KAPITEL I -->
 
     <section class="intro">
       <div class="editorial-copy">
         <div class="chapter">
-          <span class="chapter-number">CHAPTER I</span>
-          <h2>The Woman Behind FYRSTERLING</h2>
+          <span class="chapter-number">KAPITEL I</span>
+          <h2>Kvinden bag FYRSTERLING</h2>
         </div>
 
-        <p>For as long as she can remember, Mie Fyrsterling has been drawn to beauty, aesthetics and the art of creating.</p>
+        <p>Så længe Mie Fyrsterling kan huske, har hun været draget af skønhed, æstetik og glæden ved at skabe.</p>
 
-        <p>From an early age, she developed a deep appreciation for dressing with elegance, wearing beautiful, carefully crafted jewellery and caring for the skin. To Mie, these were never simply matters of appearance. They were expressions of individuality, confidence and the quiet power of feeling beautiful in one's own skin.</p>
+        <p>Allerede fra en tidlig alder udviklede hun en dyb kærlighed til at klæde sig elegant, bære smukke og omhyggeligt fremstillede smykker og pleje sin hud. For Mie handlede det aldrig blot om det ydre. Det var et udtryk for individualitet, selvtillid og den stille styrke, der ligger i at føle sig smuk og godt tilpas i sin egen hud.</p>
 
-        <p>Her fascination with aesthetics would eventually become the foundation of something much greater.</p>
+        <p>Hendes fascination af æstetik skulle med tiden blive fundamentet for noget langt større.</p>
       </div>
 
       <img
         class="photo portrait"
         src="/images/Billede%20Mie.jpg"
-        alt="Mie Fyrsterling, founder of FYRSTERLING"
+        alt="Mie Fyrsterling, grundlægger af FYRSTERLING"
         loading="eager"
       >
     </section>
 
-    <!-- CHAPTER II -->
+    <!-- KAPITEL II -->
 
     <section>
       <div class="chapter">
-        <span class="chapter-number">CHAPTER II</span>
-        <h2>The Beginning of a Universe</h2>
+        <span class="chapter-number">KAPITEL II</span>
+        <h2>Begyndelsen på et univers</h2>
       </div>
 
       <div class="prose">
-        <p>In 2024, Mie founded FYRSTERLING Clinic — the first chapter in what she envisioned as the FYRSTERLING universe.</p>
+        <p>I 2024 grundlagde Mie FYRSTERLING Clinic – det første kapitel i det, hun forestillede sig som FYRSTERLING-universet.</p>
 
-        <p>From the very beginning, her ambition was clear: nothing less than exceptional would do.</p>
+        <p>Fra begyndelsen var hendes ambition klar: Kun det ekstraordinære var godt nok.</p>
 
-        <p>The finest products.<br>
-        Beautiful, thoughtfully curated surroundings.<br>
-        And above all, an extraordinary level of personal service.</p>
+        <p>
+          De fineste produkter.<br>
+          Smukke og nøje gennemtænkte omgivelser.<br>
+          Og frem for alt en helt særlig grad af personlig service.
+        </p>
 
-        <p>As FYRSTERLING Clinic flourished and gradually expanded, one thing remained unchanged: the attention, care and personal experience offered to every individual who walked through its doors.</p>
+        <p>Efterhånden som FYRSTERLING Clinic voksede og gradvist udvidede sig, forblev én ting uændret: Den opmærksomhed, omsorg og personlige oplevelse, som blev tilbudt hvert eneste menneske, der trådte ind ad døren.</p>
       </div>
 
       <div class="clinic-layout">
         <div class="clinic-side">
           <div class="clinic-note">
-            <span class="eyebrow">THE FYRSTERLING PHILOSOPHY</span>
-            <p>Beauty in Every Detail</p>
+            <span class="eyebrow">FYRSTERLING-FILOSOFIEN</span>
+            <p>Skønhed i hver eneste detalje</p>
           </div>
 
           <img
             src="/images/sygeplejerske-vurderer-kundens-hud.jpg"
-            alt="Personal consultation at FYRSTERLING Clinic"
+            alt="Personlig konsultation hos FYRSTERLING Clinic"
             loading="lazy"
           >
         </div>
       </div>
 
       <div class="prose">
-        <p>For Mie, true luxury has never been about appearances alone. It is about how something makes you feel, the thought behind every decision and the details that others might never notice.</p>
+        <p>For Mie har ægte luksus aldrig kun handlet om det ydre. Det handler om, hvordan noget får dig til at føle, omtanken bag enhver beslutning og de detaljer, som andre måske aldrig lægger mærke til.</p>
 
-        <p>Because excellence is rarely found in the obvious. It lives in the smallest details.</p>
+        <p>For det ekstraordinære findes sjældent i det åbenlyse. Det findes i de mindste detaljer.</p>
 
-        <p>And when it comes to those details, Mie is a perfectionist.</p>
+        <p>Og når det gælder detaljerne, er Mie perfektionist.</p>
       </div>
     </section>
 
-    <!-- CHAPTER III -->
+    <!-- KAPITEL III -->
 
     <section>
       <div class="chapter">
-        <span class="chapter-number">CHAPTER III</span>
-        <h2>A Passion for Jewellery</h2>
+        <span class="chapter-number">KAPITEL III</span>
+        <h2>En passion for smykker</h2>
       </div>
 
       <div class="prose">
-        <p>With FYRSTERLING Clinic established on a strong foundation, Mie was ready to pursue another lifelong passion: fine jewellery.</p>
+        <p>Med FYRSTERLING Clinic etableret på et solidt fundament var Mie klar til at forfølge endnu en livslang passion: eksklusive smykker.</p>
 
-        <p>Jewellery had always held a special place in her heart. She believed that the pieces we choose to wear reveal something about who we are — our personality, our memories, our relationships and the moments that define us.</p>
+        <p>Smykker havde altid haft en særlig plads i hendes hjerte. Hun troede på, at de smykker, vi vælger at bære, fortæller noget om, hvem vi er – vores personlighed, minder, relationer og de øjeblikke, der former os.</p>
 
-        <p>Yet over the years, she had become increasingly aware of a frustrating reality.</p>
+        <p>Men gennem årene var hun blevet mere og mere opmærksom på en frustrerende virkelighed.</p>
 
-        <p>Even among prestigious luxury houses, she did not always feel that the quality of a piece justified its price.</p>
+        <p>Selv blandt anerkendte luksushuse oplevede hun ikke altid, at kvaliteten af et smykke stod mål med prisen.</p>
 
-        <p>To her, a celebrated name should never be a substitute for exceptional craftsmanship, carefully selected materials and genuine value.</p>
+        <p>For hende burde et berømt navn aldrig kunne erstatte enestående håndværk, nøje udvalgte materialer og reel værdi.</p>
 
-        <p>Luxury should be more than a label.</p>
+        <p>Luksus bør være mere end et navn.</p>
 
-        <p>It should be something you can see, feel and believe in.</p>
+        <p>Det bør være noget, man kan se, mærke og tro på.</p>
 
-        <p>And rather than simply accepting what was available, Mie decided to create something that reflected her own standards.</p>
+        <p>Og frem for blot at acceptere det eksisterende besluttede Mie at skabe noget, der afspejlede hendes egne standarder.</p>
       </div>
 
       <img
         class="product-photo"
         src="/images/Flyvende%20boks.PNG"
-        alt="FYRSTERLING jewellery presentation box"
+        alt="FYRSTERLING smykkeæske"
         loading="lazy"
       >
     </section>
 
-    <!-- CHAPTER IV -->
+    <!-- KAPITEL IV -->
 
     <section>
       <div class="chapter">
-        <span class="chapter-number">CHAPTER IV</span>
-        <h2>The Fascination with Diamonds</h2>
+        <span class="chapter-number">KAPITEL IV</span>
+        <h2>Fascinationen af diamanter</h2>
       </div>
 
       <div class="prose">
-        <p>Diamonds had long represented something extraordinary to Mie.</p>
+        <p>Diamanter havde længe repræsenteret noget helt særligt for Mie.</p>
 
-        <p>Their natural beauty, rarity and remarkable endurance fascinated her. That fascination grew into a deeper passion when she began investing in diamonds and gaining insight into the world behind these exceptional stones.</p>
+        <p>Deres naturlige skønhed, sjældenhed og bemærkelsesværdige holdbarhed fascinerede hende. Denne fascination udviklede sig til en endnu dybere passion, da hun begyndte at investere i diamanter og fik indsigt i verdenen bag disse enestående ædelsten.</p>
 
-        <p>Through the relationships and opportunities that followed, she was able to enter the diamond industry and develop a greater understanding of the qualities that distinguish one diamond from another.</p>
+        <p>Gennem de relationer og muligheder, der fulgte, fik hun adgang til diamantbranchen og opbyggede en større forståelse for de egenskaber, der adskiller én diamant fra en anden.</p>
 
-        <p>It was here that her vision became increasingly clear.</p>
+        <p>Det var her, hendes vision begyndte at tage en stadig tydeligere form.</p>
 
-        <p>She wanted to create fine jewellery where beauty and quality were considered at every stage — from the choice of materials to the final detail.</p>
+        <p>Hun ønskede at skabe eksklusive smykker, hvor skønhed og kvalitet blev tænkt ind i hvert eneste trin – fra valget af materialer til den sidste detalje.</p>
 
-        <p>Pieces that would not simply follow fashion, but transcend it.</p>
+        <p>Smykker, der ikke blot skulle følge moden, men hæve sig over den.</p>
 
-        <p>Jewellery designed to be treasured for a lifetime and, perhaps, passed from one generation to the next.</p>
+        <p>Smykker skabt til at blive værdsat gennem et helt liv og måske gå i arv fra generation til generation.</p>
       </div>
     </section>
 
-    <!-- CHAPTER V -->
+    <!-- KAPITEL V -->
 
     <section>
       <div class="chapter">
-        <span class="chapter-number">CHAPTER V</span>
-        <h2>AETERNUM — A Story Without End</h2>
+        <span class="chapter-number">KAPITEL V</span>
+        <h2>AETERNUM – En fortælling uden ende</h2>
       </div>
 
       <div class="prose">
-        <p>From this vision, AETERNUM was born.</p>
+        <p>Ud af denne vision blev AETERNUM født.</p>
 
-        <p>Derived from Latin and evoking the idea of eternity, AETERNUM represents everything FYRSTERLING believes fine jewellery should embody: enduring beauty, lasting meaning and a connection that reaches beyond the present moment.</p>
+        <p>Navnet er inspireret af latin og vækker tanken om evigheden. AETERNUM repræsenterer alt det, FYRSTERLING mener, at eksklusive smykker bør rumme: tidløs skønhed, varig betydning og en forbindelse, der rækker ud over det øjeblik, vi befinder os i.</p>
 
-        <p>But eternity means something different to each of us.</p>
+        <p>Men evigheden betyder noget forskelligt for os alle.</p>
       </div>
 
       <img
         class="aeternum-photo"
         src="/images/AETERNUM%20kransen.PNG"
-        alt="AETERNUM jewellery by FYRSTERLING"
+        alt="AETERNUM smykker fra FYRSTERLING"
         loading="lazy"
       >
 
       <div class="prose">
-        <p class="meaning"><strong>For some, AETERNUM is love.</strong>A promise between two people. A connection that remains, even as life changes.</p>
+        <p class="meaning"><strong>For nogle er AETERNUM kærlighed.</strong>Et løfte mellem to mennesker. En forbindelse, der består, selv når livet forandrer sig.</p>
 
-        <p class="meaning"><strong>For others, it is strength.</strong>A reminder of the challenges overcome, the courage discovered and the person they have become.</p>
+        <p class="meaning"><strong>For andre er det styrke.</strong>En påmindelse om de udfordringer, man har overvundet, det mod, man har fundet, og det menneske, man er blevet.</p>
 
-        <p class="meaning"><strong>It can represent friendship.</strong>The rare and beautiful bonds that stand the test of time.</p>
+        <p class="meaning"><strong>Det kan repræsentere venskab.</strong>De sjældne og smukke bånd, der holder gennem tidens prøvelser.</p>
 
-        <p class="meaning"><strong>It can symbolise family.</strong>The people, memories and traditions we carry with us through generations.</p>
+        <p class="meaning"><strong>Det kan symbolisere familie.</strong>De mennesker, minder og traditioner, vi bærer med os gennem generationer.</p>
 
-        <p class="meaning"><strong>And sometimes, AETERNUM is simply a promise to oneself.</strong>To remain true to who you are, to celebrate your own journey and to never compromise on what matters most.</p>
+        <p class="meaning"><strong>Og nogle gange er AETERNUM ganske enkelt et løfte til sig selv.</strong>Et løfte om at være tro mod den, man er, fejre sin egen rejse og aldrig gå på kompromis med det, der betyder allermest.</p>
 
-        <p>There is no single interpretation.</p>
+        <p>Der findes ikke én bestemt fortolkning.</p>
 
-        <p>The meaning belongs to the person who wears it.</p>
+        <p>Betydningen tilhører den, der bærer smykket.</p>
       </div>
     </section>
 
-    <!-- CHAPTER VI -->
+    <!-- KAPITEL VI -->
 
     <section>
       <div class="chapter">
-        <span class="chapter-number">CHAPTER VI</span>
-        <h2>Made to Mean More</h2>
+        <span class="chapter-number">KAPITEL VI</span>
+        <h2>Skabt til at betyde mere</h2>
       </div>
 
       <div class="prose">
-        <p>FYRSTERLING was created from a simple conviction: that exceptional jewellery should be exceptional in every sense.</p>
+        <p>FYRSTERLING blev skabt ud fra en enkel overbevisning: at et ekstraordinært smykke bør være ekstraordinært i enhver henseende.</p>
 
-        <p>Not only in its appearance, but in its materials, its craftsmanship, its attention to detail and the experience surrounding it.</p>
+        <p>Ikke kun i sit udtryk, men også i sine materialer, sit håndværk, sin sans for detaljer og den oplevelse, der omgiver det.</p>
 
-        <p>Every piece is guided by Mie's appreciation for timeless design and her belief that true elegance never needs to shout.</p>
+        <p>Hvert smykke er formet af Mies kærlighed til tidløst design og hendes overbevisning om, at ægte elegance aldrig behøver at råbe højt.</p>
 
-        <p>FYRSTERLING is for those who value substance as much as beauty. Those who recognise the difference between something made to be admired for a moment and something made to be cherished for a lifetime.</p>
+        <p>FYRSTERLING er skabt til dem, der værdsætter indhold lige så højt som skønhed. Til dem, der kender forskellen på noget, der er skabt til at blive beundret et øjeblik, og noget, der er skabt til at blive værdsat et helt liv.</p>
 
-        <p>To wear FYRSTERLING is to carry more than a beautiful piece of jewellery.</p>
+        <p>At bære FYRSTERLING er at bære mere end blot et smukt smykke.</p>
 
-        <p>It is to carry a memory, a promise, a feeling or a personal achievement.</p>
+        <p>Det er at bære et minde, et løfte, en følelse eller en personlig sejr.</p>
 
-        <p>Something that reflects who you are.</p>
+        <p>Noget, der afspejler, hvem du er.</p>
 
-        <p>Something you can wear with confidence and pride.</p>
+        <p>Noget, du kan bære med selvtillid og stolthed.</p>
       </div>
 
       <div class="blue-box">
-        <h3>Something beautiful. Something meaningful. Something eternal.</h3>
+        <h3>Noget smukt. Noget betydningsfuldt. Noget evigt.</h3>
       </div>
 
       <div class="signature">FYRSTERLING</div>
