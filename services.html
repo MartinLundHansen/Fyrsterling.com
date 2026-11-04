@@ -1,12 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Services | FYRSTERLING</title>
-  <meta name="description" content="Discover FYRSTERLING jewellery services, including private consultations and personalisation.">
+  <title>Smykkeservices & Personlig Rådgivning | FYRSTERLING</title>
+  <meta name="description" content="Oplev FYRSTERLINGs smykkeservices, herunder personlig smykkerådgivning i vores showroom i Odense og individuel gravering af eksklusive smykker.">
+
+  <link rel="canonical" href="https://fyrsterling.com/services.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/services.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +46,7 @@
       color: inherit;
     }
 
-    /* HEADER — SAME AS CONTACT AND JEWELLERY */
+    /* HEADER */
 
     .site-header {
       background: #FFFFFF;
@@ -63,6 +68,7 @@
     .main-nav {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       gap: 27px;
     }
@@ -79,6 +85,31 @@
     .main-nav a:hover,
     .main-nav a.active {
       border-bottom: 1px solid var(--navy);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
     }
 
     /* INTRODUCTION */
@@ -234,6 +265,15 @@
         letter-spacing: 0.7px;
       }
 
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
       .intro {
         padding: 35px 22px 42px;
       }
@@ -262,15 +302,21 @@
   <!-- HEADER -->
 
   <header class="site-header">
-    <a href="/index.html" class="logo">FYRSTERLING</a>
+    <a href="/" class="logo">FYRSTERLING</a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/collection.html">JEWELLERY</a>
+    <nav class="main-nav" aria-label="Hovednavigation">
+      <a href="/collection.html">SMYKKER</a>
       <a href="/services.html" class="active" aria-current="page">SERVICES</a>
       <a href="/our-story.html">MAISON</a>
-      <a href="/appointments.html">APPOINTMENTS</a>
-      <a href="/contact.html">CONTACT</a>
+      <a href="/appointments.html">BOOK TID</a>
+      <a href="/contact.html">KONTAKT</a>
       <a href="/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Vælg sprog">
+        <a href="/services.html" lang="da" aria-current="page">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/services.html" lang="en">EN</a>
+      </span>
     </nav>
   </header>
 
@@ -279,25 +325,27 @@
     <!-- SERVICES INTRODUCTION -->
 
     <section class="intro">
-      <h1>OUR SERVICES</h1>
+      <h1>VORES SERVICES</h1>
 
       <p>
-        At FYRSTERLING, we believe that fine jewellery is more
-        than a beautiful possession. It is a personal expression,
-        a meaningful connection and something to be treasured
-        for years to come.
+        Hos FYRSTERLING tror vi på, at et smykke er mere
+        end en smuk genstand. Det er et personligt udtryk,
+        en særlig forbindelse og noget, der kan værdsættes
+        gennem generationer.
       </p>
 
       <p>
-        From private consultations and personalisation to
-        jewellery care and thoughtful presentation, our
-        services reflect the attention to detail that defines
-        every FYRSTERLING creation.
+        Fra personlig smykkerådgivning og individuel gravering
+        til vejledning om smykkepleje og den særlige præsentation
+        af vores smykker afspejler vores tilgang den
+        omhu og sans for detaljer, der kendetegner
+        enhver FYRSTERLING-kreation.
       </p>
 
       <p>
-        Discover the care, guidance and personal attention
-        that accompany your FYRSTERLING experience.
+        Oplev den personlige rådgivning, omtanke og
+        opmærksomhed, der er en naturlig del af
+        FYRSTERLING-universet.
       </p>
     </section>
 
@@ -314,23 +362,24 @@
         >
           <img
             src="/images/Book%20tid.PNG"
-            alt="FYRSTERLING private jewellery presentation"
+            alt="Personlig smykkepræsentation hos FYRSTERLING"
             loading="lazy"
           >
         </a>
 
-        <h2>PRIVATE JEWELLERY CONSULTATION</h2>
+        <h2>PERSONLIG SMYKKERÅDGIVNING</h2>
 
         <p>
-          Discover a personal jewellery experience at
-          our FYRSTERLING showroom in Odense.
+          Oplev en personlig præsentation af vores
+          smykker i FYRSTERLINGs private showroom
+          i Odense.
         </p>
 
         <a
           class="find-out"
           href="/services/private-consultation.html"
         >
-          FIND OUT MORE
+          LÆS MERE
         </a>
       </article>
 
@@ -343,23 +392,23 @@
         >
           <img
             src="/images/Personalisation-ring.jpeg"
-            alt="FYRSTERLING ring with personalised date engraving"
+            alt="FYRSTERLING-ring med personlig gravering"
             loading="lazy"
           >
         </a>
 
-        <h2>PERSONALISATION</h2>
+        <h2>PERSONLIG GRAVERING</h2>
 
         <p>
-          Make your FYRSTERLING creation uniquely yours
-          with a meaningful engraving.
+          Gør dit FYRSTERLING-smykke endnu mere
+          personligt med en betydningsfuld gravering.
         </p>
 
         <a
           class="find-out"
           href="/services/personalisation.html"
         >
-          FIND OUT MORE
+          LÆS MERE
         </a>
       </article>
 
@@ -379,7 +428,7 @@
     &nbsp; | &nbsp;
 
     <a href="/terms-and-conditions.html">
-      TERMS &amp; CONDITIONS
+      HANDELSBETINGELSER
     </a>
   </footer>
 
