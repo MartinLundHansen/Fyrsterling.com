@@ -1,0 +1,401 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FYRSTERLING | Fine Jewellery & Diamonds</title>
+
+  <meta name="description" content="Discover FYRSTERLING fine jewellery and the AETERNUM collection. Explore timeless creations in 14-karat gold, sterling silver and lab-grown diamonds.">
+
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="canonical" href="https://fyrsterling.com/en/">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #FFFFFF;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 25px 20px 18px;
+      background: transparent;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .site-logo {
+      display: inline-block;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      margin-bottom: 18px;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .site-nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      padding-bottom: 5px;
+    }
+
+    .site-nav a:hover {
+      border-bottom: 1px solid currentColor;
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid currentColor;
+    }
+
+    .language-divider {
+      opacity: 0.6;
+    }
+
+    /* WHITE HEADER ON HOVER */
+
+    .site-header:hover,
+    .site-header:focus-within {
+      background: #FFFFFF;
+    }
+
+    .site-header:hover .site-logo,
+    .site-header:hover .site-nav a,
+    .site-header:hover .language-switch,
+    .site-header:focus-within .site-logo,
+    .site-header:focus-within .site-nav a,
+    .site-header:focus-within .language-switch {
+      color: var(--navy);
+    }
+
+    /* HERO VIDEO */
+
+    .visual {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+      background: #050505;
+      color: #FFFFFF;
+    }
+
+    .visual video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.14);
+      pointer-events: none;
+    }
+
+    .video-title {
+      position: absolute;
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 90%;
+      margin: 0;
+      text-align: center;
+      color: #FFFFFF;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 54px);
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+
+    .video-explore {
+      position: absolute;
+      left: 50%;
+      bottom: 11%;
+      transform: translateX(-50%);
+      z-index: 2;
+      width: 90%;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .video-explore p {
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .explore-button {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF;
+      background: transparent;
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .explore-button:hover {
+      background: #FFFFFF;
+      color: var(--navy);
+    }
+
+    /* COLLECTION */
+
+    .collection-section {
+      background: #FFFFFF;
+    }
+
+    .collection-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* CONTACT */
+
+    .home-contact {
+      background: #FFFFFF;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .home-contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .home-contact-links a {
+      color: #005A7D;
+      text-decoration: none;
+    }
+
+    .home-contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .site-logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .site-nav {
+        gap: 13px;
+      }
+
+      .site-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
+      .video-title {
+        font-size: 32px;
+      }
+
+      .video-explore p {
+        font-size: 16px;
+      }
+
+      .home-contact {
+        padding: 35px 20px;
+      }
+
+      .home-contact-links {
+        flex-direction: column;
+        gap: 16px;
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .visual video {
+        display: none;
+      }
+
+      .visual {
+        background: #142a46;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/en/" class="site-logo">FYRSTERLING</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/en/collection.html">JEWELLERY</a>
+      <a href="/en/services.html">SERVICES</a>
+      <a href="/en/our-story.html">MAISON</a>
+      <a href="/en/appointments.html">APPOINTMENTS</a>
+      <a href="/en/contact.html">CONTACT</a>
+      <a href="/en/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Choose language">
+        <a href="/" lang="da">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/" lang="en" aria-current="page">EN</a>
+      </span>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <!-- HERO VIDEO -->
+
+    <section class="visual" aria-label="FYRSTERLING fine jewellery">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="/images/Video%20til%20forsiden.MP4" type="video/mp4">
+      </video>
+
+      <h2 class="video-title">The Art of Eternity</h2>
+
+      <div class="video-explore">
+        <p>Discover the collection</p>
+        <a href="/en/collection.html" class="explore-button">
+          EXPLORE
+        </a>
+      </div>
+    </section>
+
+    <!-- AETERNUM COLLECTION -->
+
+    <section id="collection" class="collection-section">
+      <img
+        src="/images/Aeternum.PNG"
+        alt="AETERNUM fine jewellery collection by FYRSTERLING"
+        class="collection-image"
+        loading="lazy"
+      >
+
+      <!-- CONTACT INFORMATION -->
+
+      <div class="home-contact">
+        <div class="home-contact-links">
+
+          <a
+            href="https://www.instagram.com/fyrsterlingofficial/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            INSTAGRAM · @FYRSTERLINGOFFICIAL
+          </a>
+
+          <a href="mailto:info@fyrsterling.com">
+            INFO@FYRSTERLING.COM
+          </a>
+
+          <a href="tel:+4528345288">
+            +45 28 34 52 88
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script
+    type="module"
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token":"35027bd0e6db4377b46dddd2c28e5840"}'>
+  </script>
+
+</body>
+</html>
