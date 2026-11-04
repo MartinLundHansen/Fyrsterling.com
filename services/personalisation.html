@@ -1,30 +1,418 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="da">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Personalise selected FYRSTERLING jewellery pieces with meaningful engraving.">
-<title>Personalisation & Engraving | FYRSTERLING</title>
-<link rel="stylesheet" href="/styles/services.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Personlig Gravering af Smykker | FYRSTERLING</title>
+  <meta name="description" content="Gør dit FYRSTERLING-smykke personligt med en betydningsfuld gravering. Udforsk mulighederne for initialer, datoer og personlige beskeder.">
+
+  <link rel="canonical" href="https://fyrsterling.com/services/personalisation.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services/personalisation.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services/personalisation.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/services/personalisation.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --muted: #777777;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
+    }
+
+    /* BACK LINK */
+
+    .back {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding: 0 30px;
+    }
+
+    .back a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.4px;
+    }
+
+    .back a:hover {
+      color: var(--navy);
+    }
+
+    /* PAGE CONTENT */
+
+    .detail {
+      max-width: 1100px;
+      margin: 55px auto 100px;
+      padding: 0 30px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .eyebrow {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 36px;
+      line-height: 1.25;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .content {
+      max-width: 730px;
+      margin: 70px auto 0;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.95;
+      margin: 0 0 24px;
+      color: var(--text);
+    }
+
+    .content h2 {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 45px 0 18px;
+    }
+
+    .email {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* CONTACT BUTTON */
+
+    .button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 16px 30px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #FFFFFF;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      padding: 28px 20px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.7px;
+      line-height: 2;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .detail {
+        margin: 35px auto 65px;
+        padding: 0 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .content {
+        margin-top: 45px;
+      }
+
+      .content p {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header><a href="/" class="logo">FYRSTERLING</a><nav aria-label="Main navigation"><a href="/collection.html">JEWELLERY</a><a href="/services.html" aria-current="page">SERVICES</a><a href="/our-story.html">MAISON</a><a href="/appointments.html">APPOINTMENTS</a><a href="/contact.html">CONTACT</a><a href="/faq.html">FAQ</a></nav></header>
-<main class="detail-main">
-<a class="breadcrumb" href="/services.html">← ALL SERVICES</a>
-<section class="detail-hero">
-<img src="/images/Personalisation-ring.jpeg" alt="Diamond ring engraved with a meaningful date">
-<div><span class="eyebrow">FYRSTERLING SERVICES</span><h1>Personalisation &amp; Engraving</h1><p class="subtitle">Make It Uniquely Yours</p></div>
-</section>
-<section class="detail-copy">
-<p>Add a personal touch to your FYRSTERLING jewellery with a meaningful engraving.</p>
-<p>Whether initials, a special date or a personal message, engraving offers a beautiful way to make your jewellery truly your own.</p>
-<p>Engraving may be requested at the time of purchase or at a later date, subject to the design and suitability of the piece.</p>
-<p>This service is available at an additional cost, with pricing provided upon request.</p>
-<h2>Enquire About Engraving</h2>
-<p>Contact us at <a class="email" href="mailto:info@fyrsterling.com">info@fyrsterling.com</a> to discuss the possibilities for your FYRSTERLING creation.</p>
-<a class="cta" href="mailto:info@fyrsterling.com?subject=FYRSTERLING%20Engraving%20Enquiry">ENQUIRE ABOUT ENGRAVING</a>
-</section>
-</main>
-<footer>FYRSTERLING &nbsp;·&nbsp; <a href="mailto:info@fyrsterling.com">INFO@FYRSTERLING.COM</a></footer>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Hovednavigation">
+      <a href="/collection.html">SMYKKER</a>
+      <a href="/services.html" class="active">SERVICES</a>
+      <a href="/our-story.html">MAISON</a>
+      <a href="/appointments.html">BOOK TID</a>
+      <a href="/contact.html">KONTAKT</a>
+      <a href="/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Vælg sprog">
+        <a href="/services/personalisation.html" lang="da" aria-current="page">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/services/personalisation.html" lang="en">EN</a>
+      </span>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- TILBAGE TIL SERVICES -->
+
+    <div class="back">
+      <a href="/services.html">
+        &larr; ALLE SERVICES
+      </a>
+    </div>
+
+    <article class="detail">
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <img
+          src="/images/Personalisation-ring.jpeg"
+          alt="FYRSTERLING diamantring med personlig gravering"
+        >
+
+        <div>
+          <span class="eyebrow">FYRSTERLING SERVICES</span>
+
+          <h1>Personlig Gravering</h1>
+
+          <div class="subtitle">
+            Gør dit smykke helt personligt
+          </div>
+        </div>
+
+      </section>
+
+      <!-- INDHOLD -->
+
+      <section class="content">
+
+        <p>
+          Giv dit FYRSTERLING-smykke et personligt
+          præg med en betydningsfuld gravering.
+        </p>
+
+        <p>
+          Uanset om det er initialer, en særlig dato
+          eller en personlig besked, er gravering
+          en smuk måde at gøre dit smykke
+          helt unikt.
+        </p>
+
+        <p>
+          Gravering kan bestilles i forbindelse med
+          køb eller på et senere tidspunkt,
+          afhængigt af smykkets design og
+          egnethed til gravering.
+        </p>
+
+        <p>
+          Gravering tilbydes mod et tillæg,
+          og prisen oplyses efter forespørgsel.
+        </p>
+
+        <h2>Forespørgsel om Gravering</h2>
+
+        <p>
+          Kontakt os på
+          <a class="email" href="mailto:info@fyrsterling.com">
+            info@fyrsterling.com
+          </a>
+          for at høre mere om mulighederne
+          for at personliggøre dit FYRSTERLING-smykke.
+        </p>
+
+        <a
+          class="button"
+          href="mailto:info@fyrsterling.com?subject=Foresp%C3%B8rgsel%20om%20gravering%20-%20FYRSTERLING"
+        >
+          FORESPØRG OM GRAVERING
+        </a>
+
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    FYRSTERLING &nbsp; | &nbsp;
+
+    <a href="mailto:info@fyrsterling.com">
+      INFO@FYRSTERLING.COM
+    </a>
+  </footer>
+
 </body>
 </html>
