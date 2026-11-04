@@ -1,721 +1,801 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fine Jewellery FAQ | Diamonds &amp; Gold | FYRSTERLING</title>
+<title>Ofte stillede spørgsmål | FYRSTERLING</title>
+<meta name="description" content="Find svar på spørgsmål om FYRSTERLING smykker, laboratoriedyrkede diamanter, 14 karat guld, gravering, smykkepleje, levering og private showroomaftaler.">
 
-  <meta name="description" content="Discover answers about FYRSTERLING fine jewellery, lab-grown diamonds, 14-karat gold, engraving, jewellery care and private showroom appointments in Odense.">
+<link rel="canonical" href="https://fyrsterling.com/faq.html">
+<link rel="alternate" hreflang="da" href="https://fyrsterling.com/faq.html">
+<link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/faq.html">
+<link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/faq.html">
 
-  <link rel="canonical" href="https://fyrsterling.com/faq.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #142a46;
+  --white: #FFFFFF;
+  --text: #4a4a4a;
+  --line: #e8e8e8;
+}
 
-  <style>
-    :root {
-      --navy: #142a46;
-      --white: #FFFFFF;
-      --text: #4a4a4a;
-      --muted: #777777;
-      --line: #e8e8e8;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-    body {
-      margin: 0;
-      background: var(--white);
-      color: var(--navy);
-      font-family: Georgia, "Times New Roman", serif;
-      -webkit-font-smoothing: antialiased;
-    }
+a {
+  color: inherit;
+}
 
-    a {
-      color: inherit;
-    }
+/* HEADER */
 
-    /* HEADER */
+.site-header {
+  background: #FFFFFF;
+  text-align: center;
+  padding: 25px 20px 18px;
+  border-bottom: 1px solid var(--line);
+}
 
-    .site-header {
-      background: #FFFFFF;
-      text-align: center;
-      padding: 25px 20px 18px;
-      border-bottom: 1px solid var(--line);
-    }
+.logo {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
 
-    .logo {
-      display: inline-block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 29px;
-      font-weight: normal;
-      letter-spacing: 5px;
-      text-decoration: none;
-      margin-bottom: 18px;
-    }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 27px;
+}
 
-    .main-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 27px;
-    }
+.main-nav a {
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
 
-    .main-nav a {
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 1.4px;
-      text-decoration: none;
-      padding-bottom: 5px;
-    }
+.main-nav a:hover,
+.main-nav a.active {
+  border-bottom: 1px solid var(--navy);
+}
 
-    .main-nav a:hover,
-    .main-nav a.active {
-      border-bottom: 1px solid var(--navy);
-    }
+/* SPROGVALG */
 
-    /* PAGE INTRO */
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: 10px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
 
-    .faq-intro {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 43px 24px 48px;
-      text-align: center;
-    }
+.language-switch a {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
 
-    .faq-intro h1 {
-      margin: 0 0 23px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 36px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      line-height: 1.25;
-    }
+.language-switch a[aria-current="page"] {
+  border-bottom: 1px solid var(--navy);
+}
 
-    .faq-intro p {
-      max-width: 650px;
-      margin: 0 auto;
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.9;
-    }
+.language-divider {
+  color: #999999;
+}
 
-    /* FAQ CONTENT */
+/* INTRODUKTION */
 
-    .faq-container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 0 25px 95px;
-    }
+.faq-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 43px 24px 48px;
+  text-align: center;
+}
 
-    .faq-category {
-      margin-bottom: 54px;
-    }
+.faq-intro h1 {
+  margin: 0 0 23px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.25;
+}
 
-    .faq-category h2 {
-      margin: 0 0 20px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: 1.6px;
-      line-height: 1.5;
-      text-transform: uppercase;
-    }
+.faq-intro p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.9;
+}
 
-    .faq-item {
-      border-bottom: 1px solid var(--line);
-    }
+/* FAQ */
 
-    .faq-item:first-of-type {
-      border-top: 1px solid var(--line);
-    }
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 25px 95px;
+}
 
-    .faq-item summary {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 21px 0;
-      cursor: pointer;
-      list-style: none;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 400;
-      letter-spacing: 0.2px;
-      line-height: 1.6;
-    }
+.faq-category {
+  margin-bottom: 54px;
+}
 
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
+.faq-category h2 {
+  margin: 0 0 20px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
 
-    .faq-item summary::after {
-      content: "+";
-      flex-shrink: 0;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 23px;
-      font-weight: 300;
-      line-height: 1;
-    }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
 
-    .faq-item[open] summary::after {
-      content: "−";
-    }
+.faq-item:first-of-type {
+  border-top: 1px solid var(--line);
+}
 
-    .faq-item summary:hover {
-      color: #004f71;
-    }
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 21px 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
+}
 
-    .faq-item summary:focus-visible {
-      outline: 2px solid var(--navy);
-      outline-offset: 4px;
-    }
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
 
-    .faq-answer {
-      padding: 0 38px 24px 0;
-    }
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1;
+}
 
-    .faq-answer p {
-      margin: 0;
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.9;
-    }
+.faq-item[open] summary::after {
+  content: "−";
+}
 
-    .faq-answer a {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+.faq-item summary:hover {
+  color: #004f71;
+}
 
-    .faq-answer a:hover {
-      color: #004f71;
-    }
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 4px;
+}
 
-    /* CONTACT SECTION */
+.faq-answer {
+  padding: 0 38px 24px 0;
+}
 
-    .faq-contact {
-      max-width: 800px;
-      margin: 0 auto 85px;
-      padding: 43px 24px;
-      text-align: center;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
+.faq-answer p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
 
-    .faq-contact h2 {
-      margin: 0 0 17px;
-      font-size: 27px;
-      font-weight: normal;
-    }
+.faq-answer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
-    .faq-contact p {
-      margin: 0 auto 25px;
-      max-width: 520px;
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.9;
-    }
+.faq-answer a:hover {
+  color: #004f71;
+}
 
-    .contact-button {
-      display: inline-block;
-      padding: 15px 29px;
-      border: 1px solid var(--navy);
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1.4px;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
+/* KONTAKTSEKTION */
 
-    .contact-button:hover {
-      background: var(--navy);
-      color: #FFFFFF;
-    }
+.faq-contact {
+  max-width: 800px;
+  margin: 0 auto 85px;
+  padding: 43px 24px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
-    /* FOOTER */
+.faq-contact h2 {
+  margin: 0 0 17px;
+  font-size: 27px;
+  font-weight: normal;
+}
 
-    .site-footer {
-      background: #FFFFFF;
-      border-top: 1px solid var(--line);
-      padding: 30px 20px;
-      text-align: center;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.7px;
-      line-height: 2;
-    }
+.faq-contact p {
+  margin: 0 auto 25px;
+  max-width: 520px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
 
-    .site-footer a {
-      text-decoration: none;
-    }
+.contact-button {
+  display: inline-block;
+  padding: 15px 29px;
+  border: 1px solid var(--navy);
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
 
-    .site-footer a:hover {
-      text-decoration: underline;
-    }
+.contact-button:hover {
+  background: var(--navy);
+  color: #FFFFFF;
+}
 
-    /* MOBILE */
+/* FOOTER */
 
-    @media (max-width: 700px) {
-      .site-header {
-        padding: 22px 15px 16px;
-      }
+.site-footer {
+  background: #FFFFFF;
+  border-top: 1px solid var(--line);
+  padding: 30px 20px;
+  text-align: center;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  line-height: 2;
+}
 
-      .logo {
-        font-size: 24px;
-        letter-spacing: 3px;
-      }
+.site-footer a {
+  text-decoration: none;
+}
 
-      .main-nav {
-        gap: 13px;
-      }
+.site-footer a:hover {
+  text-decoration: underline;
+}
 
-      .main-nav a {
-        font-size: 10px;
-        letter-spacing: 0.7px;
-      }
+/* MOBIL */
 
-      .faq-intro {
-        padding: 35px 22px 40px;
-      }
+@media (max-width: 700px) {
+  .site-header {
+    padding: 22px 15px 16px;
+  }
 
-      .faq-intro h1 {
-        font-size: 28px;
-        letter-spacing: 1.5px;
-      }
+  .logo {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
 
-      .faq-intro p {
-        font-size: 14px;
-      }
+  .main-nav {
+    gap: 13px;
+  }
 
-      .faq-container {
-        padding: 0 22px 65px;
-      }
+  .main-nav a {
+    font-size: 10px;
+    letter-spacing: 0.7px;
+  }
 
-      .faq-category {
-        margin-bottom: 45px;
-      }
+  .language-switch {
+    margin-left: 3px;
+    gap: 7px;
+  }
 
-      .faq-category h2 {
-        font-size: 14px;
-      }
+  .language-switch a {
+    font-size: 10px;
+  }
 
-      .faq-item summary {
-        font-size: 14px;
-        padding: 19px 0;
-      }
+  .faq-intro {
+    padding: 35px 22px 40px;
+  }
 
-      .faq-answer {
-        padding-right: 18px;
-      }
+  .faq-intro h1 {
+    font-size: 28px;
+    letter-spacing: 1.5px;
+  }
 
-      .faq-answer p {
-        font-size: 13px;
-      }
+  .faq-intro p {
+    font-size: 14px;
+  }
 
-      .faq-contact {
-        margin: 0 22px 65px;
-        padding: 38px 12px;
-      }
+  .faq-container {
+    padding: 0 22px 65px;
+  }
 
-      .faq-contact h2 {
-        font-size: 24px;
-      }
-    }
-  </style>
+  .faq-category {
+    margin-bottom: 45px;
+  }
+
+  .faq-category h2 {
+    font-size: 14px;
+  }
+
+  .faq-item summary {
+    font-size: 14px;
+    padding: 19px 0;
+  }
+
+  .faq-answer {
+    padding-right: 18px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+  }
+
+  .faq-contact {
+    margin: 0 22px 65px;
+    padding: 38px 12px;
+  }
+
+  .faq-contact h2 {
+    font-size: 24px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<!-- HEADER -->
 
-  <header class="site-header">
-    <a href="/index.html" class="logo">FYRSTERLING</a>
+<header class="site-header">
+  <a href="/" class="logo">FYRSTERLING</a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/collection.html">JEWELLERY</a>
-      <a href="/services.html">SERVICES</a>
-      <a href="/our-story.html">MAISON</a>
-      <a href="/appointments.html">APPOINTMENTS</a>
-      <a href="/contact.html">CONTACT</a>
-      <a href="/faq.html" class="active" aria-current="page">FAQ</a>
-    </nav>
-  </header>
+  <nav class="main-nav" aria-label="Hovednavigation">
+    <a href="/collection.html">SMYKKER</a>
+    <a href="/services.html">SERVICES</a>
+    <a href="/our-story.html">MAISON</a>
+    <a href="/appointments.html">BOOK TID</a>
+    <a href="/contact.html">KONTAKT</a>
+    <a href="/faq.html" class="active" aria-current="page">FAQ</a>
 
-  <main>
+    <span class="language-switch" aria-label="Vælg sprog">
+      <a href="/faq.html" lang="da" aria-current="page">DA</a>
+      <span class="language-divider" aria-hidden="true">|</span>
+      <a href="/en/faq.html" lang="en">EN</a>
+    </span>
+  </nav>
+</header>
 
-    <!-- INTRODUCTION -->
+<main>
 
-    <section class="faq-intro">
-      <h1>FREQUENTLY ASKED QUESTIONS</h1>
+<!-- INTRODUKTION -->
 
-      <p>
-        Explore answers to frequently asked questions about
-        FYRSTERLING fine jewellery, diamonds, materials,
-        personalisation and our private showroom experience.
-      </p>
-    </section>
+<section class="faq-intro">
+  <h1>OFTE STILLEDE SPØRGSMÅL</h1>
 
-    <div class="faq-container">
+  <p>
+    Find svar på spørgsmål om FYRSTERLINGs smykker,
+    diamanter, materialer, personlig gravering
+    og vores private showroomoplevelse.
+  </p>
+</section>
 
-      <!-- CATEGORY 1 -->
+<div class="faq-container">
 
-      <section class="faq-category">
-        <h2>Our Jewellery &amp; Diamonds</h2>
+<!-- KATEGORI 1 -->
 
-        <details class="faq-item">
-          <summary>What materials are used in FYRSTERLING jewellery?</summary>
-          <div class="faq-answer">
-            <p>
-              FYRSTERLING fine jewellery is crafted using carefully
-              selected precious materials. Our gold and rose gold
-              creations are made from solid 14-karat gold, while
-              our silver jewellery is crafted from 925 sterling
-              silver with rhodium plating for enhanced brilliance.
-              Our diamond jewellery features lab-grown diamonds.
-            </p>
-          </div>
-        </details>
+<section class="faq-category">
+<h2>Vores smykker &amp; diamanter</h2>
 
-        <details class="faq-item">
-          <summary>Are FYRSTERLING diamonds real diamonds?</summary>
-          <div class="faq-answer">
-            <p>
-              Yes. FYRSTERLING uses lab-grown diamonds, which are
-              real diamonds with the same chemical composition,
-              crystal structure and optical properties as natural
-              mined diamonds. The difference lies in their origin:
-              lab-grown diamonds are created in controlled
-              laboratory environments rather than extracted
-              from the earth.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Hvilke materialer anvendes i FYRSTERLINGs smykker?</summary>
+  <div class="faq-answer">
+    <p>
+      FYRSTERLINGs smykker fremstilles af nøje udvalgte
+      ædle materialer. Vores smykker i guld og rosaguld
+      er fremstillet af massivt 14 karat guld, mens vores
+      sølvsmykker er fremstillet af 925 sterlingsølv med
+      rhodiumbelægning, som giver ekstra glans.
+      Vores diamantsmykker er prydet med
+      laboratoriedyrkede diamanter.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>What is the difference between lab-grown and natural diamonds?</summary>
-          <div class="faq-answer">
-            <p>
-              Lab-grown and natural diamonds share the same
-              essential physical and chemical properties.
-              Natural diamonds form deep within the earth over
-              millions of years, while lab-grown diamonds are
-              produced using advanced technology that recreates
-              the conditions required for diamond growth.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Er FYRSTERLINGs diamanter ægte diamanter?</summary>
+  <div class="faq-answer">
+    <p>
+      Ja. FYRSTERLING anvender laboratoriedyrkede
+      diamanter, som er ægte diamanter med samme
+      kemiske sammensætning, krystalstruktur og
+      optiske egenskaber som naturligt dannede diamanter.
+      Forskellen ligger i deres oprindelse:
+      Laboratoriedyrkede diamanter fremstilles
+      under kontrollerede forhold frem for
+      at blive udvundet fra jorden.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>Is FYRSTERLING gold jewellery made from solid gold?</summary>
-          <div class="faq-answer">
-            <p>
-              Yes. Our yellow gold and rose gold jewellery is
-              crafted from solid 14-karat gold, not gold-plated
-              silver. Solid 14-karat gold combines the beauty
-              of precious gold with durability suited to fine
-              jewellery.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Hvad er forskellen på laboratoriedyrkede og naturlige diamanter?</summary>
+  <div class="faq-answer">
+    <p>
+      Laboratoriedyrkede og naturlige diamanter har
+      de samme grundlæggende fysiske og kemiske
+      egenskaber. Naturlige diamanter dannes dybt
+      i jorden over millioner af år, mens
+      laboratoriedyrkede diamanter fremstilles
+      ved hjælp af avanceret teknologi, der
+      genskaber betingelserne for diamantvækst.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>What is the AETERNUM jewellery collection?</summary>
-          <div class="faq-answer">
-            <p>
-              AETERNUM is FYRSTERLING's fine jewellery collection,
-              inspired by the concept of eternity. The collection
-              celebrates timeless design, meaningful connections
-              and jewellery created to be cherished for years
-              to come.
-              <a href="/collection.html">Explore AETERNUM</a>.
-            </p>
-          </div>
-        </details>
-      </section>
+<details class="faq-item">
+  <summary>Er FYRSTERLINGs guldsmykker fremstillet af massivt guld?</summary>
+  <div class="faq-answer">
+    <p>
+      Ja. Vores smykker i gult guld og rosaguld
+      er fremstillet af massivt 14 karat guld
+      og ikke forgyldt sølv. Massivt 14 karat
+      guld forener guldets eksklusive udtryk
+      med en holdbarhed, der gør materialet
+      velegnet til fine smykker.
+    </p>
+  </div>
+</details>
 
-      <!-- CATEGORY 2 -->
+<details class="faq-item">
+  <summary>Hvad er AETERNUM-smykkekollektionen?</summary>
+  <div class="faq-answer">
+    <p>
+      AETERNUM er FYRSTERLINGs smykkekollektion,
+      inspireret af evighedens betydning.
+      Kollektionen hylder tidløst design,
+      betydningsfulde relationer og smykker,
+      der er skabt til at blive værdsat
+      i mange år fremover.
+      <a href="/collection.html">Udforsk AETERNUM</a>.
+    </p>
+  </div>
+</details>
+</section>
 
-      <section class="faq-category">
-        <h2>Orders &amp; Availability</h2>
+<!-- KATEGORI 2 -->
 
-        <details class="faq-item">
-          <summary>Where can I buy FYRSTERLING jewellery?</summary>
-          <div class="faq-answer">
-            <p>
-              FYRSTERLING jewellery can be explored through our
-              website and purchased by arrangement through our
-              private showroom in Odense, Denmark. For enquiries
-              about a particular creation, please contact
-              <a href="mailto:info@fyrsterling.com">info@fyrsterling.com</a>.
-            </p>
-          </div>
-        </details>
+<section class="faq-category">
+<h2>Bestilling &amp; tilgængelighed</h2>
 
-        <details class="faq-item">
-          <summary>Can I purchase FYRSTERLING jewellery online?</summary>
-          <div class="faq-answer">
-            <p>
-              Our website presents the FYRSTERLING collection
-              and allows customers to enquire about individual
-              pieces. Purchases are currently arranged through
-              direct contact with FYRSTERLING rather than an
-              automated online checkout.
-            </p>
-          </div>
-        </details>
-      </section>
+<details class="faq-item">
+  <summary>Hvor kan jeg købe FYRSTERLINGs smykker?</summary>
+  <div class="faq-answer">
+    <p>
+      Du kan udforske FYRSTERLINGs smykker på vores
+      hjemmeside og købe dem efter individuel
+      aftale gennem vores private showroom i Odense.
+      Har du spørgsmål til et bestemt smykke,
+      er du velkommen til at kontakte os på
+      <a href="mailto:info@fyrsterling.com">info@fyrsterling.com</a>.
+    </p>
+  </div>
+</details>
 
-      <!-- CATEGORY 3 -->
+<details class="faq-item">
+  <summary>Kan jeg købe FYRSTERLINGs smykker online?</summary>
+  <div class="faq-answer">
+    <p>
+      Vores hjemmeside præsenterer FYRSTERLINGs
+      kollektion og giver mulighed for at sende
+      en forespørgsel om de enkelte smykker.
+      Køb arrangeres i øjeblikket gennem direkte
+      kontakt med FYRSTERLING frem for
+      en automatisk onlinebetaling.
+    </p>
+  </div>
+</details>
+</section>
 
-      <section class="faq-category">
-        <h2>Private Appointments</h2>
+<!-- KATEGORI 3 -->
 
-        <details class="faq-item">
-          <summary>Where is the FYRSTERLING jewellery showroom located?</summary>
-          <div class="faq-answer">
-            <p>
-              Our private jewellery showroom is located at
-              Kildemosevej 13, 5000 Odense C, Denmark, within
-              the FYRSTERLING Clinic premises. Visits are
-              available by prior appointment only.
-            </p>
-          </div>
-        </details>
+<section class="faq-category">
+<h2>Private smykkeaftaler</h2>
 
-        <details class="faq-item">
-          <summary>How can I book a private jewellery appointment in Odense?</summary>
-          <div class="faq-answer">
-            <p>
-              You can request a private jewellery consultation
-              by emailing
-              <a href="mailto:info@fyrsterling.com">info@fyrsterling.com</a>
-              or visiting our
-              <a href="/appointments.html">Appointments page</a>.
-              Appointments are arranged individually and
-              require confirmation from FYRSTERLING.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Hvor ligger FYRSTERLINGs showroom?</summary>
+  <div class="faq-answer">
+    <p>
+      Vores private smykkeshowroom ligger på
+      Kildemosevej 13, 5000 Odense C,
+      i samme lokaler som Fyrsterling Clinic.
+      Besøg er kun muligt efter
+      forudgående bekræftet aftale.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>Is a private jewellery consultation complimentary?</summary>
-          <div class="faq-answer">
-            <p>
-              Yes. Private jewellery consultations at the
-              FYRSTERLING showroom are complimentary and last
-              approximately 60 minutes. You can explore the
-              collection, discover individual creations and
-              receive personal guidance without an obligation
-              to purchase.
-            </p>
-          </div>
-        </details>
-      </section>
+<details class="faq-item">
+  <summary>Hvordan booker jeg en privat smykkeaftale i Odense?</summary>
+  <div class="faq-answer">
+    <p>
+      Du kan anmode om en privat smykkeaftale
+      ved at skrive til
+      <a href="mailto:info@fyrsterling.com">info@fyrsterling.com</a>
+      eller besøge vores
+      <a href="/appointments.html">BOOK TID-side</a>.
+      Aftaler arrangeres individuelt og
+      kræver bekræftelse fra FYRSTERLING.
+    </p>
+  </div>
+</details>
 
-      <!-- CATEGORY 4 -->
+<details class="faq-item">
+  <summary>Er en privat smykkeaftale gratis?</summary>
+  <div class="faq-answer">
+    <p>
+      Ja. Private smykkeaftaler i FYRSTERLINGs
+      showroom er gratis og varer cirka 60 minutter.
+      Du kan opleve kollektionen, udforske
+      de enkelte smykker og få personlig
+      rådgivning helt uden købsforpligtelse.
+    </p>
+  </div>
+</details>
+</section>
 
-      <section class="faq-category">
-        <h2>Personalisation &amp; Jewellery Care</h2>
+<!-- KATEGORI 4 -->
 
-        <details class="faq-item">
-          <summary>Can FYRSTERLING jewellery be personalised with engraving?</summary>
-          <div class="faq-answer">
-            <p>
-              Selected FYRSTERLING jewellery pieces can be
-              personalised with meaningful engravings, such as
-              initials, dates or short messages. Engraving is
-              subject to the design and suitability of the
-              individual piece, and an additional fee applies.
-              <a href="/services/personalisation.html">
-                Discover personalisation
-              </a>.
-            </p>
-          </div>
-        </details>
+<section class="faq-category">
+<h2>Personlig gravering &amp; smykkepleje</h2>
 
-        <details class="faq-item">
-          <summary>How should I care for my gold and diamond jewellery?</summary>
-          <div class="faq-answer">
-            <p>
-              We recommend handling your fine jewellery with
-              care, storing pieces separately in a soft-lined
-              jewellery box and avoiding unnecessary contact
-              with chemicals, perfumes and cleaning products.
-              Gentle, appropriate cleaning helps maintain the
-              beauty of gold and diamonds.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Kan FYRSTERLINGs smykker personliggøres med gravering?</summary>
+  <div class="faq-answer">
+    <p>
+      Udvalgte FYRSTERLING-smykker kan
+      personliggøres med en betydningsfuld
+      gravering, eksempelvis initialer,
+      datoer eller korte beskeder.
+      Muligheden afhænger af det enkelte
+      smykkes design og egnethed,
+      og der pålægges et ekstra gebyr.
+      <a href="/services/personalisation.html">
+        Læs mere om personlig gravering
+      </a>.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>How do I care for rhodium-plated sterling silver jewellery?</summary>
-          <div class="faq-answer">
-            <p>
-              Rhodium-plated sterling silver should be cleaned
-              gently with a soft, non-abrasive cloth. Avoid
-              harsh chemicals, abrasive polishing products
-              and unnecessary friction, as these may gradually
-              affect the rhodium finish.
-            </p>
-          </div>
-        </details>
-      </section>
+<details class="faq-item">
+  <summary>Hvordan passer jeg bedst på mine guld- og diamantsmykker?</summary>
+  <div class="faq-answer">
+    <p>
+      Vi anbefaler, at du behandler dine smykker
+      med omtanke og opbevarer dem separat
+      i et blødt foret smykkeskrin.
+      Undgå unødig kontakt med kemikalier,
+      parfume og rengøringsmidler.
+      Skånsom og korrekt rengøring
+      hjælper med at bevare guldets
+      og diamanternes skønhed.
+    </p>
+  </div>
+</details>
 
-      <!-- CATEGORY 5 -->
+<details class="faq-item">
+  <summary>Hvordan plejer jeg rhodiumbelagte sølvsmykker?</summary>
+  <div class="faq-answer">
+    <p>
+      Rhodiumbelagt sterlingsølv bør rengøres
+      forsigtigt med en blød, ikke-slibende klud.
+      Undgå stærke kemikalier, slibende
+      pudsemidler og unødig friktion,
+      da dette gradvist kan påvirke
+      rhodiumbelægningen.
+    </p>
+  </div>
+</details>
+</section>
 
-      <section class="faq-category">
-        <h2>Shipping, Returns &amp; Exchanges</h2>
+<!-- KATEGORI 5 -->
 
-        <details class="faq-item">
-          <summary>Does FYRSTERLING offer jewellery delivery in Denmark?</summary>
-          <div class="faq-answer">
-            <p>
-              Delivery within Denmark can be arranged
-              individually. Shipping options and charges
-              depend on the jewellery and its value and will
-              be communicated before the purchase is finalised.
-            </p>
-          </div>
-        </details>
+<section class="faq-category">
+<h2>Levering, returnering &amp; ombytning</h2>
 
-        <details class="faq-item">
-          <summary>Does FYRSTERLING offer international shipping?</summary>
-          <div class="faq-answer">
-            <p>
-              International delivery may be available upon
-              request. Please contact FYRSTERLING to discuss
-              the destination, shipping arrangements and
-              applicable costs.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Tilbyder FYRSTERLING levering af smykker i Danmark?</summary>
+  <div class="faq-answer">
+    <p>
+      Levering inden for Danmark kan arrangeres
+      individuelt. Leveringsmuligheder og
+      eventuelle omkostninger afhænger af
+      smykket og dets værdi og oplyses,
+      inden købet gennemføres.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>Can I exchange jewellery purchased at the FYRSTERLING showroom?</summary>
-          <div class="faq-answer">
-            <p>
-              Yes. FYRSTERLING offers a voluntary 14-day
-              exchange policy for eligible showroom purchases.
-              Jewellery and all original packaging must be
-              completely unused and in pristine condition,
-              and the original Authenticity Card must be
-              included. Exchanges must be arranged in advance
-              and are subject to our full terms.
-              Personally engraved pieces are excluded from
-              this voluntary exchange policy.
-              Statutory consumer rights remain unaffected.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Tilbyder FYRSTERLING international levering?</summary>
+  <div class="faq-answer">
+    <p>
+      International levering kan eventuelt
+      arrangeres efter forespørgsel.
+      Kontakt FYRSTERLING for at høre
+      nærmere om destination, levering
+      og eventuelle omkostninger.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>Can I return jewellery for a refund?</summary>
-          <div class="faq-answer">
-            <p>
-              For showroom purchases, FYRSTERLING does not
-              offer cash refunds for a change of mind.
-              Eligible items may instead be exchanged for
-              another FYRSTERLING jewellery creation or a
-              physical store-credit voucher. Statutory
-              consumer rights remain unaffected. Different
-              legal rights may apply to qualifying distance
-              purchases.
-            </p>
-          </div>
-        </details>
-      </section>
+<details class="faq-item">
+  <summary>Kan jeg ombytte smykker købt i FYRSTERLINGs showroom?</summary>
+  <div class="faq-answer">
+    <p>
+      Ja. FYRSTERLING tilbyder frivillig
+      ombytning inden for 14 dage for
+      showroomkøb, der opfylder betingelserne.
+      Smykket må absolut ikke have tegn
+      på brug eller slid. Den originale
+      smykkeæske, FYRSTERLING-pose og
+      det originale Authenticity Card
+      skal ligeledes medfølge i fuldstændig
+      fejlfri stand.
+      Du skal kontakte os på forhånd
+      for at aftale en ombytningstid.
+      Uanmeldte returneringer i showroomet
+      accepteres ikke.
+      Godkendte smykker kan ombyttes
+      til et andet FYRSTERLING-smykke
+      eller et fysisk tilgodebevis i papirform,
+      som udstedes manuelt.
+      Personligt graverede smykker
+      er undtaget fra den frivillige
+      ombytningsordning.
+      Dine lovbestemte forbrugerrettigheder
+      påvirkes ikke.
+      Se vores
+      <a href="/terms-and-conditions.html">handelsbetingelser</a>.
+    </p>
+  </div>
+</details>
 
-      <!-- CATEGORY 6 -->
+<details class="faq-item">
+  <summary>Kan jeg returnere et smykke og få pengene tilbage?</summary>
+  <div class="faq-answer">
+    <p>
+      Ved køb i vores fysiske showroom
+      tilbyder FYRSTERLING ikke
+      tilbagebetaling ved fortrydelse.
+      Smykker, der opfylder betingelserne,
+      kan i stedet ombyttes til et andet
+      FYRSTERLING-smykke eller et fysisk
+      tilgodebevis i papirform.
+      Dine lovbestemte forbrugerrettigheder
+      påvirkes ikke. Ved køb indgået
+      ved fjernsalg kan der gælde
+      andre lovbestemte rettigheder,
+      herunder fortrydelsesret.
+    </p>
+  </div>
+</details>
+</section>
 
-      <section class="faq-category">
-        <h2>Authenticity &amp; Aftercare</h2>
+<!-- KATEGORI 6 -->
 
-        <details class="faq-item">
-          <summary>Does FYRSTERLING jewellery come with an Authenticity Card?</summary>
-          <div class="faq-answer">
-            <p>
-              Yes. FYRSTERLING jewellery is accompanied by an
-              Authenticity Card and an individual serial number,
-              reflecting the identity and authenticity of each
-              creation.
-            </p>
-          </div>
-        </details>
+<section class="faq-category">
+<h2>Ægthed &amp; efterfølgende service</h2>
 
-        <details class="faq-item">
-          <summary>Does FYRSTERLING offer jewellery repairs?</summary>
-          <div class="faq-answer">
-            <p>
-              FYRSTERLING may assist with repairs of FYRSTERLING
-              jewellery following an individual assessment.
-              Availability, suitability and any applicable
-              repair costs will be communicated before work
-              is undertaken. Statutory consumer rights remain
-              unaffected.
-            </p>
-          </div>
-        </details>
+<details class="faq-item">
+  <summary>Medfølger der et Authenticity Card til FYRSTERLINGs smykker?</summary>
+  <div class="faq-answer">
+    <p>
+      Ja. FYRSTERLINGs smykker leveres
+      med et Authenticity Card og et
+      individuelt serienummer, der
+      dokumenterer det enkelte smykkes
+      identitet og ægthed.
+    </p>
+  </div>
+</details>
 
-        <details class="faq-item">
-          <summary>Does FYRSTERLING jewellery come with a warranty?</summary>
-          <div class="faq-answer">
-            <p>
-              Purchases are covered by applicable statutory
-              consumer rights, including the Danish two-year
-              right to complain about defects (reklamationsret).
-              This is not an additional voluntary warranty.
-              Please contact FYRSTERLING if you believe your
-              jewellery has a defect.
-            </p>
-          </div>
-        </details>
-      </section>
+<details class="faq-item">
+  <summary>Tilbyder FYRSTERLING reparation af smykker?</summary>
+  <div class="faq-answer">
+    <p>
+      FYRSTERLING kan efter individuel
+      vurdering eventuelt hjælpe med
+      reparation af FYRSTERLING-smykker.
+      Mulighederne, smykkets egnethed
+      og eventuelle omkostninger oplyses,
+      inden arbejdet påbegyndes.
+      Dine lovbestemte forbrugerrettigheder
+      påvirkes ikke.
+    </p>
+  </div>
+</details>
 
-    </div>
+<details class="faq-item">
+  <summary>Er der garanti på FYRSTERLINGs smykker?</summary>
+  <div class="faq-answer">
+    <p>
+      Køb er omfattet af gældende
+      lovbestemte forbrugerrettigheder,
+      herunder den danske reklamationsret
+      på to år ved mangler.
+      Dette er ikke en særskilt,
+      frivillig garanti.
+      Kontakt FYRSTERLING, hvis du
+      mener, at dit smykke har en fejl
+      eller mangel.
+    </p>
+  </div>
+</details>
 
-    <!-- CONTACT -->
+</section>
+</div>
 
-    <section class="faq-contact">
-      <h2>May We Assist You Further?</h2>
+<!-- KONTAKT -->
 
-      <p>
-        Should you have any additional questions about
-        FYRSTERLING jewellery or our services, we would
-        be delighted to assist you personally.
-      </p>
+<section class="faq-contact">
+  <h2>Har du brug for yderligere hjælp?</h2>
 
-      <a class="contact-button" href="/contact.html">
-        CONTACT US
-      </a>
-    </section>
+  <p>
+    Har du flere spørgsmål om
+    FYRSTERLINGs smykker eller services,
+    hjælper vi dig meget gerne personligt.
+  </p>
 
-  </main>
+  <a class="contact-button" href="/contact.html">
+    KONTAKT OS
+  </a>
+</section>
 
-  <!-- FOOTER -->
+</main>
 
-  <footer class="site-footer">
-    FYRSTERLING &nbsp; | &nbsp;
+<!-- FOOTER -->
 
-    <a href="mailto:info@fyrsterling.com">
-      INFO@FYRSTERLING.COM
-    </a>
+<footer class="site-footer">
+  FYRSTERLING &nbsp; | &nbsp;
 
-    &nbsp; | &nbsp;
+  <a href="mailto:info@fyrsterling.com">
+    INFO@FYRSTERLING.COM
+  </a>
 
-    <a href="/terms-and-conditions.html">
-      TERMS &amp; CONDITIONS
-    </a>
-  </footer>
+  &nbsp; | &nbsp;
+
+  <a href="/terms-and-conditions.html">
+    HANDELSBETINGELSER
+  </a>
+</footer>
 
 </body>
 </html>
