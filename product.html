@@ -1,43 +1,131 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AETERNUM | FYRSTERLING</title>
+
+  <title>AETERNUM Smykker | FYRSTERLING</title>
+  <meta name="description" content="Oplev AETERNUM smykker fra FYRSTERLING. Udforsk eksklusive ringe, halskæder, øreringe og armbånd i 14 karat guld, rosaguld og sterlingsølv med diamanter.">
+
+  <link rel="canonical" id="canonicalLink" href="https://fyrsterling.com/product.html">
+  <link rel="alternate" id="danishAlternate" hreflang="da" href="https://fyrsterling.com/product.html">
+  <link rel="alternate" id="englishAlternate" hreflang="en" href="https://fyrsterling.com/en/product.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --muted: #777777;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #171717;
-      background: #fff;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
     }
 
-    header {
-      padding: 26px 30px;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-
-    header a {
+    a {
       color: inherit;
-      text-decoration: none;
-      letter-spacing: 4px;
-      font-size: 17px;
     }
+
+    /* HEADER */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
+    }
+
+    /* BACK TO COLLECTION */
 
     .back {
       display: block;
       max-width: 1200px;
       margin: 30px auto 0;
       padding: 0 30px;
-      font-size: 12px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
       letter-spacing: 1px;
-      color: #666;
+      color: var(--muted);
       text-decoration: none;
     }
+
+    .back:hover {
+      color: var(--navy);
+    }
+
+    /* PRODUCT LAYOUT */
 
     .product-layout {
       max-width: 1200px;
@@ -55,36 +143,39 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .main-image img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
+    /* PRODUCT DETAILS */
+
     .details h1 {
+      margin: 0 0 18px;
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 28px;
       font-weight: 400;
-      letter-spacing: 3px;
-      margin: 0 0 18px;
+      letter-spacing: 2px;
+      line-height: 1.3;
     }
 
     .metal {
+      margin: 0 0 30px;
+      font-family: "Barlow", Arial, sans-serif;
       font-size: 14px;
-      color: #777;
-      margin-bottom: 30px;
+      color: var(--muted);
     }
 
     .price {
-      font-size: 15px;
-      margin-bottom: 40px;
-    }
-
-    .label {
-      font-size: 11px;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
+      margin: 0 0 40px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 17px;
+      color: var(--navy);
     }
 
     .variants {
@@ -96,33 +187,132 @@
     .variant {
       width: 65px;
       height: 75px;
-      border: 1px solid #ddd;
+      border: 1px solid #dddddd;
       cursor: pointer;
       background: #f7f7f7;
       padding: 3px;
+      text-decoration: none;
     }
 
     .variant.active {
-      border: 1px solid #171717;
+      border: 1px solid var(--navy);
     }
 
     .variant img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
     .description {
-      font-size: 13px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
       line-height: 1.9;
-      color: #666;
+      color: var(--text);
     }
 
+    /* PURCHASE ENQUIRY */
+
+    .purchase-button,
+    .submit-button {
+      width: 100%;
+      padding: 18px;
+      margin-top: 35px;
+      background: #005A7D;
+      color: #FFFFFF;
+      border: 0;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .purchase-button:hover,
+    .submit-button:hover {
+      background: var(--navy);
+    }
+
+    .purchase-form {
+      margin-top: 30px;
+    }
+
+    .purchase-form[hidden] {
+      display: none;
+    }
+
+    .form-heading {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .form-field {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: 1px solid #dddddd;
+      border-radius: 0;
+      background: #FFFFFF;
+      color: var(--navy);
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .form-field:focus {
+      outline: 1px solid var(--navy);
+    }
+
+    .submit-button {
+      margin-top: 20px;
+    }
+
+    .submit-button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .form-note {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
       .product-layout {
         grid-template-columns: 1fr;
         gap: 35px;
-        margin-top: 20px;
+        margin: 20px auto 65px;
         padding: 0 16px;
       }
 
@@ -138,98 +328,182 @@
 </head>
 
 <body>
-  <header>
-    <a href="/">FYRSTERLING</a>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Hovednavigation">
+      <a href="/collection.html" class="active">SMYKKER</a>
+      <a href="/services.html">SERVICES</a>
+      <a href="/our-story.html">MAISON</a>
+      <a href="/appointments.html">BOOK TID</a>
+      <a href="/contact.html">KONTAKT</a>
+      <a href="/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Vælg sprog">
+        <a href="#" id="danishLink" lang="da" aria-current="page">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/product.html" id="englishLink" lang="en">EN</a>
+      </span>
+    </nav>
   </header>
 
+  <!-- BACK TO COLLECTION -->
+
   <a class="back" href="/collection.html">
-    ← BACK TO COLLECTION
+    ← TILBAGE TIL KOLLEKTIONEN
   </a>
 
+  <!-- PRODUCT -->
+
   <main class="product-layout">
+
     <div class="main-image">
-      <img id="mainImage" alt="AETERNUM Jewellery">
+      <img id="mainImage" alt="AETERNUM smykke">
     </div>
 
     <section class="details">
       <h1 id="productName"></h1>
       <p class="metal" id="metalName"></p>
-<p class="price" id="productPrice">Price coming soon</p>
+      <p class="price" id="productPrice"></p>
 
-      <div class="variants" id="variants"></div>
+      <div class="variants" id="variants" aria-label="Vælg materiale"></div>
 
       <p class="description">
-        Discover AETERNUM by FYRSTERLING.
-        A timeless expression of elegance,
-        designed to be treasured.
+        Oplev AETERNUM fra FYRSTERLING.
+        Et tidløst udtryk for elegance,
+        skabt til at blive værdsat gennem generationer.
       </p>
-      
-<button type="button"
-  onclick="document.getElementById('purchaseForm').hidden = false"
-  style="width:100%;padding:18px;margin-top:35px;background:#005A7D;color:white;border:0;letter-spacing:2px;cursor:pointer;">
-  REQUEST TO PURCHASE
-</button>
-<form id="purchaseForm" hidden
-  action="https://formspree.io/f/xjyyogbg"
-  method="POST"
-  onsubmit="sendPurchaseRequest(event)"
-  style="margin-top:30px;">
 
-<input type="hidden" name="product" id="requestedProduct">
-  <p style="font-size:12px;letter-spacing:2px;">
-    PURCHASE ENQUIRY
-  </p>
+      <!-- PURCHASE BUTTON -->
 
-  <input type="text" name="name" placeholder="Full name"
-    autocomplete="name" required
-    style="width:100%;padding:14px;margin:8px 0;">
+      <button
+        type="button"
+        class="purchase-button"
+        id="purchaseButton"
+        aria-expanded="false"
+        aria-controls="purchaseForm"
+      >
+        FORESPØRG OM KØB
+      </button>
 
-  <input type="email" name="email" placeholder="Email address"
-    autocomplete="email" required
-    style="width:100%;padding:14px;margin:8px 0;">
+      <!-- PURCHASE FORM -->
 
-  <input type="tel" name="phone" placeholder="Phone number"
-    autocomplete="tel" required
-    style="width:100%;padding:14px;margin:8px 0;">
+      <form
+        id="purchaseForm"
+        class="purchase-form"
+        hidden
+        action="https://formspree.io/f/xjyyogbg"
+        method="POST"
+      >
+        <input type="hidden" name="product" id="requestedProduct">
 
-  <input type="text" name="address" placeholder="Delivery address"
-    autocomplete="street-address" required
-    style="width:100%;padding:14px;margin:8px 0;">
+        <p class="form-heading">KØBSFORESPØRGSEL</p>
 
-  <input type="text" name="postal_code" placeholder="Postal code"
-    autocomplete="postal-code" required
-    style="width:100%;padding:14px;margin:8px 0;">
+        <input
+          class="form-field"
+          type="text"
+          name="name"
+          placeholder="Fulde navn"
+          aria-label="Fulde navn"
+          autocomplete="name"
+          required
+        >
 
-  <input type="text" name="city" placeholder="City"
-    autocomplete="address-level2" required
-    style="width:100%;padding:14px;margin:8px 0;">
+        <input
+          class="form-field"
+          type="email"
+          name="email"
+          placeholder="E-mailadresse"
+          aria-label="E-mailadresse"
+          autocomplete="email"
+          required
+        >
 
-<button type="submit"
-  style="width:100%;padding:18px;margin-top:20px;background:#005A7D;color:white;border:0;letter-spacing:2px;cursor:pointer;">
-  SUBMIT REQUEST
-</button>
+        <input
+          class="form-field"
+          type="tel"
+          name="phone"
+          placeholder="Telefonnummer"
+          aria-label="Telefonnummer"
+          autocomplete="tel"
+          required
+        >
 
-  <p style="font-size:12px;color:#777;line-height:1.7;">
-    Your purchase enquiry is non-binding.
-We will contact you with payment details.
-No payment is collected through this form.
-  </p>
-</form>
+        <input
+          class="form-field"
+          type="text"
+          name="address"
+          placeholder="Leveringsadresse"
+          aria-label="Leveringsadresse"
+          autocomplete="street-address"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="text"
+          name="postal_code"
+          placeholder="Postnummer"
+          aria-label="Postnummer"
+          autocomplete="postal-code"
+          required
+        >
+
+        <input
+          class="form-field"
+          type="text"
+          name="city"
+          placeholder="By"
+          aria-label="By"
+          autocomplete="address-level2"
+          required
+        >
+
+        <button type="submit" class="submit-button">
+          SEND FORESPØRGSEL
+        </button>
+
+        <p class="form-note">
+          Din købsforespørgsel er uforpligtende.
+          Vi kontakter dig med oplysninger om betaling
+          og den videre proces. Der opkræves ingen
+          betaling via denne formular.
+        </p>
+      </form>
 
     </section>
   </main>
 
   <script>
+    /* PRODUCT PARAMETERS */
+
     const params = new URLSearchParams(window.location.search);
 
-    const validTypes = ["Ring", "Necklace", "Earrings", "Bracelet"];
-    const validMetals = ["Yellow Gold", "Rose Gold", "Silver"];
+    const validTypes = [
+      "Ring",
+      "Necklace",
+      "Earrings",
+      "Bracelet"
+    ];
+
+    const validMetals = [
+      "Yellow Gold",
+      "Rose Gold",
+      "Silver"
+    ];
 
     const type = validTypes.includes(params.get("type"))
-      ? params.get("type") : "Ring";
+      ? params.get("type")
+      : "Ring";
 
     const metal = validMetals.includes(params.get("metal"))
-      ? params.get("metal") : "Yellow Gold";
+      ? params.get("metal")
+      : "Yellow Gold";
+
+    /* ORIGINAL IMAGE FILENAMES */
 
     const types = {
       "Ring": "ring",
@@ -243,85 +517,194 @@ No payment is collected through this form.
       "Rose Gold": "Rose gold",
       "Silver": "Sølv"
     };
-const prices = {
-  "Ring": {
-    "Yellow Gold": 9600,
-    "Rose Gold": 9600,
-    "Silver": 3200
-  },
-  "Earrings": {
-    "Yellow Gold": 5200,
-    "Rose Gold": 5200,
-    "Silver": 3000
-  },
-  "Necklace": {
-    "Yellow Gold": 9100,
-    "Rose Gold": 9100,
-    "Silver": 3600
-  },
-  "Bracelet": {
-    "Yellow Gold": 6500,
-    "Rose Gold": 6500,
-    "Silver": 3200
-  }
-};
+
+    /* DANISH PRODUCT NAMES */
+
+    const danishTypes = {
+      "Ring": "RING",
+      "Necklace": "HALSKÆDE",
+      "Earrings": "ØRERINGE",
+      "Bracelet": "ARMBÅND"
+    };
+
+    const danishMetals = {
+      "Yellow Gold": "14 KARAT GULD",
+      "Rose Gold": "14 KARAT ROSAGULD",
+      "Silver": "STERLINGSØLV"
+    };
+
+    /* PRODUCT PRICES */
+
+    const prices = {
+      "Ring": {
+        "Yellow Gold": 9600,
+        "Rose Gold": 9600,
+        "Silver": 3200
+      },
+      "Earrings": {
+        "Yellow Gold": 5200,
+        "Rose Gold": 5200,
+        "Silver": 3000
+      },
+      "Necklace": {
+        "Yellow Gold": 9100,
+        "Rose Gold": 9100,
+        "Silver": 3600
+      },
+      "Bracelet": {
+        "Yellow Gold": 6500,
+        "Rose Gold": 6500,
+        "Silver": 3200
+      }
+    };
 
     function imagePath(selectedMetal) {
       const filename = `${metals[selectedMetal]} ${types[type]}.jpeg`;
       return "/images/" + encodeURIComponent(filename);
     }
 
-    document.getElementById("productName").textContent =
-      "AETERNUM " + type.toUpperCase();
+    function productUrl(language, selectedMetal = metal) {
+      const path = language === "en"
+        ? "/en/product.html"
+        : "/product.html";
 
-    document.getElementById("metalName").textContent = metal;
-document.getElementById("productPrice").textContent = prices[type][metal].toLocaleString("da-DK") + " DKK";
-document.getElementById("requestedProduct").value = "AETERNUM " + type.toUpperCase() + " – " + metal;
-    document.getElementById("mainImage").src = imagePath(metal);
+      const query = new URLSearchParams({
+        type: type,
+        metal: selectedMetal
+      });
 
-    document.getElementById("variants").innerHTML =
-      validMetals.map(selectedMetal => `
-        <a
-          class="variant ${selectedMetal === metal ? "active" : ""}"
-          href="/product.html?type=${encodeURIComponent(type)}&metal=${encodeURIComponent(selectedMetal)}"
-          title="${selectedMetal}"
-          aria-label="${selectedMetal}"
-        >
-          <img src="${imagePath(selectedMetal)}" alt="${selectedMetal}">
-        </a>
-      `).join("");
-    
-async function sendPurchaseRequest(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const button = form.querySelector('button[type="submit"]');
-
-  button.disabled = true;
-  button.textContent = "SENDING...";
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        "Accept": "application/json"
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error("Submission failed");
+      return path + "?" + query.toString();
     }
 
-    window.location.href = "/thank-you.html";
+    /* PRODUCT CONTENT */
 
-  } catch (error) {
-    alert("Your enquiry could not be sent. Please try again.");
-    button.disabled = false;
-    button.textContent = "SUBMIT REQUEST";
-  }
-}
+    document.getElementById("productName").textContent =
+      "AETERNUM " + danishTypes[type];
 
+    document.getElementById("metalName").textContent =
+      danishMetals[metal];
+
+    document.getElementById("productPrice").textContent =
+      prices[type][metal].toLocaleString("da-DK") + " DKK";
+
+    document.getElementById("requestedProduct").value =
+      "AETERNUM " + danishTypes[type] + " – " + danishMetals[metal];
+
+    const mainImage = document.getElementById("mainImage");
+    mainImage.src = imagePath(metal);
+    mainImage.alt =
+      "AETERNUM " + danishTypes[type].toLowerCase() +
+      " i " + danishMetals[metal].toLowerCase();
+
+    /* LANGUAGE LINKS */
+
+    document.getElementById("danishLink").href =
+      productUrl("da");
+
+    document.getElementById("englishLink").href =
+      productUrl("en");
+
+    /* SEO LINKS */
+
+    const origin = "https://fyrsterling.com";
+
+    document.getElementById("canonicalLink").href =
+      origin + productUrl("da");
+
+    document.getElementById("danishAlternate").href =
+      origin + productUrl("da");
+
+    document.getElementById("englishAlternate").href =
+      origin + productUrl("en");
+
+    document.title =
+      "AETERNUM " + danishTypes[type] +
+      " – " + danishMetals[metal] +
+      " | FYRSTERLING";
+
+    /* METAL VARIANTS */
+
+    const variantsContainer =
+      document.getElementById("variants");
+
+    validMetals.forEach(selectedMetal => {
+      const link = document.createElement("a");
+
+      link.className = "variant" +
+        (selectedMetal === metal ? " active" : "");
+
+      link.href = productUrl("da", selectedMetal);
+      link.title = danishMetals[selectedMetal];
+      link.setAttribute(
+        "aria-label",
+        danishMetals[selectedMetal]
+      );
+
+      if (selectedMetal === metal) {
+        link.setAttribute("aria-current", "page");
+      }
+
+      const image = document.createElement("img");
+      image.src = imagePath(selectedMetal);
+      image.alt = danishMetals[selectedMetal];
+
+      link.appendChild(image);
+      variantsContainer.appendChild(link);
+    });
+
+    /* SHOW PURCHASE FORM */
+
+    const purchaseButton =
+      document.getElementById("purchaseButton");
+
+    const purchaseForm =
+      document.getElementById("purchaseForm");
+
+    purchaseButton.addEventListener("click", () => {
+      purchaseForm.hidden = false;
+      purchaseButton.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+    });
+
+    /* SEND PURCHASE ENQUIRY */
+
+    purchaseForm.addEventListener("submit", async event => {
+      event.preventDefault();
+
+      const button = purchaseForm.querySelector(
+        'button[type="submit"]'
+      );
+
+      button.disabled = true;
+      button.textContent = "SENDER...";
+
+      try {
+        const response = await fetch(purchaseForm.action, {
+          method: "POST",
+          body: new FormData(purchaseForm),
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Submission failed");
+        }
+
+        window.location.href = "/thank-you.html";
+
+      } catch (error) {
+        alert(
+          "Din forespørgsel kunne ikke sendes. Prøv venligst igen."
+        );
+
+        button.disabled = false;
+        button.textContent = "SEND FORESPØRGSEL";
+      }
+    });
   </script>
+
 </body>
 </html>
