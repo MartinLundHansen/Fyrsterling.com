@@ -1,1 +1,375 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Discover FYRSTERLING jewellery through a private showroom appointment in Odense, Denmark.">
+
+  <title>Private Appointments | FYRSTERLING</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER — SAME AS OTHER MAIN PAGES */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    /* MAIN CONTENT */
+
+    main {
+      padding: 43px 24px 110px;
+    }
+
+    /* INTRODUCTION */
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    .intro h1 {
+      margin: 18px 0 20px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      font-style: italic;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* PRESENTATION IMAGE */
+
+.image-wrap {
+  max-width: 480px;
+  margin: 45px auto 55px;
+  text-align: center;
+}
+
+    .image-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* APPOINTMENT CONTENT */
+
+    .appointment-content {
+      max-width: 610px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .appointment-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      margin: 0 0 26px;
+    }
+
+    .appointment-content p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      line-height: 1.9;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      margin: 0 0 22px;
+    }
+
+    /* APPOINTMENT BUTTON */
+
+    .request-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 17px 30px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .request-button:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    /* SHOWROOM DETAILS */
+
+    .details {
+      margin-top: 58px;
+      color: #647080;
+    }
+
+    .details p {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.9;
+      letter-spacing: 0.3px;
+      color: #647080;
+      margin: 0 0 22px;
+    }
+
+    .details .duration {
+      font-size: 11px;
+      color: #89919a;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #FFFFFF;
+      padding: 35px 20px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      color: #647080;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      main {
+        padding: 35px 22px 75px;
+      }
+
+      .intro h1 {
+        font-size: 28px;
+        letter-spacing: 1.5px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+
+      .image-wrap {
+        margin: 45px auto 50px;
+      }
+
+      .appointment-content h2 {
+        font-size: 26px;
+      }
+
+      .appointment-content p {
+        font-size: 14px;
+      }
+
+      .details {
+        margin-top: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/index.html" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/collection.html">JEWELLERY</a>
+      <a href="/services.html">SERVICES</a>
+      <a href="/our-story.html">MAISON</a>
+      <a href="/appointments.html" class="active" aria-current="page">APPOINTMENTS</a>
+      <a href="/contact.html">CONTACT</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro">
+      <div class="eyebrow">THE FYRSTERLING EXPERIENCE</div>
+
+      <h1>PRIVATE APPOINTMENTS</h1>
+
+      <p class="subtitle">
+        An Invitation to Discover FYRSTERLING
+      </p>
+    </section>
+
+    <!-- SHOWROOM PRESENTATION IMAGE -->
+
+    <div class="image-wrap">
+      <img
+        src="/images/Book%20tid.PNG"
+        alt="FYRSTERLING private jewellery presentation"
+      >
+    </div>
+
+    <!-- APPOINTMENT INFORMATION -->
+
+    <section class="appointment-content">
+      <h2>A Personal Invitation</h2>
+
+      <p>
+        We invite you to discover the world of FYRSTERLING
+        through a private jewellery appointment at our
+        showroom in Odense, Denmark.
+      </p>
+
+      <p>
+        In an intimate and welcoming setting, explore
+        our jewellery collection, discover the details
+        behind each creation, and enjoy a personal
+        introduction to the FYRSTERLING universe.
+      </p>
+
+      <p>
+        Each appointment is arranged individually,
+        allowing us to offer a thoughtful and
+        personal experience.
+      </p>
+
+      <!-- APPOINTMENT REQUEST -->
+
+      <a
+        class="request-button"
+        href="mailto:info@fyrsterling.com?subject=Private%20Jewellery%20Appointment%20Request"
+      >
+        REQUEST AN APPOINTMENT
+      </a>
+
+      <!-- SHOWROOM DETAILS -->
+
+      <div class="details">
+        <p>
+          FYRSTERLING PRIVATE SHOWROOM<br>
+          Kildemosevej 13<br>
+          5000 Odense C, Denmark
+        </p>
+
+        <p>
+          Visits are complimentary and available
+          by prior arrangement only.<br>
+          All appointments are subject to confirmation
+          by FYRSTERLING.
+        </p>
+
+        <p class="duration">
+          Each private appointment lasts approximately 60 minutes.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    © FYRSTERLING — THE ART OF ETERNITY
+  </footer>
+
+</body>
+</html>
