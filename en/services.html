@@ -5,8 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Services | FYRSTERLING</title>
-  <meta name="description" content="Discover FYRSTERLING jewellery services, including private consultations and personalisation.">
+  <title>Fine Jewellery Services & Consultations | FYRSTERLING</title>
+  <meta name="description" content="Discover FYRSTERLING fine jewellery services, including private jewellery consultations in Odense and personalised jewellery engraving.">
+
+  <link rel="canonical" href="https://fyrsterling.com/en/services.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/services.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +46,7 @@
       color: inherit;
     }
 
-    /* HEADER — SAME AS CONTACT AND JEWELLERY */
+    /* HEADER */
 
     .site-header {
       background: #FFFFFF;
@@ -63,6 +68,7 @@
     .main-nav {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       gap: 27px;
     }
@@ -79,6 +85,31 @@
     .main-nav a:hover,
     .main-nav a.active {
       border-bottom: 1px solid var(--navy);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
     }
 
     /* INTRODUCTION */
@@ -234,6 +265,15 @@
         letter-spacing: 0.7px;
       }
 
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
       .intro {
         padding: 35px 22px 42px;
       }
@@ -262,15 +302,21 @@
   <!-- HEADER -->
 
   <header class="site-header">
-    <a href="/index.html" class="logo">FYRSTERLING</a>
+    <a href="/en/" class="logo">FYRSTERLING</a>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="/collection.html">JEWELLERY</a>
-      <a href="/services.html" class="active" aria-current="page">SERVICES</a>
-      <a href="/our-story.html">MAISON</a>
-      <a href="/appointments.html">APPOINTMENTS</a>
-      <a href="/contact.html">CONTACT</a>
-      <a href="/faq.html">FAQ</a>
+      <a href="/en/collection.html">JEWELLERY</a>
+      <a href="/en/services.html" class="active" aria-current="page">SERVICES</a>
+      <a href="/en/our-story.html">MAISON</a>
+      <a href="/en/appointments.html">APPOINTMENTS</a>
+      <a href="/en/contact.html">CONTACT</a>
+      <a href="/en/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Choose language">
+        <a href="/services.html" lang="da">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/services.html" lang="en" aria-current="page">EN</a>
+      </span>
     </nav>
   </header>
 
@@ -310,7 +356,7 @@
       <article class="service">
         <a
           class="service-image"
-          href="/services/private-consultation.html"
+          href="/en/services/private-consultation.html"
         >
           <img
             src="/images/Book%20tid.PNG"
@@ -328,7 +374,7 @@
 
         <a
           class="find-out"
-          href="/services/private-consultation.html"
+          href="/en/services/private-consultation.html"
         >
           FIND OUT MORE
         </a>
@@ -339,7 +385,7 @@
       <article class="service">
         <a
           class="service-image"
-          href="/services/personalisation.html"
+          href="/en/services/personalisation.html"
         >
           <img
             src="/images/Personalisation-ring.jpeg"
@@ -357,7 +403,7 @@
 
         <a
           class="find-out"
-          href="/services/personalisation.html"
+          href="/en/services/personalisation.html"
         >
           FIND OUT MORE
         </a>
@@ -378,11 +424,10 @@
 
     &nbsp; | &nbsp;
 
-    <a href="/terms-and-conditions.html">
+    <a href="/en/terms-and-conditions.html">
       TERMS &amp; CONDITIONS
     </a>
   </footer>
 
 </body>
 </html>
-
