@@ -1,12 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | FYRSTERLING</title>
-<meta name="description" content="Contact FYRSTERLING for jewellery enquiries, personal assistance and private showroom consultations in Odense, Denmark.">
+<title>Kontakt Os | FYRSTERLING</title>
+<meta name="description" content="Kontakt FYRSTERLING ved spørgsmål om smykker, personlig rådgivning, køb eller private smykkeaftaler i vores showroom i Odense.">
+
+<link rel="canonical" href="https://fyrsterling.com/contact.html">
+<link rel="alternate" hreflang="da" href="https://fyrsterling.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/contact.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,6 +67,7 @@ a {
 .main-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 27px;
 }
@@ -80,7 +86,32 @@ a {
   border-bottom: 1px solid var(--navy);
 }
 
-/* PAGE HEADING */
+/* SPROGVALG */
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: 10px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.language-switch a {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.language-switch a[aria-current="page"] {
+  border-bottom: 1px solid var(--navy);
+}
+
+.language-divider {
+  color: #999999;
+}
+
+/* SIDEOVERSKRIFT */
 
 .contact-intro {
   max-width: 850px;
@@ -107,7 +138,7 @@ a {
   color: var(--text);
 }
 
-/* CONTACT LAYOUT */
+/* KONTAKTLAYOUT */
 
 .contact-layout {
   display: grid;
@@ -208,7 +239,7 @@ a {
   opacity: 0.65;
 }
 
-/* CENTER IMAGE */
+/* BILLEDE I MIDTEN */
 
 .contact-image {
   display: flex;
@@ -275,7 +306,7 @@ a {
   }
 }
 
-/* MOBILE */
+/* MOBIL */
 
 @media (max-width: 760px) {
   .site-header {
@@ -294,6 +325,15 @@ a {
   .main-nav a {
     font-size: 10px;
     letter-spacing: 0.7px;
+  }
+
+  .language-switch {
+    margin-left: 3px;
+    gap: 7px;
+  }
+
+  .language-switch a {
+    font-size: 10px;
   }
 
   .contact-intro {
@@ -365,71 +405,89 @@ a {
 
 <body>
 
-<header class="site-header">
-  <a href="/index.html" class="logo">FYRSTERLING</a>
+<!-- HEADER -->
 
-  <nav class="main-nav" aria-label="Main navigation">
-    <a href="/collection.html">JEWELLERY</a>
+<header class="site-header">
+  <a href="/" class="logo">FYRSTERLING</a>
+
+  <nav class="main-nav" aria-label="Hovednavigation">
+    <a href="/collection.html">SMYKKER</a>
     <a href="/services.html">SERVICES</a>
     <a href="/our-story.html">MAISON</a>
-    <a href="/appointments.html">APPOINTMENTS</a>
-    <a href="/contact.html" class="active" aria-current="page">CONTACT</a>
+    <a href="/appointments.html">BOOK TID</a>
+    <a href="/contact.html" class="active" aria-current="page">KONTAKT</a>
     <a href="/faq.html">FAQ</a>
+
+    <span class="language-switch" aria-label="Vælg sprog">
+      <a href="/contact.html" lang="da" aria-current="page">DA</a>
+      <span class="language-divider" aria-hidden="true">|</span>
+      <a href="/en/contact.html" lang="en">EN</a>
+    </span>
   </nav>
 </header>
 
 <main>
 
+  <!-- INTRODUKTION -->
+
   <section class="contact-intro">
-    <h1>CONTACT US</h1>
+    <h1>KONTAKT OS</h1>
 
     <p>
-      Whether you have an enquiry about our jewellery,
-      need personal assistance with a purchase or wish
-      to arrange a private consultation,
-      we are delighted to assist you.
+      Uanset om du har spørgsmål til vores smykker,
+      ønsker personlig hjælp i forbindelse med et køb
+      eller gerne vil arrangere en privat smykkeaftale,
+      står vi klar til at hjælpe dig.
     </p>
   </section>
 
-  <section class="contact-layout" aria-label="Contact information">
+  <!-- KONTAKTOPLYSNINGER -->
 
-    <!-- LEFT COLUMN -->
+  <section class="contact-layout" aria-label="Kontaktoplysninger">
+
+    <!-- VENSTRE KOLONNE -->
 
     <div class="contact-column left">
+
+      <!-- RING TIL OS -->
 
       <article class="contact-item">
         <div class="contact-heading">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L8.2 11a16 16 0 0 0 4.8 4.8l1.6-1.8a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.7 2z"/>
           </svg>
-          <h2>CALL US</h2>
+          <h2>RING TIL OS</h2>
         </div>
 
         <p>
-          For personal assistance with our jewellery,
-          services or purchases, please contact us
-          by telephone.
+          Har du spørgsmål om vores smykker,
+          services eller køb, er du velkommen
+          til at kontakte os telefonisk.
         </p>
+
+        <p>Telefontider:</p>
 
         <div class="contact-hours">
           <div>
-            <span>Monday – Friday:</span>
-            <span>09:00 – 18:00</span>
+            <span>Mandag – fredag:</span>
+            <span>09.00 – 18.00</span>
           </div>
           <div>
-            <span>Saturday:</span>
-            <span>10:00 – 15:00</span>
+            <span>Lørdag:</span>
+            <span>10.00 – 15.00</span>
           </div>
           <div>
-            <span>Sunday:</span>
-            <span>10:00 – 15:00</span>
+            <span>Søndag:</span>
+            <span>10.00 – 15.00</span>
           </div>
         </div>
 
         <a class="contact-link" href="tel:+4528345288">
-          Tel. +45 28 34 52 88
+          Tlf. +45 28 34 52 88
         </a>
       </article>
+
+      <!-- SKRIV TIL OS -->
 
       <article class="contact-item">
         <div class="contact-heading">
@@ -437,13 +495,13 @@ a {
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="m2 6 10 7 10-7"/>
           </svg>
-          <h2>EMAIL US</h2>
+          <h2>SKRIV TIL OS</h2>
         </div>
 
         <p>
-          For enquiries regarding our collections,
-          personalisation or services,
-          we welcome you to contact us by email.
+          Har du spørgsmål om vores kollektioner,
+          personlig gravering eller øvrige services,
+          er du altid velkommen til at sende os en e-mail.
         </p>
 
         <a class="contact-link" href="mailto:info@fyrsterling.com">
@@ -453,19 +511,21 @@ a {
 
     </div>
 
-    <!-- CENTER IMAGE -->
+    <!-- BILLEDE I MIDTEN -->
 
     <div class="contact-image">
       <img
         src="/images/Flyvende%20boks.PNG"
-        alt="FYRSTERLING navy jewellery presentation box"
+        alt="FYRSTERLING mørkeblå smykkeæske"
         loading="eager"
       >
     </div>
 
-    <!-- RIGHT COLUMN -->
+    <!-- HØJRE KOLONNE -->
 
     <div class="contact-column right">
+
+      <!-- BESØG VORES SHOWROOM -->
 
       <article class="contact-item">
         <div class="contact-heading">
@@ -478,30 +538,37 @@ a {
             <path d="M2 21h20"/>
             <path d="m2 9 10-6 10 6"/>
           </svg>
-          <h2>VISIT OUR SHOWROOM</h2>
+          <h2>BESØG VORES SHOWROOM</h2>
         </div>
 
         <p>
-          Discover our jewellery through a
-          complimentary private consultation
-          at our showroom in Odense.
+          Oplev vores smykker ved en gratis,
+          personlig smykkeaftale i vores
+          showroom i Odense.
         </p>
 
         <address>
           Kildemosevej 13<br>
           5000 Odense C<br>
-          Denmark
+          Danmark
         </address>
 
         <p>
-          Visits are available by confirmed
-          appointment only.
+          Vores showroom ligger i samme lokaler
+          som Fyrsterling Clinic.
+        </p>
+
+        <p>
+          Besøg er kun muligt efter
+          forudgående bekræftet aftale.
         </p>
 
         <a class="contact-link" href="/appointments.html">
-          ARRANGE AN APPOINTMENT
+          BOOK TID
         </a>
       </article>
+
+      <!-- HJÆLP -->
 
       <article class="contact-item">
         <div class="contact-heading">
@@ -510,17 +577,17 @@ a {
             <path d="M12 11v6"/>
             <path d="M12 7h.01"/>
           </svg>
-          <h2>HELP</h2>
+          <h2>HJÆLP</h2>
         </div>
 
         <p>
-          Do you have a question about our jewellery,
-          services or purchases? You may find the
-          answer in our frequently asked questions.
+          Har du spørgsmål om vores smykker,
+          services eller køb? Du kan muligvis
+          finde svaret blandt vores ofte stillede spørgsmål.
         </p>
 
         <a class="contact-link" href="/faq.html">
-          EXPLORE FAQ
+          SE OFTE STILLEDE SPØRGSMÅL
         </a>
       </article>
 
@@ -530,14 +597,19 @@ a {
 
 </main>
 
+<!-- FOOTER -->
+
 <footer class="site-footer">
   FYRSTERLING &nbsp; | &nbsp;
+
   <a href="mailto:info@fyrsterling.com">
     INFO@FYRSTERLING.COM
   </a>
+
   &nbsp; | &nbsp;
+
   <a href="/terms-and-conditions.html">
-    TERMS &amp; CONDITIONS
+    HANDELSBETINGELSER
   </a>
 </footer>
 
