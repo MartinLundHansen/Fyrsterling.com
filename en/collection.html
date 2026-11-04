@@ -1,14 +1,14 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AETERNUM Fine Jewellery Collection | FYRSTERLING</title>
-  <meta name="description" content="Explore the AETERNUM fine jewellery collection by FYRSTERLING. Discover rings, necklaces, earrings and bracelets in gold, rose gold and sterling silver with diamonds.">
+  <title>AETERNUM Smykkekollektion | Guld og Diamanter | FYRSTERLING</title>
+  <meta name="description" content="Udforsk AETERNUM smykkekollektionen fra FYRSTERLING. Oplev eksklusive ringe, halskæder, øreringe og armbånd i 14 karat guld, rosaguld og sterlingsølv med diamanter.">
 
-  <link rel="canonical" href="https://fyrsterling.com/en/collection.html">
+  <link rel="canonical" href="https://fyrsterling.com/collection.html">
   <link rel="alternate" hreflang="da" href="https://fyrsterling.com/collection.html">
   <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/collection.html">
   <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/collection.html">
@@ -266,20 +266,20 @@
   <!-- HEADER -->
 
   <header class="site-header">
-    <a href="/en/" class="logo">FYRSTERLING</a>
+    <a href="/" class="logo">FYRSTERLING</a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/en/collection.html" class="active" aria-current="page">JEWELLERY</a>
-      <a href="/en/services.html">SERVICES</a>
-      <a href="/en/our-story.html">MAISON</a>
-      <a href="/en/appointments.html">APPOINTMENTS</a>
-      <a href="/en/contact.html">CONTACT</a>
-      <a href="/en/faq.html">FAQ</a>
+    <nav class="main-nav" aria-label="Hovednavigation">
+      <a href="/collection.html" class="active" aria-current="page">SMYKKER</a>
+      <a href="/services.html">SERVICES</a>
+      <a href="/our-story.html">MAISON</a>
+      <a href="/appointments.html">BOOK TID</a>
+      <a href="/contact.html">KONTAKT</a>
+      <a href="/faq.html">FAQ</a>
 
-      <span class="language-switch" aria-label="Choose language">
-        <a href="/collection.html" lang="da">DA</a>
+      <span class="language-switch" aria-label="Vælg sprog">
+        <a href="/collection.html" lang="da" aria-current="page">DA</a>
         <span class="language-divider" aria-hidden="true">|</span>
-        <a href="/en/collection.html" lang="en" aria-current="page">EN</a>
+        <a href="/en/collection.html" lang="en">EN</a>
       </span>
     </nav>
   </header>
@@ -288,7 +288,7 @@
 
   <section class="intro">
     <h1>AETERNUM</h1>
-    <p>THE COLLECTION</p>
+    <p>KOLLEKTIONEN</p>
   </section>
 
   <!-- COLLECTION PRODUCTS -->
@@ -298,6 +298,11 @@
   </main>
 
   <script>
+    /*
+      Original product identifiers are retained
+      for compatibility with product.html.
+    */
+
     const products = [
       ["Ring", "Yellow Gold"],
       ["Necklace", "Silver"],
@@ -313,6 +318,8 @@
       ["Bracelet", "Rose Gold"]
     ];
 
+    /* Original image filenames */
+
     const metals = {
       "Yellow Gold": "Guld",
       "Rose Gold": "Rose gold",
@@ -325,6 +332,23 @@
       "Earrings": "øreringe",
       "Bracelet": "armbånd"
     };
+
+    /* Danish display names */
+
+    const danishTypes = {
+      "Ring": "RING",
+      "Necklace": "HALSKÆDE",
+      "Earrings": "ØRERINGE",
+      "Bracelet": "ARMBÅND"
+    };
+
+    const danishMetals = {
+      "Yellow Gold": "14 KARAT GULD",
+      "Rose Gold": "14 KARAT ROSAGULD",
+      "Silver": "STERLINGSØLV"
+    };
+
+    /* Original prices */
 
     const prices = {
       "Ring": {
@@ -357,18 +381,18 @@
           <article class="product">
             <a
               class="product-image"
-              href="/en/product.html?type=${encodeURIComponent(name)}&metal=${encodeURIComponent(metal)}"
-              aria-label="View AETERNUM ${name} in ${metal}"
+              href="/product.html?type=${encodeURIComponent(name)}&metal=${encodeURIComponent(metal)}"
+              aria-label="Se AETERNUM ${danishTypes[name].toLowerCase()} i ${danishMetals[metal].toLowerCase()}"
             >
               <img
                 src="/images/${encodeURIComponent(filename)}"
-                alt="AETERNUM ${name} – ${metal}"
+                alt="AETERNUM ${danishTypes[name].toLowerCase()} i ${danishMetals[metal].toLowerCase()}"
                 loading="lazy"
               >
             </a>
 
-            <h2>AETERNUM ${name.toUpperCase()}</h2>
-            <p>${metal}</p>
+            <h2>AETERNUM ${danishTypes[name]}</h2>
+            <p>${danishMetals[metal]}</p>
             <p>${prices[name][metal].toLocaleString("da-DK")} DKK</p>
           </article>
         `;
