@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Private Jewellery Consultation | FYRSTERLING</title>
+  <meta name="description" content="Discover a complimentary private jewellery consultation at the FYRSTERLING showroom in Odense, Denmark. Explore our collection with personal guidance.">
+
+  <link rel="canonical" href="https://fyrsterling.com/en/services/private-consultation.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services/private-consultation.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services/private-consultation.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/services/private-consultation.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --muted: #777777;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
+    }
+
+    /* BACK LINK */
+
+    .back {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding: 0 30px;
+    }
+
+    .back a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.4px;
+    }
+
+    .back a:hover {
+      color: var(--navy);
+    }
+
+    /* PAGE CONTENT */
+
+    .detail {
+      max-width: 1100px;
+      margin: 55px auto 100px;
+      padding: 0 30px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .eyebrow {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 36px;
+      line-height: 1.25;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .content {
+      max-width: 730px;
+      margin: 70px auto 0;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.95;
+      margin: 0 0 24px;
+      color: var(--text);
+    }
+
+    .content h2 {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 45px 0 18px;
+    }
+
+    /* APPOINTMENT BUTTON */
+
+    .button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 16px 30px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #FFFFFF;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      padding: 28px 20px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.7px;
+      line-height: 2;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .language-switch a {
+        font-size: 10px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .detail {
+        margin: 35px auto 65px;
+        padding: 0 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .content {
+        margin-top: 45px;
+      }
+
+      .content p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/en/" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/en/collection.html">JEWELLERY</a>
+      <a href="/en/services.html" class="active">SERVICES</a>
+      <a href="/en/our-story.html">MAISON</a>
+      <a href="/en/appointments.html">APPOINTMENTS</a>
+      <a href="/en/contact.html">CONTACT</a>
+      <a href="/en/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Choose language">
+        <a href="/services/private-consultation.html" lang="da">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/services/private-consultation.html" lang="en" aria-current="page">EN</a>
+      </span>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- BACK TO SERVICES -->
+
+    <div class="back">
+      <a href="/en/services.html">
+        &larr; ALL SERVICES
+      </a>
+    </div>
+
+    <article class="detail">
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <img
+          src="/images/Book%20tid.PNG"
+          alt="Private jewellery presentation at FYRSTERLING showroom"
+        >
+
+        <div>
+          <span class="eyebrow">FYRSTERLING SERVICES</span>
+
+          <h1>Private Jewellery Consultation</h1>
+
+          <div class="subtitle">
+            An Experience as Personal as the Jewellery Itself
+          </div>
+        </div>
+
+      </section>
+
+      <!-- CONTENT -->
+
+      <section class="content">
+
+        <p>
+          Discover FYRSTERLING through a private jewellery
+          consultation at our showroom in Odense.
+        </p>
+
+        <p>
+          Explore our collection, receive personal guidance
+          and find a piece that reflects your individual
+          style or a special occasion.
+        </p>
+
+        <p>
+          Each private consultation lasts approximately
+          60 minutes and is offered complimentary.
+        </p>
+
+        <h2>Visit Our Showroom</h2>
+
+        <p>
+          Our showroom is located at Kildemosevej 13,
+          5000 Odense C, Denmark, within the FYRSTERLING
+          Clinic premises.
+        </p>
+
+        <p>
+          Private appointments are arranged individually
+          upon request and require confirmation from FYRSTERLING.
+        </p>
+
+        <a class="button" href="/en/appointments.html">
+          ARRANGE YOUR PRIVATE APPOINTMENT
+        </a>
+
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    FYRSTERLING &nbsp; | &nbsp;
+
+    <a href="mailto:info@fyrsterling.com">
+      INFO@FYRSTERLING.COM
+    </a>
+  </footer>
+
+</body>
+</html>
