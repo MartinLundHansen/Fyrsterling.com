@@ -41,7 +41,11 @@
       color: inherit;
     }
 
-    /* HEADER — MATCHES COLLECTION */
+    [hidden] {
+      display: none !important;
+    }
+
+    /* HEADER */
 
     .site-header {
       background: #FFFFFF;
@@ -81,8 +85,6 @@
     .main-nav a.active {
       border-bottom: 1px solid var(--navy);
     }
-
-    /* LANGUAGE SWITCH */
 
     .language-switch {
       display: inline-flex;
@@ -134,7 +136,7 @@
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 80px;
-      align-items: center;
+      align-items: start;
     }
 
     .main-image {
@@ -172,7 +174,7 @@
     }
 
     .price {
-      margin: 0 0 40px;
+      margin: 0 0 35px;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 17px;
       color: var(--navy);
@@ -181,7 +183,7 @@
     .variants {
       display: flex;
       gap: 12px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     .variant {
@@ -205,14 +207,171 @@
       object-fit: contain;
     }
 
+    /* PRODUCT DESCRIPTION */
+
     .description {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 14px;
       line-height: 1.9;
       color: var(--text);
+      margin: 0 0 28px;
     }
 
-    /* PURCHASE ENQUIRY */
+    .section-heading {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      margin: 0 0 15px;
+      color: var(--navy);
+    }
+
+    /* SIZE SELECTION */
+
+    .size-section {
+      margin: 30px 0;
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .size-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .size-option {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .size-option input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+    .size-option span {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid #cccccc;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 13px;
+      color: var(--navy);
+      transition: border-color 0.2s;
+    }
+
+    .size-option input:checked + span {
+      border: 1px solid var(--navy);
+      background: #f5f6f8;
+    }
+
+    .size-option input:focus-visible + span {
+      outline: 2px solid var(--navy);
+      outline-offset: 3px;
+    }
+
+    .custom-size-link {
+      background: none;
+      border: 0;
+      border-bottom: 1px solid var(--navy);
+      padding: 0 0 4px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.7px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .custom-size-box {
+      margin-top: 18px;
+    }
+
+    .custom-size-box label {
+      display: block;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.8;
+      margin: 12px 0 0;
+    }
+
+    /* MATERIALS */
+
+    .materials {
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f1f1;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-label {
+      color: var(--muted);
+    }
+
+    .detail-value {
+      color: var(--navy);
+      text-align: right;
+    }
+
+    /* DELIVERY */
+
+    .delivery {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: "Barlow", Arial, sans-serif;
+    }
+
+    .delivery-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .delivery-line p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .info-button {
+      border: 1px solid var(--navy);
+      background: #FFFFFF;
+      color: var(--navy);
+      border-radius: 50%;
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 0;
+    }
+
+    /* PURCHASE BUTTON */
 
     .purchase-button,
     .submit-button {
@@ -235,10 +394,6 @@
 
     .purchase-form {
       margin-top: 30px;
-    }
-
-    .purchase-form[hidden] {
-      display: none;
     }
 
     .form-heading {
@@ -279,6 +434,45 @@
       line-height: 1.8;
     }
 
+    /* DELIVERY INFORMATION DIALOG */
+
+    .info-dialog {
+      border: 0;
+      width: min(90%, 650px);
+      padding: 40px;
+      background: #FFFFFF;
+      color: var(--navy);
+      box-shadow: 0 10px 50px rgba(0,0,0,0.12);
+    }
+
+    .info-dialog::backdrop {
+      background: rgba(0,0,0,0.55);
+    }
+
+    .info-dialog h2 {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      margin: 0 0 25px;
+    }
+
+    .info-dialog p {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    .close-dialog {
+      float: right;
+      border: 0;
+      background: none;
+      color: var(--navy);
+      font-size: 25px;
+      cursor: pointer;
+    }
+
     /* MOBILE */
 
     @media (max-width: 700px) {
@@ -305,10 +499,6 @@
         gap: 7px;
       }
 
-      .language-switch a {
-        font-size: 10px;
-      }
-
       .product-layout {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -322,6 +512,10 @@
 
       .details h1 {
         font-size: 23px;
+      }
+
+      .info-dialog {
+        padding: 25px;
       }
     }
   </style>
@@ -365,17 +559,137 @@
     </div>
 
     <section class="details">
+
       <h1 id="productName"></h1>
+
       <p class="metal" id="metalName"></p>
+
       <p class="price" id="productPrice"></p>
 
-      <div class="variants" id="variants" aria-label="Available metal options"></div>
+      <div
+        class="variants"
+        id="variants"
+        aria-label="Available metal options"
+      ></div>
 
-      <p class="description">
-        Discover AETERNUM by FYRSTERLING.
-        A timeless expression of elegance,
-        designed to be treasured.
-      </p>
+      <!-- INDIVIDUAL PRODUCT DESCRIPTION -->
+
+      <p class="description" id="productDescription"></p>
+
+      <!-- BRACELET SIZE SELECTION -->
+
+      <div class="size-section" id="sizeSection" hidden>
+
+        <p class="section-heading">SELECT SIZE</p>
+
+        <div class="size-options" role="group" aria-label="Bracelet size">
+
+          <label class="size-option">
+            <input
+              type="radio"
+              name="braceletSizeChoice"
+              value="17.5 cm"
+            >
+            <span>17.5 cm</span>
+          </label>
+
+          <label class="size-option">
+            <input
+              type="radio"
+              name="braceletSizeChoice"
+              value="18.5 cm"
+            >
+            <span>18.5 cm</span>
+          </label>
+
+        </div>
+
+        <button
+          type="button"
+          class="custom-size-link"
+          id="customSizeButton"
+          aria-expanded="false"
+          aria-controls="customSizeBox"
+        >
+          REQUEST A CUSTOM SIZE
+        </button>
+
+        <div
+          class="custom-size-box"
+          id="customSizeBox"
+          hidden
+        >
+          <label for="customSizeInput">
+            Your preferred bracelet size (cm)
+          </label>
+
+          <input
+            type="number"
+            id="customSizeInput"
+            class="form-field"
+            min="1"
+            max="40"
+            step="0.1"
+            placeholder="e.g. 19.0"
+          >
+
+          <p class="small-note">
+            Custom sizing is subject to confirmation.
+            A small additional fee may apply.
+            Any additional cost will be confirmed
+            before you accept your purchase offer.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- MATERIALS AND DETAILS -->
+
+      <div class="materials">
+
+        <p class="section-heading">MATERIALS &amp; DETAILS</p>
+
+        <div class="detail-row">
+          <span class="detail-label">Collection</span>
+          <span class="detail-value">AETERNUM</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Material</span>
+          <span class="detail-value" id="materialDetail"></span>
+        </div>
+
+        <div class="detail-row" id="diamondRow" hidden>
+          <span class="detail-label">Diamond</span>
+          <span class="detail-value">
+            Lab-grown diamond, 0.11 ct
+          </span>
+        </div>
+
+      </div>
+
+      <!-- DELIVERY: GOLD AND ROSE GOLD BRACELETS ONLY -->
+
+      <div class="delivery" id="deliverySection" hidden>
+
+        <div class="delivery-line">
+
+          <p>
+            Estimated delivery time: Approximately 3 weeks.
+          </p>
+
+          <button
+            type="button"
+            class="info-button"
+            id="deliveryInfoButton"
+            aria-label="Why is the delivery time approximately three weeks?"
+          >
+            ?
+          </button>
+
+        </div>
+
+      </div>
 
       <!-- PURCHASE BUTTON -->
 
@@ -398,9 +712,27 @@
         action="https://formspree.io/f/xjyyogbg"
         method="POST"
       >
-        <input type="hidden" name="product" id="requestedProduct">
 
-        <p class="form-heading">PURCHASE ENQUIRY</p>
+        <input
+          type="hidden"
+          name="product"
+          id="requestedProduct"
+        >
+
+        <input
+          type="hidden"
+          name="bracelet_size"
+          id="requestedSize"
+          disabled
+        >
+
+        <p class="form-heading">PURCHASE REQUEST</p>
+
+        <p class="form-note">
+          Please complete your details below.
+          Your request is non-binding and no payment
+          will be collected at this stage.
+        </p>
 
         <input
           class="form-field"
@@ -462,24 +794,66 @@
           required
         >
 
+        <p class="form-note">
+          Your purchase request is non-binding.
+          FYRSTERLING will contact you with an offer,
+          payment details and further information.
+          Your purchase is only confirmed once you
+          accept the offer.
+          No payment is collected through this form.
+        </p>
+
         <button type="submit" class="submit-button">
           SUBMIT REQUEST
         </button>
 
-        <p class="form-note">
-          Your purchase enquiry is non-binding.
-          We will contact you with payment details.
-          No payment is collected through this form.
-        </p>
       </form>
 
     </section>
   </main>
 
+  <!-- DELIVERY INFORMATION DIALOG -->
+
+  <dialog
+    class="info-dialog"
+    id="deliveryDialog"
+    aria-labelledby="deliveryDialogTitle"
+  >
+
+    <button
+      type="button"
+      class="close-dialog"
+      id="closeDeliveryDialog"
+      aria-label="Close"
+    >
+      &times;
+    </button>
+
+    <h2 id="deliveryDialogTitle">
+      Why is there a longer delivery time?
+    </h2>
+
+    <p>
+      Our AETERNUM gold and rose gold bracelets may
+      require additional preparation time.
+      The estimated delivery time is approximately
+      three weeks.
+    </p>
+
+    <p>
+      We will confirm the expected delivery time
+      before you accept your purchase offer.
+    </p>
+
+  </dialog>
+
   <script>
+
     /* PRODUCT PARAMETERS */
 
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(
+      window.location.search
+    );
 
     const validTypes = [
       "Ring",
@@ -542,12 +916,59 @@
       }
     };
 
+    /* MATERIAL DETAILS */
+
+    const materialDetails = {
+      "Yellow Gold": "Solid 14K Yellow Gold",
+      "Rose Gold": "Solid 14K Rose Gold",
+      "Silver": "Sterling Silver 925/1000, Rhodium-Plated"
+    };
+
+    /* PRODUCT DESCRIPTIONS */
+
+    const descriptions = {
+      "Ring":
+        "The AETERNUM ring embodies refined simplicity " +
+        "and timeless elegance. Its delicate design " +
+        "offers an understated expression of luxury, " +
+        "created to be treasured for generations.",
+
+      "Necklace":
+        "The AETERNUM necklace is an elegant expression " +
+        "of understated luxury. Its timeless design " +
+        "brings a delicate touch of sophistication " +
+        "to both everyday moments and special occasions.",
+
+      "Earrings":
+        "The AETERNUM earrings celebrate timeless " +
+        "elegance through refined proportions and " +
+        "thoughtful details. Designed to complement " +
+        "a personal style with effortless sophistication.",
+
+      "Bracelet":
+        "The AETERNUM bracelet brings together " +
+        "contemporary elegance and timeless design. " +
+        "Its delicate chain and sparkling lab-grown " +
+        "diamond create a refined expression of " +
+        "understated luxury, beautiful worn alone " +
+        "or alongside other treasured pieces."
+    };
+
+    /* IMAGE PATH */
+
     function imagePath(selectedMetal) {
-      const filename = `${metals[selectedMetal]} ${types[type]}.jpeg`;
+      const filename =
+        `${metals[selectedMetal]} ${types[type]}.jpeg`;
+
       return "/images/" + encodeURIComponent(filename);
     }
 
-    function productUrl(language, selectedMetal = metal) {
+    /* PRODUCT URL */
+
+    function productUrl(
+      language,
+      selectedMetal = metal
+    ) {
       const path = language === "en"
         ? "/en/product.html"
         : "/product.html";
@@ -565,7 +986,8 @@
     document.getElementById("productName").textContent =
       "AETERNUM " + type.toUpperCase();
 
-    document.getElementById("metalName").textContent = metal;
+    document.getElementById("metalName").textContent =
+      metal;
 
     document.getElementById("productPrice").textContent =
       prices[type][metal].toLocaleString("da-DK") + " DKK";
@@ -573,14 +995,46 @@
     document.getElementById("requestedProduct").value =
       "AETERNUM " + type.toUpperCase() + " – " + metal;
 
+    document.getElementById("productDescription").textContent =
+      descriptions[type];
+
+    document.getElementById("materialDetail").textContent =
+      materialDetails[metal];
+
     const mainImage = document.getElementById("mainImage");
+
     mainImage.src = imagePath(metal);
-    mainImage.alt = "AETERNUM " + type + " – " + metal;
+
+    mainImage.alt =
+      "AETERNUM " + type + " – " + metal;
+
+    /* BRACELET-SPECIFIC DETAILS */
+
+    const isBracelet = type === "Bracelet";
+
+    const isGoldBracelet =
+      isBracelet && metal !== "Silver";
+
+    const sizeSection =
+      document.getElementById("sizeSection");
+
+    const diamondRow =
+      document.getElementById("diamondRow");
+
+    const deliverySection =
+      document.getElementById("deliverySection");
+
+    sizeSection.hidden = !isBracelet;
+    diamondRow.hidden = !isBracelet;
+    deliverySection.hidden = !isGoldBracelet;
 
     /* LANGUAGE LINKS */
 
-    document.getElementById("danishLink").href = productUrl("da");
-    document.getElementById("englishLink").href = productUrl("en");
+    document.getElementById("danishLink").href =
+      productUrl("da");
+
+    document.getElementById("englishLink").href =
+      productUrl("en");
 
     /* SEO LINKS */
 
@@ -596,76 +1050,294 @@
       origin + productUrl("en");
 
     document.title =
-      "AETERNUM " + type + " – " + metal + " | FYRSTERLING";
+      "AETERNUM " + type +
+      " – " + metal +
+      " | FYRSTERLING";
 
     /* METAL VARIANTS */
 
-    const variantsContainer = document.getElementById("variants");
+    const variantsContainer =
+      document.getElementById("variants");
 
     validMetals.forEach(selectedMetal => {
+
       const link = document.createElement("a");
-      link.className = "variant" +
+
+      link.className =
+        "variant" +
         (selectedMetal === metal ? " active" : "");
 
       link.href = productUrl("en", selectedMetal);
+
       link.title = selectedMetal;
-      link.setAttribute("aria-label", selectedMetal);
+
+      link.setAttribute(
+        "aria-label",
+        selectedMetal
+      );
 
       if (selectedMetal === metal) {
         link.setAttribute("aria-current", "page");
       }
 
       const image = document.createElement("img");
+
       image.src = imagePath(selectedMetal);
+
       image.alt = selectedMetal;
 
       link.appendChild(image);
+
       variantsContainer.appendChild(link);
+
+    });
+
+    /* BRACELET SIZE SELECTION */
+
+    const sizeRadios = document.querySelectorAll(
+      'input[name="braceletSizeChoice"]'
+    );
+
+    const customSizeButton =
+      document.getElementById("customSizeButton");
+
+    const customSizeBox =
+      document.getElementById("customSizeBox");
+
+    const customSizeInput =
+      document.getElementById("customSizeInput");
+
+    const requestedSize =
+      document.getElementById("requestedSize");
+
+    let customSizeActive = false;
+
+    customSizeButton.addEventListener("click", () => {
+
+      customSizeActive = !customSizeActive;
+
+      customSizeBox.hidden = !customSizeActive;
+
+      customSizeButton.setAttribute(
+        "aria-expanded",
+        String(customSizeActive)
+      );
+
+      if (customSizeActive) {
+
+        sizeRadios.forEach(radio => {
+          radio.checked = false;
+        });
+
+        customSizeInput.required = true;
+        customSizeInput.focus();
+
+      } else {
+
+        customSizeInput.required = false;
+        customSizeInput.value = "";
+
+      }
+
+    });
+
+    sizeRadios.forEach(radio => {
+
+      radio.addEventListener("change", () => {
+
+        customSizeActive = false;
+        customSizeBox.hidden = true;
+        customSizeInput.required = false;
+        customSizeInput.value = "";
+
+        customSizeButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+    function getSelectedBraceletSize() {
+
+      if (!isBracelet) {
+        return "";
+      }
+
+      if (customSizeActive) {
+
+        const value = customSizeInput.value.trim();
+        const number = Number(value);
+
+        if (
+          !value ||
+          !Number.isFinite(number) ||
+          number <= 0 ||
+          number > 40
+        ) {
+          return "";
+        }
+
+        return "Custom size requested: " + value + " cm";
+      }
+
+      const selected = document.querySelector(
+        'input[name="braceletSizeChoice"]:checked'
+      );
+
+      return selected ? selected.value : "";
+
+    }
+
+    /* DELIVERY INFORMATION */
+
+    const deliveryDialog =
+      document.getElementById("deliveryDialog");
+
+    document.getElementById(
+      "deliveryInfoButton"
+    ).addEventListener("click", () => {
+
+      if (typeof deliveryDialog.showModal === "function") {
+        deliveryDialog.showModal();
+      }
+
+    });
+
+    document.getElementById(
+      "closeDeliveryDialog"
+    ).addEventListener("click", () => {
+
+      deliveryDialog.close();
+
+    });
+
+    deliveryDialog.addEventListener("click", event => {
+
+      if (event.target === deliveryDialog) {
+        deliveryDialog.close();
+      }
+
     });
 
     /* SHOW PURCHASE FORM */
 
-    const purchaseButton = document.getElementById("purchaseButton");
-    const purchaseForm = document.getElementById("purchaseForm");
+    const purchaseButton =
+      document.getElementById("purchaseButton");
+
+    const purchaseForm =
+      document.getElementById("purchaseForm");
 
     purchaseButton.addEventListener("click", () => {
-      purchaseForm.hidden = false;
-      purchaseButton.setAttribute("aria-expanded", "true");
-    });
 
-    /* SEND PURCHASE ENQUIRY */
+      if (isBracelet && !getSelectedBraceletSize()) {
 
-    purchaseForm.addEventListener("submit", async event => {
-      event.preventDefault();
+        alert(
+          "Please select a bracelet size or enter " +
+          "your preferred custom size."
+        );
 
-      const button = purchaseForm.querySelector(
-        'button[type="submit"]'
-      );
-
-      button.disabled = true;
-      button.textContent = "SENDING...";
-
-      try {
-        const response = await fetch(purchaseForm.action, {
-          method: "POST",
-          body: new FormData(purchaseForm),
-          headers: {
-            "Accept": "application/json"
-          }
+        sizeSection.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
         });
 
-        if (!response.ok) {
-          throw new Error("Submission failed");
+        return;
+      }
+
+      purchaseForm.hidden = false;
+
+      purchaseButton.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      purchaseForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    });
+
+    /* SEND PURCHASE REQUEST */
+
+    purchaseForm.addEventListener(
+      "submit",
+      async event => {
+
+        event.preventDefault();
+
+        if (isBracelet) {
+
+          const selectedSize = getSelectedBraceletSize();
+
+          if (!selectedSize) {
+
+            alert(
+              "Please select a bracelet size before " +
+              "submitting your request."
+            );
+
+            sizeSection.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+            return;
+          }
+
+          requestedSize.disabled = false;
+          requestedSize.value = selectedSize;
+
+        } else {
+
+          requestedSize.disabled = true;
+          requestedSize.value = "";
+
         }
 
-        window.location.href = "/en/thank-you.html";
+        const button = purchaseForm.querySelector(
+          'button[type="submit"]'
+        );
 
-      } catch (error) {
-        alert("Your enquiry could not be sent. Please try again.");
-        button.disabled = false;
-        button.textContent = "SUBMIT REQUEST";
+        button.disabled = true;
+        button.textContent = "SENDING...";
+
+        try {
+
+          const response = await fetch(
+            purchaseForm.action,
+            {
+              method: "POST",
+              body: new FormData(purchaseForm),
+              headers: {
+                "Accept": "application/json"
+              }
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
+
+          window.location.href = "/en/thank-you.html";
+
+        } catch (error) {
+
+          alert(
+            "Your request could not be sent. " +
+            "Please try again."
+          );
+
+          button.disabled = false;
+          button.textContent = "SUBMIT REQUEST";
+
+        }
+
       }
-    });
+    );
+
   </script>
 
 </body>
