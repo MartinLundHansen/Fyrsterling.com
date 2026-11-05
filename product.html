@@ -305,10 +305,6 @@
         gap: 7px;
       }
 
-      .language-switch a {
-        font-size: 10px;
-      }
-
       .product-layout {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -365,11 +361,18 @@
     </div>
 
     <section class="details">
+
       <h1 id="productName"></h1>
+
       <p class="metal" id="metalName"></p>
+
       <p class="price" id="productPrice"></p>
 
-      <div class="variants" id="variants" aria-label="Vælg materiale"></div>
+      <div
+        class="variants"
+        id="variants"
+        aria-label="Vælg materiale"
+      ></div>
 
       <p class="description">
         Oplev AETERNUM fra FYRSTERLING.
@@ -386,7 +389,7 @@
         aria-expanded="false"
         aria-controls="purchaseForm"
       >
-        FORESPØRG OM KØB
+        ANMOD OM KØB
       </button>
 
       <!-- PURCHASE FORM -->
@@ -398,9 +401,16 @@
         action="https://formspree.io/f/xjyyogbg"
         method="POST"
       >
-        <input type="hidden" name="product" id="requestedProduct">
 
-        <p class="form-heading">KØBSFORESPØRGSEL</p>
+        <input
+          type="hidden"
+          name="product"
+          id="requestedProduct"
+        >
+
+        <p class="form-heading">
+          KØBSANMODNING
+        </p>
 
         <input
           class="form-field"
@@ -462,25 +472,34 @@
           required
         >
 
-        <button type="submit" class="submit-button">
-          SEND FORESPØRGSEL
+        <p class="form-note">
+          Send din købsanmodning til FYRSTERLING.
+          Vi kontakter dig efterfølgende med et tilbud
+          og oplysninger om betaling.
+          Din anmodning er uforpligtende, indtil du
+          accepterer tilbuddet.
+          Der opkræves ingen betaling via denne formular.
+        </p>
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          SEND ANMODNING
         </button>
 
-        <p class="form-note">
-          Din købsforespørgsel er uforpligtende.
-          Vi kontakter dig med oplysninger om betaling
-          og den videre proces. Der opkræves ingen
-          betaling via denne formular.
-        </p>
       </form>
 
     </section>
   </main>
 
   <script>
+
     /* PRODUCT PARAMETERS */
 
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(
+      window.location.search
+    );
 
     const validTypes = [
       "Ring",
@@ -558,12 +577,21 @@
       }
     };
 
+    /* IMAGE PATH */
+
     function imagePath(selectedMetal) {
-      const filename = `${metals[selectedMetal]} ${types[type]}.jpeg`;
+      const filename =
+        `${metals[selectedMetal]} ${types[type]}.jpeg`;
+
       return "/images/" + encodeURIComponent(filename);
     }
 
-    function productUrl(language, selectedMetal = metal) {
+    /* PRODUCT URL */
+
+    function productUrl(
+      language,
+      selectedMetal = metal
+    ) {
       const path = language === "en"
         ? "/en/product.html"
         : "/product.html";
@@ -588,13 +616,19 @@
       prices[type][metal].toLocaleString("da-DK") + " DKK";
 
     document.getElementById("requestedProduct").value =
-      "AETERNUM " + danishTypes[type] + " – " + danishMetals[metal];
+      "AETERNUM " + danishTypes[type] +
+      " – " + danishMetals[metal];
 
-    const mainImage = document.getElementById("mainImage");
+    const mainImage =
+      document.getElementById("mainImage");
+
     mainImage.src = imagePath(metal);
+
     mainImage.alt =
-      "AETERNUM " + danishTypes[type].toLowerCase() +
-      " i " + danishMetals[metal].toLowerCase();
+      "AETERNUM " +
+      danishTypes[type].toLowerCase() +
+      " i " +
+      danishMetals[metal].toLowerCase();
 
     /* LANGUAGE LINKS */
 
@@ -618,8 +652,10 @@
       origin + productUrl("en");
 
     document.title =
-      "AETERNUM " + danishTypes[type] +
-      " – " + danishMetals[metal] +
+      "AETERNUM " +
+      danishTypes[type] +
+      " – " +
+      danishMetals[metal] +
       " | FYRSTERLING";
 
     /* METAL VARIANTS */
@@ -628,13 +664,17 @@
       document.getElementById("variants");
 
     validMetals.forEach(selectedMetal => {
+
       const link = document.createElement("a");
 
-      link.className = "variant" +
+      link.className =
+        "variant" +
         (selectedMetal === metal ? " active" : "");
 
       link.href = productUrl("da", selectedMetal);
+
       link.title = danishMetals[selectedMetal];
+
       link.setAttribute(
         "aria-label",
         danishMetals[selectedMetal]
@@ -645,11 +685,15 @@
       }
 
       const image = document.createElement("img");
+
       image.src = imagePath(selectedMetal);
+
       image.alt = danishMetals[selectedMetal];
 
       link.appendChild(image);
+
       variantsContainer.appendChild(link);
+
     });
 
     /* SHOW PURCHASE FORM */
@@ -661,49 +705,67 @@
       document.getElementById("purchaseForm");
 
     purchaseButton.addEventListener("click", () => {
+
       purchaseForm.hidden = false;
+
       purchaseButton.setAttribute(
         "aria-expanded",
         "true"
       );
+
     });
 
     /* SEND PURCHASE ENQUIRY */
 
-    purchaseForm.addEventListener("submit", async event => {
-      event.preventDefault();
+    purchaseForm.addEventListener(
+      "submit",
+      async event => {
 
-      const button = purchaseForm.querySelector(
-        'button[type="submit"]'
-      );
+        event.preventDefault();
 
-      button.disabled = true;
-      button.textContent = "SENDER...";
-
-      try {
-        const response = await fetch(purchaseForm.action, {
-          method: "POST",
-          body: new FormData(purchaseForm),
-          headers: {
-            "Accept": "application/json"
-          }
-        });
-
-        if (!response.ok) {
-          throw new Error("Submission failed");
-        }
-
-        window.location.href = "/thank-you.html";
-
-      } catch (error) {
-        alert(
-          "Din forespørgsel kunne ikke sendes. Prøv venligst igen."
+        const button = purchaseForm.querySelector(
+          'button[type="submit"]'
         );
 
-        button.disabled = false;
-        button.textContent = "SEND FORESPØRGSEL";
+        button.disabled = true;
+
+        button.textContent = "SENDER...";
+
+        try {
+
+          const response = await fetch(
+            purchaseForm.action,
+            {
+              method: "POST",
+              body: new FormData(purchaseForm),
+              headers: {
+                "Accept": "application/json"
+              }
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
+
+          window.location.href = "/thank-you.html";
+
+        } catch (error) {
+
+          alert(
+            "Din anmodning kunne ikke sendes. " +
+            "Prøv venligst igen."
+          );
+
+          button.disabled = false;
+
+          button.textContent = "SEND ANMODNING";
+
+        }
+
       }
-    });
+    );
+
   </script>
 
 </body>
