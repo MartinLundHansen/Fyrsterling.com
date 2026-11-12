@@ -2,721 +2,795 @@
 <!doctype html>
 <html lang="da">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>FYRSTERLING | Eksklusive smykker og diamanter</title>
-
-  <meta name="description" content="Oplev FYRSTERLING og AETERNUM – eksklusive smykker i 14 karat guld, sterlingsølv og med laboratoriedyrkede diamanter. Udforsk kollektionen og vores private showroom i Odense.">
-
-  <meta name="theme-color" content="#050505">
-
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-  <link rel="canonical" href="https://fyrsterling.com/">
-  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/">
-  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/">
-  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/style.css">
-
-  <style>
-    :root {
-      --navy: #142a46;
-      --white: #FFFFFF;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: #FFFFFF;
-      color: var(--navy);
-      font-family: Georgia, "Times New Roman", serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* HEADER */
-
-    .site-header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 25px 20px 18px;
-      background: transparent;
-      text-align: center;
-      transition: background 0.3s ease;
-    }
-
-    .site-logo {
-      display: inline-block;
-      color: #FFFFFF;
-      text-decoration: none;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 29px;
-      font-weight: normal;
-      letter-spacing: 5px;
-      margin-bottom: 18px;
-    }
-
-    .site-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 27px;
-    }
-
-    .site-nav a {
-      color: #FFFFFF;
-      text-decoration: none;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 1.4px;
-      padding-bottom: 5px;
-    }
-
-    .site-nav a:hover {
-      border-bottom: 1px solid currentColor;
-    }
-
-    /* JEWELLERY DROPDOWN */
-
-    .nav-dropdown {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .nav-dropdown > a {
-      display: inline-block;
-    }
-
-    .dropdown-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 16px;
-      height: 22px;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: #FFFFFF;
-      cursor: pointer;
-    }
-
-    .dropdown-toggle svg {
-      width: 11px;
-      height: 11px;
-      transition: transform 0.2s ease;
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 190px;
-      padding: 19px 0 10px;
-      background: #FFFFFF;
-      border: 1px solid #eeeeee;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
-      text-align: left;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.2s ease, visibility 0.2s ease;
-      z-index: 200;
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 12px 22px;
-      border-bottom: 0 !important;
-      color: var(--navy) !important;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1.3px;
-      white-space: nowrap;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-
-    .dropdown-menu a:hover,
-    .dropdown-menu a:focus-visible {
-      background: #f5f6f8;
-      border-bottom: 0;
-    }
-
-    .nav-dropdown:hover .dropdown-menu,
-    .nav-dropdown:focus-within .dropdown-menu,
-    .nav-dropdown.is-open .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
-    .nav-dropdown:hover .dropdown-toggle svg,
-    .nav-dropdown:focus-within .dropdown-toggle svg,
-    .nav-dropdown.is-open .dropdown-toggle svg {
-      transform: rotate(180deg);
-    }
-
-    /* LANGUAGE SWITCH */
-
-    .language-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-left: 10px;
-      color: #FFFFFF;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    .language-switch a {
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    .language-switch a[aria-current="page"] {
-      border-bottom: 1px solid currentColor;
-    }
-
-    .language-divider {
-      opacity: 0.6;
-    }
-
-    /* WHITE HEADER ON HOVER */
-
-    .site-header:hover,
-    .site-header:focus-within {
-      background: #FFFFFF;
-    }
-
-    .site-header:hover .site-logo,
-    .site-header:hover .site-nav a,
-    .site-header:hover .language-switch,
-    .site-header:hover .dropdown-toggle,
-    .site-header:focus-within .site-logo,
-    .site-header:focus-within .site-nav a,
-    .site-header:focus-within .language-switch,
-    .site-header:focus-within .dropdown-toggle {
-      color: var(--navy);
-    }
-
-    /* HERO VIDEO */
-
-    .visual {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      min-height: 100svh;
-      overflow: hidden;
-      background: #050505;
-      color: #FFFFFF;
-    }
-
-    .visual video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .visual::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.14);
-      pointer-events: none;
-    }
-
-    .video-title {
-      position: absolute;
-      top: 43%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      width: 90%;
-      margin: 0;
-      text-align: center;
-      color: #FFFFFF;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(30px, 4vw, 54px);
-      font-weight: normal;
-      letter-spacing: 2px;
-    }
-
-    .video-explore {
-      position: absolute;
-      left: 50%;
-      bottom: 11%;
-      transform: translateX(-50%);
-      z-index: 2;
-      width: 90%;
-      text-align: center;
-      color: #FFFFFF;
-    }
-
-    .video-explore p {
-      margin: 0 0 22px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      letter-spacing: 0.5px;
-    }
-
-    .explore-button {
-      display: inline-block;
-      padding: 14px 32px;
-      border: 1px solid #FFFFFF;
-      color: #FFFFFF;
-      background: transparent;
-      text-decoration: none;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1.6px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .explore-button:hover {
-      background: #FFFFFF;
-      color: var(--navy);
-    }
-
-    /* NEW EDITORIAL IMAGE SECTION */
-
-    .editorial-section {
-      background: #FFFFFF;
-      padding: 60px 30px;
-    }
-
-    .editorial-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 50px;
-      align-items: start;
-    }
-
-    .editorial-card {
-      display: block;
-      color: var(--navy);
-      text-decoration: none;
-    }
-
-    .editorial-image-wrap {
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background: #f7f7f7;
-    }
-
-    .editorial-image {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.45s ease;
-    }
-
-    .editorial-card:hover .editorial-image {
-      transform: scale(1.025);
-    }
-
-    .editorial-title {
-      margin: 20px 0 0;
-      text-align: center;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 1.6px;
-      line-height: 1.5;
-    }
-
-    /* AETERNUM COLLECTION */
-
-    .collection-section {
-      background: #FFFFFF;
-    }
-
-    .collection-image {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    /* CONTACT INFORMATION */
-
-    .home-contact {
-      background: #FFFFFF;
-      padding: 45px 20px;
-      text-align: center;
-    }
-
-    .home-contact-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .home-contact-links a {
-      color: #005A7D;
-      text-decoration: none;
-    }
-
-    .home-contact-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-      .site-header {
-        padding: 22px 15px 16px;
-      }
-
-      .site-logo {
-        font-size: 24px;
-        letter-spacing: 3px;
-      }
-
-      .site-nav {
-        gap: 13px;
-      }
-
-      .site-nav a {
-        font-size: 10px;
-        letter-spacing: 0.7px;
-      }
-
-      .nav-dropdown {
-        gap: 2px;
-      }
-
-      .dropdown-toggle {
-        width: 15px;
-      }
-
-      .dropdown-menu {
-        left: 0;
-        transform: none;
-        min-width: 175px;
-      }
-
-      .dropdown-menu a {
-        font-size: 11px;
-        padding: 13px 18px;
-      }
-
-      .language-switch {
-        margin-left: 3px;
-        gap: 7px;
-      }
-
-      .language-switch a {
-        font-size: 10px;
-      }
-
-      .video-title {
-        font-size: 32px;
-      }
-
-      .video-explore p {
-        font-size: 16px;
-      }
-
-      .editorial-section {
-        padding: 45px 20px;
-      }
-
-      .editorial-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .editorial-title {
-        font-size: 12px;
-        margin-top: 16px;
-      }
-
-      .home-contact {
-        padding: 35px 20px;
-      }
-
-      .home-contact-links {
-        flex-direction: column;
-        gap: 16px;
-        font-size: 11px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .visual video {
-        display: none;
-      }
-
-      .visual {
-        background: #142a46;
-      }
-
-      .dropdown-menu,
-      .dropdown-toggle svg,
-      .editorial-image {
-        transition: none;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FYRSTERLING | Eksklusive smykker og diamanter</title>
+<meta name="description" content="Oplev FYRSTERLING og AETERNUM – eksklusive smykker i 14 karat guld, sterlingsølv og med laboratoriedyrkede diamanter.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="canonical" href="https://fyrsterling.com/">
+<link rel="alternate" hreflang="da" href="https://fyrsterling.com/">
+<link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+:root {
+  --navy:#142a46;
+  --white:#FFFFFF;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:#FFFFFF;
+  color:var(--navy);
+  font-family:Georgia,"Times New Roman",serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* HEADER */
+.site-header {
+  position:absolute;
+  top:0;left:0;right:0;
+  z-index:100;
+  padding:25px 20px 18px;
+  background:transparent;
+  text-align:center;
+  transition:background .3s;
+}
+.site-logo {
+  display:inline-block;
+  margin-bottom:18px;
+  color:#FFFFFF;
+  text-decoration:none;
+  font-size:29px;
+  letter-spacing:5px;
+}
+.site-nav {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:27px;
+}
+.site-nav a {
+  color:#FFFFFF;
+  text-decoration:none;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:1.4px;
+  padding-bottom:5px;
+}
+.site-nav a:hover {
+  border-bottom:1px solid currentColor;
+}
+
+/* JEWELLERY DROPDOWN */
+.nav-dropdown {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+.dropdown-toggle {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:16px;height:22px;
+  padding:0;border:0;
+  background:transparent;
+  color:#FFFFFF;
+  cursor:pointer;
+}
+.dropdown-toggle svg {
+  width:11px;height:11px;
+  transition:transform .2s;
+}
+.dropdown-menu {
+  position:absolute;
+  top:100%;left:50%;
+  transform:translateX(-50%);
+  z-index:200;
+  min-width:190px;
+  padding:19px 0 10px;
+  background:#FFFFFF;
+  border:1px solid #eeeeee;
+  box-shadow:0 12px 25px rgba(0,0,0,.06);
+  text-align:left;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .2s,visibility .2s;
+}
+.dropdown-menu a {
+  display:block;
+  padding:12px 22px;
+  border-bottom:0!important;
+  color:var(--navy)!important;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:1.3px;
+  white-space:nowrap;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background:#f5f6f8;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown.is-open .dropdown-menu {
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+.nav-dropdown:hover .dropdown-toggle svg,
+.nav-dropdown:focus-within .dropdown-toggle svg,
+.nav-dropdown.is-open .dropdown-toggle svg {
+  transform:rotate(180deg);
+}
+
+/* LANGUAGE */
+.language-switch {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-left:10px;
+  color:#FFFFFF;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:11px;
+}
+.language-switch a {
+  font-size:11px;
+  letter-spacing:1px;
+}
+.language-switch a[aria-current="page"] {
+  border-bottom:1px solid currentColor;
+}
+.language-divider {opacity:.6}
+.site-header:hover,
+.site-header:focus-within {
+  background:#FFFFFF;
+}
+.site-header:hover .site-logo,
+.site-header:hover .site-nav a,
+.site-header:hover .language-switch,
+.site-header:hover .dropdown-toggle,
+.site-header:focus-within .site-logo,
+.site-header:focus-within .site-nav a,
+.site-header:focus-within .language-switch,
+.site-header:focus-within .dropdown-toggle {
+  color:var(--navy);
+}
+
+/* HERO */
+.visual {
+  position:relative;
+  width:100%;
+  min-height:100vh;
+  min-height:100svh;
+  overflow:hidden;
+  background:#050505;
+  color:#FFFFFF;
+}
+.visual video {
+  position:absolute;
+  inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+}
+.visual::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.14);
+  pointer-events:none;
+}
+.video-title {
+  position:absolute;
+  top:43%;left:50%;
+  transform:translate(-50%,-50%);
+  z-index:2;
+  width:90%;
+  margin:0;
+  text-align:center;
+  color:#FFFFFF;
+  font-size:clamp(30px,4vw,54px);
+  font-weight:normal;
+  letter-spacing:2px;
+}
+.video-explore {
+  position:absolute;
+  left:50%;bottom:11%;
+  transform:translateX(-50%);
+  z-index:2;
+  width:90%;
+  text-align:center;
+}
+.video-explore p {
+  margin:0 0 22px;
+  font-size:18px;
+}
+.explore-button {
+  display:inline-block;
+  padding:14px 32px;
+  border:1px solid #FFFFFF;
+  color:#FFFFFF;
+  background:transparent;
+  text-decoration:none;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:1.6px;
+  transition:background .2s,color .2s;
+}
+.explore-button:hover {
+  background:#FFFFFF;
+  color:var(--navy);
+}
+
+/* TWO EDITORIAL IMAGES */
+.editorial-section {
+  background:#FFFFFF;
+  padding:60px 30px;
+}
+.editorial-grid {
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:50px;
+}
+.editorial-card {
+  display:block;
+  color:var(--navy);
+  text-decoration:none;
+}
+.editorial-image-wrap {
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#f7f7f7;
+}
+.editorial-image {
+  display:block;
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform .45s;
+}
+.editorial-card:hover .editorial-image {
+  transform:scale(1.025);
+}
+.editorial-title {
+  margin:20px 0 0;
+  text-align:center;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:13px;
+  font-weight:400;
+  letter-spacing:1.6px;
+}
+
+/* AUTOMATIC JEWELLERY SLIDER */
+.jewellery-slider {
+  background:#FFFFFF;
+  padding:55px 24px 80px;
+}
+.slider-container {
+  max-width:1320px;
+  margin:0 auto;
+}
+.slider-heading {
+  margin:0 0 45px;
+  text-align:center;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:22px;
+  font-weight:400;
+  letter-spacing:3px;
+}
+.slider-viewport {
+  width:100%;
+  overflow:hidden;
+}
+.slider-track {
+  display:flex;
+  transition:transform .7s ease;
+  will-change:transform;
+}
+.slider-item {
+  flex:0 0 25%;
+  min-width:0;
+  padding:0 12px;
+}
+.slider-item a {
+  display:block;
+  color:var(--navy);
+  text-decoration:none;
+  text-align:center;
+}
+.slider-product-image {
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  background:#fafafa;
+}
+.slider-product-name {
+  margin:18px 0 6px;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:1px;
+  line-height:1.5;
+}
+.slider-product-metal {
+  margin:0 0 9px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:13px;
+  color:#666666;
+}
+.slider-product-price {
+  margin:0;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:13px;
+}
+.slider-controls {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:32px;
+  margin-top:38px;
+}
+.slider-arrow {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:38px;height:38px;
+  border:1px solid #d8d8d8;
+  border-radius:50%;
+  background:#FFFFFF;
+  color:var(--navy);
+  font-size:22px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.slider-arrow:hover {background:#f4f4f4}
+.slider-counter {
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:1px;
+  color:#777777;
+}
+
+/* AETERNUM IMAGE */
+.collection-section {background:#FFFFFF}
+.collection-image {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* CONTACT */
+.home-contact {
+  background:#FFFFFF;
+  padding:45px 20px;
+  text-align:center;
+}
+.home-contact-links {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  font-family:"Barlow",Arial,sans-serif;
+  font-size:13px;
+  letter-spacing:1px;
+}
+.home-contact-links a {
+  color:#005A7D;
+  text-decoration:none;
+}
+.home-contact-links a:hover {text-decoration:underline}
+
+/* MOBILE */
+@media(max-width:700px) {
+  .site-header {padding:22px 15px 16px}
+  .site-logo {font-size:24px;letter-spacing:3px}
+  .site-nav {gap:13px}
+  .site-nav a {font-size:10px;letter-spacing:.7px}
+  .nav-dropdown {gap:2px}
+  .dropdown-toggle {width:15px}
+  .dropdown-menu {
+    left:0;
+    transform:none;
+    min-width:175px;
+  }
+  .dropdown-menu a {
+    font-size:11px;
+    padding:13px 18px;
+  }
+  .language-switch {margin-left:3px;gap:7px}
+  .language-switch a {font-size:10px}
+  .video-title {font-size:32px}
+  .video-explore p {font-size:16px}
+  .editorial-section {padding:45px 20px}
+  .editorial-grid {
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .editorial-title {font-size:12px;margin-top:16px}
+  .jewellery-slider {padding:45px 12px 60px}
+  .slider-heading {font-size:18px;margin-bottom:30px}
+  .slider-item {flex-basis:50%;padding:0 7px}
+  .slider-product-name {font-size:10px}
+  .slider-product-metal,
+  .slider-product-price {font-size:12px}
+  .home-contact {padding:35px 20px}
+  .home-contact-links {
+    flex-direction:column;
+    gap:16px;
+    font-size:11px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .visual video {display:none}
+  .visual {background:#142a46}
+  .dropdown-menu,
+  .dropdown-toggle svg,
+  .editorial-image,
+  .slider-track {transition:none}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<header class="site-header">
+  <a href="/" class="site-logo">FYRSTERLING</a>
 
-  <header class="site-header">
-    <a href="/" class="site-logo">FYRSTERLING</a>
+  <nav class="site-nav" aria-label="Hovednavigation">
+    <div class="nav-dropdown" id="jewelleryDropdown">
+      <a href="/collection.html">SMYKKER</a>
+      <button type="button" class="dropdown-toggle"
+        id="jewelleryToggle"
+        aria-label="Vis smykkekategorier"
+        aria-expanded="false"
+        aria-controls="jewelleryMenu">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5"
+          aria-hidden="true">
+          <path d="M5 9l7 7 7-7"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="jewelleryMenu">
+        <a href="/collection.html#rings">RINGE</a>
+        <a href="/collection.html#bracelets">ARMBÅND</a>
+        <a href="/collection.html#necklaces">HALSKÆDER</a>
+        <a href="/collection.html#earrings">ØRERINGE</a>
+      </div>
+    </div>
 
-    <nav class="site-nav" aria-label="Hovednavigation">
+    <a href="/services.html">SERVICES</a>
+    <a href="/our-story.html">MAISON</a>
+    <a href="/appointments.html">BOOK TID</a>
+    <a href="/contact.html">KONTAKT</a>
+    <a href="/faq.html">FAQ</a>
 
-      <!-- SMYKKER MED UNDERMENU -->
+    <span class="language-switch" aria-label="Vælg sprog">
+      <a href="/" lang="da" aria-current="page">DA</a>
+      <span class="language-divider" aria-hidden="true">|</span>
+      <a href="/en/" lang="en">EN</a>
+    </span>
+  </nav>
+</header>
 
-      <div class="nav-dropdown" id="jewelleryDropdown">
+<main class="page">
 
-        <a href="/collection.html">SMYKKER</a>
+  <!-- HERO VIDEO -->
+  <section class="visual" aria-label="FYRSTERLING smykker">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="/images/Video%20til%20forsiden.MP4"
+        type="video/mp4">
+    </video>
+    <h2 class="video-title">The Art of Eternity</h2>
+    <div class="video-explore">
+      <p>Oplev kollektionen</p>
+      <a href="/collection.html" class="explore-button">
+        UDFORSK
+      </a>
+    </div>
+  </section>
 
-        <button
-          type="button"
-          class="dropdown-toggle"
-          id="jewelleryToggle"
-          aria-label="Vis smykkekategorier"
-          aria-expanded="false"
-          aria-controls="jewelleryMenu"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            aria-hidden="true"
-          >
-            <path d="M5 9l7 7 7-7"/>
-          </svg>
-        </button>
+  <!-- TWO EDITORIAL IMAGES -->
+  <section class="editorial-section" aria-label="Udforsk AETERNUM">
+    <div class="editorial-grid">
+      <a href="/collection.html" class="editorial-card">
+        <span class="editorial-image-wrap">
+          <img
+            src="/images/Generelt%20aeternum%20billede.jpg"
+            alt="Model med AETERNUM-smykker"
+            class="editorial-image"
+            loading="lazy">
+        </span>
+        <h2 class="editorial-title">AETERNUM COLLECTION</h2>
+      </a>
 
-        <div class="dropdown-menu" id="jewelleryMenu">
-          <a href="/collection.html#rings">RINGE</a>
-          <a href="/collection.html#bracelets">ARMBÅND</a>
-          <a href="/collection.html#necklaces">HALSKÆDER</a>
-          <a href="/collection.html#earrings">ØRERINGE</a>
-        </div>
+      <a href="/collection.html#earrings" class="editorial-card">
+        <span class="editorial-image-wrap">
+          <img
+            src="/images/S%C3%B8lv%20%C3%B8reringe%20i%20box.PNG"
+            alt="AETERNUM-øreringe i FYRSTERLING-æske"
+            class="editorial-image"
+            loading="lazy">
+        </span>
+        <h2 class="editorial-title">THE ART OF DETAIL</h2>
+      </a>
+    </div>
+  </section>
 
+  <!-- AUTOMATIC JEWELLERY SLIDER -->
+  <section class="jewellery-slider"
+    aria-label="AETERNUM smykkekollektion">
+
+    <div class="slider-container">
+      <h2 class="slider-heading">DISCOVER AETERNUM</h2>
+
+      <div class="slider-viewport" id="sliderViewport">
+        <div class="slider-track" id="sliderTrack"></div>
       </div>
 
-      <a href="/services.html">SERVICES</a>
-      <a href="/our-story.html">MAISON</a>
-      <a href="/appointments.html">BOOK TID</a>
-      <a href="/contact.html">KONTAKT</a>
-      <a href="/faq.html">FAQ</a>
+      <div class="slider-controls">
+        <button class="slider-arrow" id="sliderPrev"
+          type="button" aria-label="Forrige smykke">‹</button>
+        <span class="slider-counter" id="sliderCounter"
+          aria-live="off"></span>
+        <button class="slider-arrow" id="sliderNext"
+          type="button" aria-label="Næste smykke">›</button>
+      </div>
+    </div>
+  </section>
 
-      <span class="language-switch" aria-label="Vælg sprog">
-        <a href="/" lang="da" aria-current="page">DA</a>
-        <span class="language-divider" aria-hidden="true">|</span>
-        <a href="/en/" lang="en">EN</a>
-      </span>
+  <!-- EXISTING AETERNUM IMAGE -->
+  <section id="collection" class="collection-section">
+    <img src="/images/Aeternum.PNG"
+      alt="AETERNUM smykkekollektion fra FYRSTERLING"
+      class="collection-image" loading="lazy">
 
-    </nav>
-  </header>
-
-  <main class="page">
-
-    <!-- HERO VIDEO -->
-
-    <section class="visual" aria-label="FYRSTERLING smykker">
-      <video autoplay muted loop playsinline preload="metadata">
-        <source
-          src="/images/Video%20til%20forsiden.MP4"
-          type="video/mp4"
-        >
-      </video>
-
-      <h2 class="video-title">The Art of Eternity</h2>
-
-      <div class="video-explore">
-        <p>Oplev kollektionen</p>
-
-        <a href="/collection.html" class="explore-button">
-          UDFORSK
+    <div class="home-contact">
+      <div class="home-contact-links">
+        <a href="https://www.instagram.com/fyrsterlingofficial/"
+          target="_blank" rel="noopener noreferrer">
+          INSTAGRAM · @FYRSTERLINGOFFICIAL
+        </a>
+        <a href="mailto:info@fyrsterling.com">
+          INFO@FYRSTERLING.COM
+        </a>
+        <a href="tel:+4528345288">
+          +45 28 34 52 88
         </a>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <!-- NEW TWO-IMAGE EDITORIAL SECTION -->
+<script>
+"use strict";
 
-    <section class="editorial-section" aria-label="Udforsk AETERNUM">
+/* DROPDOWN */
+const dropdown = document.getElementById("jewelleryDropdown");
+const toggle = document.getElementById("jewelleryToggle");
 
-      <div class="editorial-grid">
+function setDropdownOpen(open) {
+  dropdown.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+}
+toggle.addEventListener("click", () => {
+  setDropdownOpen(!dropdown.classList.contains("is-open"));
+});
+dropdown.addEventListener("mouseenter", () => {
+  if (window.matchMedia("(hover: hover)").matches) {
+    setDropdownOpen(true);
+  }
+});
+dropdown.addEventListener("mouseleave", () => setDropdownOpen(false));
+dropdown.addEventListener("focusin", () => setDropdownOpen(true));
+dropdown.addEventListener("focusout", event => {
+  if (!dropdown.contains(event.relatedTarget)) setDropdownOpen(false);
+});
+document.addEventListener("click", event => {
+  if (!dropdown.contains(event.target)) setDropdownOpen(false);
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    setDropdownOpen(false);
+    toggle.focus();
+  }
+});
 
-        <!-- IMAGE 1: MODEL WITH JEWELLERY -->
+/* PRODUCT DATA */
+const products = [
+  ["Ring","Yellow Gold"],["Necklace","Silver"],
+  ["Earrings","Rose Gold"],["Bracelet","Yellow Gold"],
+  ["Ring","Silver"],["Necklace","Rose Gold"],
+  ["Bracelet","Silver"],["Earrings","Yellow Gold"],
+  ["Necklace","Yellow Gold"],["Ring","Rose Gold"],
+  ["Earrings","Silver"],["Bracelet","Rose Gold"]
+];
 
-        <a
-          href="/collection.html"
-          class="editorial-card"
-          aria-label="Udforsk AETERNUM-kollektionen"
-        >
-          <span class="editorial-image-wrap">
-            <img
-              src="/images/Generelt%20aeternum%20billede.jpg"
-              alt="Model med AETERNUM-smykker fra FYRSTERLING"
-              class="editorial-image"
-              loading="lazy"
-            >
-          </span>
+const fileMetals = {
+  "Yellow Gold":"Guld",
+  "Rose Gold":"Rose gold",
+  "Silver":"Sølv"
+};
+const fileTypes = {
+  Ring:"ring",
+  Necklace:"halskæde",
+  Earrings:"øreringe",
+  Bracelet:"armbånd"
+};
+const productNames = {
+  Ring:"AETERNUM RING",
+  Necklace:"AETERNUM HALSKÆDE",
+  Earrings:"AETERNUM ØRERINGE",
+  Bracelet:"AETERNUM ARMBÅND"
+};
+const metalNames = {
+  "Yellow Gold":"14 KT. GULD",
+  "Rose Gold":"14 KT. ROSAGULD",
+  Silver:"STERLINGSØLV"
+};
+const prices = {
+  Ring:{"Yellow Gold":9600,"Rose Gold":9600,Silver:3200},
+  Earrings:{"Yellow Gold":5200,"Rose Gold":5200,Silver:3000},
+  Necklace:{"Yellow Gold":9100,"Rose Gold":9100,Silver:3600},
+  Bracelet:{"Yellow Gold":6500,"Rose Gold":6500,Silver:3200}
+};
 
-          <h2 class="editorial-title">
-            AETERNUM COLLECTION
-          </h2>
-        </a>
+/* SHUFFLE PRODUCTS */
+for (let i = products.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [products[i],products[j]] = [products[j],products[i]];
+}
 
-        <!-- IMAGE 2: EARRINGS IN FYRSTERLING BOX -->
+const track = document.getElementById("sliderTrack");
+const viewport = document.getElementById("sliderViewport");
+const counter = document.getElementById("sliderCounter");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-        <a
-          href="/collection.html#earrings"
-          class="editorial-card"
-          aria-label="Udforsk AETERNUM-øreringe"
-        >
-          <span class="editorial-image-wrap">
-            <img
-              src="/images/S%C3%B8lv%20%C3%B8reringe%20i%20box.PNG"
-              alt="AETERNUM-øreringe i FYRSTERLING-smykkeæske"
-              class="editorial-image"
-              loading="lazy"
-            >
-          </span>
+function productCard(name, metal) {
+  const filename = fileMetals[metal] + " " + fileTypes[name] + ".jpeg";
+  const image = "/images/" + encodeURIComponent(filename);
+  const url = "/product.html?type=" +
+    encodeURIComponent(name) + "&metal=" + encodeURIComponent(metal);
+  const price = prices[name][metal].toLocaleString("da-DK");
 
-          <h2 class="editorial-title">
-            THE ART OF DETAIL
-          </h2>
-        </a>
+  const item = document.createElement("div");
+  item.className = "slider-item";
 
-      </div>
-    </section>
+  const link = document.createElement("a");
+  link.href = url;
 
-    <!-- EXISTING AETERNUM COLLECTION IMAGE -->
+  const img = document.createElement("img");
+  img.className = "slider-product-image";
+  img.src = image;
+  img.alt = productNames[name] + " – " + metalNames[metal];
+  img.loading = "lazy";
 
-    <section id="collection" class="collection-section">
+  const title = document.createElement("p");
+  title.className = "slider-product-name";
+  title.textContent = productNames[name];
 
-      <img
-        src="/images/Aeternum.PNG"
-        alt="AETERNUM smykkekollektion fra FYRSTERLING"
-        class="collection-image"
-        loading="lazy"
-      >
+  const material = document.createElement("p");
+  material.className = "slider-product-metal";
+  material.textContent = metalNames[metal];
 
-      <!-- CONTACT INFORMATION -->
+  const priceText = document.createElement("p");
+  priceText.className = "slider-product-price";
+  priceText.textContent = price + " DKK";
 
-      <div class="home-contact">
-        <div class="home-contact-links">
+  link.append(img,title,material,priceText);
+  item.appendChild(link);
+  return item;
+}
 
-          <a
-            href="https://www.instagram.com/fyrsterlingofficial/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            INSTAGRAM · @FYRSTERLINGOFFICIAL
-          </a>
+/* ADD CLONES FOR SEAMLESS LOOP */
+products.forEach(p => track.appendChild(productCard(...p)));
+products.slice(0,4).forEach(p => track.appendChild(productCard(...p)));
 
-          <a href="mailto:info@fyrsterling.com">
-            INFO@FYRSTERLING.COM
-          </a>
+let index = 0;
+let busy = false;
+let timer;
+let paused = false;
 
-          <a href="tel:+4528345288">
-            +45 28 34 52 88
-          </a>
-
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- DROPDOWN FUNCTIONALITY -->
-
-  <script>
-    const dropdown = document.getElementById("jewelleryDropdown");
-    const toggle = document.getElementById("jewelleryToggle");
-
-    function setDropdownOpen(open) {
-      dropdown.classList.toggle("is-open", open);
-      toggle.setAttribute("aria-expanded", String(open));
+function visibleCount() {
+  return window.innerWidth <= 700 ? 2 : 4;
+}
+function updateCounter() {
+  counter.textContent = (index % products.length + 1) +
+    " / " + products.length;
+}
+function position(animate = true) {
+  track.style.transition = animate && !reducedMotion.matches
+    ? "transform .7s ease" : "none";
+  track.style.transform =
+    "translateX(-" + (index * 100 / visibleCount()) + "%)";
+  updateCounter();
+}
+function next() {
+  if (busy) return;
+  busy = true;
+  index++;
+  position();
+  if (reducedMotion.matches) {
+    if (index >= products.length) {
+      index = 0;
+      position(false);
     }
+    busy = false;
+  }
+}
+function previous() {
+  if (busy) return;
+  if (index === 0) {
+    index = products.length;
+    position(false);
+    track.offsetHeight;
+  }
+  busy = true;
+  index--;
+  position();
+  if (reducedMotion.matches) busy = false;
+}
+track.addEventListener("transitionend", event => {
+  if (event.target !== track || event.propertyName !== "transform") return;
+  if (index >= products.length) {
+    index = 0;
+    position(false);
+  }
+  busy = false;
+});
 
-    toggle.addEventListener("click", function () {
-      setDropdownOpen(!dropdown.classList.contains("is-open"));
-    });
+function startAuto() {
+  clearInterval(timer);
+  if (reducedMotion.matches || paused || document.hidden) return;
+  timer = setInterval(next,4000);
+}
+function pauseAuto() {
+  paused = true;
+  clearInterval(timer);
+}
+function resumeAuto() {
+  paused = false;
+  startAuto();
+}
+document.getElementById("sliderNext").addEventListener("click", () => {
+  next();
+  startAuto();
+});
+document.getElementById("sliderPrev").addEventListener("click", () => {
+  previous();
+  startAuto();
+});
+viewport.addEventListener("mouseenter", pauseAuto);
+viewport.addEventListener("mouseleave", resumeAuto);
+viewport.addEventListener("focusin", pauseAuto);
+viewport.addEventListener("focusout", event => {
+  if (!viewport.contains(event.relatedTarget)) resumeAuto();
+});
+document.addEventListener("visibilitychange", startAuto);
+window.addEventListener("resize", () => position(false));
+reducedMotion.addEventListener("change", startAuto);
 
-    dropdown.addEventListener("mouseenter", function () {
-      if (window.matchMedia("(hover: hover)").matches) {
-        setDropdownOpen(true);
-      }
-    });
+position(false);
+startAuto();
+</script>
 
-    dropdown.addEventListener("mouseleave", function () {
-      setDropdownOpen(false);
-    });
-
-    dropdown.addEventListener("focusin", function () {
-      setDropdownOpen(true);
-    });
-
-    dropdown.addEventListener("focusout", function (event) {
-      if (!dropdown.contains(event.relatedTarget)) {
-        setDropdownOpen(false);
-      }
-    });
-
-    document.addEventListener("click", function (event) {
-      if (!dropdown.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        setDropdownOpen(false);
-        toggle.focus();
-      }
-    });
-  </script>
-
-  <script
-    type="module"
-    src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token":"35027bd0e6db4377b46dddd2c28e5840"}'>
-  </script>
-
+<script type="module"
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token":"35027bd0e6db4377b46dddd2c28e5840"}'>
+</script>
 </body>
 </html>
