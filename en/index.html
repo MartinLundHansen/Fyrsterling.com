@@ -35,6 +35,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: #FFFFFF;
@@ -86,7 +90,7 @@
       padding-bottom: 5px;
     }
 
-    .site-nav > a:hover {
+    .site-nav a:hover {
       border-bottom: 1px solid currentColor;
     }
 
@@ -99,15 +103,15 @@
       gap: 5px;
     }
 
-    .nav-dropdown > a:hover {
-      border-bottom: 1px solid currentColor;
+    .nav-dropdown > a {
+      display: inline-block;
     }
 
     .dropdown-toggle {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 18px;
+      justify-content: center;
+      width: 16px;
       height: 22px;
       padding: 0;
       border: 0;
@@ -117,8 +121,8 @@
     }
 
     .dropdown-toggle svg {
-      width: 12px;
-      height: 12px;
+      width: 11px;
+      height: 11px;
       transition: transform 0.2s ease;
     }
 
@@ -127,34 +131,36 @@
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 200;
-      min-width: 195px;
-      padding: 18px 0 10px;
+      min-width: 190px;
+      padding: 19px 0 10px;
       background: #FFFFFF;
       border: 1px solid #eeeeee;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.07);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
       text-align: left;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
       transition: opacity 0.2s ease, visibility 0.2s ease;
+      z-index: 200;
     }
 
     .dropdown-menu a {
       display: block;
-      padding: 13px 22px;
+      padding: 12px 22px;
       border-bottom: 0 !important;
       color: var(--navy) !important;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
       letter-spacing: 1.3px;
-      text-decoration: none;
       white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.2s ease;
     }
 
     .dropdown-menu a:hover,
     .dropdown-menu a:focus-visible {
       background: #f5f6f8;
+      border-bottom: 0;
     }
 
     .nav-dropdown:hover .dropdown-menu,
@@ -178,10 +184,10 @@
       align-items: center;
       gap: 9px;
       margin-left: 10px;
+      color: #FFFFFF;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
       letter-spacing: 1px;
-      color: #FFFFFF;
     }
 
     .language-switch a {
@@ -205,15 +211,13 @@
     }
 
     .site-header:hover .site-logo,
-    .site-header:hover .site-nav > a,
-    .site-header:hover .nav-dropdown > a,
-    .site-header:hover .dropdown-toggle,
+    .site-header:hover .site-nav a,
     .site-header:hover .language-switch,
+    .site-header:hover .dropdown-toggle,
     .site-header:focus-within .site-logo,
-    .site-header:focus-within .site-nav > a,
-    .site-header:focus-within .nav-dropdown > a,
-    .site-header:focus-within .dropdown-toggle,
-    .site-header:focus-within .language-switch {
+    .site-header:focus-within .site-nav a,
+    .site-header:focus-within .language-switch,
+    .site-header:focus-within .dropdown-toggle {
       color: var(--navy);
     }
 
@@ -297,7 +301,59 @@
       color: var(--navy);
     }
 
-    /* COLLECTION */
+    /* NEW EDITORIAL IMAGE SECTION */
+
+    .editorial-section {
+      background: #FFFFFF;
+      padding: 60px 30px;
+    }
+
+    .editorial-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 50px;
+      align-items: start;
+    }
+
+    .editorial-card {
+      display: block;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .editorial-image-wrap {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #f7f7f7;
+    }
+
+    .editorial-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .editorial-card:hover .editorial-image {
+      transform: scale(1.025);
+    }
+
+    .editorial-title {
+      margin: 20px 0 0;
+      text-align: center;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.6px;
+      line-height: 1.5;
+    }
+
+    /* AETERNUM COLLECTION */
 
     .collection-section {
       background: #FFFFFF;
@@ -309,7 +365,7 @@
       height: auto;
     }
 
-    /* CONTACT */
+    /* CONTACT INFORMATION */
 
     .home-contact {
       background: #FFFFFF;
@@ -361,10 +417,19 @@
         gap: 2px;
       }
 
+      .dropdown-toggle {
+        width: 15px;
+      }
+
       .dropdown-menu {
         left: 0;
         transform: none;
         min-width: 175px;
+      }
+
+      .dropdown-menu a {
+        font-size: 11px;
+        padding: 13px 18px;
       }
 
       .language-switch {
@@ -382,6 +447,20 @@
 
       .video-explore p {
         font-size: 16px;
+      }
+
+      .editorial-section {
+        padding: 45px 20px;
+      }
+
+      .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .editorial-title {
+        font-size: 12px;
+        margin-top: 16px;
       }
 
       .home-contact {
@@ -405,7 +484,8 @@
       }
 
       .dropdown-menu,
-      .dropdown-toggle svg {
+      .dropdown-toggle svg,
+      .editorial-image {
         transition: none;
       }
     }
@@ -420,6 +500,8 @@
     <a href="/en/" class="site-logo">FYRSTERLING</a>
 
     <nav class="site-nav" aria-label="Main navigation">
+
+      <!-- JEWELLERY WITH DROPDOWN -->
 
       <div class="nav-dropdown" id="jewelleryDropdown">
 
@@ -474,22 +556,78 @@
 
     <section class="visual" aria-label="FYRSTERLING fine jewellery">
       <video autoplay muted loop playsinline preload="metadata">
-        <source src="/images/Video%20til%20forsiden.MP4" type="video/mp4">
+        <source
+          src="/images/Video%20til%20forsiden.MP4"
+          type="video/mp4"
+        >
       </video>
 
       <h2 class="video-title">The Art of Eternity</h2>
 
       <div class="video-explore">
         <p>Discover the collection</p>
+
         <a href="/en/collection.html" class="explore-button">
           EXPLORE
         </a>
       </div>
     </section>
 
-    <!-- AETERNUM COLLECTION -->
+    <!-- NEW TWO-IMAGE EDITORIAL SECTION -->
+
+    <section class="editorial-section" aria-label="Explore AETERNUM">
+
+      <div class="editorial-grid">
+
+        <!-- IMAGE 1: MODEL WITH JEWELLERY -->
+
+        <a
+          href="/en/collection.html"
+          class="editorial-card"
+          aria-label="Explore the AETERNUM collection"
+        >
+          <span class="editorial-image-wrap">
+            <img
+              src="/images/Generelt%20aeternum%20billede.jpg"
+              alt="Model wearing AETERNUM jewellery by FYRSTERLING"
+              class="editorial-image"
+              loading="lazy"
+            >
+          </span>
+
+          <h2 class="editorial-title">
+            AETERNUM COLLECTION
+          </h2>
+        </a>
+
+        <!-- IMAGE 2: EARRINGS IN FYRSTERLING BOX -->
+
+        <a
+          href="/en/collection.html#earrings"
+          class="editorial-card"
+          aria-label="Explore AETERNUM earrings"
+        >
+          <span class="editorial-image-wrap">
+            <img
+              src="/images/S%C3%B8lv%20%C3%B8reringe%20i%20box.PNG"
+              alt="AETERNUM earrings presented in a FYRSTERLING jewellery box"
+              class="editorial-image"
+              loading="lazy"
+            >
+          </span>
+
+          <h2 class="editorial-title">
+            THE ART OF DETAIL
+          </h2>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- EXISTING AETERNUM COLLECTION IMAGE -->
 
     <section id="collection" class="collection-section">
+
       <img
         src="/images/Aeternum.PNG"
         alt="AETERNUM fine jewellery collection by FYRSTERLING"
@@ -520,57 +658,56 @@
 
         </div>
       </div>
+
     </section>
 
   </main>
 
-  <!-- JEWELLERY DROPDOWN FUNCTIONALITY -->
+  <!-- DROPDOWN FUNCTIONALITY -->
 
   <script>
-    "use strict";
-
     const dropdown = document.getElementById("jewelleryDropdown");
-    const dropdownToggle = document.getElementById("jewelleryToggle");
+    const toggle = document.getElementById("jewelleryToggle");
 
     function setDropdownOpen(open) {
       dropdown.classList.toggle("is-open", open);
-      dropdownToggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-expanded", String(open));
     }
 
-    dropdownToggle.addEventListener("click", () => {
+    toggle.addEventListener("click", function () {
       setDropdownOpen(!dropdown.classList.contains("is-open"));
     });
 
-    dropdown.addEventListener("mouseenter", () => {
+    dropdown.addEventListener("mouseenter", function () {
       if (window.matchMedia("(hover: hover)").matches) {
         setDropdownOpen(true);
       }
     });
 
-    dropdown.addEventListener("mouseleave", () => {
+    dropdown.addEventListener("mouseleave", function () {
       setDropdownOpen(false);
     });
 
-    dropdown.addEventListener("focusin", () => {
+    dropdown.addEventListener("focusin", function () {
       setDropdownOpen(true);
     });
 
-    dropdown.addEventListener("focusout", event => {
+    dropdown.addEventListener("focusout", function (event) {
       if (!dropdown.contains(event.relatedTarget)) {
         setDropdownOpen(false);
       }
     });
 
-    document.addEventListener("click", event => {
+    document.addEventListener("click", function (event) {
       if (!dropdown.contains(event.target)) {
         setDropdownOpen(false);
       }
     });
 
-    document.addEventListener("keydown", event => {
+    document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
         setDropdownOpen(false);
-        dropdownToggle.blur();
+        toggle.focus();
       }
     });
   </script>
