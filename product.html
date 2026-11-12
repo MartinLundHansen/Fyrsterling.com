@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>AETERNUM Smykker | FYRSTERLING</title>
-  <meta name="description" content="Oplev AETERNUM fra FYRSTERLING. Eksklusive ringe, halskæder, øreringe og armbånd i 14 karat guld, rosaguld og sterlingsølv.">
+  <meta name="description" content="Oplev AETERNUM fra FYRSTERLING. Eksklusive ringe, halskæder, øreringe og armbånd i guld, rosaguld og sterlingsølv.">
 
   <link rel="canonical" id="canonicalLink" href="https://fyrsterling.com/product.html">
   <link rel="alternate" id="danishAlternate" hreflang="da" href="https://fyrsterling.com/product.html">
@@ -26,7 +26,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -38,10 +37,7 @@
     }
 
     a { color: inherit; }
-
     [hidden] { display: none !important; }
-
-    /* HEADER */
 
     .site-header {
       background: #FFFFFF;
@@ -89,21 +85,13 @@
       margin-left: 10px;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    .language-switch a {
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    .language-switch a[aria-current="page"] {
-      border-bottom: 1px solid var(--navy);
     }
 
     .language-divider { color: #999999; }
 
-    /* BACK LINK */
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
 
     .back {
       display: block;
@@ -118,8 +106,6 @@
     }
 
     .back:hover { color: var(--navy); }
-
-    /* PRODUCT LAYOUT */
 
     .product-layout {
       max-width: 1200px;
@@ -147,8 +133,6 @@
       object-fit: contain;
     }
 
-    /* PRODUCT DETAILS */
-
     .details h1 {
       margin: 0 0 18px;
       font-family: "Barlow", Arial, sans-serif;
@@ -169,7 +153,6 @@
       margin: 0 0 35px;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 17px;
-      color: var(--navy);
     }
 
     .variants {
@@ -198,6 +181,7 @@
     }
 
     .description {
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 14px;
       line-height: 1.9;
       color: var(--text);
@@ -211,8 +195,6 @@
       letter-spacing: 1.5px;
       margin: 0 0 15px;
     }
-
-    /* BRACELET SIZE */
 
     .size-section {
       margin: 30px 0;
@@ -288,8 +270,6 @@
       margin: 12px 0 0;
     }
 
-    /* MATERIALS */
-
     .materials {
       padding: 25px 0;
       border-bottom: 1px solid var(--line);
@@ -307,15 +287,12 @@
     }
 
     .detail-row:last-child { border-bottom: 0; }
-
     .detail-label { color: var(--muted); }
 
     .detail-value {
       color: var(--navy);
       text-align: right;
     }
-
-    /* DELIVERY */
 
     .delivery {
       padding: 24px 0;
@@ -349,8 +326,6 @@
       line-height: 16px;
       padding: 0;
     }
-
-    /* PURCHASE */
 
     .purchase-button,
     .submit-button {
@@ -409,8 +384,6 @@
       line-height: 1.8;
     }
 
-    /* INFORMATION DIALOG */
-
     .info-dialog {
       border: 0;
       width: min(90%, 650px);
@@ -447,12 +420,8 @@
       cursor: pointer;
     }
 
-    /* MOBILE */
-
     @media (max-width: 700px) {
-      .site-header {
-        padding: 22px 15px 16px;
-      }
+      .site-header { padding: 22px 15px 16px; }
 
       .logo {
         font-size: 24px;
@@ -479,17 +448,13 @@
       }
 
       .back { padding: 0 16px; }
-
       .details h1 { font-size: 23px; }
-
       .info-dialog { padding: 25px; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
     <a href="/" class="logo">FYRSTERLING</a>
@@ -514,8 +479,6 @@
     ← TILBAGE TIL KOLLEKTIONEN
   </a>
 
-  <!-- PRODUCT -->
-
   <main class="product-layout">
 
     <div class="main-image">
@@ -525,9 +488,7 @@
     <section class="details">
 
       <h1 id="productName"></h1>
-
       <p class="metal" id="metalName"></p>
-
       <p class="price" id="productPrice"></p>
 
       <div
@@ -536,13 +497,11 @@
         aria-label="Vælg materiale"
       ></div>
 
-      <!-- PRODUCT DESCRIPTION -->
-
       <p class="description" id="productDescription"></p>
 
-      <!-- BRACELET SIZE SELECTION -->
+      <!-- ARMBÅND: STØRRELSE -->
 
-      <div class="size-section" id="sizeSection" hidden>
+      <div class="size-section" id="braceletSizeSection" hidden>
 
         <p class="section-heading">VÆLG STØRRELSE</p>
 
@@ -551,69 +510,100 @@
           role="group"
           aria-label="Armbåndsstørrelse"
         >
-
           <label class="size-option">
-            <input
-              type="radio"
-              name="braceletSizeChoice"
-              value="17,5 cm"
-            >
+            <input type="radio" name="braceletSizeChoice" value="17,5 cm">
             <span>17,5 cm</span>
           </label>
 
           <label class="size-option">
-            <input
-              type="radio"
-              name="braceletSizeChoice"
-              value="18,5 cm"
-            >
+            <input type="radio" name="braceletSizeChoice" value="18,5 cm">
             <span>18,5 cm</span>
           </label>
-
         </div>
 
         <button
           type="button"
           class="custom-size-link"
-          id="customSizeButton"
+          id="customBraceletButton"
           aria-expanded="false"
-          aria-controls="customSizeBox"
+          aria-controls="customBraceletBox"
         >
           FORESPØRG OM EN ANDEN STØRRELSE
         </button>
 
-        <div
-          class="custom-size-box"
-          id="customSizeBox"
-          hidden
-        >
+        <div class="custom-size-box" id="customBraceletBox" hidden>
 
-          <label for="customSizeInput">
-            Din ønskede armbåndsstørrelse (cm)
+          <label for="customBraceletInput">
+            Ønsket armbåndsstørrelse (cm)
           </label>
 
           <input
             type="number"
-            id="customSizeInput"
+            id="customBraceletInput"
             class="form-field"
             min="1"
             max="40"
-            step="0.1"
+            step="any"
+            inputmode="decimal"
             placeholder="F.eks. 19,0"
           >
 
           <p class="small-note">
             Specialstørrelser skal bekræftes af FYRSTERLING.
-            Et mindre tillæg kan forekomme.
-            En eventuel merpris oplyses, inden du
-            accepterer dit købstilbud.
+            Et pristillæg kan forekomme. Pris, leveringstid
+            og eventuelle særlige vilkår oplyses,
+            inden du accepterer dit købstilbud.
           </p>
 
         </div>
-
       </div>
 
-      <!-- MATERIALS & DETAILS -->
+      <!-- HALSKÆDE: LÆNGDE -->
+
+      <div class="size-section" id="necklaceLengthSection" hidden>
+
+        <p class="section-heading">LÆNGDE</p>
+
+        <p class="description">Standardlængde: 43 cm</p>
+
+        <button
+          type="button"
+          class="custom-size-link"
+          id="customNecklaceButton"
+          aria-expanded="false"
+          aria-controls="customNecklaceBox"
+        >
+          FORESPØRG OM EN ANDEN LÆNGDE
+        </button>
+
+        <div class="custom-size-box" id="customNecklaceBox" hidden>
+
+          <label for="customNecklaceInput">
+            Din ønskede længde (cm)
+          </label>
+
+          <input
+            type="number"
+            id="customNecklaceInput"
+            class="form-field"
+            min="1"
+            max="150"
+            step="any"
+            inputmode="decimal"
+            placeholder="F.eks. 45"
+          >
+
+          <p class="small-note">
+            Ved speciallængder fremstilles en ny halskæde
+            efter dine individuelle mål. Eventuel merpris,
+            leveringstid og særlige vilkår om fortrydelsesret
+            oplyses, inden du accepterer købstilbuddet.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- MATERIALER OG DIAMANTER -->
 
       <div class="materials">
 
@@ -629,39 +619,33 @@
           <span class="detail-value" id="materialDetail"></span>
         </div>
 
+        <div class="detail-row" id="necklaceLengthRow" hidden>
+          <span class="detail-label">Længde</span>
+          <span class="detail-value">43 cm (standard)</span>
+        </div>
+
         <div class="detail-row" id="diamondRow" hidden>
           <span class="detail-label">Diamant</span>
-          <span class="detail-value">
-            Laboratoriedyrket diamant, 0,11 ct
-          </span>
+          <span class="detail-value" id="diamondDetail"></span>
         </div>
 
       </div>
 
-      <!-- DELIVERY: GOLD BRACELETS ONLY -->
+      <!-- LEVERING -->
 
       <div class="delivery" id="deliverySection" hidden>
-
         <div class="delivery-line">
-
-          <p>
-            Forventet leveringstid: Cirka 3 uger.
-          </p>
-
+          <p>Forventet leveringstid: Cirka 3 uger.</p>
           <button
             type="button"
             class="info-button"
             id="deliveryInfoButton"
-            aria-label="Hvorfor er leveringstiden cirka tre uger?"
-          >
-            ?
-          </button>
-
+            aria-label="Læs mere om leveringstiden"
+          >?</button>
         </div>
-
       </div>
 
-      <!-- PURCHASE BUTTON -->
+      <!-- KØBSANMODNING -->
 
       <button
         type="button"
@@ -673,8 +657,6 @@
         ANMOD OM KØB
       </button>
 
-      <!-- PURCHASE FORM -->
-
       <form
         id="purchaseForm"
         class="purchase-form"
@@ -683,16 +665,19 @@
         method="POST"
       >
 
-        <input
-          type="hidden"
-          name="product"
-          id="requestedProduct"
-        >
+        <input type="hidden" name="product" id="requestedProduct">
 
         <input
           type="hidden"
           name="bracelet_size"
-          id="requestedSize"
+          id="requestedBraceletSize"
+          disabled
+        >
+
+        <input
+          type="hidden"
+          name="necklace_length"
+          id="requestedNecklaceLength"
           disabled
         >
 
@@ -766,12 +751,11 @@
 
         <p class="form-note">
           Din købsanmodning er uforpligtende.
-          FYRSTERLING kontakter dig efterfølgende
-          med et tilbud, betalingsoplysninger
-          og yderligere information.
-          Købet bekræftes først, når du
-          accepterer tilbuddet.
-          Der opkræves ingen betaling via formularen.
+          FYRSTERLING kontakter dig efterfølgende med
+          et tilbud, betalingsoplysninger og yderligere
+          information. Købet bekræftes først, når du
+          accepterer tilbuddet. Der opkræves ingen
+          betaling via formularen.
         </p>
 
         <button type="submit" class="submit-button">
@@ -783,7 +767,7 @@
     </section>
   </main>
 
-  <!-- DELIVERY INFORMATION -->
+  <!-- LEVERINGSINFORMATION -->
 
   <dialog
     class="info-dialog"
@@ -796,34 +780,32 @@
       class="close-dialog"
       id="closeDeliveryDialog"
       aria-label="Luk"
-    >
-      &times;
-    </button>
+    >&times;</button>
 
     <h2 id="deliveryDialogTitle">
-      Hvorfor er der længere leveringstid?
+      Information om leveringstid
     </h2>
 
     <p>
-      Vores AETERNUM-armbånd i guld og rosaguld
-      kan kræve ekstra klargøring.
-      Den forventede leveringstid er cirka tre uger.
+      Vores AETERNUM-smykker i guld og rosaguld
+      kan kræve ekstra klargøring eller fremstilling.
+      Den forventede leveringstid for dette smykke
+      er cirka tre uger.
     </p>
 
     <p>
       Vi bekræfter den forventede leveringstid,
       inden du accepterer dit købstilbud.
+      Ved individuelle specialmål kan leveringstiden afvige.
     </p>
 
   </dialog>
 
   <script>
 
-    /* PRODUCT PARAMETERS */
+    /* PRODUKTVALG */
 
-    const params = new URLSearchParams(
-      window.location.search
-    );
+    const params = new URLSearchParams(window.location.search);
 
     const validTypes = [
       "Ring",
@@ -846,99 +828,114 @@
       ? params.get("metal")
       : "Yellow Gold";
 
-    /* ORIGINAL IMAGE FILENAMES */
+    const isBracelet = type === "Bracelet";
+    const isNecklace = type === "Necklace";
+
+    /* BILLEDFILNAVNE */
 
     const types = {
-      "Ring": "ring",
-      "Necklace": "halskæde",
-      "Earrings": "øreringe",
-      "Bracelet": "armbånd"
+      Ring: "ring",
+      Necklace: "halskæde",
+      Earrings: "øreringe",
+      Bracelet: "armbånd"
     };
 
     const metals = {
       "Yellow Gold": "Guld",
       "Rose Gold": "Rose gold",
-      "Silver": "Sølv"
+      Silver: "Sølv"
     };
 
-    /* DANISH PRODUCT NAMES */
+    /* DANSKE PRODUKTNAVNE */
 
     const danishTypes = {
-      "Ring": "RING",
-      "Necklace": "HALSKÆDE",
-      "Earrings": "ØRERINGE",
-      "Bracelet": "ARMBÅND"
+      Ring: "RING",
+      Necklace: "HALSKÆDE",
+      Earrings: "ØRERINGE",
+      Bracelet: "ARMBÅND"
     };
 
     const danishMetals = {
       "Yellow Gold": "14 KARAT GULD",
       "Rose Gold": "14 KARAT ROSAGULD",
-      "Silver": "STERLINGSØLV"
+      Silver: "STERLINGSØLV"
     };
 
-    /* PRODUCT PRICES */
+    /* PRISER */
 
     const prices = {
-      "Ring": {
+      Ring: {
         "Yellow Gold": 9600,
         "Rose Gold": 9600,
-        "Silver": 3200
+        Silver: 3200
       },
-      "Earrings": {
+      Earrings: {
         "Yellow Gold": 5200,
         "Rose Gold": 5200,
-        "Silver": 3000
+        Silver: 3000
       },
-      "Necklace": {
+      Necklace: {
         "Yellow Gold": 9100,
         "Rose Gold": 9100,
-        "Silver": 3600
+        Silver: 3600
       },
-      "Bracelet": {
+      Bracelet: {
         "Yellow Gold": 6500,
         "Rose Gold": 6500,
-        "Silver": 3200
+        Silver: 3200
       }
     };
 
-    /* MATERIAL DETAILS */
+    /* MATERIALER */
 
     const materialDetails = {
       "Yellow Gold": "Massivt 14 karat guld",
       "Rose Gold": "Massivt 14 karat rosaguld",
-      "Silver": "Sterlingsølv 925/1000, rhodiumbelagt"
+      Silver: "Sterlingsølv 925/1000, rhodiumbelagt"
     };
 
-    /* INDIVIDUAL PRODUCT DESCRIPTIONS */
+    /* DIAMANTOPLYSNINGER */
+
+    const diamondDetails = {
+      Ring: "Laboratoriedyrket diamant, ca. 0,10 ct",
+      Necklace: "Laboratoriedyrket diamant, 0,11 ct",
+      Bracelet: "Laboratoriedyrket diamant, 0,11 ct",
+      Earrings: null
+    };
+
+    /* BESKRIVELSER */
 
     const descriptions = {
-      "Ring":
+      Ring:
         "AETERNUM-ringen forener raffineret enkelhed " +
         "med tidløs elegance. Dens harmoniske design " +
+        "og laboratoriedyrkede diamant på cirka 0,10 ct " +
         "udstråler en diskret luksus og er skabt til " +
         "at blive værdsat gennem generationer.",
 
-      "Necklace":
-        "AETERNUM-halskæden er en elegant fortolkning " +
-        "af underspillet luksus. Det tidløse design " +
-        "tilfører et raffineret strejf af elegance " +
-        "til både hverdag og særlige øjeblikke.",
+      Necklace:
+        "AETERNUM-halskæden forener tidløs elegance " +
+        "med et raffineret, minimalistisk udtryk. " +
+        "Den fine kæde på 43 cm og den strålende " +
+        "laboratoriedyrkede diamant på 0,11 ct " +
+        "skaber et smykke, der er smukt både alene " +
+        "og sammen med andre personlige favoritter.",
 
-      "Earrings":
+      Earrings:
         "AETERNUM-øreringene forener tidløs elegance " +
         "med raffinerede proportioner og gennemtænkte " +
         "detaljer. Skabt til at fremhæve en personlig " +
         "stil med ubesværet elegance.",
 
-      "Bracelet":
+      Bracelet:
         "AETERNUM-armbåndet forener moderne elegance " +
         "med tidløst design. Den fine kæde og den " +
-        "strålende laboratoriedyrkede diamant skaber " +
+        "laboratoriedyrkede diamant på 0,11 ct skaber " +
         "et raffineret udtryk af underspillet luksus, " +
         "smukt både alene og sammen med andre smykker."
     };
 
-    /* IMAGE PATH */
+    /* URL OG BILLEDER */
 
     function imagePath(selectedMetal) {
       const filename =
@@ -947,12 +944,7 @@
       return "/images/" + encodeURIComponent(filename);
     }
 
-    /* PRODUCT URL */
-
-    function productUrl(
-      language,
-      selectedMetal = metal
-    ) {
+    function productUrl(language, selectedMetal = metal) {
       const path = language === "en"
         ? "/en/product.html"
         : "/product.html";
@@ -965,7 +957,7 @@
       return path + "?" + query.toString();
     }
 
-    /* PRODUCT CONTENT */
+    /* VIS PRODUKT */
 
     document.getElementById("productName").textContent =
       "AETERNUM " + danishTypes[type];
@@ -986,46 +978,51 @@
     document.getElementById("materialDetail").textContent =
       materialDetails[metal];
 
-    const mainImage =
-      document.getElementById("mainImage");
+    const mainImage = document.getElementById("mainImage");
 
     mainImage.src = imagePath(metal);
 
     mainImage.alt =
-      "AETERNUM " +
-      danishTypes[type].toLowerCase() +
-      " i " +
-      danishMetals[metal].toLowerCase();
+      "AETERNUM " + danishTypes[type].toLowerCase() +
+      " i " + danishMetals[metal].toLowerCase();
 
-    /* BRACELET DETAILS ONLY */
+    /* VIS RELEVANTE PRODUKTDETALJER */
 
-    const isBracelet = type === "Bracelet";
+    document.getElementById("braceletSizeSection").hidden =
+      !isBracelet;
 
-    const isGoldBracelet =
-      isBracelet && metal !== "Silver";
+    document.getElementById("necklaceLengthSection").hidden =
+      !isNecklace;
 
-    const sizeSection =
-      document.getElementById("sizeSection");
+    document.getElementById("necklaceLengthRow").hidden =
+      !isNecklace;
 
-    const diamondRow =
-      document.getElementById("diamondRow");
+    /* DIAMANTVÆGT AFHÆNGER AF SMYKKETYPE */
+
+    const diamondRow = document.getElementById("diamondRow");
+    const diamondDetail = document.getElementById("diamondDetail");
+
+    diamondRow.hidden = !diamondDetails[type];
+
+    if (diamondDetails[type]) {
+      diamondDetail.textContent = diamondDetails[type];
+    }
+
+    /* LEVERINGSTID */
 
     const deliverySection =
       document.getElementById("deliverySection");
 
-    sizeSection.hidden = !isBracelet;
-    diamondRow.hidden = !isBracelet;
-    deliverySection.hidden = !isGoldBracelet;
+    deliverySection.hidden =
+      !((isBracelet || isNecklace) && metal !== "Silver");
 
-    /* LANGUAGE LINKS */
+    /* SPROG OG SEO */
 
     document.getElementById("danishLink").href =
       productUrl("da");
 
     document.getElementById("englishLink").href =
       productUrl("en");
-
-    /* SEO LINKS */
 
     const origin = "https://fyrsterling.com";
 
@@ -1039,13 +1036,11 @@
       origin + productUrl("en");
 
     document.title =
-      "AETERNUM " +
-      danishTypes[type] +
-      " – " +
-      danishMetals[metal] +
+      "AETERNUM " + danishTypes[type] +
+      " – " + danishMetals[metal] +
       " | FYRSTERLING";
 
-    /* METAL VARIANTS */
+    /* MATERIALEVARIANTER */
 
     const variantsContainer =
       document.getElementById("variants");
@@ -1059,7 +1054,6 @@
         (selectedMetal === metal ? " active" : "");
 
       link.href = productUrl("da", selectedMetal);
-
       link.title = danishMetals[selectedMetal];
 
       link.setAttribute(
@@ -1074,60 +1068,75 @@
       const image = document.createElement("img");
 
       image.src = imagePath(selectedMetal);
-
       image.alt = danishMetals[selectedMetal];
 
       link.appendChild(image);
-
       variantsContainer.appendChild(link);
 
     });
 
-    /* BRACELET SIZE SELECTION */
+    /* DECIMALTAL */
+
+    function parseLength(input, maximum) {
+      const raw = input.value.trim().replace(",", ".");
+      const number = Number(raw);
+
+      if (
+        !raw ||
+        !Number.isFinite(number) ||
+        number <= 0 ||
+        number > maximum
+      ) {
+        return null;
+      }
+
+      return number;
+    }
+
+    function formatCentimetres(number) {
+      return number.toLocaleString("da-DK", {
+        maximumFractionDigits: 2
+      }) + " cm";
+    }
+
+    /* ARMBÅND: STØRRELSE */
 
     const sizeRadios = document.querySelectorAll(
       'input[name="braceletSizeChoice"]'
     );
 
-    const customSizeButton =
-      document.getElementById("customSizeButton");
+    const customBraceletButton =
+      document.getElementById("customBraceletButton");
 
-    const customSizeBox =
-      document.getElementById("customSizeBox");
+    const customBraceletBox =
+      document.getElementById("customBraceletBox");
 
-    const customSizeInput =
-      document.getElementById("customSizeInput");
+    const customBraceletInput =
+      document.getElementById("customBraceletInput");
 
-    const requestedSize =
-      document.getElementById("requestedSize");
+    const requestedBraceletSize =
+      document.getElementById("requestedBraceletSize");
 
-    let customSizeActive = false;
+    customBraceletButton.addEventListener("click", () => {
 
-    customSizeButton.addEventListener("click", () => {
+      const opening = customBraceletBox.hidden;
 
-      customSizeActive = !customSizeActive;
+      customBraceletBox.hidden = !opening;
 
-      customSizeBox.hidden = !customSizeActive;
-
-      customSizeButton.setAttribute(
+      customBraceletButton.setAttribute(
         "aria-expanded",
-        String(customSizeActive)
+        String(opening)
       );
 
-      if (customSizeActive) {
+      customBraceletInput.required = opening;
 
+      if (opening) {
         sizeRadios.forEach(radio => {
           radio.checked = false;
         });
-
-        customSizeInput.required = true;
-        customSizeInput.focus();
-
+        customBraceletInput.focus();
       } else {
-
-        customSizeInput.required = false;
-        customSizeInput.value = "";
-
+        customBraceletInput.value = "";
       }
 
     });
@@ -1136,12 +1145,11 @@
 
       radio.addEventListener("change", () => {
 
-        customSizeActive = false;
-        customSizeBox.hidden = true;
-        customSizeInput.required = false;
-        customSizeInput.value = "";
+        customBraceletBox.hidden = true;
+        customBraceletInput.required = false;
+        customBraceletInput.value = "";
 
-        customSizeButton.setAttribute(
+        customBraceletButton.setAttribute(
           "aria-expanded",
           "false"
         );
@@ -1150,28 +1158,16 @@
 
     });
 
-    function getSelectedBraceletSize() {
+    function getBraceletSize() {
 
-      if (!isBracelet) {
-        return "";
-      }
+      if (!isBracelet) return "";
 
-      if (customSizeActive) {
+      if (!customBraceletBox.hidden) {
+        const number = parseLength(customBraceletInput, 40);
 
-        const value = customSizeInput.value.trim();
-        const number = Number(value);
-
-        if (
-          !value ||
-          !Number.isFinite(number) ||
-          number <= 0 ||
-          number > 40
-        ) {
-          return "";
-        }
-
-        return "Specialstørrelse: " +
-          value.replace(".", ",") + " cm";
+        return number === null
+          ? ""
+          : "Specialstørrelse: " + formatCentimetres(number);
       }
 
       const selected = document.querySelector(
@@ -1182,7 +1178,59 @@
 
     }
 
-    /* DELIVERY INFORMATION */
+    /* HALSKÆDE: SPECIALLÆNGDE */
+
+    const customNecklaceButton =
+      document.getElementById("customNecklaceButton");
+
+    const customNecklaceBox =
+      document.getElementById("customNecklaceBox");
+
+    const customNecklaceInput =
+      document.getElementById("customNecklaceInput");
+
+    const requestedNecklaceLength =
+      document.getElementById("requestedNecklaceLength");
+
+    customNecklaceButton.addEventListener("click", () => {
+
+      const opening = customNecklaceBox.hidden;
+
+      customNecklaceBox.hidden = !opening;
+
+      customNecklaceButton.setAttribute(
+        "aria-expanded",
+        String(opening)
+      );
+
+      customNecklaceInput.required = opening;
+
+      if (opening) {
+        customNecklaceInput.focus();
+      } else {
+        customNecklaceInput.value = "";
+      }
+
+    });
+
+    function getNecklaceLength() {
+
+      if (!isNecklace) return "";
+
+      if (customNecklaceBox.hidden) {
+        return "43 cm (standard)";
+      }
+
+      const number = parseLength(customNecklaceInput, 150);
+
+      return number === null
+        ? ""
+        : "Specialfremstillet længde: " +
+          formatCentimetres(number);
+
+    }
+
+    /* LEVERINGSINFORMATION */
 
     const deliveryDialog =
       document.getElementById("deliveryDialog");
@@ -1200,20 +1248,57 @@
     document.getElementById(
       "closeDeliveryDialog"
     ).addEventListener("click", () => {
-
       deliveryDialog.close();
-
     });
 
     deliveryDialog.addEventListener("click", event => {
-
       if (event.target === deliveryDialog) {
         deliveryDialog.close();
       }
-
     });
 
-    /* SHOW PURCHASE FORM */
+    /* VALIDER VALG */
+
+    function validateProductSelection() {
+
+      if (isBracelet && !getBraceletSize()) {
+
+        alert(
+          "Vælg venligst en armbåndsstørrelse " +
+          "eller angiv din ønskede specialstørrelse."
+        );
+
+        document.getElementById(
+          "braceletSizeSection"
+        ).scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+        return false;
+      }
+
+      if (isNecklace && !getNecklaceLength()) {
+
+        alert(
+          "Angiv venligst en gyldig længde " +
+          "på halskæden."
+        );
+
+        document.getElementById(
+          "necklaceLengthSection"
+        ).scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+        return false;
+      }
+
+      return true;
+    }
+
+    /* VIS KØBSFORMULAR */
 
     const purchaseButton =
       document.getElementById("purchaseButton");
@@ -1223,20 +1308,7 @@
 
     purchaseButton.addEventListener("click", () => {
 
-      if (isBracelet && !getSelectedBraceletSize()) {
-
-        alert(
-          "Vælg venligst en armbåndsstørrelse " +
-          "eller angiv din ønskede specialstørrelse."
-        );
-
-        sizeSection.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-
-        return;
-      }
+      if (!validateProductSelection()) return;
 
       purchaseForm.hidden = false;
 
@@ -1252,7 +1324,7 @@
 
     });
 
-    /* SEND PURCHASE REQUEST */
+    /* SEND KØBSANMODNING */
 
     purchaseForm.addEventListener(
       "submit",
@@ -1260,34 +1332,19 @@
 
         event.preventDefault();
 
-        if (isBracelet) {
+        if (!validateProductSelection()) return;
 
-          const selectedSize = getSelectedBraceletSize();
+        requestedBraceletSize.disabled = !isBracelet;
 
-          if (!selectedSize) {
+        requestedBraceletSize.value = isBracelet
+          ? getBraceletSize()
+          : "";
 
-            alert(
-              "Vælg venligst en armbåndsstørrelse, " +
-              "før du sender din anmodning."
-            );
+        requestedNecklaceLength.disabled = !isNecklace;
 
-            sizeSection.scrollIntoView({
-              behavior: "smooth",
-              block: "center"
-            });
-
-            return;
-          }
-
-          requestedSize.disabled = false;
-          requestedSize.value = selectedSize;
-
-        } else {
-
-          requestedSize.disabled = true;
-          requestedSize.value = "";
-
-        }
+        requestedNecklaceLength.value = isNecklace
+          ? getNecklaceLength()
+          : "";
 
         const button = purchaseForm.querySelector(
           'button[type="submit"]'
