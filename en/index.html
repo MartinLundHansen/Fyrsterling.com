@@ -86,8 +86,89 @@
       padding-bottom: 5px;
     }
 
-    .site-nav a:hover {
+    .site-nav > a:hover {
       border-bottom: 1px solid currentColor;
+    }
+
+    /* JEWELLERY DROPDOWN */
+
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-dropdown > a:hover {
+      border-bottom: 1px solid currentColor;
+    }
+
+    .dropdown-toggle {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 22px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .dropdown-toggle svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+      min-width: 195px;
+      padding: 18px 0 10px;
+      background: #FFFFFF;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.07);
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 13px 22px;
+      border-bottom: 0 !important;
+      color: var(--navy) !important;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible {
+      background: #f5f6f8;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu,
+    .nav-dropdown.is-open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown:hover .dropdown-toggle svg,
+    .nav-dropdown:focus-within .dropdown-toggle svg,
+    .nav-dropdown.is-open .dropdown-toggle svg {
+      transform: rotate(180deg);
     }
 
     /* LANGUAGE SWITCH */
@@ -124,10 +205,14 @@
     }
 
     .site-header:hover .site-logo,
-    .site-header:hover .site-nav a,
+    .site-header:hover .site-nav > a,
+    .site-header:hover .nav-dropdown > a,
+    .site-header:hover .dropdown-toggle,
     .site-header:hover .language-switch,
     .site-header:focus-within .site-logo,
-    .site-header:focus-within .site-nav a,
+    .site-header:focus-within .site-nav > a,
+    .site-header:focus-within .nav-dropdown > a,
+    .site-header:focus-within .dropdown-toggle,
     .site-header:focus-within .language-switch {
       color: var(--navy);
     }
@@ -272,6 +357,16 @@
         letter-spacing: 0.7px;
       }
 
+      .nav-dropdown {
+        gap: 2px;
+      }
+
+      .dropdown-menu {
+        left: 0;
+        transform: none;
+        min-width: 175px;
+      }
+
       .language-switch {
         margin-left: 3px;
         gap: 7px;
@@ -308,6 +403,11 @@
       .visual {
         background: #142a46;
       }
+
+      .dropdown-menu,
+      .dropdown-toggle svg {
+        transition: none;
+      }
     }
   </style>
 </head>
@@ -320,7 +420,39 @@
     <a href="/en/" class="site-logo">FYRSTERLING</a>
 
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="/en/collection.html">JEWELLERY</a>
+
+      <div class="nav-dropdown" id="jewelleryDropdown">
+
+        <a href="/en/collection.html">JEWELLERY</a>
+
+        <button
+          type="button"
+          class="dropdown-toggle"
+          id="jewelleryToggle"
+          aria-label="Show jewellery categories"
+          aria-expanded="false"
+          aria-controls="jewelleryMenu"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M5 9l7 7 7-7"/>
+          </svg>
+        </button>
+
+        <div class="dropdown-menu" id="jewelleryMenu">
+          <a href="/en/collection.html#rings">RINGS</a>
+          <a href="/en/collection.html#bracelets">BRACELETS</a>
+          <a href="/en/collection.html#necklaces">NECKLACES</a>
+          <a href="/en/collection.html#earrings">EARRINGS</a>
+        </div>
+
+      </div>
+
       <a href="/en/services.html">SERVICES</a>
       <a href="/en/our-story.html">MAISON</a>
       <a href="/en/appointments.html">APPOINTMENTS</a>
@@ -332,6 +464,7 @@
         <span class="language-divider" aria-hidden="true">|</span>
         <a href="/en/" lang="en" aria-current="page">EN</a>
       </span>
+
     </nav>
   </header>
 
@@ -390,6 +523,57 @@
     </section>
 
   </main>
+
+  <!-- JEWELLERY DROPDOWN FUNCTIONALITY -->
+
+  <script>
+    "use strict";
+
+    const dropdown = document.getElementById("jewelleryDropdown");
+    const dropdownToggle = document.getElementById("jewelleryToggle");
+
+    function setDropdownOpen(open) {
+      dropdown.classList.toggle("is-open", open);
+      dropdownToggle.setAttribute("aria-expanded", String(open));
+    }
+
+    dropdownToggle.addEventListener("click", () => {
+      setDropdownOpen(!dropdown.classList.contains("is-open"));
+    });
+
+    dropdown.addEventListener("mouseenter", () => {
+      if (window.matchMedia("(hover: hover)").matches) {
+        setDropdownOpen(true);
+      }
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      setDropdownOpen(false);
+    });
+
+    dropdown.addEventListener("focusin", () => {
+      setDropdownOpen(true);
+    });
+
+    dropdown.addEventListener("focusout", event => {
+      if (!dropdown.contains(event.relatedTarget)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("click", event => {
+      if (!dropdown.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        setDropdownOpen(false);
+        dropdownToggle.blur();
+      }
+    });
+  </script>
 
   <script
     type="module"
