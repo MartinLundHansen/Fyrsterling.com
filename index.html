@@ -94,6 +94,89 @@
       border-bottom: 1px solid currentColor;
     }
 
+    /* JEWELLERY DROPDOWN */
+
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-dropdown > a {
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 22px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .dropdown-toggle svg {
+      width: 11px;
+      height: 11px;
+      transition: transform 0.2s ease;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 190px;
+      padding: 19px 0 10px;
+      background: #FFFFFF;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      z-index: 200;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px 22px;
+      border-bottom: 0 !important;
+      color: var(--navy) !important;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible {
+      background: #f5f6f8;
+      border-bottom: 0;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu,
+    .nav-dropdown.is-open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown:hover .dropdown-toggle svg,
+    .nav-dropdown:focus-within .dropdown-toggle svg,
+    .nav-dropdown.is-open .dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+
     /* LANGUAGE SWITCH */
 
     .language-switch {
@@ -130,9 +213,11 @@
     .site-header:hover .site-logo,
     .site-header:hover .site-nav a,
     .site-header:hover .language-switch,
+    .site-header:hover .dropdown-toggle,
     .site-header:focus-within .site-logo,
     .site-header:focus-within .site-nav a,
-    .site-header:focus-within .language-switch {
+    .site-header:focus-within .language-switch,
+    .site-header:focus-within .dropdown-toggle {
       color: var(--navy);
     }
 
@@ -276,6 +361,25 @@
         letter-spacing: 0.7px;
       }
 
+      .nav-dropdown {
+        gap: 2px;
+      }
+
+      .dropdown-toggle {
+        width: 15px;
+      }
+
+      .dropdown-menu {
+        left: 0;
+        transform: none;
+        min-width: 175px;
+      }
+
+      .dropdown-menu a {
+        font-size: 11px;
+        padding: 13px 18px;
+      }
+
       .language-switch {
         margin-left: 3px;
         gap: 7px;
@@ -312,6 +416,11 @@
       .visual {
         background: #142a46;
       }
+
+      .dropdown-menu,
+      .dropdown-toggle svg {
+        transition: none;
+      }
     }
   </style>
 </head>
@@ -324,7 +433,41 @@
     <a href="/" class="site-logo">FYRSTERLING</a>
 
     <nav class="site-nav" aria-label="Hovednavigation">
-      <a href="/collection.html">SMYKKER</a>
+
+      <!-- SMYKKER MED UNDERMENU -->
+
+      <div class="nav-dropdown" id="jewelleryDropdown">
+
+        <a href="/collection.html">SMYKKER</a>
+
+        <button
+          type="button"
+          class="dropdown-toggle"
+          id="jewelleryToggle"
+          aria-label="Vis smykkekategorier"
+          aria-expanded="false"
+          aria-controls="jewelleryMenu"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M5 9l7 7 7-7"/>
+          </svg>
+        </button>
+
+        <div class="dropdown-menu" id="jewelleryMenu">
+          <a href="/collection.html#rings">RINGE</a>
+          <a href="/collection.html#bracelets">ARMBÅND</a>
+          <a href="/collection.html#necklaces">HALSKÆDER</a>
+          <a href="/collection.html#earrings">ØRERINGE</a>
+        </div>
+
+      </div>
+
       <a href="/services.html">SERVICES</a>
       <a href="/our-story.html">MAISON</a>
       <a href="/appointments.html">BOOK TID</a>
@@ -336,6 +479,7 @@
         <span class="language-divider" aria-hidden="true">|</span>
         <a href="/en/" lang="en">EN</a>
       </span>
+
     </nav>
   </header>
 
@@ -345,7 +489,10 @@
 
     <section class="visual" aria-label="FYRSTERLING smykker">
       <video autoplay muted loop playsinline preload="metadata">
-        <source src="/images/Video%20til%20forsiden.MP4" type="video/mp4">
+        <source
+          src="/images/Video%20til%20forsiden.MP4"
+          type="video/mp4"
+        >
       </video>
 
       <h2 class="video-title">The Art of Eternity</h2>
@@ -397,6 +544,55 @@
     </section>
 
   </main>
+
+  <!-- DROPDOWN FUNCTIONALITY -->
+
+  <script>
+    const dropdown = document.getElementById("jewelleryDropdown");
+    const toggle = document.getElementById("jewelleryToggle");
+
+    function setDropdownOpen(open) {
+      dropdown.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+    }
+
+    toggle.addEventListener("click", function () {
+      setDropdownOpen(!dropdown.classList.contains("is-open"));
+    });
+
+    dropdown.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(hover: hover)").matches) {
+        setDropdownOpen(true);
+      }
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      setDropdownOpen(false);
+    });
+
+    dropdown.addEventListener("focusin", function () {
+      setDropdownOpen(true);
+    });
+
+    dropdown.addEventListener("focusout", function (event) {
+      if (!dropdown.contains(event.relatedTarget)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setDropdownOpen(false);
+        toggle.focus();
+      }
+    });
+  </script>
 
   <script
     type="module"
