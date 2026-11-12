@@ -1,403 +1,718 @@
 
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AETERNUM Smykkekollektion | Guld og Diamanter | FYRSTERLING</title>
-  <meta name="description" content="Udforsk AETERNUM smykkekollektionen fra FYRSTERLING. Oplev eksklusive ringe, halskæder, øreringe og armbånd i 14 karat guld, rosaguld og sterlingsølv med diamanter.">
+<title>AETERNUM Jewellery Collection | FYRSTERLING</title>
 
-  <link rel="canonical" href="https://fyrsterling.com/collection.html">
-  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/collection.html">
-  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/collection.html">
-  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/collection.html">
+<meta name="description" content="Explore the AETERNUM jewellery collection by FYRSTERLING. Discover elegant rings, bracelets, necklaces and earrings in 14-karat gold, rose gold and sterling silver with lab-grown diamonds.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://fyrsterling.com/en/collection.html">
+<link rel="alternate" hreflang="da" href="https://fyrsterling.com/collection.html">
+<link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/collection.html">
+<link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/collection.html">
 
-  <style>
-    :root {
-      --navy: #142a46;
-      --white: #FFFFFF;
-      --text: #4a4a4a;
-      --line: #e8e8e8;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+:root {
+  --navy: #142a46;
+  --white: #FFFFFF;
+  --text: #4a4a4a;
+  --line: #e8e8e8;
+}
 
-    html {
-      width: 100%;
-      max-width: 100%;
-      scroll-behavior: smooth;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-      background: var(--white);
-      color: var(--navy);
-      font-family: Georgia, "Times New Roman", serif;
-      -webkit-font-smoothing: antialiased;
-    }
+html {
+  width: 100%;
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
 
-    a {
-      color: inherit;
-    }
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: var(--white);
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-    /* HEADER */
+a {
+  color: inherit;
+}
 
-    .site-header {
-      background: #FFFFFF;
-      text-align: center;
-      padding: 25px 20px 18px;
-      border-bottom: 1px solid var(--line);
-    }
+/* HEADER */
 
-    .logo {
-      display: inline-block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 29px;
-      font-weight: normal;
-      letter-spacing: 5px;
-      text-decoration: none;
-      margin-bottom: 18px;
-    }
+.site-header {
+  position: relative;
+  z-index: 100;
+  background: #FFFFFF;
+  text-align: center;
+  padding: 25px 20px 18px;
+  border-bottom: 1px solid var(--line);
+}
 
-    .main-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 27px;
-    }
+.logo {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
 
-    .main-nav a {
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 1.4px;
-      text-decoration: none;
-      padding-bottom: 5px;
-    }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 27px;
+}
 
-    .main-nav a:hover,
-    .main-nav a.active {
-      border-bottom: 1px solid var(--navy);
-    }
+.main-nav a {
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
 
-    /* LANGUAGE SWITCH */
+.main-nav > a:hover,
+.main-nav > a.active {
+  border-bottom: 1px solid var(--navy);
+}
 
-    .language-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-left: 10px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
+/* JEWELLERY DROPDOWN */
 
-    .language-switch a {
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 
-    .language-switch a[aria-current="page"] {
-      border-bottom: 1px solid var(--navy);
-    }
+.nav-dropdown > a {
+  border-bottom: 1px solid var(--navy);
+}
 
-    .language-divider {
-      color: #999999;
-    }
+.dropdown-toggle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+}
 
-    /* COLLECTION INTRODUCTION */
+.dropdown-toggle svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+}
 
-    .intro {
-      text-align: center;
-      padding: 43px 20px 35px;
-    }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 195px;
+  padding: 18px 0 10px;
+  background: #FFFFFF;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.07);
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 200;
+}
 
-    .intro h1 {
-      margin: 0 0 16px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 36px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
+.dropdown-menu a {
+  display: block;
+  padding: 13px 22px;
+  border: 0 !important;
+  color: var(--navy);
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+}
 
-    .intro p {
-      margin: 0;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      color: #777777;
-    }
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background: #f5f6f8;
+}
 
-    /* COLLECTION GRID */
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown.is-open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
-    .collection {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 20px 30px 90px;
-    }
+.nav-dropdown:hover .dropdown-toggle svg,
+.nav-dropdown:focus-within .dropdown-toggle svg,
+.nav-dropdown.is-open .dropdown-toggle svg {
+  transform: rotate(180deg);
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 48px 24px;
-      width: 100%;
-    }
+/* LANGUAGE SWITCH */
 
-    .product {
-      min-width: 0;
-      width: 100%;
-      text-align: center;
-    }
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: 10px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
 
-    .product-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background: #f7f7f7;
-      text-decoration: none;
-    }
+.language-switch a {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
 
-    .product-image img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.35s ease;
-    }
+.language-switch a[aria-current="page"] {
+  border-bottom: 1px solid var(--navy);
+}
 
-    .product-image:hover img {
-      transform: scale(1.025);
-    }
+.language-divider {
+  color: #999999;
+}
 
-    .product h2 {
-      margin: 20px 0 10px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
+/* COLLECTION INTRO */
 
-    .product p {
-      margin: 8px 0;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 13px;
-      color: #777777;
-    }
+.intro {
+  text-align: center;
+  padding: 43px 20px 28px;
+}
 
-    /* MOBILE */
+.intro h1 {
+  margin: 0 0 16px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
 
-    @media (max-width: 700px) {
-      .site-header {
-        padding: 22px 15px 16px;
-      }
+.intro p {
+  margin: 0;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #777777;
+}
 
-      .logo {
-        font-size: 24px;
-        letter-spacing: 3px;
-      }
+/* CATEGORY FILTER */
 
-      .main-nav {
-        gap: 13px;
-      }
+.category-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  max-width: 1100px;
+  margin: 10px auto 40px;
+  padding: 0 20px;
+}
 
-      .main-nav a {
-        font-size: 10px;
-        letter-spacing: 0.7px;
-      }
+.category-filter a {
+  padding: 8px 0;
+  color: #777777;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  transition: color 0.2s, border-color 0.2s;
+}
 
-      .language-switch {
-        margin-left: 3px;
-        gap: 7px;
-      }
+.category-filter a:hover,
+.category-filter a.active {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
 
-      .language-switch a {
-        font-size: 10px;
-      }
+/* COLLECTION GRID */
 
-      .intro {
-        padding: 35px 20px 30px;
-      }
+.collection {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px 90px;
+}
 
-      .intro h1 {
-        font-size: 28px;
-      }
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px 24px;
+  width: 100%;
+}
 
-      .collection {
-        padding: 15px 12px 60px;
-      }
+.product {
+  min-width: 0;
+  width: 100%;
+  text-align: center;
+}
 
-      .products {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 30px 12px;
-      }
+.product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #f7f7f7;
+  text-decoration: none;
+}
 
-      .product h2 {
-        font-size: 13px;
-        line-height: 1.4;
-      }
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
 
-      .product p {
-        font-size: 12px;
-        line-height: 1.5;
-      }
-    }
-  </style>
+.product-image:hover img {
+  transform: scale(1.025);
+}
+
+.product h2 {
+  margin: 20px 0 10px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.product p {
+  margin: 8px 0;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 13px;
+  color: #777777;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 22px 15px 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .main-nav {
+    gap: 13px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+    letter-spacing: 0.7px;
+  }
+
+  .nav-dropdown {
+    gap: 2px;
+  }
+
+  .dropdown-menu {
+    left: 0;
+    transform: none;
+    min-width: 175px;
+  }
+
+  .language-switch {
+    margin-left: 3px;
+    gap: 7px;
+  }
+
+  .language-switch a {
+    font-size: 10px;
+  }
+
+  .intro {
+    padding: 35px 20px 25px;
+  }
+
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .category-filter {
+    gap: 8px 18px;
+    margin-bottom: 28px;
+  }
+
+  .category-filter a {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .collection {
+    padding: 0 12px 60px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 12px;
+  }
+
+  .product h2 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .product p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown-menu,
+  .dropdown-toggle svg,
+  .product-image img {
+    transition: none;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<!-- HEADER -->
 
-  <header class="site-header">
-    <a href="/" class="logo">FYRSTERLING</a>
+<header class="site-header">
+  <a href="/en/index.html" class="logo">FYRSTERLING</a>
 
-    <nav class="main-nav" aria-label="Hovednavigation">
-      <a href="/collection.html" class="active" aria-current="page">SMYKKER</a>
-      <a href="/services.html">SERVICES</a>
-      <a href="/our-story.html">MAISON</a>
-      <a href="/appointments.html">BOOK TID</a>
-      <a href="/contact.html">KONTAKT</a>
-      <a href="/faq.html">FAQ</a>
+  <nav class="main-nav" aria-label="Main navigation">
 
-      <span class="language-switch" aria-label="Vælg sprog">
-        <a href="/collection.html" lang="da" aria-current="page">DA</a>
-        <span class="language-divider" aria-hidden="true">|</span>
-        <a href="/en/collection.html" lang="en">EN</a>
-      </span>
-    </nav>
-  </header>
+    <div class="nav-dropdown" id="jewelleryDropdown">
 
-  <!-- COLLECTION HEADING -->
+      <a href="/en/collection.html" aria-current="page">
+        JEWELLERY
+      </a>
 
-  <section class="intro">
-    <h1>AETERNUM</h1>
-    <p>KOLLEKTIONEN</p>
-  </section>
+      <button
+        type="button"
+        class="dropdown-toggle"
+        id="jewelleryToggle"
+        aria-label="Show jewellery categories"
+        aria-expanded="false"
+        aria-controls="jewelleryMenu"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <path d="M5 9l7 7 7-7"/>
+        </svg>
+      </button>
 
-  <!-- COLLECTION PRODUCTS -->
+      <div class="dropdown-menu" id="jewelleryMenu">
+        <a href="/en/collection.html#rings">RINGS</a>
+        <a href="/en/collection.html#bracelets">BRACELETS</a>
+        <a href="/en/collection.html#necklaces">NECKLACES</a>
+        <a href="/en/collection.html#earrings">EARRINGS</a>
+      </div>
 
-  <main class="collection">
-    <div class="products" id="products"></div>
-  </main>
+    </div>
 
-  <script>
-    /*
-      Original product identifiers are retained
-      for compatibility with product.html.
-    */
+    <a href="/en/services.html">SERVICES</a>
+    <a href="/en/our-story.html">MAISON</a>
+    <a href="/en/appointments.html">APPOINTMENTS</a>
+    <a href="/en/contact.html">CONTACT</a>
+    <a href="/en/faq.html">FAQ</a>
 
-    const products = [
-      ["Ring", "Yellow Gold"],
-      ["Necklace", "Silver"],
-      ["Earrings", "Rose Gold"],
-      ["Bracelet", "Yellow Gold"],
-      ["Ring", "Silver"],
-      ["Necklace", "Rose Gold"],
-      ["Bracelet", "Silver"],
-      ["Earrings", "Yellow Gold"],
-      ["Necklace", "Yellow Gold"],
-      ["Ring", "Rose Gold"],
-      ["Earrings", "Silver"],
-      ["Bracelet", "Rose Gold"]
-    ];
+    <span class="language-switch" aria-label="Select language">
+      <a href="/collection.html" lang="da">DA</a>
+      <span class="language-divider" aria-hidden="true">|</span>
+      <a href="/en/collection.html" lang="en" aria-current="page">EN</a>
+    </span>
 
-    /* Original image filenames */
+  </nav>
+</header>
 
-    const metals = {
-      "Yellow Gold": "Guld",
-      "Rose Gold": "Rose gold",
-      "Silver": "Sølv"
-    };
+<!-- COLLECTION HEADING -->
 
-    const types = {
-      "Ring": "ring",
-      "Necklace": "halskæde",
-      "Earrings": "øreringe",
-      "Bracelet": "armbånd"
-    };
+<section class="intro">
+  <h1>AETERNUM</h1>
+  <p id="collectionSubtitle">THE COLLECTION</p>
+</section>
 
-    /* Danish display names */
+<!-- CATEGORY FILTER -->
 
-    const danishTypes = {
-      "Ring": "RING",
-      "Necklace": "HALSKÆDE",
-      "Earrings": "ØRERINGE",
-      "Bracelet": "ARMBÅND"
-    };
+<nav class="category-filter" aria-label="Jewellery categories">
+  <a href="/en/collection.html" data-filter="all">ALL JEWELLERY</a>
+  <a href="#rings" data-filter="rings">RINGS</a>
+  <a href="#bracelets" data-filter="bracelets">BRACELETS</a>
+  <a href="#necklaces" data-filter="necklaces">NECKLACES</a>
+  <a href="#earrings" data-filter="earrings">EARRINGS</a>
+</nav>
 
-    const danishMetals = {
-      "Yellow Gold": "14 KARAT GULD",
-      "Rose Gold": "14 KARAT ROSAGULD",
-      "Silver": "STERLINGSØLV"
-    };
+<!-- COLLECTION PRODUCTS -->
 
-    /* Original prices */
+<main class="collection">
+  <div class="products" id="products"></div>
+</main>
 
-    const prices = {
-      "Ring": {
-        "Yellow Gold": 9600,
-        "Rose Gold": 9600,
-        "Silver": 3200
-      },
-      "Earrings": {
-        "Yellow Gold": 5200,
-        "Rose Gold": 5200,
-        "Silver": 3000
-      },
-      "Necklace": {
-        "Yellow Gold": 9100,
-        "Rose Gold": 9100,
-        "Silver": 3600
-      },
-      "Bracelet": {
-        "Yellow Gold": 6500,
-        "Rose Gold": 6500,
-        "Silver": 3200
-      }
-    };
+<script>
+"use strict";
 
-    document.getElementById("products").innerHTML =
-      products.map(([name, metal]) => {
-        const filename = `${metals[metal]} ${types[name]}.jpeg`;
+/*
+  Original product identifiers are retained
+  for compatibility with product.html.
+*/
 
-        return `
-          <article class="product">
-            <a
-              class="product-image"
-              href="/product.html?type=${encodeURIComponent(name)}&metal=${encodeURIComponent(metal)}"
-              aria-label="Se AETERNUM ${danishTypes[name].toLowerCase()} i ${danishMetals[metal].toLowerCase()}"
+const products = [
+  ["Ring", "Yellow Gold"],
+  ["Necklace", "Silver"],
+  ["Earrings", "Rose Gold"],
+  ["Bracelet", "Yellow Gold"],
+  ["Ring", "Silver"],
+  ["Necklace", "Rose Gold"],
+  ["Bracelet", "Silver"],
+  ["Earrings", "Yellow Gold"],
+  ["Necklace", "Yellow Gold"],
+  ["Ring", "Rose Gold"],
+  ["Earrings", "Silver"],
+  ["Bracelet", "Rose Gold"]
+];
+
+/* Original image filenames */
+
+const metals = {
+  "Yellow Gold": "Guld",
+  "Rose Gold": "Rose gold",
+  "Silver": "Sølv"
+};
+
+const types = {
+  Ring: "ring",
+  Necklace: "halskæde",
+  Earrings: "øreringe",
+  Bracelet: "armbånd"
+};
+
+/* English display names */
+
+const displayTypes = {
+  Ring: "RING",
+  Necklace: "NECKLACE",
+  Earrings: "EARRINGS",
+  Bracelet: "BRACELET"
+};
+
+const displayMetals = {
+  "Yellow Gold": "14K YELLOW GOLD",
+  "Rose Gold": "14K ROSE GOLD",
+  Silver: "STERLING SILVER"
+};
+
+/* Original prices */
+
+const prices = {
+  Ring: {
+    "Yellow Gold": 9600,
+    "Rose Gold": 9600,
+    Silver: 3200
+  },
+  Earrings: {
+    "Yellow Gold": 5200,
+    "Rose Gold": 5200,
+    Silver: 3000
+  },
+  Necklace: {
+    "Yellow Gold": 9100,
+    "Rose Gold": 9100,
+    Silver: 3600
+  },
+  Bracelet: {
+    "Yellow Gold": 6500,
+    "Rose Gold": 6500,
+    Silver: 3200
+  }
+};
+
+/* Category mapping */
+
+const categoryTypes = {
+  rings: "Ring",
+  bracelets: "Bracelet",
+  necklaces: "Necklace",
+  earrings: "Earrings"
+};
+
+const categoryTitles = {
+  all: "THE COLLECTION",
+  rings: "RINGS",
+  bracelets: "BRACELETS",
+  necklaces: "NECKLACES",
+  earrings: "EARRINGS"
+};
+
+/* Render products according to selected category */
+
+function renderProducts() {
+  const hash = window.location.hash
+    .replace("#", "")
+    .toLowerCase();
+
+  const category = Object.prototype.hasOwnProperty.call(
+    categoryTypes,
+    hash
+  ) ? hash : "all";
+
+  const selectedType = categoryTypes[category];
+
+  const visibleProducts = selectedType
+    ? products.filter(([name]) => name === selectedType)
+    : products;
+
+  document.getElementById(
+    "collectionSubtitle"
+  ).textContent = categoryTitles[category];
+
+  document.querySelectorAll(
+    ".category-filter a"
+  ).forEach(link => {
+    const active = link.dataset.filter === category;
+
+    link.classList.toggle("active", active);
+
+    if (active) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  document.getElementById("products").innerHTML =
+    visibleProducts.map(([name, metal]) => {
+      const filename =
+        `${metals[metal]} ${types[name]}.jpeg`;
+
+      const productLink =
+        "/en/product.html?type=" +
+        encodeURIComponent(name) +
+        "&metal=" +
+        encodeURIComponent(metal);
+
+      return `
+        <article class="product">
+          <a
+            class="product-image"
+            href="${productLink}"
+            aria-label="View AETERNUM ${name} in ${metal}"
+          >
+            <img
+              src="/images/${encodeURIComponent(filename)}"
+              alt="AETERNUM ${name} in ${metal}"
+              loading="lazy"
             >
-              <img
-                src="/images/${encodeURIComponent(filename)}"
-                alt="AETERNUM ${danishTypes[name].toLowerCase()} i ${danishMetals[metal].toLowerCase()}"
-                loading="lazy"
-              >
-            </a>
+          </a>
 
-            <h2>AETERNUM ${danishTypes[name]}</h2>
-            <p>${danishMetals[metal]}</p>
-            <p>${prices[name][metal].toLocaleString("da-DK")} DKK</p>
-          </article>
-        `;
-      }).join("");
-  </script>
+          <h2>AETERNUM ${displayTypes[name]}</h2>
+          <p>${displayMetals[metal]}</p>
+          <p>${prices[name][metal].toLocaleString("da-DK")} DKK</p>
+        </article>
+      `;
+    }).join("");
+}
+
+/* Initial render */
+
+renderProducts();
+
+/* Update when category changes */
+
+window.addEventListener("hashchange", renderProducts);
+
+/* Dropdown menu */
+
+const dropdown = document.getElementById(
+  "jewelleryDropdown"
+);
+
+const toggle = document.getElementById(
+  "jewelleryToggle"
+);
+
+function setDropdownOpen(open) {
+  dropdown.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+}
+
+toggle.addEventListener("click", () => {
+  setDropdownOpen(
+    !dropdown.classList.contains("is-open")
+  );
+});
+
+dropdown.addEventListener("mouseenter", () => {
+  if (window.matchMedia("(hover: hover)").matches) {
+    setDropdownOpen(true);
+  }
+});
+
+dropdown.addEventListener("mouseleave", () => {
+  setDropdownOpen(false);
+});
+
+dropdown.addEventListener("focusin", () => {
+  setDropdownOpen(true);
+});
+
+dropdown.addEventListener("focusout", event => {
+  if (!dropdown.contains(event.relatedTarget)) {
+    setDropdownOpen(false);
+  }
+});
+
+document.addEventListener("click", event => {
+  if (!dropdown.contains(event.target)) {
+    setDropdownOpen(false);
+  }
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    setDropdownOpen(false);
+    toggle.focus();
+  }
+});
+
+window.addEventListener("hashchange", () => {
+  setDropdownOpen(false);
+});
+</script>
 
 </body>
 </html>
