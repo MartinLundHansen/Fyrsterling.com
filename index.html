@@ -301,6 +301,58 @@
       color: var(--navy);
     }
 
+    /* NEW EDITORIAL IMAGE SECTION */
+
+    .editorial-section {
+      background: #FFFFFF;
+      padding: 60px 30px;
+    }
+
+    .editorial-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 50px;
+      align-items: start;
+    }
+
+    .editorial-card {
+      display: block;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .editorial-image-wrap {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #f7f7f7;
+    }
+
+    .editorial-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .editorial-card:hover .editorial-image {
+      transform: scale(1.025);
+    }
+
+    .editorial-title {
+      margin: 20px 0 0;
+      text-align: center;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.6px;
+      line-height: 1.5;
+    }
+
     /* AETERNUM COLLECTION */
 
     .collection-section {
@@ -397,6 +449,20 @@
         font-size: 16px;
       }
 
+      .editorial-section {
+        padding: 45px 20px;
+      }
+
+      .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .editorial-title {
+        font-size: 12px;
+        margin-top: 16px;
+      }
+
       .home-contact {
         padding: 35px 20px;
       }
@@ -418,7 +484,8 @@
       }
 
       .dropdown-menu,
-      .dropdown-toggle svg {
+      .dropdown-toggle svg,
+      .editorial-image {
         transition: none;
       }
     }
@@ -506,7 +573,58 @@
       </div>
     </section>
 
-    <!-- AETERNUM COLLECTION -->
+    <!-- NEW TWO-IMAGE EDITORIAL SECTION -->
+
+    <section class="editorial-section" aria-label="Udforsk AETERNUM">
+
+      <div class="editorial-grid">
+
+        <!-- IMAGE 1: MODEL WITH JEWELLERY -->
+
+        <a
+          href="/collection.html"
+          class="editorial-card"
+          aria-label="Udforsk AETERNUM-kollektionen"
+        >
+          <span class="editorial-image-wrap">
+            <img
+              src="/images/Generelt%20aeternum%20billede.jpg"
+              alt="Model med AETERNUM-smykker fra FYRSTERLING"
+              class="editorial-image"
+              loading="lazy"
+            >
+          </span>
+
+          <h2 class="editorial-title">
+            AETERNUM COLLECTION
+          </h2>
+        </a>
+
+        <!-- IMAGE 2: EARRINGS IN FYRSTERLING BOX -->
+
+        <a
+          href="/collection.html#earrings"
+          class="editorial-card"
+          aria-label="Udforsk AETERNUM-øreringe"
+        >
+          <span class="editorial-image-wrap">
+            <img
+              src="/images/S%C3%B8lv%20%C3%B8reringe%20i%20box.PNG"
+              alt="AETERNUM-øreringe i FYRSTERLING-smykkeæske"
+              class="editorial-image"
+              loading="lazy"
+            >
+          </span>
+
+          <h2 class="editorial-title">
+            THE ART OF DETAIL
+          </h2>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- EXISTING AETERNUM COLLECTION IMAGE -->
 
     <section id="collection" class="collection-section">
 
