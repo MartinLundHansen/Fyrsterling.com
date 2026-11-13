@@ -4,18 +4,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>FYRSTERLING | Eksklusive smykker og diamanter</title>
-<meta name="description" content="Oplev FYRSTERLING og AETERNUM – eksklusive smykker i 14 karat guld, sterlingsølv og med laboratoriedyrkede diamanter.">
+
+<meta name="description" content="Oplev FYRSTERLING og AETERNUM – eksklusive smykker i 14 karat guld, sterlingsølv og med laboratoriedyrkede diamanter. Udforsk kollektionen og vores private showroom i Odense.">
+
 <meta name="theme-color" content="#050505">
+
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
 <link rel="canonical" href="https://fyrsterling.com/">
 <link rel="alternate" hreflang="da" href="https://fyrsterling.com/">
 <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/css/style.css">
 
 <style>
@@ -23,8 +30,15 @@
   --navy:#142a46;
   --white:#FFFFFF;
 }
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
 body {
   margin:0;
   background:#FFFFFF;
@@ -34,23 +48,30 @@ body {
 }
 
 /* HEADER */
+
 .site-header {
   position:absolute;
-  top:0;left:0;right:0;
+  top:0;
+  left:0;
+  right:0;
   z-index:100;
   padding:25px 20px 18px;
   background:transparent;
   text-align:center;
   transition:background .3s;
 }
+
 .site-logo {
   display:inline-block;
   margin-bottom:18px;
   color:#FFFFFF;
   text-decoration:none;
+  font-family:Georgia,"Times New Roman",serif;
   font-size:29px;
+  font-weight:normal;
   letter-spacing:5px;
 }
+
 .site-nav {
   display:flex;
   justify-content:center;
@@ -58,6 +79,7 @@ body {
   flex-wrap:wrap;
   gap:27px;
 }
+
 .site-nav a {
   color:#FFFFFF;
   text-decoration:none;
@@ -67,34 +89,47 @@ body {
   letter-spacing:1.4px;
   padding-bottom:5px;
 }
+
 .site-nav a:hover {
   border-bottom:1px solid currentColor;
 }
 
-/* JEWELLERY DROPDOWN */
+/* SMYKKER DROPDOWN */
+
 .nav-dropdown {
   position:relative;
   display:inline-flex;
   align-items:center;
   gap:5px;
 }
+
+.nav-dropdown > a {
+  display:inline-block;
+}
+
 .dropdown-toggle {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:16px;height:22px;
-  padding:0;border:0;
+  width:16px;
+  height:22px;
+  padding:0;
+  border:0;
   background:transparent;
   color:#FFFFFF;
   cursor:pointer;
 }
+
 .dropdown-toggle svg {
-  width:11px;height:11px;
+  width:11px;
+  height:11px;
   transition:transform .2s;
 }
+
 .dropdown-menu {
   position:absolute;
-  top:100%;left:50%;
+  top:100%;
+  left:50%;
   transform:translateX(-50%);
   z-index:200;
   min-width:190px;
@@ -108,6 +143,7 @@ body {
   pointer-events:none;
   transition:opacity .2s,visibility .2s;
 }
+
 .dropdown-menu a {
   display:block;
   padding:12px 22px;
@@ -117,11 +153,15 @@ body {
   font-size:11px;
   letter-spacing:1.3px;
   white-space:nowrap;
+  text-decoration:none;
 }
+
 .dropdown-menu a:hover,
 .dropdown-menu a:focus-visible {
   background:#f5f6f8;
+  border-bottom:0;
 }
+
 .nav-dropdown:hover .dropdown-menu,
 .nav-dropdown:focus-within .dropdown-menu,
 .nav-dropdown.is-open .dropdown-menu {
@@ -129,13 +169,15 @@ body {
   visibility:visible;
   pointer-events:auto;
 }
+
 .nav-dropdown:hover .dropdown-toggle svg,
 .nav-dropdown:focus-within .dropdown-toggle svg,
 .nav-dropdown.is-open .dropdown-toggle svg {
   transform:rotate(180deg);
 }
 
-/* LANGUAGE */
+/* SPROG */
+
 .language-switch {
   display:inline-flex;
   align-items:center;
@@ -144,19 +186,29 @@ body {
   color:#FFFFFF;
   font-family:"Barlow",Arial,sans-serif;
   font-size:11px;
+  letter-spacing:1px;
 }
+
 .language-switch a {
   font-size:11px;
   letter-spacing:1px;
 }
+
 .language-switch a[aria-current="page"] {
   border-bottom:1px solid currentColor;
 }
-.language-divider {opacity:.6}
+
+.language-divider {
+  opacity:.6;
+}
+
+/* HVID HEADER VED HOVER */
+
 .site-header:hover,
 .site-header:focus-within {
   background:#FFFFFF;
 }
+
 .site-header:hover .site-logo,
 .site-header:hover .site-nav a,
 .site-header:hover .language-switch,
@@ -168,7 +220,8 @@ body {
   color:var(--navy);
 }
 
-/* HERO */
+/* FORSIDEVIDEO */
+
 .visual {
   position:relative;
   width:100%;
@@ -178,12 +231,15 @@ body {
   background:#050505;
   color:#FFFFFF;
 }
+
 .visual video {
   position:absolute;
   inset:0;
-  width:100%;height:100%;
+  width:100%;
+  height:100%;
   object-fit:cover;
 }
+
 .visual::after {
   content:"";
   position:absolute;
@@ -191,31 +247,40 @@ body {
   background:rgba(0,0,0,.14);
   pointer-events:none;
 }
+
 .video-title {
   position:absolute;
-  top:43%;left:50%;
+  top:43%;
+  left:50%;
   transform:translate(-50%,-50%);
   z-index:2;
   width:90%;
   margin:0;
   text-align:center;
   color:#FFFFFF;
+  font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(30px,4vw,54px);
   font-weight:normal;
   letter-spacing:2px;
 }
+
 .video-explore {
   position:absolute;
-  left:50%;bottom:11%;
+  left:50%;
+  bottom:11%;
   transform:translateX(-50%);
   z-index:2;
   width:90%;
   text-align:center;
+  color:#FFFFFF;
 }
+
 .video-explore p {
   margin:0 0 22px;
   font-size:18px;
+  letter-spacing:.5px;
 }
+
 .explore-button {
   display:inline-block;
   padding:14px 32px;
@@ -228,28 +293,34 @@ body {
   letter-spacing:1.6px;
   transition:background .2s,color .2s;
 }
+
 .explore-button:hover {
   background:#FFFFFF;
   color:var(--navy);
 }
 
-/* TWO EDITORIAL IMAGES */
+/* DE TO STORE BILLEDER */
+
 .editorial-section {
   background:#FFFFFF;
   padding:60px 30px;
 }
+
 .editorial-grid {
   max-width:1200px;
-  margin:auto;
+  margin:0 auto;
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:50px;
+  align-items:start;
 }
+
 .editorial-card {
   display:block;
   color:var(--navy);
   text-decoration:none;
 }
+
 .editorial-image-wrap {
   display:block;
   width:100%;
@@ -257,15 +328,19 @@ body {
   overflow:hidden;
   background:#f7f7f7;
 }
+
 .editorial-image {
   display:block;
-  width:100%;height:100%;
+  width:100%;
+  height:100%;
   object-fit:cover;
-  transition:transform .45s;
+  transition:transform .45s ease;
 }
+
 .editorial-card:hover .editorial-image {
   transform:scale(1.025);
 }
+
 .editorial-title {
   margin:20px 0 0;
   text-align:center;
@@ -273,17 +348,21 @@ body {
   font-size:13px;
   font-weight:400;
   letter-spacing:1.6px;
+  line-height:1.5;
 }
 
-/* AUTOMATIC JEWELLERY SLIDER */
+/* AUTOMATISK SMYKKESLIDER */
+
 .jewellery-slider {
   background:#FFFFFF;
   padding:55px 24px 80px;
 }
+
 .slider-container {
   max-width:1320px;
   margin:0 auto;
 }
+
 .slider-heading {
   margin:0 0 45px;
   text-align:center;
@@ -292,26 +371,36 @@ body {
   font-weight:400;
   letter-spacing:3px;
 }
+
+.slider-stage {
+  position:relative;
+  padding:0 45px;
+}
+
 .slider-viewport {
   width:100%;
   overflow:hidden;
 }
+
 .slider-track {
   display:flex;
   transition:transform .7s ease;
   will-change:transform;
 }
+
 .slider-item {
   flex:0 0 25%;
   min-width:0;
   padding:0 12px;
 }
+
 .slider-item a {
   display:block;
   color:var(--navy);
   text-decoration:none;
   text-align:center;
 }
+
 .slider-product-image {
   display:block;
   width:100%;
@@ -319,6 +408,7 @@ body {
   object-fit:contain;
   background:#fafafa;
 }
+
 .slider-product-name {
   margin:18px 0 6px;
   font-family:"Barlow",Arial,sans-serif;
@@ -327,29 +417,33 @@ body {
   letter-spacing:1px;
   line-height:1.5;
 }
+
 .slider-product-metal {
   margin:0 0 9px;
   font-family:Georgia,"Times New Roman",serif;
   font-size:13px;
   color:#666666;
 }
+
 .slider-product-price {
   margin:0;
   font-family:"Barlow",Arial,sans-serif;
   font-size:13px;
 }
-.slider-controls {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:32px;
-  margin-top:38px;
-}
+
+/* PILE I SIDERNE */
+
 .slider-arrow {
+  position:absolute;
+  top:clamp(65px,11vw,155px);
+  transform:translateY(-50%);
+  z-index:5;
   display:flex;
   justify-content:center;
   align-items:center;
-  width:38px;height:38px;
+  width:38px;
+  height:38px;
+  padding:0;
   border:1px solid #d8d8d8;
   border-radius:50%;
   background:#FFFFFF;
@@ -358,28 +452,44 @@ body {
   cursor:pointer;
   transition:background .2s;
 }
-.slider-arrow:hover {background:#f4f4f4}
-.slider-counter {
-  font-family:"Barlow",Arial,sans-serif;
-  font-size:11px;
-  letter-spacing:1px;
-  color:#777777;
+
+.slider-arrow:hover {
+  background:#f4f4f4;
 }
 
-/* AETERNUM IMAGE */
-.collection-section {background:#FFFFFF}
+.slider-arrow:focus-visible {
+  outline:2px solid var(--navy);
+  outline-offset:3px;
+}
+
+#sliderPrev {
+  left:0;
+}
+
+#sliderNext {
+  right:0;
+}
+
+/* AETERNUM BILLEDE */
+
+.collection-section {
+  background:#FFFFFF;
+}
+
 .collection-image {
   display:block;
   width:100%;
   height:auto;
 }
 
-/* CONTACT */
+/* KONTAKTOPLYSNINGER */
+
 .home-contact {
   background:#FFFFFF;
   padding:45px 20px;
   text-align:center;
 }
+
 .home-contact-links {
   display:flex;
   justify-content:center;
@@ -389,82 +499,182 @@ body {
   font-size:13px;
   letter-spacing:1px;
 }
+
 .home-contact-links a {
   color:#005A7D;
   text-decoration:none;
 }
-.home-contact-links a:hover {text-decoration:underline}
 
-/* MOBILE */
+.home-contact-links a:hover {
+  text-decoration:underline;
+}
+
+/* MOBIL */
+
 @media(max-width:700px) {
-  .site-header {padding:22px 15px 16px}
-  .site-logo {font-size:24px;letter-spacing:3px}
-  .site-nav {gap:13px}
-  .site-nav a {font-size:10px;letter-spacing:.7px}
-  .nav-dropdown {gap:2px}
-  .dropdown-toggle {width:15px}
+  .site-header {
+    padding:22px 15px 16px;
+  }
+
+  .site-logo {
+    font-size:24px;
+    letter-spacing:3px;
+  }
+
+  .site-nav {
+    gap:13px;
+  }
+
+  .site-nav a {
+    font-size:10px;
+    letter-spacing:.7px;
+  }
+
+  .nav-dropdown {
+    gap:2px;
+  }
+
+  .dropdown-toggle {
+    width:15px;
+  }
+
   .dropdown-menu {
     left:0;
     transform:none;
     min-width:175px;
   }
+
   .dropdown-menu a {
     font-size:11px;
     padding:13px 18px;
   }
-  .language-switch {margin-left:3px;gap:7px}
-  .language-switch a {font-size:10px}
-  .video-title {font-size:32px}
-  .video-explore p {font-size:16px}
-  .editorial-section {padding:45px 20px}
+
+  .language-switch {
+    margin-left:3px;
+    gap:7px;
+  }
+
+  .language-switch a {
+    font-size:10px;
+  }
+
+  .video-title {
+    font-size:32px;
+  }
+
+  .video-explore p {
+    font-size:16px;
+  }
+
+  .editorial-section {
+    padding:45px 20px;
+  }
+
   .editorial-grid {
     grid-template-columns:1fr;
     gap:40px;
   }
-  .editorial-title {font-size:12px;margin-top:16px}
-  .jewellery-slider {padding:45px 12px 60px}
-  .slider-heading {font-size:18px;margin-bottom:30px}
-  .slider-item {flex-basis:50%;padding:0 7px}
-  .slider-product-name {font-size:10px}
+
+  .editorial-title {
+    font-size:12px;
+    margin-top:16px;
+  }
+
+  .jewellery-slider {
+    padding:45px 12px 60px;
+  }
+
+  .slider-heading {
+    font-size:18px;
+    margin-bottom:30px;
+  }
+
+  .slider-stage {
+    padding:0 28px;
+  }
+
+  .slider-arrow {
+    top:clamp(60px,23vw,155px);
+    width:27px;
+    height:27px;
+    font-size:19px;
+  }
+
+  .slider-item {
+    flex-basis:50%;
+    padding:0 7px;
+  }
+
+  .slider-product-name {
+    font-size:10px;
+  }
+
   .slider-product-metal,
-  .slider-product-price {font-size:12px}
-  .home-contact {padding:35px 20px}
+  .slider-product-price {
+    font-size:12px;
+  }
+
+  .home-contact {
+    padding:35px 20px;
+  }
+
   .home-contact-links {
     flex-direction:column;
     gap:16px;
     font-size:11px;
   }
 }
+
 @media(prefers-reduced-motion:reduce) {
-  .visual video {display:none}
-  .visual {background:#142a46}
+  .visual video {
+    display:none;
+  }
+
+  .visual {
+    background:#142a46;
+  }
+
   .dropdown-menu,
   .dropdown-toggle svg,
   .editorial-image,
-  .slider-track {transition:none}
+  .slider-track {
+    transition:none;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header class="site-header">
   <a href="/" class="site-logo">FYRSTERLING</a>
 
   <nav class="site-nav" aria-label="Hovednavigation">
+
     <div class="nav-dropdown" id="jewelleryDropdown">
       <a href="/collection.html">SMYKKER</a>
-      <button type="button" class="dropdown-toggle"
+
+      <button
+        type="button"
+        class="dropdown-toggle"
         id="jewelleryToggle"
         aria-label="Vis smykkekategorier"
         aria-expanded="false"
-        aria-controls="jewelleryMenu">
-        <svg viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1.5"
-          aria-hidden="true">
+        aria-controls="jewelleryMenu"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
           <path d="M5 9l7 7 7-7"/>
         </svg>
       </button>
+
       <div class="dropdown-menu" id="jewelleryMenu">
         <a href="/collection.html#rings">RINGE</a>
         <a href="/collection.html#bracelets">ARMBÅND</a>
@@ -484,313 +694,504 @@ body {
       <span class="language-divider" aria-hidden="true">|</span>
       <a href="/en/" lang="en">EN</a>
     </span>
+
   </nav>
 </header>
 
 <main class="page">
 
-  <!-- HERO VIDEO -->
+  <!-- FORSIDEVIDEO -->
+
   <section class="visual" aria-label="FYRSTERLING smykker">
     <video autoplay muted loop playsinline preload="metadata">
-      <source src="/images/Video%20til%20forsiden.MP4"
-        type="video/mp4">
+      <source
+        src="/images/Video%20til%20forsiden.MP4"
+        type="video/mp4"
+      >
     </video>
+
     <h2 class="video-title">The Art of Eternity</h2>
+
     <div class="video-explore">
       <p>Oplev kollektionen</p>
+
       <a href="/collection.html" class="explore-button">
         UDFORSK
       </a>
     </div>
   </section>
 
-  <!-- TWO EDITORIAL IMAGES -->
-  <section class="editorial-section" aria-label="Udforsk AETERNUM">
+  <!-- TO STORE BILLEDER -->
+
+  <section
+    class="editorial-section"
+    aria-label="Udforsk AETERNUM"
+  >
     <div class="editorial-grid">
-      <a href="/collection.html" class="editorial-card">
+
+      <a
+        href="/collection.html"
+        class="editorial-card"
+        aria-label="Udforsk AETERNUM-kollektionen"
+      >
         <span class="editorial-image-wrap">
           <img
             src="/images/Generelt%20aeternum%20billede.jpg"
-            alt="Model med AETERNUM-smykker"
+            alt="Model med AETERNUM-smykker fra FYRSTERLING"
             class="editorial-image"
-            loading="lazy">
+            loading="lazy"
+          >
         </span>
-        <h2 class="editorial-title">AETERNUM COLLECTION</h2>
+
+        <h2 class="editorial-title">
+          AETERNUM COLLECTION
+        </h2>
       </a>
 
-      <a href="/collection.html#earrings" class="editorial-card">
+      <a
+        href="/collection.html#earrings"
+        class="editorial-card"
+        aria-label="Udforsk AETERNUM-øreringe"
+      >
         <span class="editorial-image-wrap">
           <img
             src="/images/S%C3%B8lv%20%C3%B8reringe%20i%20box.PNG"
-            alt="AETERNUM-øreringe i FYRSTERLING-æske"
+            alt="AETERNUM-øreringe i FYRSTERLING-smykkeæske"
             class="editorial-image"
-            loading="lazy">
+            loading="lazy"
+          >
         </span>
-        <h2 class="editorial-title">THE ART OF DETAIL</h2>
+
+        <h2 class="editorial-title">
+          THE ART OF DETAIL
+        </h2>
       </a>
+
     </div>
   </section>
 
-  <!-- AUTOMATIC JEWELLERY SLIDER -->
-  <section class="jewellery-slider"
-    aria-label="AETERNUM smykkekollektion">
+  <!-- AUTOMATISK SMYKKESLIDER -->
 
+  <section
+    class="jewellery-slider"
+    aria-label="AETERNUM smykkekollektion"
+  >
     <div class="slider-container">
-      <h2 class="slider-heading">DISCOVER AETERNUM</h2>
 
-      <div class="slider-viewport" id="sliderViewport">
-        <div class="slider-track" id="sliderTrack"></div>
+      <h2 class="slider-heading">
+        DISCOVER AETERNUM
+      </h2>
+
+      <div class="slider-stage" id="sliderStage">
+
+        <button
+          class="slider-arrow"
+          id="sliderPrev"
+          type="button"
+          aria-label="Forrige smykke"
+        >‹</button>
+
+        <div class="slider-viewport" id="sliderViewport">
+          <div class="slider-track" id="sliderTrack"></div>
+        </div>
+
+        <button
+          class="slider-arrow"
+          id="sliderNext"
+          type="button"
+          aria-label="Næste smykke"
+        >›</button>
+
       </div>
 
-      <div class="slider-controls">
-        <button class="slider-arrow" id="sliderPrev"
-          type="button" aria-label="Forrige smykke">‹</button>
-        <span class="slider-counter" id="sliderCounter"
-          aria-live="off"></span>
-        <button class="slider-arrow" id="sliderNext"
-          type="button" aria-label="Næste smykke">›</button>
-      </div>
     </div>
   </section>
 
-  <!-- EXISTING AETERNUM IMAGE -->
+  <!-- EKSISTERENDE AETERNUM BILLEDE -->
+
   <section id="collection" class="collection-section">
-    <img src="/images/Aeternum.PNG"
+
+    <img
+      src="/images/Aeternum.PNG"
       alt="AETERNUM smykkekollektion fra FYRSTERLING"
-      class="collection-image" loading="lazy">
+      class="collection-image"
+      loading="lazy"
+    >
+
+    <!-- KONTAKTOPLYSNINGER -->
 
     <div class="home-contact">
       <div class="home-contact-links">
-        <a href="https://www.instagram.com/fyrsterlingofficial/"
-          target="_blank" rel="noopener noreferrer">
+
+        <a
+          href="https://www.instagram.com/fyrsterlingofficial/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           INSTAGRAM · @FYRSTERLINGOFFICIAL
         </a>
+
         <a href="mailto:info@fyrsterling.com">
           INFO@FYRSTERLING.COM
         </a>
+
         <a href="tel:+4528345288">
           +45 28 34 52 88
         </a>
+
       </div>
     </div>
+
   </section>
+
 </main>
 
 <script>
 "use strict";
 
-/* DROPDOWN */
+/* SMYKKER DROPDOWN */
+
 const dropdown = document.getElementById("jewelleryDropdown");
 const toggle = document.getElementById("jewelleryToggle");
 
 function setDropdownOpen(open) {
-  dropdown.classList.toggle("is-open", open);
-  toggle.setAttribute("aria-expanded", String(open));
+  dropdown.classList.toggle("is-open",open);
+  toggle.setAttribute("aria-expanded",String(open));
 }
-toggle.addEventListener("click", () => {
+
+toggle.addEventListener("click",() => {
   setDropdownOpen(!dropdown.classList.contains("is-open"));
 });
-dropdown.addEventListener("mouseenter", () => {
+
+dropdown.addEventListener("mouseenter",() => {
   if (window.matchMedia("(hover: hover)").matches) {
     setDropdownOpen(true);
   }
 });
-dropdown.addEventListener("mouseleave", () => setDropdownOpen(false));
-dropdown.addEventListener("focusin", () => setDropdownOpen(true));
-dropdown.addEventListener("focusout", event => {
-  if (!dropdown.contains(event.relatedTarget)) setDropdownOpen(false);
+
+dropdown.addEventListener("mouseleave",() => {
+  setDropdownOpen(false);
 });
-document.addEventListener("click", event => {
-  if (!dropdown.contains(event.target)) setDropdownOpen(false);
+
+dropdown.addEventListener("focusin",() => {
+  setDropdownOpen(true);
 });
-document.addEventListener("keydown", event => {
+
+dropdown.addEventListener("focusout",event => {
+  if (!dropdown.contains(event.relatedTarget)) {
+    setDropdownOpen(false);
+  }
+});
+
+document.addEventListener("click",event => {
+  if (!dropdown.contains(event.target)) {
+    setDropdownOpen(false);
+  }
+});
+
+document.addEventListener("keydown",event => {
   if (event.key === "Escape") {
     setDropdownOpen(false);
     toggle.focus();
   }
 });
 
-/* PRODUCT DATA */
+/* ALLE 12 AETERNUM-SMYKKER */
+
 const products = [
-  ["Ring","Yellow Gold"],["Necklace","Silver"],
-  ["Earrings","Rose Gold"],["Bracelet","Yellow Gold"],
-  ["Ring","Silver"],["Necklace","Rose Gold"],
-  ["Bracelet","Silver"],["Earrings","Yellow Gold"],
-  ["Necklace","Yellow Gold"],["Ring","Rose Gold"],
-  ["Earrings","Silver"],["Bracelet","Rose Gold"]
+  ["Ring","Yellow Gold"],
+  ["Necklace","Silver"],
+  ["Earrings","Rose Gold"],
+  ["Bracelet","Yellow Gold"],
+  ["Ring","Silver"],
+  ["Necklace","Rose Gold"],
+  ["Bracelet","Silver"],
+  ["Earrings","Yellow Gold"],
+  ["Necklace","Yellow Gold"],
+  ["Ring","Rose Gold"],
+  ["Earrings","Silver"],
+  ["Bracelet","Rose Gold"]
 ];
+
+/* BILLEDFILNAVNE */
 
 const fileMetals = {
   "Yellow Gold":"Guld",
   "Rose Gold":"Rose gold",
   "Silver":"Sølv"
 };
+
 const fileTypes = {
   Ring:"ring",
   Necklace:"halskæde",
   Earrings:"øreringe",
   Bracelet:"armbånd"
 };
+
+/* DANSKE PRODUKTNAVNE */
+
 const productNames = {
   Ring:"AETERNUM RING",
   Necklace:"AETERNUM HALSKÆDE",
   Earrings:"AETERNUM ØRERINGE",
   Bracelet:"AETERNUM ARMBÅND"
 };
+
+/* MATERIALER */
+
 const metalNames = {
   "Yellow Gold":"14 KT. GULD",
   "Rose Gold":"14 KT. ROSAGULD",
   Silver:"STERLINGSØLV"
 };
+
+/* PRISER */
+
 const prices = {
-  Ring:{"Yellow Gold":9600,"Rose Gold":9600,Silver:3200},
-  Earrings:{"Yellow Gold":5200,"Rose Gold":5200,Silver:3000},
-  Necklace:{"Yellow Gold":9100,"Rose Gold":9100,Silver:3600},
-  Bracelet:{"Yellow Gold":6500,"Rose Gold":6500,Silver:3200}
+  Ring:{
+    "Yellow Gold":9600,
+    "Rose Gold":9600,
+    Silver:3200
+  },
+  Earrings:{
+    "Yellow Gold":5200,
+    "Rose Gold":5200,
+    Silver:3000
+  },
+  Necklace:{
+    "Yellow Gold":9100,
+    "Rose Gold":9100,
+    Silver:3600
+  },
+  Bracelet:{
+    "Yellow Gold":6500,
+    "Rose Gold":6500,
+    Silver:3200
+  }
 };
 
-/* SHUFFLE PRODUCTS */
-for (let i = products.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [products[i],products[j]] = [products[j],products[i]];
+/* BLAND RÆKKEFØLGEN VED SIDEINDLÆSNING */
+
+for (let i=products.length-1;i>0;i--) {
+  const j=Math.floor(Math.random()*(i+1));
+  [products[i],products[j]]=[products[j],products[i]];
 }
 
-const track = document.getElementById("sliderTrack");
-const viewport = document.getElementById("sliderViewport");
-const counter = document.getElementById("sliderCounter");
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+/* SLIDER ELEMENTER */
 
-function productCard(name, metal) {
-  const filename = fileMetals[metal] + " " + fileTypes[name] + ".jpeg";
-  const image = "/images/" + encodeURIComponent(filename);
-  const url = "/product.html?type=" +
-    encodeURIComponent(name) + "&metal=" + encodeURIComponent(metal);
-  const price = prices[name][metal].toLocaleString("da-DK");
+const track=document.getElementById("sliderTrack");
+const viewport=document.getElementById("sliderViewport");
+const sliderStage=document.getElementById("sliderStage");
 
-  const item = document.createElement("div");
-  item.className = "slider-item";
+const reducedMotion=window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
 
-  const link = document.createElement("a");
-  link.href = url;
+/* OPRET PRODUKTKORT */
 
-  const img = document.createElement("img");
-  img.className = "slider-product-image";
-  img.src = image;
-  img.alt = productNames[name] + " – " + metalNames[metal];
-  img.loading = "lazy";
+function productCard(name,metal) {
+  const filename=
+    fileMetals[metal]+" "+fileTypes[name]+".jpeg";
 
-  const title = document.createElement("p");
-  title.className = "slider-product-name";
-  title.textContent = productNames[name];
+  const image="/images/"+encodeURIComponent(filename);
 
-  const material = document.createElement("p");
-  material.className = "slider-product-metal";
-  material.textContent = metalNames[metal];
+  const url="/product.html?type="+
+    encodeURIComponent(name)+
+    "&metal="+encodeURIComponent(metal);
 
-  const priceText = document.createElement("p");
-  priceText.className = "slider-product-price";
-  priceText.textContent = price + " DKK";
+  const price=prices[name][metal].toLocaleString("da-DK");
+
+  const item=document.createElement("div");
+  item.className="slider-item";
+
+  const link=document.createElement("a");
+  link.href=url;
+
+  const img=document.createElement("img");
+  img.className="slider-product-image";
+  img.src=image;
+  img.alt=productNames[name]+" – "+metalNames[metal];
+  img.loading="lazy";
+
+  const title=document.createElement("p");
+  title.className="slider-product-name";
+  title.textContent=productNames[name];
+
+  const material=document.createElement("p");
+  material.className="slider-product-metal";
+  material.textContent=metalNames[metal];
+
+  const priceText=document.createElement("p");
+  priceText.className="slider-product-price";
+  priceText.textContent=price+" DKK";
 
   link.append(img,title,material,priceText);
   item.appendChild(link);
+
   return item;
 }
 
-/* ADD CLONES FOR SEAMLESS LOOP */
-products.forEach(p => track.appendChild(productCard(...p)));
-products.slice(0,4).forEach(p => track.appendChild(productCard(...p)));
+/* INDSÆT PRODUKTER OG EKSTRA KORT TIL LOOP */
 
-let index = 0;
-let busy = false;
+products.forEach(product => {
+  track.appendChild(productCard(...product));
+});
+
+products.slice(0,4).forEach(product => {
+  track.appendChild(productCard(...product));
+});
+
+/* AUTOMATISK SLIDER */
+
+let index=0;
+let busy=false;
 let timer;
-let paused = false;
+let paused=false;
 
 function visibleCount() {
-  return window.innerWidth <= 700 ? 2 : 4;
+  return window.innerWidth<=700 ? 2 : 4;
 }
-function updateCounter() {
-  counter.textContent = (index % products.length + 1) +
-    " / " + products.length;
+
+function position(animate=true) {
+  track.style.transition=
+    animate && !reducedMotion.matches
+      ? "transform .7s ease"
+      : "none";
+
+  track.style.transform=
+    "translateX(-"+(index*100/visibleCount())+"%)";
 }
-function position(animate = true) {
-  track.style.transition = animate && !reducedMotion.matches
-    ? "transform .7s ease" : "none";
-  track.style.transform =
-    "translateX(-" + (index * 100 / visibleCount()) + "%)";
-  updateCounter();
-}
+
 function next() {
   if (busy) return;
-  busy = true;
+
+  busy=true;
   index++;
   position();
+
   if (reducedMotion.matches) {
-    if (index >= products.length) {
-      index = 0;
+    if (index>=products.length) {
+      index=0;
       position(false);
     }
-    busy = false;
+    busy=false;
   }
 }
+
 function previous() {
   if (busy) return;
-  if (index === 0) {
-    index = products.length;
+
+  if (index===0) {
+    index=products.length;
     position(false);
+
+    /* Genberegn layout før animation */
     track.offsetHeight;
   }
-  busy = true;
+
+  busy=true;
   index--;
   position();
-  if (reducedMotion.matches) busy = false;
+
+  if (reducedMotion.matches) {
+    busy=false;
+  }
 }
-track.addEventListener("transitionend", event => {
-  if (event.target !== track || event.propertyName !== "transform") return;
-  if (index >= products.length) {
-    index = 0;
+
+/* SØRGER FOR AT SLIDEREN KØRER I RING */
+
+track.addEventListener("transitionend",event => {
+  if (
+    event.target!==track ||
+    event.propertyName!=="transform"
+  ) {
+    return;
+  }
+
+  if (index>=products.length) {
+    index=0;
     position(false);
   }
-  busy = false;
+
+  busy=false;
 });
+
+/* AUTOMATISK SKIFT HVERT 4. SEKUND */
 
 function startAuto() {
   clearInterval(timer);
-  if (reducedMotion.matches || paused || document.hidden) return;
-  timer = setInterval(next,4000);
+
+  if (
+    reducedMotion.matches ||
+    paused ||
+    document.hidden
+  ) {
+    return;
+  }
+
+  timer=setInterval(next,4000);
 }
+
 function pauseAuto() {
-  paused = true;
+  paused=true;
   clearInterval(timer);
 }
+
 function resumeAuto() {
-  paused = false;
+  paused=false;
   startAuto();
 }
-document.getElementById("sliderNext").addEventListener("click", () => {
-  next();
-  startAuto();
+
+/* PILE */
+
+document.getElementById("sliderNext")
+  .addEventListener("click",() => {
+    next();
+    startAuto();
+  });
+
+document.getElementById("sliderPrev")
+  .addEventListener("click",() => {
+    previous();
+    startAuto();
+  });
+
+/* PAUSE NÅR MUSEN HOLDES OVER SLIDEREN */
+
+sliderStage.addEventListener("mouseenter",pauseAuto);
+sliderStage.addEventListener("mouseleave",resumeAuto);
+
+sliderStage.addEventListener("focusin",pauseAuto);
+
+sliderStage.addEventListener("focusout",event => {
+  if (!sliderStage.contains(event.relatedTarget)) {
+    resumeAuto();
+  }
 });
-document.getElementById("sliderPrev").addEventListener("click", () => {
-  previous();
-  startAuto();
+
+/* STOP AUTOMATIK NÅR FANEN IKKE ER SYNLIG */
+
+document.addEventListener("visibilitychange",startAuto);
+
+/* TILPAS VED ÆNDRET SKÆRMSTØRRELSE */
+
+window.addEventListener("resize",() => {
+  position(false);
 });
-viewport.addEventListener("mouseenter", pauseAuto);
-viewport.addEventListener("mouseleave", resumeAuto);
-viewport.addEventListener("focusin", pauseAuto);
-viewport.addEventListener("focusout", event => {
-  if (!viewport.contains(event.relatedTarget)) resumeAuto();
-});
-document.addEventListener("visibilitychange", startAuto);
-window.addEventListener("resize", () => position(false));
-reducedMotion.addEventListener("change", startAuto);
+
+reducedMotion.addEventListener("change",startAuto);
+
+/* START */
 
 position(false);
 startAuto();
 </script>
 
-<script type="module"
+<script
+  type="module"
   src="https://static.cloudflareinsights.com/beacon.min.js"
   data-cf-beacon='{"token":"35027bd0e6db4377b46dddd2c28e5840"}'>
 </script>
+
 </body>
 </html>
