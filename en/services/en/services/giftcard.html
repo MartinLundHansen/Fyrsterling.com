@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luxury Gift Cards | FYRSTERLING</title>
+
+  <meta name="description" content="Discover FYRSTERLING's exclusive physical gift cards, beautifully presented in a dark blue case. Valid for three years towards FYRSTERLING jewellery.">
+
+  <link rel="canonical" href="https://fyrsterling.com/en/services/giftcard.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services/giftcard.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services/giftcard.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/services/giftcard.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142a46;
+      --white: #FFFFFF;
+      --text: #4a4a4a;
+      --muted: #777777;
+      --line: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: #FFFFFF;
+      text-align: center;
+      padding: 25px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: inline-block;
+      font-size: 29px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+
+    .main-nav > a:hover,
+    .main-nav > a.active {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    /* JEWELLERY DROPDOWN */
+
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 22px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .dropdown-toggle svg {
+      width: 11px;
+      height: 11px;
+      transition: transform .2s ease;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 190px;
+      padding: 19px 0 10px;
+      background: #FFFFFF;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 12px 25px rgba(0,0,0,.06);
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .2s ease, visibility .2s ease;
+      z-index: 200;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px 22px;
+      color: var(--navy);
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible {
+      background: #f5f6f8;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu,
+    .nav-dropdown.is-open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown:hover .dropdown-toggle svg,
+    .nav-dropdown:focus-within .dropdown-toggle svg,
+    .nav-dropdown.is-open .dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+
+    /* LANGUAGE SWITCH */
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-left: 10px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .language-switch a[aria-current="page"] {
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .language-divider {
+      color: #999999;
+    }
+
+    /* PAGE TITLE */
+
+    .page-intro {
+      text-align: center;
+      padding: 52px 24px 45px;
+    }
+
+    .page-intro h1 {
+      margin: 0 0 16px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.2;
+    }
+
+    .page-subtitle {
+      margin: 0;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* TWO-COLUMN LAYOUT */
+
+    .giftcard-layout {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 45px 100px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 75px;
+      align-items: center;
+    }
+
+    /* LARGE VIDEO */
+
+    .video-column {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      background: #fafafa;
+      overflow: hidden;
+    }
+
+    .giftcard-video {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      background: #fafafa;
+    }
+
+    /* TEXT COLUMN */
+
+    .text-column {
+      width: 100%;
+      max-width: 570px;
+      text-align: left;
+    }
+
+    .text-column h2 {
+      margin: 0 0 25px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1.8px;
+      line-height: 1.5;
+    }
+
+    .text-column > p {
+      margin: 0 0 19px;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .section-divider {
+      width: 65px;
+      height: 1px;
+      margin: 35px 0;
+      background: #d8d8d8;
+    }
+
+    /* GIFT CARD DETAILS */
+
+    .giftcard-detail {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .giftcard-detail h3 {
+      margin: 0 0 8px;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.3px;
+    }
+
+    .giftcard-detail p {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* CONTACT BUTTON */
+
+    .contact-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 16px 35px;
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .contact-button:hover {
+      background: #FFFFFF;
+      color: var(--navy);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 28px;
+      color: var(--navy);
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 4px;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--line);
+      padding: 28px 20px;
+      text-align: center;
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: .7px;
+      line-height: 2;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+      .giftcard-layout {
+        gap: 35px;
+        padding: 0 25px 70px;
+      }
+
+      .text-column h2 {
+        font-size: 18px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 22px 15px 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: .7px;
+      }
+
+      .dropdown-menu {
+        left: 0;
+        transform: none;
+        min-width: 175px;
+      }
+
+      .language-switch {
+        margin-left: 3px;
+        gap: 7px;
+      }
+
+      .page-intro {
+        padding: 40px 20px 35px;
+      }
+
+      .page-intro h1 {
+        font-size: 28px;
+      }
+
+      .page-subtitle {
+        font-size: 16px;
+      }
+
+      .giftcard-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 0 22px 65px;
+      }
+
+      .video-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .text-column {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .text-column > p {
+        font-size: 14px;
+      }
+
+      .text-column h2 {
+        font-size: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dropdown-menu,
+      .dropdown-toggle svg {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="/" class="logo">FYRSTERLING</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+
+      <div class="nav-dropdown" id="jewelleryDropdown">
+        <a href="/en/collection.html">JEWELLERY</a>
+
+        <button
+          type="button"
+          class="dropdown-toggle"
+          id="jewelleryToggle"
+          aria-label="Show jewellery categories"
+          aria-expanded="false"
+          aria-controls="jewelleryMenu"
+        >
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.5"
+               aria-hidden="true">
+            <path d="M5 9l7 7 7-7"/>
+          </svg>
+        </button>
+
+        <div class="dropdown-menu" id="jewelleryMenu">
+          <a href="/en/collection.html#rings">RINGS</a>
+          <a href="/en/collection.html#bracelets">BRACELETS</a>
+          <a href="/en/collection.html#necklaces">NECKLACES</a>
+          <a href="/en/collection.html#earrings">EARRINGS</a>
+        </div>
+      </div>
+
+      <a href="/en/services.html" class="active">SERVICES</a>
+      <a href="/en/our-story.html">MAISON</a>
+      <a href="/en/appointments.html">BOOK AN APPOINTMENT</a>
+      <a href="/en/contact.html">CONTACT</a>
+      <a href="/en/faq.html">FAQ</a>
+
+      <span class="language-switch" aria-label="Select language">
+        <a href="/services/giftcard.html" lang="da">DA</a>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <a href="/en/services/giftcard.html"
+           lang="en"
+           aria-current="page">EN</a>
+      </span>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-intro">
+      <h1>FYRSTERLING GIFT CARDS</h1>
+
+      <p class="page-subtitle">
+        A personal gift. A timeless choice.
+      </p>
+    </section>
+
+    <!-- VIDEO + TEXT -->
+
+    <section class="giftcard-layout">
+
+      <!-- LEFT: LARGE VIDEO -->
+
+      <div class="video-column">
+        <div class="video-wrapper">
+          <video
+            id="giftcardVideo"
+            class="giftcard-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/images/Gavekort.jpg"
+            aria-label="Rotating FYRSTERLING gift card in an elegant dark blue case"
+          >
+            <source
+              src="/videos/Roterende%20gavekort.MP4"
+              type="video/mp4">
+
+            Your browser does not support video playback.
+          </video>
+        </div>
+      </div>
+
+      <!-- RIGHT: TEXT -->
+
+      <div class="text-column">
+
+        <h2>A GIFT OF SPECIAL SIGNIFICANCE</h2>
+
+        <p>
+          Some gifts are more than a simple gesture.
+          They are a way of expressing thoughtfulness
+          and creating memories that last.
+        </p>
+
+        <p>
+          With a gift card from FYRSTERLING, you offer
+          someone the opportunity to choose a piece
+          of jewellery that reflects their personal
+          style and meaningful moments.
+        </p>
+
+        <p>
+          Our physical gift cards are presented in a
+          beautiful dark blue case, selected with
+          the same attention to elegance and detail
+          as our jewellery. An exclusive presentation
+          that makes the act of giving a special
+          experience in itself.
+        </p>
+
+        <div class="section-divider"></div>
+
+        <h2>GOOD TO KNOW</h2>
+
+        <div class="giftcard-detail">
+          <h3>VALIDITY</h3>
+          <p>
+            FYRSTERLING gift cards are valid for
+            three years from the date of issue.
+          </p>
+        </div>
+
+        <div class="giftcard-detail">
+          <h3>REDEMPTION</h3>
+          <p>
+            Gift cards may be used as payment
+            towards the purchase of FYRSTERLING jewellery.
+          </p>
+        </div>
+
+        <div class="giftcard-detail">
+          <h3>PHYSICAL GIFT CARD</h3>
+          <p>
+            Our gift cards are issued in physical
+            form and presented in our exclusive
+            dark blue case. Digital gift cards
+            are not currently available.
+          </p>
+        </div>
+
+        <div class="giftcard-detail">
+          <h3>CASH REDEMPTION</h3>
+          <p>
+            Gift cards are generally not redeemable
+            for cash. Any statutory rights to cash
+            redemption under applicable law will,
+            of course, be respected.
+          </p>
+        </div>
+
+        <a
+          class="contact-button"
+          href="mailto:info@fyrsterling.com?subject=FYRSTERLING%20Gift%20Card%20Enquiry"
+        >
+          ENQUIRE ABOUT A GIFT CARD
+        </a>
+
+        <div>
+          <a class="back-link" href="/en/services.html">
+            BACK TO SERVICES
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    FYRSTERLING &nbsp; | &nbsp;
+
+    <a href="mailto:info@fyrsterling.com">
+      INFO@FYRSTERLING.COM
+    </a>
+
+    &nbsp; | &nbsp;
+
+    <a href="/en/terms-and-conditions.html">
+      TERMS &amp; CONDITIONS
+    </a>
+  </footer>
+
+  <!-- JAVASCRIPT: JEWELLERY DROPDOWN -->
+
+  <script>
+    "use strict";
+
+    const dropdown =
+      document.getElementById("jewelleryDropdown");
+
+    const toggle =
+      document.getElementById("jewelleryToggle");
+
+    function setDropdownOpen(open) {
+      dropdown.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+    }
+
+    toggle.addEventListener("click", function () {
+      setDropdownOpen(
+        !dropdown.classList.contains("is-open")
+      );
+    });
+
+    dropdown.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(hover: hover)").matches) {
+        setDropdownOpen(true);
+      }
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      setDropdownOpen(false);
+    });
+
+    dropdown.addEventListener("focusin", function () {
+      setDropdownOpen(true);
+    });
+
+    dropdown.addEventListener("focusout", function (event) {
+      if (!dropdown.contains(event.relatedTarget)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" &&
+          dropdown.classList.contains("is-open")) {
+        setDropdownOpen(false);
+        toggle.focus();
+      }
+    });
+  </script>
+
+</body>
+</html>
