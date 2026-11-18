@@ -7,7 +7,7 @@
 
   <title>Fine Jewellery Services & Consultations | FYRSTERLING</title>
 
-  <meta name="description" content="Explore FYRSTERLING fine jewellery services, including private consultations, personalisation and jewellery care guidance.">
+  <meta name="description" content="Explore FYRSTERLING fine jewellery services, including private consultations, personalisation, jewellery care guidance and exclusive gift cards.">
 
   <link rel="canonical" href="https://fyrsterling.com/en/services.html">
   <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services.html">
@@ -84,8 +84,8 @@
       padding-bottom: 5px;
     }
 
-    .main-nav a:hover,
-    .main-nav a.active {
+    .main-nav > a:hover,
+    .main-nav > a.active {
       border-bottom: 1px solid var(--navy);
     }
 
@@ -152,8 +152,8 @@
       margin: 0 auto;
       padding: 0 36px 100px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 35px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
       align-items: start;
     }
 
@@ -238,11 +238,11 @@
 
     /* TABLET */
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 0 20px 70px;
-        gap: 30px 18px;
+        padding: 0 24px 75px;
+        gap: 42px 24px;
       }
     }
 
@@ -294,6 +294,12 @@
         grid-template-columns: 1fr;
         padding: 0 22px 65px;
         gap: 55px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-image img {
+        transition: none;
       }
     }
   </style>
@@ -469,6 +475,39 @@
         <a
           class="find-out"
           href="/en/jewellery-care.html"
+        >
+          FIND OUT MORE
+        </a>
+
+      </article>
+
+      <!-- GIFTCARD -->
+
+      <article class="service">
+
+        <a
+          class="service-image"
+          href="/en/services/giftcard.html"
+        >
+          <img
+            src="/images/Gavekort.jpg"
+            alt="FYRSTERLING gift card presented in an elegant dark blue case"
+            loading="lazy"
+          >
+        </a>
+
+        <h2>GIFTCARD</h2>
+
+        <p>
+          Give the freedom to choose something truly
+          personal with a FYRSTERLING gift card,
+          beautifully presented in an exclusive
+          dark blue case.
+        </p>
+
+        <a
+          class="find-out"
+          href="/en/services/giftcard.html"
         >
           FIND OUT MORE
         </a>
