@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Smykkeservices & Personlig Rådgivning | FYRSTERLING</title>
-  <meta name="description" content="Oplev FYRSTERLINGs smykkeservices, personlig rådgivning, gravering, smykkepleje og gavekort.">
+  <meta name="description" content="Oplev FYRSTERLINGs smykkeservices, herunder personlig smykkerådgivning, gravering, smykkepleje og eksklusive gavekort.">
 
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://fyrsterling.com/services.html">
   <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services.html">
   <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services.html">
@@ -26,9 +27,13 @@
       --line: #e8e8e8;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -38,7 +43,9 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     /* HEADER */
 
@@ -88,10 +95,6 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-    }
-
-    .nav-dropdown > a:hover {
-      border-bottom: 1px solid var(--navy);
     }
 
     .dropdown-toggle {
@@ -162,7 +165,7 @@
       transform: rotate(180deg);
     }
 
-    /* LANGUAGE SWITCH */
+    /* SPROG */
 
     .language-switch {
       display: inline-flex;
@@ -178,9 +181,11 @@
       border-bottom: 1px solid var(--navy);
     }
 
-    .language-divider { color: #999999; }
+    .language-divider {
+      color: #999999;
+    }
 
-    /* INTRODUCTION */
+    /* INTRODUKTION */
 
     .intro {
       max-width: 800px;
@@ -207,9 +212,11 @@
       color: var(--text);
     }
 
-    .intro p:last-child { margin-bottom: 0; }
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
 
-    /* SERVICES GRID */
+    /* SERVICES */
 
     .services-grid {
       max-width: 1400px;
@@ -232,9 +239,6 @@
       aspect-ratio: 1 / 1;
       overflow: hidden;
       background: #f7f7f7;
-      border: 0;
-      padding: 0;
-      cursor: pointer;
     }
 
     .service-image img {
@@ -274,57 +278,13 @@
       letter-spacing: 1.3px;
       color: var(--navy);
       text-decoration: none;
-      border: 0;
       border-bottom: 1px solid var(--navy);
-      padding: 0 0 4px;
-      background: transparent;
-      cursor: pointer;
+      padding-bottom: 4px;
     }
 
-    .find-out:hover { opacity: .65; }
-
-    /* GIFT CARD VIDEO POPUP */
-
-    .video-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: rgba(0,0,0,.78);
+    .find-out:hover {
+      opacity: .65;
     }
-
-    .video-modal.is-visible { display: flex; }
-
-    .video-modal-content {
-      position: relative;
-      width: min(100%, 500px);
-      max-height: 90vh;
-    }
-
-    .video-modal video {
-      display: block;
-      width: 100%;
-      max-height: 85vh;
-      object-fit: contain;
-      background: #FFFFFF;
-    }
-
-    .video-close {
-      position: absolute;
-      top: -46px;
-      right: 0;
-      border: 0;
-      background: transparent;
-      color: #FFFFFF;
-      font-size: 32px;
-      font-weight: 300;
-      cursor: pointer;
-    }
-
-    body.modal-open { overflow: hidden; }
 
     /* FOOTER */
 
@@ -339,8 +299,13 @@
       line-height: 2;
     }
 
-    .site-footer a { text-decoration: none; }
-    .site-footer a:hover { text-decoration: underline; }
+    .site-footer a {
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
 
     /* TABLET */
 
@@ -352,24 +317,26 @@
       }
     }
 
-    /* MOBILE */
+    /* MOBIL */
 
     @media (max-width: 560px) {
-      .site-header { padding: 22px 15px 16px; }
+      .site-header {
+        padding: 22px 15px 16px;
+      }
 
       .logo {
         font-size: 24px;
         letter-spacing: 3px;
       }
 
-      .main-nav { gap: 13px; }
+      .main-nav {
+        gap: 13px;
+      }
 
       .main-nav a {
         font-size: 10px;
         letter-spacing: .7px;
       }
-
-      .nav-dropdown { gap: 2px; }
 
       .dropdown-menu {
         left: 0;
@@ -382,7 +349,9 @@
         gap: 7px;
       }
 
-      .intro { padding: 35px 22px 42px; }
+      .intro {
+        padding: 35px 22px 42px;
+      }
 
       .intro h1 {
         font-size: 28px;
@@ -431,8 +400,10 @@
           aria-expanded="false"
           aria-controls="jewelleryMenu"
         >
-          <svg viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.5"
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.5"
                aria-hidden="true">
             <path d="M5 9l7 7 7-7"/>
           </svg>
@@ -446,14 +417,19 @@
         </div>
       </div>
 
-      <a href="/services.html" class="active" aria-current="page">SERVICES</a>
+      <a href="/services.html"
+         class="active"
+         aria-current="page">SERVICES</a>
+
       <a href="/our-story.html">MAISON</a>
       <a href="/appointments.html">BOOK TID</a>
       <a href="/contact.html">KONTAKT</a>
       <a href="/faq.html">FAQ</a>
 
       <span class="language-switch" aria-label="Vælg sprog">
-        <a href="/services.html" lang="da" aria-current="page">DA</a>
+        <a href="/services.html"
+           lang="da"
+           aria-current="page">DA</a>
         <span class="language-divider" aria-hidden="true">|</span>
         <a href="/en/services.html" lang="en">EN</a>
       </span>
@@ -463,7 +439,7 @@
 
   <main>
 
-    <!-- SERVICES INTRODUCTION -->
+    <!-- INTRODUKTION -->
 
     <section class="intro">
       <h1>VORES SERVICES</h1>
@@ -492,7 +468,8 @@
 
     <!-- SERVICES -->
 
-    <section class="services-grid" aria-label="FYRSTERLING services">
+    <section class="services-grid"
+             aria-label="FYRSTERLING services">
 
       <!-- PERSONLIG SMYKKERÅDGIVNING -->
 
@@ -562,7 +539,8 @@
           bevarer deres skønhed og glans.
         </p>
 
-        <a class="find-out" href="/jewellery-care.html">
+        <a class="find-out"
+           href="/jewellery-care.html">
           LÆS MERE
         </a>
       </article>
@@ -570,73 +548,31 @@
       <!-- GAVEKORT -->
 
       <article class="service">
-        <button
-          type="button"
-          class="service-image"
-          data-open-giftcard
-          aria-label="Se video om FYRSTERLING gavekort"
-          aria-haspopup="dialog"
-        >
+        <a class="service-image"
+           href="/services/giftcard.html">
           <img
             src="/images/Gavekort.jpg"
-            alt="FYRSTERLING gavekort i eksklusivt blåt etui"
+            alt="FYRSTERLING gavekort præsenteret i et eksklusivt mørkeblåt etui"
             loading="lazy">
-        </button>
+        </a>
 
         <h2>GAVEKORT</h2>
 
         <p>
-          Giv en særlig oplevelse med et FYRSTERLING-gavekort.
-          En personlig gave med mulighed for at vælge
-          et smykke, der varer ved.
+          En særlig gave til én, du holder af.
+          Oplev FYRSTERLINGs eksklusive gavekort,
+          smukt præsenteret i vores mørkeblå etui.
         </p>
 
-        <button
-          type="button"
-          class="find-out"
-          data-open-giftcard
-          aria-haspopup="dialog"
-        >
-          SE GAVEKORTET
-        </button>
+        <a class="find-out"
+           href="/services/giftcard.html">
+          LÆS MERE
+        </a>
       </article>
 
     </section>
 
   </main>
-
-  <!-- GAVEKORT VIDEO -->
-
-  <div
-    class="video-modal"
-    id="giftcardModal"
-    role="dialog"
-    aria-modal="true"
-    aria-label="FYRSTERLING gavekortvideo"
-    aria-hidden="true"
-  >
-    <div class="video-modal-content">
-      <button
-        type="button"
-        class="video-close"
-        id="giftcardClose"
-        aria-label="Luk video"
-      >&times;</button>
-
-      <video
-        id="giftcardVideo"
-        controls
-        playsinline
-        preload="none"
-        poster="/images/Gavekort.jpg"
-      >
-        <source
-          src="/videos/Roterende%20gavekort.MP4"
-          type="video/mp4">
-        Din browser understøtter ikke videoafspilning.
-      </video>
-    </div>
-  </div>
 
   <!-- FOOTER -->
 
@@ -654,13 +590,14 @@
     </a>
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- DROPDOWN -->
 
   <script>
-    /* SMYKKER DROPDOWN */
+    const dropdown =
+      document.getElementById("jewelleryDropdown");
 
-    const dropdown = document.getElementById("jewelleryDropdown");
-    const toggle = document.getElementById("jewelleryToggle");
+    const toggle =
+      document.getElementById("jewelleryToggle");
 
     function setDropdownOpen(open) {
       dropdown.classList.toggle("is-open", open);
@@ -668,7 +605,9 @@
     }
 
     toggle.addEventListener("click", function () {
-      setDropdownOpen(!dropdown.classList.contains("is-open"));
+      setDropdownOpen(
+        !dropdown.classList.contains("is-open")
+      );
     });
 
     dropdown.addEventListener("mouseenter", function () {
@@ -702,69 +641,6 @@
           dropdown.classList.contains("is-open")) {
         setDropdownOpen(false);
         toggle.focus();
-      }
-    });
-
-    /* GAVEKORT VIDEO */
-
-    const modal = document.getElementById("giftcardModal");
-    const video = document.getElementById("giftcardVideo");
-    const closeButton = document.getElementById("giftcardClose");
-    const openButtons = document.querySelectorAll("[data-open-giftcard]");
-
-    let previousFocus = null;
-
-    function openGiftcard() {
-      previousFocus = document.activeElement;
-      modal.classList.add("is-visible");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-      closeButton.focus();
-
-      const playPromise = video.play();
-
-      if (playPromise !== undefined) {
-        playPromise.catch(function () {
-          // Kunden kan starte videoen med afspilningsknappen.
-        });
-      }
-    }
-
-    function closeGiftcard() {
-      video.pause();
-      video.currentTime = 0;
-
-      modal.classList.remove("is-visible");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-
-      if (previousFocus) {
-        previousFocus.focus();
-      }
-    }
-
-    openButtons.forEach(function (button) {
-      button.addEventListener("click", openGiftcard);
-    });
-
-    closeButton.addEventListener("click", closeGiftcard);
-
-    modal.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        closeGiftcard();
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" &&
-          modal.classList.contains("is-visible")) {
-        closeGiftcard();
-      }
-
-      if (event.key === "Tab" &&
-          modal.classList.contains("is-visible")) {
-        event.preventDefault();
-        closeButton.focus();
       }
     });
   </script>
