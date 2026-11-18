@@ -7,35 +7,16 @@
 
   <title>Eksklusive Gavekort | FYRSTERLING</title>
 
-  <meta name="description"
-        content="Giv et eksklusivt FYRSTERLING-gavekort, smukt præsenteret i et mørkeblåt etui. Gyldigt i 3 år til køb af FYRSTERLING-smykker.">
+  <meta name="description" content="Giv et eksklusivt FYRSTERLING-gavekort, smukt præsenteret i et mørkeblåt etui. Gyldigt i 3 år til køb af FYRSTERLING-smykker.">
 
-  <meta name="theme-color" content="#FFFFFF">
-
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-  <link rel="canonical"
-        href="https://fyrsterling.com/services/giftcard.html">
-
-  <link rel="alternate"
-        hreflang="da"
-        href="https://fyrsterling.com/services/giftcard.html">
-
-  <link rel="alternate"
-        hreflang="en"
-        href="https://fyrsterling.com/en/services/giftcard.html">
-
-  <link rel="alternate"
-        hreflang="x-default"
-        href="https://fyrsterling.com/services/giftcard.html">
+  <link rel="canonical" href="https://fyrsterling.com/services/giftcard.html">
+  <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services/giftcard.html">
+  <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services/giftcard.html">
+  <link rel="alternate" hreflang="x-default" href="https://fyrsterling.com/services/giftcard.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -202,17 +183,15 @@
       color: #999999;
     }
 
-    /* PAGE HEADING */
+    /* PAGE TITLE */
 
     .page-intro {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 65px 24px 35px;
       text-align: center;
+      padding: 52px 24px 45px;
     }
 
     .page-intro h1 {
-      margin: 0 0 22px;
+      margin: 0 0 16px;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 36px;
       font-weight: 400;
@@ -222,26 +201,34 @@
 
     .page-subtitle {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
+      font-size: 18px;
       font-style: italic;
-      line-height: 1.6;
       color: var(--text);
+      line-height: 1.6;
     }
 
-    /* VIDEO */
+    /* TWO-COLUMN LAYOUT */
 
-    .giftcard-video-section {
-      max-width: 1200px;
+    .giftcard-layout {
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 15px 24px 70px;
-      text-align: center;
+      padding: 0 45px 100px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 75px;
+      align-items: center;
+    }
+
+    /* LARGE VIDEO */
+
+    .video-column {
+      width: 100%;
+      min-width: 0;
     }
 
     .video-wrapper {
-      width: min(100%, 510px);
-      margin: 0 auto;
-      background: #f8f8f7;
+      width: 100%;
+      background: #fafafa;
       overflow: hidden;
     }
 
@@ -251,100 +238,68 @@
       height: auto;
       aspect-ratio: 3 / 4;
       object-fit: contain;
-      background: #f8f8f7;
+      background: #fafafa;
     }
 
-    .video-control {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 8px 0;
-      border: 0;
-      border-bottom: 1px solid var(--navy);
-      background: transparent;
-      color: var(--navy);
+    /* TEXT COLUMN */
+
+    .text-column {
+      width: 100%;
+      max-width: 570px;
+      text-align: left;
+    }
+
+    .text-column h2 {
+      margin: 0 0 25px;
       font-family: "Barlow", Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      cursor: pointer;
-    }
-
-    /* CONTENT */
-
-    .giftcard-content {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 28px 90px;
-      text-align: center;
-    }
-
-    .giftcard-content h2 {
-      margin: 0 0 27px;
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
       line-height: 1.5;
     }
 
-    .giftcard-content p {
-      max-width: 670px;
-      margin: 0 auto 23px;
+    .text-column > p {
+      margin: 0 0 19px;
       color: var(--text);
       font-size: 15px;
-      line-height: 1.95;
+      line-height: 1.9;
     }
 
     .section-divider {
       width: 65px;
       height: 1px;
-      margin: 50px auto;
+      margin: 35px 0;
       background: #d8d8d8;
     }
 
     /* GIFT CARD DETAILS */
 
-    .giftcard-details {
-      max-width: 630px;
-      margin: 0 auto;
-    }
-
-    .giftcard-details h2 {
-      margin-bottom: 28px;
-    }
-
     .giftcard-detail {
-      padding: 22px 0;
+      padding: 17px 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .giftcard-detail:first-of-type {
-      border-top: 1px solid var(--line);
-    }
-
     .giftcard-detail h3 {
-      margin: 0 0 11px;
+      margin: 0 0 8px;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 12px;
       font-weight: 500;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.3px;
     }
 
     .giftcard-detail p {
-      margin-bottom: 0;
+      margin: 0;
+      color: var(--text);
       font-size: 14px;
       line-height: 1.8;
     }
 
-    /* CONTACT */
-
-    .giftcard-contact {
-      margin-top: 65px;
-    }
+    /* CONTACT BUTTON */
 
     .contact-button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 16px 38px;
+      margin-top: 30px;
+      padding: 16px 35px;
       border: 1px solid var(--navy);
       background: var(--navy);
       color: #FFFFFF;
@@ -362,7 +317,7 @@
 
     .back-link {
       display: inline-block;
-      margin-top: 40px;
+      margin-top: 28px;
       color: var(--navy);
       font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
@@ -375,6 +330,7 @@
     /* FOOTER */
 
     .site-footer {
+      background: #FFFFFF;
       border-top: 1px solid var(--line);
       padding: 28px 20px;
       text-align: center;
@@ -390,6 +346,19 @@
 
     .site-footer a:hover {
       text-decoration: underline;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+      .giftcard-layout {
+        gap: 35px;
+        padding: 0 25px 70px;
+      }
+
+      .text-column h2 {
+        font-size: 18px;
+      }
     }
 
     /* MOBILE */
@@ -425,7 +394,7 @@
       }
 
       .page-intro {
-        padding: 45px 20px 28px;
+        padding: 40px 20px 35px;
       }
 
       .page-intro h1 {
@@ -433,24 +402,31 @@
       }
 
       .page-subtitle {
-        font-size: 17px;
-      }
-
-      .giftcard-video-section {
-        padding: 10px 22px 55px;
-      }
-
-      .giftcard-content {
-        padding: 0 24px 65px;
-      }
-
-      .giftcard-content h2 {
         font-size: 16px;
       }
 
-      .giftcard-content p {
+      .giftcard-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 0 22px 65px;
+      }
+
+      .video-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .text-column {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .text-column > p {
         font-size: 14px;
-        line-height: 1.85;
+      }
+
+      .text-column h2 {
+        font-size: 18px;
       }
     }
 
@@ -511,11 +487,9 @@
            lang="da"
            aria-current="page">DA</a>
 
-        <span class="language-divider"
-              aria-hidden="true">|</span>
+        <span class="language-divider" aria-hidden="true">|</span>
 
-        <a href="/en/services/giftcard.html"
-           lang="en">EN</a>
+        <a href="/en/services/giftcard.html" lang="en">EN</a>
       </span>
 
     </nav>
@@ -523,7 +497,7 @@
 
   <main>
 
-    <!-- HEADING -->
+    <!-- PAGE TITLE -->
 
     <section class="page-intro">
       <h1>FYRSTERLING GAVEKORT</h1>
@@ -533,73 +507,61 @@
       </p>
     </section>
 
-    <!-- GIFT CARD VIDEO -->
+    <!-- VIDEO + TEXT -->
 
-    <section
-      class="giftcard-video-section"
-      aria-label="Præsentation af FYRSTERLING gavekort"
-    >
-      <div class="video-wrapper">
-        <video
-          id="giftcardVideo"
-          class="giftcard-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="/images/Gavekort.jpg"
-          aria-label="Roterende FYRSTERLING gavekort i mørkeblåt etui"
-        >
-          <source
-            src="/videos/Roterende%20gavekort.MP4"
-            type="video/mp4">
+    <section class="giftcard-layout">
 
-          Din browser understøtter ikke videoafspilning.
-        </video>
+      <!-- LEFT: LARGE VIDEO -->
+
+      <div class="video-column">
+        <div class="video-wrapper">
+          <video
+            id="giftcardVideo"
+            class="giftcard-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/images/Gavekort.jpg"
+            aria-label="Roterende FYRSTERLING gavekort i mørkeblåt etui"
+          >
+            <source
+              src="/videos/Roterende%20gavekort.MP4"
+              type="video/mp4">
+
+            Din browser understøtter ikke videoafspilning.
+          </video>
+        </div>
       </div>
 
-      <button
-        type="button"
-        class="video-control"
-        id="videoToggle"
-        aria-label="Sæt gavekortvideoen på pause"
-      >
-        PAUSE VIDEO
-      </button>
-    </section>
+      <!-- RIGHT: TEXT -->
 
-    <!-- DESCRIPTION -->
+      <div class="text-column">
 
-    <section class="giftcard-content">
+        <h2>EN GAVE MED SÆRLIG BETYDNING</h2>
 
-      <h2>EN GAVE MED SÆRLIG BETYDNING</h2>
+        <p>
+          Nogle gaver er mere end blot en gestus.
+          De er en måde at vise omtanke på og skabe
+          minder, der varer ved.
+        </p>
 
-      <p>
-        Nogle gaver er mere end blot en gestus.
-        De er en måde at vise omtanke på og skabe
-        minder, der varer ved.
-      </p>
+        <p>
+          Med et gavekort fra FYRSTERLING giver du
+          muligheden for at vælge et smykke, der
+          afspejler personlig stil og særlige øjeblikke.
+        </p>
 
-      <p>
-        Med et gavekort fra FYRSTERLING giver du
-        muligheden for at vælge et smykke, der
-        afspejler personlig stil og særlige øjeblikke.
-      </p>
+        <p>
+          Vores fysiske gavekort præsenteres i et
+          smukt, mørkeblåt etui, udvalgt med samme
+          sans for elegance og detaljer som vores smykker.
+          En eksklusiv præsentation, der gør selve
+          overrækkelsen til en særlig oplevelse.
+        </p>
 
-      <p>
-        Vores fysiske gavekort præsenteres i et
-        smukt, mørkeblåt etui, udvalgt med samme
-        sans for elegance og detaljer som vores smykker.
-        En eksklusiv præsentation, der gør selve
-        overrækkelsen til en særlig oplevelse.
-      </p>
-
-      <div class="section-divider"></div>
-
-      <!-- DETAILS -->
-
-      <div class="giftcard-details">
+        <div class="section-divider"></div>
 
         <h2>VÆRD AT VIDE</h2>
 
@@ -625,8 +587,8 @@
             Gavekortet udstedes som et fysisk
             gavekort og præsenteres i vores
             eksklusive mørkeblå etui.
-            Vi tilbyder på nuværende tidspunkt
-            ikke digitale gavekort.
+            Vi tilbyder ikke digitale gavekort
+            på nuværende tidspunkt.
           </p>
         </div>
 
@@ -641,30 +603,11 @@
           </p>
         </div>
 
-      </div>
-
-      <!-- CONTACT -->
-
-      <div class="giftcard-contact">
-
-        <h2>BESTIL ET FYRSTERLING GAVEKORT</h2>
-
-        <p>
-          Ønsker du at glæde én, du holder af,
-          med et FYRSTERLING-gavekort?
-        </p>
-
-        <p>
-          Kontakt os for at høre mere om
-          bestilling og mulighederne for
-          et personligt gavekort.
-        </p>
-
         <a
           class="contact-button"
           href="mailto:info@fyrsterling.com?subject=Foresp%C3%B8rgsel%20om%20FYRSTERLING%20gavekort"
         >
-          KONTAKT OS
+          BESTIL ET GAVEKORT
         </a>
 
         <div>
@@ -695,12 +638,10 @@
     </a>
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- JAVASCRIPT: SMYKKER DROPDOWN -->
 
   <script>
     "use strict";
-
-    /* SMYKKER DROPDOWN */
 
     const dropdown =
       document.getElementById("jewelleryDropdown");
@@ -752,52 +693,6 @@
         toggle.focus();
       }
     });
-
-    /* VIDEO PLAY / PAUSE */
-
-    const giftcardVideo =
-      document.getElementById("giftcardVideo");
-
-    const videoToggle =
-      document.getElementById("videoToggle");
-
-    function updateVideoButton() {
-      if (giftcardVideo.paused) {
-        videoToggle.textContent = "AFSPIL VIDEO";
-        videoToggle.setAttribute(
-          "aria-label",
-          "Afspil gavekortvideoen"
-        );
-      } else {
-        videoToggle.textContent = "PAUSE VIDEO";
-        videoToggle.setAttribute(
-          "aria-label",
-          "Sæt gavekortvideoen på pause"
-        );
-      }
-    }
-
-    videoToggle.addEventListener("click", function () {
-      if (giftcardVideo.paused) {
-        giftcardVideo.play().catch(function () {
-          updateVideoButton();
-        });
-      } else {
-        giftcardVideo.pause();
-      }
-    });
-
-    giftcardVideo.addEventListener(
-      "play",
-      updateVideoButton
-    );
-
-    giftcardVideo.addEventListener(
-      "pause",
-      updateVideoButton
-    );
-
-    updateVideoButton();
   </script>
 
 </body>
