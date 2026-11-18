@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Fine Jewellery Services & Consultations | FYRSTERLING</title>
-
   <meta name="description" content="Explore FYRSTERLING fine jewellery services, including private consultations, personalisation, jewellery care guidance and exclusive gift cards.">
 
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://fyrsterling.com/en/services.html">
   <link rel="alternate" hreflang="da" href="https://fyrsterling.com/services.html">
   <link rel="alternate" hreflang="en" href="https://fyrsterling.com/en/services.html">
@@ -16,7 +16,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -89,6 +88,83 @@
       border-bottom: 1px solid var(--navy);
     }
 
+    /* JEWELLERY DROPDOWN */
+
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 22px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .dropdown-toggle svg {
+      width: 11px;
+      height: 11px;
+      transition: transform .2s ease;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 190px;
+      padding: 19px 0 10px;
+      background: #FFFFFF;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 12px 25px rgba(0,0,0,.06);
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .2s ease, visibility .2s ease;
+      z-index: 200;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px 22px;
+      border-bottom: 0 !important;
+      color: var(--navy);
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible {
+      background: #f5f6f8;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu,
+    .nav-dropdown.is-open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown:hover .dropdown-toggle svg,
+    .nav-dropdown:focus-within .dropdown-toggle svg,
+    .nav-dropdown.is-open .dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+
     /* LANGUAGE SWITCH */
 
     .language-switch {
@@ -97,11 +173,6 @@
       gap: 9px;
       margin-left: 10px;
       font-family: "Barlow", Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    .language-switch a {
       font-size: 11px;
       letter-spacing: 1px;
     }
@@ -145,15 +216,15 @@
       margin-bottom: 0;
     }
 
-    /* SERVICES GRID */
+    /* SERVICES */
 
     .services-grid {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 36px 100px;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px;
       align-items: start;
     }
 
@@ -175,7 +246,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform .5s ease;
     }
 
     .service-image:hover img {
@@ -212,7 +283,7 @@
     }
 
     .find-out:hover {
-      opacity: 0.65;
+      opacity: .65;
     }
 
     /* FOOTER */
@@ -224,7 +295,7 @@
       text-align: center;
       font-family: "Barlow", Arial, sans-serif;
       font-size: 11px;
-      letter-spacing: 0.7px;
+      letter-spacing: .7px;
       line-height: 2;
     }
 
@@ -238,11 +309,11 @@
 
     /* TABLET */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 800px) {
       .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 0 24px 75px;
-        gap: 42px 24px;
+        padding: 0 20px 70px;
+        gap: 30px 18px;
       }
     }
 
@@ -264,16 +335,18 @@
 
       .main-nav a {
         font-size: 10px;
-        letter-spacing: 0.7px;
+        letter-spacing: .7px;
+      }
+
+      .dropdown-menu {
+        left: 0;
+        transform: none;
+        min-width: 175px;
       }
 
       .language-switch {
         margin-left: 3px;
         gap: 7px;
-      }
-
-      .language-switch a {
-        font-size: 10px;
       }
 
       .intro {
@@ -298,7 +371,9 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .service-image img {
+      .service-image img,
+      .dropdown-menu,
+      .dropdown-toggle svg {
         transition: none;
       }
     }
@@ -314,38 +389,53 @@
 
     <nav class="main-nav" aria-label="Main navigation">
 
-      <a href="/en/collection.html">JEWELLERY</a>
+      <!-- JEWELLERY: ONLY DROPDOWN -->
 
-      <a
-        href="/en/services.html"
-        class="active"
-        aria-current="page"
-      >
-        SERVICES
-      </a>
+      <div class="nav-dropdown" id="jewelleryDropdown">
+        <a href="/en/collection.html">JEWELLERY</a>
+
+        <button
+          type="button"
+          class="dropdown-toggle"
+          id="jewelleryToggle"
+          aria-label="Show jewellery categories"
+          aria-expanded="false"
+          aria-controls="jewelleryMenu"
+        >
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.5"
+               aria-hidden="true">
+            <path d="M5 9l7 7 7-7"/>
+          </svg>
+        </button>
+
+        <div class="dropdown-menu" id="jewelleryMenu">
+          <a href="/en/collection.html#rings">RINGS</a>
+          <a href="/en/collection.html#bracelets">BRACELETS</a>
+          <a href="/en/collection.html#necklaces">NECKLACES</a>
+          <a href="/en/collection.html#earrings">EARRINGS</a>
+        </div>
+      </div>
+
+      <!-- SERVICES: NORMAL LINK, NO DROPDOWN -->
+
+      <a href="/en/services.html"
+         class="active"
+         aria-current="page">SERVICES</a>
 
       <a href="/en/our-story.html">MAISON</a>
-
       <a href="/en/appointments.html">APPOINTMENTS</a>
-
       <a href="/en/contact.html">CONTACT</a>
-
       <a href="/en/faq.html">FAQ</a>
 
       <span class="language-switch" aria-label="Choose language">
-
         <a href="/services.html" lang="da">DA</a>
-
         <span class="language-divider" aria-hidden="true">|</span>
-
-        <a
-          href="/en/services.html"
-          lang="en"
-          aria-current="page"
-        >
-          EN
-        </a>
-
+        <a href="/en/services.html"
+           lang="en"
+           aria-current="page">EN</a>
       </span>
 
     </nav>
@@ -353,10 +443,9 @@
 
   <main>
 
-    <!-- SERVICES INTRODUCTION -->
+    <!-- INTRODUCTION -->
 
     <section class="intro">
-
       <h1>OUR SERVICES</h1>
 
       <p>
@@ -377,141 +466,111 @@
         Discover the care, guidance and personal attention
         that accompany your FYRSTERLING experience.
       </p>
-
     </section>
 
-    <!-- SERVICES GRID -->
+    <!-- SERVICES -->
 
-    <section
-      class="services-grid"
-      aria-label="FYRSTERLING services"
-    >
+    <section class="services-grid"
+             aria-label="FYRSTERLING services">
 
       <!-- PRIVATE JEWELLERY CONSULTATION -->
 
       <article class="service">
-
-        <a
-          class="service-image"
-          href="/en/services/private-consultation.html"
-        >
+        <a class="service-image"
+           href="/en/services/private-consultation.html">
           <img
             src="/images/Book%20tid.PNG"
             alt="FYRSTERLING private jewellery presentation"
-            loading="lazy"
-          >
+            loading="lazy">
         </a>
 
         <h2>PRIVATE JEWELLERY CONSULTATION</h2>
 
         <p>
-          Discover a personal jewellery experience at
-          our FYRSTERLING showroom in Odense.
+          Discover a personal jewellery experience
+          at our private FYRSTERLING showroom
+          in Odense.
         </p>
 
-        <a
-          class="find-out"
-          href="/en/services/private-consultation.html"
-        >
+        <a class="find-out"
+           href="/en/services/private-consultation.html">
           FIND OUT MORE
         </a>
-
       </article>
 
       <!-- PERSONALISATION -->
 
       <article class="service">
-
-        <a
-          class="service-image"
-          href="/en/services/personalisation.html"
-        >
+        <a class="service-image"
+           href="/en/services/personalisation.html">
           <img
             src="/images/Personalisation-ring.jpeg"
-            alt="FYRSTERLING ring with personalised date engraving"
-            loading="lazy"
-          >
+            alt="FYRSTERLING ring with personalised engraving"
+            loading="lazy">
         </a>
 
         <h2>PERSONALISATION</h2>
 
         <p>
-          Make your FYRSTERLING creation uniquely yours
-          with a meaningful engraving.
+          Make your FYRSTERLING creation uniquely
+          yours with a meaningful engraving.
         </p>
 
-        <a
-          class="find-out"
-          href="/en/services/personalisation.html"
-        >
+        <a class="find-out"
+           href="/en/services/personalisation.html">
           FIND OUT MORE
         </a>
-
       </article>
 
       <!-- JEWELLERY CARE -->
 
       <article class="service">
-
-        <a
-          class="service-image"
-          href="/en/jewellery-care.html"
-        >
+        <a class="service-image"
+           href="/en/jewellery-care.html">
           <img
             src="/images/Jewellery%20care.jpg"
             alt="FYRSTERLING jewellery carefully presented with white gloves"
-            loading="lazy"
-          >
+            loading="lazy">
         </a>
 
         <h2>JEWELLERY CARE</h2>
 
         <p>
-          Discover our recommendations for caring for
-          your FYRSTERLING jewellery and preserving
-          its beauty, brilliance and timeless character.
+          Discover our recommendations for caring
+          for your FYRSTERLING jewellery and
+          preserving its beauty, brilliance
+          and timeless character.
         </p>
 
-        <a
-          class="find-out"
-          href="/en/jewellery-care.html"
-        >
+        <a class="find-out"
+           href="/en/jewellery-care.html">
           FIND OUT MORE
         </a>
-
       </article>
 
-      <!-- GIFTCARD -->
+      <!-- GIFT CARDS -->
 
       <article class="service">
-
-        <a
-          class="service-image"
-          href="/en/services/giftcard.html"
-        >
+        <a class="service-image"
+           href="/en/services/giftcard.html">
           <img
             src="/images/Gavekort.jpg"
-            alt="FYRSTERLING gift card presented in an elegant dark blue case"
-            loading="lazy"
-          >
+            alt="FYRSTERLING gift card presented in an exclusive dark blue case"
+            loading="lazy">
         </a>
 
-        <h2>GIFTCARD</h2>
+        <h2>GIFT CARDS</h2>
 
         <p>
-          Give the freedom to choose something truly
-          personal with a FYRSTERLING gift card,
-          beautifully presented in an exclusive
-          dark blue case.
+          A thoughtful gift for someone special.
+          Discover FYRSTERLING's exclusive gift cards,
+          beautifully presented in our dark blue case.
         </p>
 
-        <a
-          class="find-out"
-          href="/en/services/giftcard.html"
-        >
+        <a class="find-out"
+           href="/en/services/giftcard.html">
           FIND OUT MORE
         </a>
-
       </article>
 
     </section>
@@ -521,7 +580,6 @@
   <!-- FOOTER -->
 
   <footer class="site-footer">
-
     FYRSTERLING &nbsp; | &nbsp;
 
     <a href="mailto:info@fyrsterling.com">
@@ -533,8 +591,64 @@
     <a href="/en/terms-and-conditions.html">
       TERMS &amp; CONDITIONS
     </a>
-
   </footer>
+
+  <!-- JEWELLERY DROPDOWN SCRIPT -->
+
+  <script>
+    "use strict";
+
+    const dropdown =
+      document.getElementById("jewelleryDropdown");
+
+    const toggle =
+      document.getElementById("jewelleryToggle");
+
+    function setDropdownOpen(open) {
+      dropdown.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+    }
+
+    toggle.addEventListener("click", function () {
+      setDropdownOpen(
+        !dropdown.classList.contains("is-open")
+      );
+    });
+
+    dropdown.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(hover: hover)").matches) {
+        setDropdownOpen(true);
+      }
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      setDropdownOpen(false);
+    });
+
+    dropdown.addEventListener("focusin", function () {
+      setDropdownOpen(true);
+    });
+
+    dropdown.addEventListener("focusout", function (event) {
+      if (!dropdown.contains(event.relatedTarget)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" &&
+          dropdown.classList.contains("is-open")) {
+        setDropdownOpen(false);
+        toggle.focus();
+      }
+    });
+  </script>
 
 </body>
 </html>
