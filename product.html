@@ -1815,5 +1815,377 @@ $("purchaseForm").addEventListener("submit", async event => {
 });
 </script>
 
+<style>
+  .gold-gallery-stage {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    touch-action: pan-y;
+  }
+
+  .gold-gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #e8e8e8;
+    background: rgba(255,255,255,.94);
+    color: #142a46;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .gold-gallery-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .gold-gallery-prev {
+    left: 12px;
+  }
+
+  .gold-gallery-next {
+    right: 12px;
+  }
+
+  .gold-gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .gold-gallery-thumb {
+    width: 75px;
+    aspect-ratio: 3 / 4;
+    padding: 3px;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    cursor: pointer;
+  }
+
+  .gold-gallery-thumb.active {
+    border-color: #142a46;
+  }
+
+  .gold-gallery-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .gold-gallery-arrow:focus-visible,
+  .gold-gallery-thumb:focus-visible {
+    outline: 2px solid #142a46;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 700px) {
+    .gold-gallery-thumbnails {
+      gap: 8px;
+    }
+
+    .gold-gallery-thumb {
+      width: 62px;
+    }
+
+    .gold-gallery-arrow {
+      width: 32px;
+      height: 38px;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  const parameters =
+    new URLSearchParams(window.location.search);
+
+  const selectedType = parameters.get("type");
+  const selectedMetal = parameters.get("metal");
+
+  if (
+    selectedType !== "Necklace" ||
+    selectedMetal !== "Yellow Gold"
+  ) {
+    return;
+  }
+
+  const english =
+    window.location.pathname.startsWith("/en/");
+
+  const mainImage =
+    document.getElementById("mainImage");
+
+  if (
+    !mainImage ||
+    document.getElementById("galleryThumbnails") ||
+    document.getElementById("goldGallery")
+  ) {
+    return;
+  }
+
+  const imageContainer =
+    mainImage.closest(".main-image");
+
+  if (!imageContainer) return;
+
+  const images = [
+    {
+      src: mainImage.getAttribute("src"),
+      alt: english
+        ? "AETERNUM necklace in 14K yellow gold"
+        : "AETERNUM halskæde i 14 karat guld"
+    },
+    {
+      src: "/images/" +
+        encodeURIComponent("Guld halskæde bagfra.jpg"),
+      alt: english
+        ? "AETERNUM necklace viewed from behind"
+        : "AETERNUM halskæde set bagfra"
+    },
+    {
+      src: "/images/" +
+        encodeURIComponent("Krans på guld smykke.PNG"),
+      alt: english
+        ? "Detail of the AETERNUM wreath"
+        : "Detalje af AETERNUM-kransen"
+    },
+    {
+      src: "/images/" +
+        encodeURIComponent("Logo på guld smykke.PNG"),
+      alt: english
+        ? "Detail of the FYRSTERLING logo"
+        : "Detalje af FYRSTERLING-logoet"
+    }
+  ];
+
+  let currentImage = 0;
+
+  const gallery = document.createElement("div");
+
+  gallery.id = "goldGallery";
+  gallery.style.minWidth = "0";
+
+  gallery.setAttribute("role", "group");
+
+  gallery.setAttribute(
+    "aria-label",
+    english ? "Product images" : "Produktbilleder"
+  );
+
+  imageContainer.parentNode.insertBefore(
+    gallery,
+    imageContainer
+  );
+
+  gallery.appendChild(imageContainer);
+
+  imageContainer.classList.add(
+    "gold-gallery-stage"
+  );
+
+  mainImage.draggable = false;
+
+  const previousButton =
+    document.createElement("button");
+
+  previousButton.type = "button";
+
+  previousButton.className =
+    "gold-gallery-arrow gold-gallery-prev";
+
+  previousButton.setAttribute(
+    "aria-label",
+    english ? "Previous image" : "Forrige billede"
+  );
+
+  previousButton.innerHTML = `
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.5"
+         aria-hidden="true">
+      <path d="M15 5l-7 7 7 7"/>
+    </svg>
+  `;
+
+  const nextButton =
+    document.createElement("button");
+
+  nextButton.type = "button";
+
+  nextButton.className =
+    "gold-gallery-arrow gold-gallery-next";
+
+  nextButton.setAttribute(
+    "aria-label",
+    english ? "Next image" : "Næste billede"
+  );
+
+  nextButton.innerHTML = `
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.5"
+         aria-hidden="true">
+      <path d="M9 5l7 7-7 7"/>
+    </svg>
+  `;
+
+  imageContainer.appendChild(previousButton);
+  imageContainer.appendChild(nextButton);
+
+  const thumbnails =
+    document.createElement("div");
+
+  thumbnails.className =
+    "gold-gallery-thumbnails";
+
+  gallery.appendChild(thumbnails);
+
+  const thumbnailButtons = [];
+
+  images.forEach(function (image, index) {
+    const button =
+      document.createElement("button");
+
+    button.type = "button";
+    button.className = "gold-gallery-thumb";
+
+    button.setAttribute(
+      "aria-label",
+      image.alt
+    );
+
+    button.setAttribute(
+      "aria-pressed",
+      "false"
+    );
+
+    const thumbnail =
+      document.createElement("img");
+
+    thumbnail.src = image.src;
+    thumbnail.alt = "";
+    thumbnail.loading = "lazy";
+
+    button.appendChild(thumbnail);
+
+    button.addEventListener("click", function () {
+      showImage(index);
+    });
+
+    thumbnails.appendChild(button);
+    thumbnailButtons.push(button);
+  });
+
+  function showImage(index) {
+    currentImage =
+      (index + images.length) % images.length;
+
+    mainImage.src = images[currentImage].src;
+    mainImage.alt = images[currentImage].alt;
+
+    thumbnailButtons.forEach(
+      function (button, buttonIndex) {
+        const active =
+          buttonIndex === currentImage;
+
+        button.classList.toggle(
+          "active",
+          active
+        );
+
+        button.setAttribute(
+          "aria-pressed",
+          String(active)
+        );
+      }
+    );
+  }
+
+  previousButton.addEventListener(
+    "click",
+    function () {
+      showImage(currentImage - 1);
+    }
+  );
+
+  nextButton.addEventListener(
+    "click",
+    function () {
+      showImage(currentImage + 1);
+    }
+  );
+
+  gallery.addEventListener(
+    "keydown",
+    function (event) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showImage(currentImage - 1);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showImage(currentImage + 1);
+      }
+    }
+  );
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  imageContainer.addEventListener(
+    "touchstart",
+    function (event) {
+      touchStartX =
+        event.changedTouches[0].screenX;
+
+      touchStartY =
+        event.changedTouches[0].screenY;
+    },
+    { passive: true }
+  );
+
+  imageContainer.addEventListener(
+    "touchend",
+    function (event) {
+      const differenceX =
+        event.changedTouches[0].screenX -
+        touchStartX;
+
+      const differenceY =
+        event.changedTouches[0].screenY -
+        touchStartY;
+
+      if (
+        Math.abs(differenceX) > 45 &&
+        Math.abs(differenceX) >
+        Math.abs(differenceY)
+      ) {
+        if (differenceX < 0) {
+          showImage(currentImage + 1);
+        } else {
+          showImage(currentImage - 1);
+        }
+      }
+    },
+    { passive: true }
+  );
+
+  showImage(0);
+
+})();
+</script>
+
+  
 </body>
 </html>
